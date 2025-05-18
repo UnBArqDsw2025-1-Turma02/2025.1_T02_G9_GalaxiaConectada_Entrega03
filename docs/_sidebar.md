@@ -13,4 +13,4 @@
   
 
 - **3.5 Iniciativas Extras** 
-  - [3.5.1 Cronograma Planejado](/docs/PadroesDeProjeto/IniciativasExtras/CronogramaPlanejado.md)
+  - [3.5.1 Cronograma Planejado](/PadroesDeProjeto/IniciativasExtras/CronogramaPlanejado.md)
