@@ -12,17 +12,50 @@ Este documento apresenta o cronograma planejado para a execução dos três mód
 
 ## Planejamento Módulo GoFs Criacionais
 
+| Data    | Tarefa                                                       | Tempo Estimado |
+|---------|-------------------------------------------------------------|----------------|
+| 19/05   | Pesquisa aprofundada sobre o padrão escolhido               | 1h             |
+| 19/05   | Revisar diagramas UML existentes                             | 1h             |
+| 20/05   | Criar estrutura base do código (setup do projeto)           | 1h             |
+| 20/05   | Implementar as classes principais do padrão                  | 2h             |
+| 20/05   | Implementar métodos e comportamentos                         | 1h             |
+| 21/05   | Testar funcionalidade básica                                 | 1h             |
+| 21/05   | Corrigir erros e ajustar código                              | 1h             |
+| 21/05   | Commit e push do código no repositório                       | 1h             |
+| 22/05   | Escrever documentação do padrão (objetivo, uso, exemplos)   | 1h             |
+| 22/05   | Revisar e formatar documentação                              | 1h             |
+| 22/05   | Revisão final do código e push final                         | 1h             |
 
-
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
 ## Planejamento Módulo GoFs Estruturais
 
+| Data    | Tarefa                                                       | Tempo Estimado |
+|---------|-------------------------------------------------------------|----------------|
+| 26/05   | Pesquisa aprofundada sobre o padrão escolhido               | 1h             |
+| 26/05   | Revisar diagramas UML existentes                             | 1h             |
+| 27/05   | Criar estrutura base do código                               | 1h             |
+| 27/05   | Implementar classes principais do padrão                    | 2h             |
+| 27/05   | Implementar métodos e comportamentos                         | 1h             |
+| 28/05   | Testar funcionalidades básicas                              | 1h             |
+| 28/05   | Corrigir erros e ajustar código                              | 2h             |
+| 28/05   | Commit, push e escrever documentação inicial                | 1h             |
 
-
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
 ## Planejamento Módulo GoFs Comportamentais
 
+| Data    | Tarefa                                                       | Tempo Estimado |
+|---------|-------------------------------------------------------------|----------------|
+| 29/05   | Pesquisa aprofundada sobre o padrão escolhido               | 1h             |
+| 29/05   | Revisar diagramas UML existentes                             | 1h             |
+| 29/05   | Criar estrutura base do código                               | 1h             |
+| 30/05   | Implementar classes principais e métodos                    | 3h             |
+| 30/05   | Testar funcionalidades e corrigir erros                     | 2h             |
+| 30/05   | Documentar o padrão (uso, exemplos)                          | 1h             |
 
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
 ## Histórico de versão
 
