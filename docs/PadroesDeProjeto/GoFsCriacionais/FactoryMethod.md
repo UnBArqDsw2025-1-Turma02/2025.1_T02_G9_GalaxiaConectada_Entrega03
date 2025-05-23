@@ -134,6 +134,8 @@ public abstract class Conteudo {
 
 ```
 
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
 
 ##### Imagem do código no VSCODE
 
@@ -207,6 +209,9 @@ public enum TipoVisibilidade {
 
 ```
 
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
 ##### Imagem do código no VSCODE
 
 A figura 3 abaixo ilustra a estrutura da classe `TipoVisibilidade.java` no ambiente de desenvolvimento VSCode.
@@ -271,6 +276,7 @@ public class Artigo extends Conteudo {
 }
 
 ```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
 ##### Imagem do código no VSCODE
 
@@ -347,7 +353,7 @@ public class Video extends Conteudo {
 }
 
 ```
-
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
 
 ##### Imagem do código no VSCODE
@@ -421,6 +427,9 @@ public class Quiz extends Conteudo {
 }
 
 ```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
 
 ##### Imagem do código no VSCODE
 
@@ -497,6 +506,7 @@ public class Jogo extends Conteudo {
 }
 
 ```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
 ##### Imagem do código no VSCODE
 
@@ -650,6 +660,7 @@ public class Usuario {
 }
 
 ```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
 ##### Imagem do código no VSCODE
 
@@ -685,9 +696,10 @@ A figura 8 abaixo ilustra a estrutura da classe `Usuario.java` no ambiente de de
     <br>
 </div>
 
-
-
 ### Criação das Classes de Fábrica
+
+Com os "produtos" (Conteudo e suas subclasses) definidos, foram implementadas as fábricas responsáveis pela sua criação, seguindo o padrão Factory Method.
+
 
 #### Fábrica Abstrata FabricaDeConteudo.java
 
