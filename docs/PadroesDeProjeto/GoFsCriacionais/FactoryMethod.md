@@ -15,7 +15,7 @@
         - [Classe Concreta Quiz](#Classe-Concreta-Quiz)
         - [Classe Concreta Jogo](#Classe-Concreta-Jogo)
         - [Classe Auxiliar Usuario](#Classe-Auxiliar-Usuario)
-    - [Criação das Classes de Fábrica](#Criação-das-Classes-de-Fábrica)
+    - [Criação das Classes de Fábrica de Conteudo](#Criação-das-Classes-de-Fábrica-de-Conteudo)
         - [Fábrica Abstrata FabricaDeConteudo](#Fábrica-Abstrata-FabricaDeConteudo)
         - [Fábrica Concreta FabricaDeArtigo](#Fábrica-Concreta-FabricaDeArtigo)
         - [Fábrica Concreta FabricaDeVideo](#Fábrica-Concreta-FabricaDeVideo)
@@ -696,7 +696,7 @@ A figura 8 abaixo ilustra a estrutura da classe `Usuario.java` no ambiente de de
     <br>
 </div>
 
-### Criação das Classes de Fábrica
+### Criação das Classes de Fábrica de Conteudo
 
 Com os "produtos" (Conteudo e suas subclasses) definidos, foram implementadas as fábricas responsáveis pela sua criação, seguindo o padrão Factory Method.
 
