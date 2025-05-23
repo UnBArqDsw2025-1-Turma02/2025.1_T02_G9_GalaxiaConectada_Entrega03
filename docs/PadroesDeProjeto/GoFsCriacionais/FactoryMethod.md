@@ -703,15 +703,262 @@ Com os "produtos" (Conteudo e suas subclasses) definidos, foram implementadas as
 
 #### Fábrica Abstrata FabricaDeConteudo
 
+FabricaDeConteudo é a classe "Creator" abstrata. Com isso, ela define o contrato para todas as fábricas de conteúdo ao declarar o método fábrica abstrato criarConteudo(). Este método recebe os parâmetros comuns para a criação de qualquer Conteudo, incluindo o TipoVisibilidade, e um Map para os detalhes específicos de cada subclasse de Conteudo. 
+
+A fábrica abstrata também possui um método concreto, **iniciarPublicacaoDeConteudo**, a qual demonstra como a fábrica pode orquestrar a criação e o uso inicial do produto.
+
+Abaixo o código para FabricaDeConteudo.java:
+
+```
+package com.galaxiaconectada.fabricas; // Pertence ao pacote 'fabricas'
+
+// Importa a classe base Conteudo e a interface Map
+import com.galaxiaconectada.core.Conteudo;
+import com.galaxiaconectada.core.TipoVisibilidade;
+import java.util.Map;
+
+// Ela não pode ser instanciada diretamente.
+public abstract class FabricaDeConteudo {
+
+    /**
+     * FACTORY METHOD (Método de Fábrica) abstrato.
+     * Cada fábrica concreta (FabricaDeArtigo ou FabricaDeVideo) precisará implementar este método para criar seu tipo específico de Conteudo.
+     *
+     * @param id O ID do conteúdo.
+     * @param titulo O título do conteúdo.
+     * @param descricao A descrição do conteúdo.
+     * @param visibilidade A visibilidade do conteúdo.
+     * @param detalhes Um Map contendo atributos específicos para o tipo de conteúdo a ser criado
+     * (ex: para Artigo pode ter "textoHtml", "fonte"; para Video "urlVideo", "duracaoSegundos").
+     * @return Uma instância de uma subclasse de Conteudo.
+     */
+    public abstract Conteudo criarConteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade, Map<String, Object> detalhes);
+
+
+     public void iniciarPublicacaoDeConteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade, Map<String, Object> detalhes) {
+        // Chama o factory method para obter o objeto Produto.
+        Conteudo conteudo = criarConteudo(id, titulo, descricao, visibilidade, detalhes);
+
+        // Agora usa o produto.
+        System.out.println("\n--- Nova Publicação Iniciada pela Fábrica ---");
+        System.out.println("Fábrica: " + this.getClass().getSimpleName() + " está trabalhando...");
+        System.out.println("Conteúdo criado: " + conteudo.getTitulo() + " (ID: " + conteudo.getId() + ")");
+        conteudo.exibir(); // Chama o método exibir() do produto específico
+        System.out.println("--- Publicação Concluída ---");
+    }
+}
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+##### Imagem do código no VSCODE
+
+
+A figura 11 abaixo ilustra a estrutura da classe `FabricaDeConteudo.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 11:  Fábrica Abstrata FabricaDeConteudo.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 
 #### Fábrica Concreta FabricaDeArtigo
 
+FabricaDeArtigo é uma "ConcreteCreator" que também herda de FabricaDeConteudo. Assim, sua responsabilidade é implementar o método criarConteudo() para instanciar e retornar especificamente objetos Artigo. Ela extrai os dados necessários para um artigo (como textoHtml e fonte) do Map de detalhes fornecido.
+
+Abaixo o código para FabricaDeArtigo.java:
+
+```
+package com.galaxiaconectada.fabricas; // Pertence ao pacote 'fabricas'
+
+// Importa a classe base Conteudo e a interface Map
+import com.galaxiaconectada.core.Conteudo;
+import com.galaxiaconectada.core.TipoVisibilidade;
+import java.util.Map;
+
+// Ela não pode ser instanciada diretamente.
+public abstract class FabricaDeConteudo {
+
+    /**
+     * FACTORY METHOD (Método de Fábrica) abstrato.
+     * Cada fábrica concreta (FabricaDeArtigo ou FabricaDeVideo) precisará implementar este método para criar seu tipo específico de Conteudo.
+     *
+     * @param id O ID do conteúdo.
+     * @param titulo O título do conteúdo.
+     * @param descricao A descrição do conteúdo.
+     * @param visibilidade A visibilidade do conteúdo.
+     * @param detalhes Um Map contendo atributos específicos para o tipo de conteúdo a ser criado
+     * (ex: para Artigo pode ter "textoHtml", "fonte"; para Video "urlVideo", "duracaoSegundos").
+     * @return Uma instância de uma subclasse de Conteudo.
+     */
+    public abstract Conteudo criarConteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade, Map<String, Object> detalhes);
+
+
+     public void iniciarPublicacaoDeConteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade, Map<String, Object> detalhes) {
+        // Chama o factory method para obter o objeto Produto.
+        Conteudo conteudo = criarConteudo(id, titulo, descricao, visibilidade, detalhes);
+
+        // Agora usa o produto.
+        System.out.println("\n--- Nova Publicação Iniciada pela Fábrica ---");
+        System.out.println("Fábrica: " + this.getClass().getSimpleName() + " está trabalhando...");
+        System.out.println("Conteúdo criado: " + conteudo.getTitulo() + " (ID: " + conteudo.getId() + ")");
+        conteudo.exibir(); // Chama o método exibir() do produto específico
+        System.out.println("--- Publicação Concluída ---");
+    }
+}
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+##### Imagem do código no VSCODE
+
+
+A figura 12 abaixo ilustra a estrutura da classe `FabricaDeArtigo.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 12: Fábrica Concreta FabricaDeArtigo.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
 #### Fábrica Concreta FabricaDeVideo
+
+Especializada na criação de objetos Video, a FabricaDeVideo implementa o método fábrica criarConteudo() para construir instâncias de Video, utilizando os detalhes apropriados como urlVideo, duracaoSegundos e transcricao.
+
+Abaixo o código para FabricaDeVideo.java
+
+
+```
+package com.galaxiaconectada.fabricas;
+
+import com.galaxiaconectada.core.Conteudo;
+import com.galaxiaconectada.core.TipoVisibilidade; // Importa a classe Video
+import com.galaxiaconectada.core.Video; 
+import java.util.Map;
+
+public class FabricaDeVideo extends FabricaDeConteudo {
+
+    @Override
+    public Conteudo criarConteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade, Map<String, Object> detalhes) {
+        String urlVideo = (String) detalhes.getOrDefault("urlVideo", "http://example.com/default.mp4");
+        int duracaoSegundos = (int) detalhes.getOrDefault("duracaoSegundos", 0);
+        String transcricao = (String) detalhes.getOrDefault("transcricao", ""); 
+
+        return new Video(id, titulo, descricao, visibilidade, urlVideo, duracaoSegundos, transcricao);
+    }
+}
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+##### Imagem do código no VSCODE
+
+
+A figura 13 abaixo ilustra a estrutura da classe `FabricaDeVideo.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 13: Fábrica Concreta FabricaDeVideo.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 #### Fábrica Concreta FabricaDeQuiz
 
+FabricaDeQuiz é a fábrica concreta encarregada de instanciar objetos do tipo Quiz. Ela implementa criarConteudo() para configurar e retornar um Quiz com seus atributos específicos, como tempoLimiteMin e tentativasPermitidas.
+
+Abaixo o código para FabricaDeQuiz.java:
+
+```
+package com.galaxiaconectada.fabricas;
+
+import com.galaxiaconectada.core.Conteudo;
+import com.galaxiaconectada.core.Quiz; // Importa a classe Quiz
+import com.galaxiaconectada.core.TipoVisibilidade;
+import java.util.Map;
+
+public class FabricaDeQuiz extends FabricaDeConteudo {
+
+    @Override
+    public Conteudo criarConteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade, Map<String, Object> detalhes) {
+        int tempoLimiteMin = (int) detalhes.getOrDefault("tempoLimiteMin", 30);
+        int tentativasPermitidas = (int) detalhes.getOrDefault("tentativasPermitidas", 1);
+
+        return new Quiz(id, titulo, descricao, visibilidade, tempoLimiteMin, tentativasPermitidas);
+    }
+}
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+##### Imagem do código no VSCODE
+
+A figura 14 abaixo ilustra a estrutura da classe `FabricaDeQuiz.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 14: Fábrica Concreta FabricaDeVideo.java
+    <br>
+    <img src="Fábrica Concreta FabricaDeQuiz.java" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
 #### Fábrica Concreta FabricaDeJogo
+
+A FabricaDeJogo é a fábrica concreta especializada na criação de instâncias da classe Jogo. Desse modo, ela implementa o método criarConteudo() para configurar e retornar objetos Jogo com seus detalhes como tipoJogo, nivelDificuldade e urlJogo.
+
+Abaixo o código para FabricaDeJogo.java:
+
+```
+package com.galaxiaconectada.fabricas;
+
+import com.galaxiaconectada.core.Conteudo;
+import com.galaxiaconectada.core.Jogo; // Importa a classe Jogo
+import com.galaxiaconectada.core.TipoVisibilidade;
+import java.util.Map;
+
+public class FabricaDeJogo extends FabricaDeConteudo {
+
+    @Override
+    public Conteudo criarConteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade, Map<String, Object> detalhes) {
+        String tipoJogo = (String) detalhes.getOrDefault("tipoJogo", "Desconhecido");
+        int nivelDificuldade = (int) detalhes.getOrDefault("nivelDificuldade", 1);
+        String urlJogo = (String) detalhes.getOrDefault("urlJogo", "http://example.com/defaultgame");
+
+        return new Jogo(id, titulo, descricao, visibilidade, tipoJogo, nivelDificuldade, urlJogo);
+    }
+}
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+##### Imagem do código no VSCODE
+
+A figura 15 abaixo ilustra a estrutura da classe `FabricaDeJogo.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 15: Fábrica Concreta FabricaDeJogo.java
+    <br>
+    <img src="Fábrica Concreta FabricaDeQuiz.java" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 
 ### Classe de Teste AplicacaoGalaxia a Main
 
@@ -727,3 +974,4 @@ Com os "produtos" (Conteudo e suas subclasses) definidos, foram implementadas as
 | 1.0 | Elaboração do documento| Larissa Stéfane | 22/05/2025 |
 | 1.1 | Adição do Conteudo.java | Larissa Stéfane | 22/05/2025 |
 | 1.1 | Adição das outras classes de poduto da hierarquia| Larissa Stéfane | 23/05/2025 |
+| 1.2 | Adição das fábricas de contudo | Larissa Stéfane | 23/05/2025 |
