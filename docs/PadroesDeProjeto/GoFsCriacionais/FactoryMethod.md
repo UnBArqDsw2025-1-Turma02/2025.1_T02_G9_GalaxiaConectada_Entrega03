@@ -659,11 +659,33 @@ A figura 8 abaixo ilustra a estrutura da classe `Usuario.java` no ambiente de de
 <div align="center">
     Figura 8: Classe Auxiliar Usuario.java
     <br>
-    <img src="" width="500">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/ca5a0ec7a0d186a9874f2b158d99b222508d32c4/docs/PadroesDeProjeto/Imagens/UsuarioJava1.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+
+<div align="center">
+    Figura 9: Classe Auxiliar Usuario.java
+    <br>
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/ca5a0ec7a0d186a9874f2b158d99b222508d32c4/docs/PadroesDeProjeto/Imagens/UsuarioJava2.png" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+<div align="center">
+    Figura 10: Classe Auxiliar Usuario.java
+    <br>
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/ca5a0ec7a0d186a9874f2b158d99b222508d32c4/docs/PadroesDeProjeto/Imagens/UsuarioJava3.png" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
 
 ### Criação das Classes de Fábrica
 
