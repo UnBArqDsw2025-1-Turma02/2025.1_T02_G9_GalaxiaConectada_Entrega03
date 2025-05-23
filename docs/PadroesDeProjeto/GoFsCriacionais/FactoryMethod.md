@@ -8,20 +8,20 @@
 - [Desenvolvimento e Implementação](#Desenvolvimento-e-Implementação)
     - [Preparação do Ambiente](#Preparação-do-Ambiente)
     - [Criação das Classes de Produto da Hierarquia de Conteúdo](Criação-das-Classes-de-Produto-da-Hierarquia-de-Conteúdo)
-        - [Classe Abstrata Conteudo.java](#Classe-Abstrata-Conteudo.java)
-        - [Classe TipoVisibilidade.java](#Classe-TipoVisibilidade.java)
-        - [Classe Concreta Artigo.java](#Classe-Concreta-Artigo.java)
-        - [Classe Concreta Video.java](#Classe-Concreta-Video.java)
-        - [Classe Concreta Quiz.java](#Classe-Concreta-Quiz.java)
-        - [Classe Concreta Jogo.java](#Classe-Concreta-Jogo.java)
-        - [Classe Auxiliar Usuario.java](#Classe-Auxiliar-Usuario.java)
+        - [Classe Abstrata Conteudo](#Classe-Abstrata-Conteudo)
+        - [Classe TipoVisibilidade](#Classe-TipoVisibilidade)
+        - [Classe Concreta Artigo](#Classe-Concreta-Artigo)
+        - [Classe Concreta Video](#Classe-Concreta-Video)
+        - [Classe Concreta Quiz](#Classe-Concreta-Quiz)
+        - [Classe Concreta Jogo](#Classe-Concreta-Jogo)
+        - [Classe Auxiliar Usuario](#Classe-Auxiliar-Usuario)
     - [Criação das Classes de Fábrica](#Criação-das-Classes-de-Fábrica)
-        - [Fábrica Abstrata FabricaDeConteudo.java](#Fábrica-Abstrata-FabricaDeConteudo.java)
-        - [Fábrica Concreta FabricaDeArtigo.java](#Fábrica-Concreta-FabricaDeArtigo.java)
-        - [Fábrica Concreta FabricaDeVideo.java](#Fábrica-Concreta-FabricaDeVideo.java)
-        - [Fábrica Concreta FabricaDeQuiz.java](#Fábrica-Concreta-FabricaDeQuiz.java)
-        - [Fábrica Concreta FabricaDeJogo.java](#Fábrica-Concreta-FabricaDeJogo.java)
-    - [Classe de Teste AplicacaoGalaxia.java a Main](#Classe-de-Teste-AplicacaoGalaxia.java-a-Main)
+        - [Fábrica Abstrata FabricaDeConteudo](#Fábrica-Abstrata-FabricaDeConteudo)
+        - [Fábrica Concreta FabricaDeArtigo](#Fábrica-Concreta-FabricaDeArtigo)
+        - [Fábrica Concreta FabricaDeVideo](#Fábrica-Concreta-FabricaDeVideo)
+        - [Fábrica Concreta FabricaDeQuiz](#Fábrica-Concreta-FabricaDeQuiz)
+        - [Fábrica Concreta FabricaDeJogo](#Fábrica-Concreta-FabricaDeJogo)
+    - [Classe de Teste AplicacaoGalaxia a Main](#Classe-de-Teste-AplicacaoGalaxia-a-Main)
 - [Conclusão](#Conclusão)
 - [Bibliografia](#Bibliografia)
 - [Histórico de versão](#Histórico-de-versão)
@@ -67,7 +67,7 @@ A seguir, detalha-se a configuração do ambiente de desenvolvimento e a impleme
 
 A base para a aplicação do Factory Method é a existência de uma hierarquia de "produtos". No projeto "Galáxia Conectada", estes produtos são os diferentes tipos de conteúdo educacional que a plataforma oferecerá.
 
-#### Classe Abstrata Conteudo.java
+#### Classe Abstrata Conteudo
 
 A classe `Conteudo` serve como a **superclasse abstrata** para todos os tipos de materiais de estudo. Assim, ela define atributos comuns como `id`, `titulo`, `descricao`, `dataPublicacao` e `visibilidade`, além de um método abstrato `exibir()` que será implementado de forma específica por cada subclasse para determinar como o conteúdo é apresentado.
 
@@ -228,7 +228,7 @@ A figura 3 abaixo ilustra a estrutura da classe `TipoVisibilidade.java` no ambie
 
 
 
-#### Classe Concreta Artigo.java
+#### Classe Concreta Artigo
 
 A classe Artigo é uma especialização de Conteudo, a qual representa conteúdo textual. Além dos atributos herdados, possui textoHtml para o corpo do artigo e fonte para referências. 
 
@@ -293,7 +293,7 @@ A figura 4 abaixo ilustra a estrutura da classe `Artigo.java` no ambiente de des
 </div>
 
 
-#### Classe Concreta Video.java
+#### Classe Concreta Video
 
 A classe **Video** estende **Conteudo** para representar conteúdo audiovisual. Com isso, contém atributos específicos como urlVideo, duracaoSegundos e transcricao. 
 
@@ -370,7 +370,7 @@ A figura 5 abaixo ilustra a estrutura da classe `Video.java` no ambiente de dese
     <br>
 </div>
 
-#### Classe Concreta Quiz.java
+#### Classe Concreta Quiz
 
 Como um tipo de Conteudo interativo, a classe Quiz é destinada a avaliações ou testes de conhecimento. Dessa maneira, ela herda de Conteudo e adiciona atributos como tempoLimiteMin e tentativasPermitidas.
 
@@ -445,7 +445,7 @@ A figura 6 abaixo ilustra a estrutura da classe `Quiz.java` no ambiente de desen
     <br>
 </div>
 
-#### Classe Concreta Jogo.java
+#### Classe Concreta Jogo
 
 A classe Jogo representa conteúdo educacional em formato interativo e lúdico. Sendo uma subclasse de Conteudo, ela inclui atributos específicos como tipoJogo, nivelDificuldade e urlJogo. 
 
@@ -523,7 +523,7 @@ A figura 7 abaixo ilustra a estrutura da classe `Jogo.java` no ambiente de desen
 </div>
 
 
-#### Classe Auxiliar Usuario.java
+#### Classe Auxiliar Usuario
 
 A classe Usuario, localizada no pacote com.galaxiaconectada.domain, é fundamental para o sistema, pois representa os participantes da plataforma. Assim, no contexto desta implementação do Factory Method, ela é utilizada por métodos dentro das classes de Conteudo (ex: adicionarComentario) e para simular interações em Quiz e Jogo. 
 
@@ -701,17 +701,19 @@ A figura 8 abaixo ilustra a estrutura da classe `Usuario.java` no ambiente de de
 Com os "produtos" (Conteudo e suas subclasses) definidos, foram implementadas as fábricas responsáveis pela sua criação, seguindo o padrão Factory Method.
 
 
-#### Fábrica Abstrata FabricaDeConteudo.java
+#### Fábrica Abstrata FabricaDeConteudo
 
-#### Fábrica Concreta FabricaDeArtigo.java
 
-#### Fábrica Concreta FabricaDeVideo.java
 
-#### Fábrica Concreta FabricaDeQuiz.java
+#### Fábrica Concreta FabricaDeArtigo
 
-#### Fábrica Concreta FabricaDeJogo.java
+#### Fábrica Concreta FabricaDeVideo
 
-### Classe de Teste AplicacaoGalaxia.java a Main
+#### Fábrica Concreta FabricaDeQuiz
+
+#### Fábrica Concreta FabricaDeJogo
+
+### Classe de Teste AplicacaoGalaxia a Main
 
 ## Conclusão
 
