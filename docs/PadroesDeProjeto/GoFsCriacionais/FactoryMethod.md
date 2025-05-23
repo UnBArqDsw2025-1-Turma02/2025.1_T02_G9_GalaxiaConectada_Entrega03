@@ -64,7 +64,64 @@ A base para a aplicação do Factory Method é a existência de uma hierarquia d
 A classe `Conteudo` serve como a superclasse abstrata para todos os tipos de materiais de estudo. Ela define atributos comuns como `id`, `titulo`, `descricao`, `dataPublicacao` e `visibilidade`, além de um método abstrato `exibir()` que será implementado de forma específica por cada subclasse para determinar como o conteúdo é apresentado.
 
 Abaixo o código para `Conteudo.java`:
-```java
+```package com.galaxiaconectada.core; 
+
+import java.time.LocalDateTime;
+import com.galaxiaconectada.domain.Usuario; // Importa a classe Usuario
+
+// Não se pode criar um "Conteudo" genérico diretamente.
+public abstract class Conteudo {
+    private int id;
+    private String titulo;
+    private String descricao;
+    private LocalDateTime dataPublicacao;
+    private String visibilidade; // Ex: "PUBLICO", "PRIVADO"
+
+    // Chamado quando criado um objeto Conteudo (ou suas subclasses).
+    public Conteudo(int id, String titulo, String descricao, String visibilidade) {
+        this.id = id;
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.dataPublicacao = LocalDateTime.now(); // Define a data de publicação para agora
+        this.visibilidade = visibilidade;
+    }
+
+    // Este método é 'abstract'. Isso força cada subclasse de Conteudo
+    // (como Artigo, Video) a ter sua própria maneira de "se exibir".
+    public abstract void exibir();
+
+    public void adicionarComentario(Usuario usuario, String texto) {
+
+        System.out.println("Comentário de " + usuario.getNome() + " adicionado ao conteúdo '" + this.titulo + "': " + texto);
+    }
+
+    // métodos para obter os valores dos atributos privados.
+    public int getId() {
+        return id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public LocalDateTime getDataPublicacao() {
+        return dataPublicacao;
+    }
+
+    public String getVisibilidade() {
+        return visibilidade;
+    }
+
+    // Define como o objeto Conteudo será representado como texto
+    @Override
+    public String toString() {
+        return "Conteudo [id=" + id + ", titulo=" + titulo + ", dataPublicacao=" + dataPublicacao + "]";
+    }
+}
 
 ```
 
