@@ -143,7 +143,7 @@ As figuras 1 e 2 abaixo ilustra a estrutura da classe `Conteudo.java` no ambient
 <div align="center">
     Figura 1: Classe Abstrata Conteudo.java
     <br>
-    <img src="" width="500">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/ca5a0ec7a0d186a9874f2b158d99b222508d32c4/docs/PadroesDeProjeto/Imagens/conteudoJava1.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -153,7 +153,7 @@ As figuras 1 e 2 abaixo ilustra a estrutura da classe `Conteudo.java` no ambient
 <div align="center">
     Figura 2: Classe Abstrata Conteudo.java
     <br>
-    <img src="" width="500">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/ca5a0ec7a0d186a9874f2b158d99b222508d32c4/docs/PadroesDeProjeto/Imagens/ConteudoJava2.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -214,7 +214,7 @@ A figura 3 abaixo ilustra a estrutura da classe `TipoVisibilidade.java` no ambie
 <div align="center">
     Figura 3: TipoVisibilidade.java
     <br>
-    <img src="" width="500">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/ca5a0ec7a0d186a9874f2b158d99b222508d32c4/docs/PadroesDeProjeto/Imagens/TipoVisibilidadeJava.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -280,7 +280,7 @@ A figura 4 abaixo ilustra a estrutura da classe `Artigo.java` no ambiente de des
 <div align="center">
     Figura 4: Classe Concreta Artigo.java
     <br>
-    <img src="" width="500">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/ca5a0ec7a0d186a9874f2b158d99b222508d32c4/docs/PadroesDeProjeto/Imagens/ArtigoJava.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -358,7 +358,7 @@ A figura 5 abaixo ilustra a estrutura da classe `Video.java` no ambiente de dese
 <div align="center">
     Figura 5: Classe Concreta Video.java
     <br>
-    <img src="" width="500">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/ca5a0ec7a0d186a9874f2b158d99b222508d32c4/docs/PadroesDeProjeto/Imagens/VideoJava.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -430,7 +430,7 @@ A figura 6 abaixo ilustra a estrutura da classe `Quiz.java` no ambiente de desen
 <div align="center">
     Figura 6: Classe Concreta Quiz.java
     <br>
-    <img src="" width="500">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/ca5a0ec7a0d186a9874f2b158d99b222508d32c4/docs/PadroesDeProjeto/Imagens/QuizJava.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -506,7 +506,7 @@ A figura 7 abaixo ilustra a estrutura da classe `Jogo.java` no ambiente de desen
 <div align="center">
     Figura 7:  Classe Concreta Jogo.java
     <br>
-    <img src="" width="500">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/ca5a0ec7a0d186a9874f2b158d99b222508d32c4/docs/PadroesDeProjeto/Imagens/JogoJava.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
