@@ -689,5 +689,5 @@ A figura 8 abaixo ilustra a estrutura da classe `Usuario.java` no ambiente de de
 | Versão | Alteração | Responsável | Data |
 | - | - | - | - |
 | 1.0 | Elaboração do documento| Larissa Stéfane | 22/05/2025 |
-| 1.1 | Adição do COnteudo.java | Larissa Stéfane | 22/05/2025 |
+| 1.1 | Adição do Conteudo.java | Larissa Stéfane | 22/05/2025 |
 | 1.1 | Adição das outras classes de poduto da hierarquia| Larissa Stéfane | 23/05/2025 |
