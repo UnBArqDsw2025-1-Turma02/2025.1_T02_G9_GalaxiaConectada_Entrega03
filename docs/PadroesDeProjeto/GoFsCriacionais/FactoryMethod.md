@@ -9,6 +9,7 @@
     - [Preparação do Ambiente](#Preparação-do-Ambiente)
     - [Criação das Classes de Produto da Hierarquia de Conteúdo](Criação-das-Classes-de-Produto-da-Hierarquia-de-Conteúdo)
         - [Classe Abstrata Conteudo.java](#Classe-Abstrata-Conteudo.java)
+        - [Classe TipoVisibilidade.java](#Classe-TipoVisibilidade.java)
         - [Classe Concreta Artigo.java](#Classe-Concreta-Artigo.java)
         - [Classe Concreta Video.java](#Classe-Concreta-Video.java)
         - [Classe Concreta Quiz.java](#Classe-Concreta-Quiz.java)
@@ -48,6 +49,7 @@ No sistema "Galáxia Conectada", identificou-se a necessidade de criar diferente
 
 A concepção das classes de produto e suas inter-relações foi guiada pelo Diagrama de Classes previamente elaborado para o projeto:
 * **Diagrama de Classes de Referência:** [Diagrama de Classes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaClasses).
+* * **Diagrama de Classes de Componentes:** [Diagrama de Componentes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaComponentes).
 
 
 ## Desenvolvimento e Implementação
@@ -55,7 +57,11 @@ A concepção das classes de produto e suas inter-relações foi guiada pelo Dia
 A seguir, detalha-se a configuração do ambiente de desenvolvimento e a implementação em Java das classes que compõem a solução com o padrão Factory Method.
 
 ### Preparação do Ambiente
-O desenvolvimento foi realizado utilizando o **Visual Studio Code (VSCode)** como IDE principal. O ambiente Java foi configurado com o **OpenJDK JDK**. Para facilitar o desenvolvimento Java no VSCode, foi utilizado o pacote de extensões **"Extension Pack for Java"** da Microsoft, que provê funcionalidades como autocompletar, depuração e gerenciamento de projetos Java. A estrutura de pastas do projeto foi organizada seguindo as convenções de pacotes Java, com o código fonte principal localizado na pasta `src`.
+
+- O desenvolvimento foi realizado ao utilizar o [**Visual Studio Code (VSCode)**](https://code.visualstudio.com/) como IDE principal.
+- O ambiente Java foi configurado com o **OpenJDK JDK**.
+- Para facilitar o desenvolvimento Java no VSCode, foi utilizado o pacote de extensões **"Extension Pack for Java"** da Microsoft, que provê funcionalidades como autocompletar, depuração e gerenciamento de projetos Java.
+- A estrutura de pastas do projeto foi organizada seguindo as convenções de pacotes Java, com o código fonte principal localizado na pasta `src`.
 
 ### Criação das Classes de Produto da Hierarquia de Conteúdo
 
@@ -64,13 +70,14 @@ A base para a aplicação do Factory Method é a existência de uma hierarquia d
 #### Classe Abstrata Conteudo.java
 
 **Descrição:**
-A classe `Conteudo` serve como a superclasse abstrata para todos os tipos de materiais de estudo. Ela define atributos comuns como `id`, `titulo`, `descricao`, `dataPublicacao` e `visibilidade`, além de um método abstrato `exibir()` que será implementado de forma específica por cada subclasse para determinar como o conteúdo é apresentado.
+A classe `Conteudo` serve como a **superclasse abstrata** para todos os tipos de materiais de estudo. Assim, ela define atributos comuns como `id`, `titulo`, `descricao`, `dataPublicacao` e `visibilidade`, além de um método abstrato `exibir()` que será implementado de forma específica por cada subclasse para determinar como o conteúdo é apresentado.
 
 Abaixo o código para `Conteudo.java`:
-```package com.galaxiaconectada.core; 
+```
+package com.galaxiaconectada.core; 
 
-import java.time.LocalDateTime;
-import com.galaxiaconectada.domain.Usuario; // Importa a classe Usuario
+import com.galaxiaconectada.domain.Usuario;
+import java.time.LocalDateTime; // Importa a classe Usuario
 
 // Não se pode criar um "Conteudo" genérico diretamente.
 public abstract class Conteudo {
@@ -78,10 +85,10 @@ public abstract class Conteudo {
     private String titulo;
     private String descricao;
     private LocalDateTime dataPublicacao;
-    private String visibilidade; // Ex: "PUBLICO", "PRIVADO"
+    private TipoVisibilidade visibilidade; 
 
     // Chamado quando criado um objeto Conteudo (ou suas subclasses).
-    public Conteudo(int id, String titulo, String descricao, String visibilidade) {
+    public Conteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade) { 
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
@@ -115,18 +122,43 @@ public abstract class Conteudo {
         return dataPublicacao;
     }
 
-    public String getVisibilidade() {
-        return visibilidade;
+    public TipoVisibilidade getVisibilidade() { 
+        return visibilidade; 
     }
 
     // Define como o objeto Conteudo será representado como texto
     @Override
     public String toString() {
-        return "Conteudo [id=" + id + ", titulo=" + titulo + ", dataPublicacao=" + dataPublicacao + "]";
+        return "Conteudo [id=" + id + ", titulo=" + titulo + ", dataPublicacao=" + dataPublicacao + ", visibilidade=" + visibilidade.name() + "]";
     }
 }
 
 ```
+
+
+##### Imagem do código no VSCODE
+
+As figuras 1 e 2 abaixo ilustra a estrutura da classe Conteudo.java no ambiente de desenvolvimento VSCode.
+
+&lt;div align="center">
+Figura 1: Classe Abstrata Conteudo.java
+&lt;br>
+&lt;img src="LINK_DA_SUA_IMAGEM_CONTEUDO_JAVA_AQUI" alt="Classe Conteudo.java no VSCode" width="700">
+&lt;br>
+&lt;b>Autora:&lt;/b> &lt;a href="https://github.com/SkywalkerSupreme">Larissa Stéfane&lt;/a>.
+&lt;br>
+&lt;/div>
+
+&lt;div align="center">
+Figura 2: Classe Abstrata Conteudo.java
+&lt;br>
+&lt;img src="LINK_DA_SUA_IMAGEM_CONTEUDO_JAVA_AQUI" alt="Classe Conteudo.java no VSCode" width="700">
+&lt;br>
+&lt;b>Autora:&lt;/b> &lt;a href="https://github.com/SkywalkerSupreme">Larissa Stéfane&lt;/a>.
+&lt;br>
+&lt;/div>
+
+#### Classe TipoVisibilidade.java
 
 #### Classe Concreta Artigo.java
 
