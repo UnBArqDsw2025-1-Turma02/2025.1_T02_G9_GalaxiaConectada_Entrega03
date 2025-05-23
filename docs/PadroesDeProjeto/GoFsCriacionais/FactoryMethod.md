@@ -25,12 +25,15 @@
 - [Bibliografia](#Bibliografia)
 - [Histórico de versão](#Histórico-de-versão)
 
-## 1. Objetivo {#1-objetivo}
-
-O presente documento tem como principal objetivo detalhar o processo de design e implementação do padrão de projeto criacional **Factory Method** no contexto da plataforma "Galáxia Conectada". Especificamente, este trabalho foca na aplicação do padrão para gerenciar a criação de diversos tipos de objetos de `Conteudo` (como Artigos, Vídeos, Quizzes e Jogos), ao buscar promover uma arquitetura de software mais flexível, extensível e de fácil manutenção para esta funcionalidade central do sistema.
+## Introdução
 
 
-## 2. Metodologia: O Padrão Factory Method {#2-metodologia-o-padrao-factory-method}
+
+## Objetivo
+
+
+
+## Metodologia
 
 O **Factory Method** é um padrão de projeto criacional que propõe uma solução para o problema de criação de objetos sem que a classe cliente precise especificar a classe concreta do objeto a ser criado. Com isso, ele define uma interface (ou classe abstrata) com um método para criar um objeto – o "método fábrica" – mas permite que as subclasses alterem o tipo de objeto que será efetivamente criado. Isso promove o baixo acoplamento, pois o cliente interage com a interface da fábrica e do produto, desconhecendo as implementações concretas.
 
@@ -47,19 +50,18 @@ A concepção das classes de produto e suas inter-relações foi guiada pelo Dia
 * **Diagrama de Classes de Referência:** [Diagrama de Classes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaClasses).
 
 
-## 3. Desenvolvimento e Implementação {#3-desenvolvimento-e-implementacao}
+## Desenvolvimento e Implementação
 
 A seguir, detalha-se a configuração do ambiente de desenvolvimento e a implementação em Java das classes que compõem a solução com o padrão Factory Method.
 
-### 3.1. Preparação do Ambiente {#31-preparacao-do-ambiente}
-
+### Preparação do Ambiente
 O desenvolvimento foi realizado utilizando o **Visual Studio Code (VSCode)** como IDE principal. O ambiente Java foi configurado com o **OpenJDK JDK**. Para facilitar o desenvolvimento Java no VSCode, foi utilizado o pacote de extensões **"Extension Pack for Java"** da Microsoft, que provê funcionalidades como autocompletar, depuração e gerenciamento de projetos Java. A estrutura de pastas do projeto foi organizada seguindo as convenções de pacotes Java, com o código fonte principal localizado na pasta `src`.
 
-### 3.2. Criação das Classes de Produto (Hierarquia de Conteúdo) {#32-criacao-das-classes-de-produto-hierarquia-de-conteudo}
+### Criação das Classes de Produto da Hierarquia de Conteúdo
 
 A base para a aplicação do Factory Method é a existência de uma hierarquia de "produtos". No projeto "Galáxia Conectada", estes produtos são os diferentes tipos de conteúdo educacional que a plataforma oferecerá.
 
-#### 3.2.1. Classe Abstrata `Conteudo.java` {#321-classe-abstrata-conteudojd}
+#### Classe Abstrata Conteudo.java
 
 **Descrição:**
 A classe `Conteudo` serve como a superclasse abstrata para todos os tipos de materiais de estudo. Ela define atributos comuns como `id`, `titulo`, `descricao`, `dataPublicacao` e `visibilidade`, além de um método abstrato `exibir()` que será implementado de forma específica por cada subclasse para determinar como o conteúdo é apresentado.
@@ -126,9 +128,40 @@ public abstract class Conteudo {
 
 ```
 
+#### Classe Concreta Artigo.java
+
+#### Classe Concreta Video.java
+
+#### Classe Concreta Quiz.java
+
+#### Classe Concreta Jogo.java
+
+#### Classe Auxiliar Usuario.java
+
+
+### Criação das Classes de Fábrica
+
+#### Fábrica Abstrata FabricaDeConteudo.java
+
+#### Fábrica Concreta FabricaDeArtigo.java
+
+#### Fábrica Concreta FabricaDeVideo.java
+
+#### Fábrica Concreta FabricaDeQuiz.java
+
+#### Fábrica Concreta FabricaDeJogo.java
+
+### Classe de Teste AplicacaoGalaxia.java a Main
+
+## Conclusão
+
+## Bibliografia 
+
+
 ## Histórico de versão
 
 | Versão | Alteração | Responsável | Data |
 | - | - | - | - |
 | 1.0 | Elaboração do documento| Larissa Stéfane | 22/05/2025 |
 | 1.1 | Adição do COnteudo.java | Larissa Stéfane | 22/05/2025 |
+| 1.1 | Adição das outras classes de poduto da hierarquia| Larissa Stéfane | 23/05/2025 |
