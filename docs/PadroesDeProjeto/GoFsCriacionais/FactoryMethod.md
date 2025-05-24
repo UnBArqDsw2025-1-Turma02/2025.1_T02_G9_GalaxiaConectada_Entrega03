@@ -981,35 +981,166 @@ A figura 15 abaixo ilustra a estrutura da classe `FabricaDeJogo.java` no ambient
 
 ### Aplicação do Factory Method para Papéis de Usuário
 
+Além da criação de diferentes tipos de `Conteudo`, o padrão Factory Method também foi aplicado para gerenciar a criação e atribuição de diferentes **papéis** aos usuários da plataforma "Galáxia Conectada". Isso permite que um objeto `Usuario` base possa assumir funcionalidades e atributos específicos de `Aluno`, `Instrutor`, `ProfessorVoluntario`, `Administrador` e `Moderador` , de forma flexível e desacoplada.
+
 ### Interface Produto PapelUsuario
+
+A interface `PapelUsuario` define o contrato comum para todos os papéis específicos que um usuário pode desempenhar na plataforma. Ela estabelece os métodos essenciais que cada papel deve implementar, como `getTipoPapel()` para identificar o papel e `exibirDetalhesDoPapel()` para apresentar informações específicas daquela função.
+
+Abaixo o código para `PapelUsuario.java`:
+
+```
+package com.galaxiaconectada.domain.papeis;
+
+  public interface PapelUsuario {
+      String getTipoPapel(); // Retorna uma string como "Aluno", "Instrutor"
+      void exibirDetalhesDoPapel(); // Mostra informações específicas do papel
+      
+  }
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+##### Imagem do código no VSCODE
+
+A figura 16 abaixo ilustra a estrutura da classe `PapelUsuario.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 16: Interface PapelUsuario.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 
 #### Classes Concretas de Produto e Papéis
 
+As classes concretas a seguir implementam a interface PapelUsuario e representam os diferentes papéis que um usuário pode ter, cada uma com seus atributos e comportamentos específicos, conforme definido na tabela de classes do projeto.
+
 #### Classe Aluno
+
+A classe Aluno implementa PapelUsuario e encapsula os dados e funcionalidades específicas de um usuário enquanto estudante na plataforma, como seu progresso geral e o último acesso a trilhas educacionais.
+
+Abaixo o código para `Aluno.java`
+
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+
 
 #### Classe Instrutor
 
+
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
 #### Classe ProfessorVoluntario
+
+
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
 
 #### Classe Administrador
 
+
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+
 #### Classe Moderador
+
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
 
 ### Criação das Classes de Produto da Hierarquia de Usuário
 
 #### Fábrica Abstrata FabricaDePapelUsuario
 
+
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
 #### Fábricas Concretas de Papel
+
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
 
 #### Fábrica FabricaDeAluno
 
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
 #### Fábrica FabricaDeInstrutor
+
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
 
 #### Fábrica FabricaDeProfessorVoluntario
 
+
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
 #### Fábrica FabricaDeAdministrador
 
+
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+
 #### Fábrica FabricaDeModerador
+
+```
+
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
 
 ### Classe de Teste AplicacaoGalaxia a Main
 
