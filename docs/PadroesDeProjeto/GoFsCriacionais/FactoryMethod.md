@@ -1031,7 +1031,18 @@ Abaixo o código para `Aluno.java`
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+##### Imagem do código no VSCODE
 
+A figura 17 abaixo ilustra a estrutura da classe `Aluno.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 17: Classe Aluno.java (Papel)
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 
 #### Classe Instrutor
@@ -1043,6 +1054,20 @@ Abaixo o código para `Aluno.java`
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+##### Imagem do código no VSCODE
+
+A figura 18 abaixo ilustra a estrutura da classe `Instrutor.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 18: Classe Instrutor.java (Papel)
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
 #### Classe ProfessorVoluntario
 
 
@@ -1051,6 +1076,20 @@ Abaixo o código para `Aluno.java`
 
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+##### Imagem do código no VSCODE
+
+A figura 19 abaixo ilustra a estrutura da classe `ProfessorVoluntario.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 19: Classe ProfessorVoluntario.java (Papel)
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 
 
@@ -1063,7 +1102,18 @@ Abaixo o código para `Aluno.java`
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+##### Imagem do código no VSCODE
 
+A figura 20 abaixo ilustra a estrutura da classe `Administrador.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 20: Classe Administrador.java (Papel)
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 #### Classe Moderador
 
@@ -1073,6 +1123,18 @@ Abaixo o código para `Aluno.java`
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+##### Imagem do código no VSCODE
+
+A figura 21 abaixo ilustra a estrutura da classe `Moderador.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 21: Classe Moderador.java (Papel)
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 ### Criação das Classes de Produto da Hierarquia de Usuário
 
@@ -1155,5 +1217,8 @@ Abaixo o código para `Aluno.java`
 | - | - | - | - |
 | 1.0 | Elaboração do documento| Larissa Stéfane | 22/05/2025 |
 | 1.1 | Adição do Conteudo.java | Larissa Stéfane | 22/05/2025 |
-| 1.1 | Adição das outras classes de poduto da hierarquia| Larissa Stéfane | 23/05/2025 |
-| 1.2 | Adição das fábricas de contudo | Larissa Stéfane | 23/05/2025 |
+| 1.2 | Adição das outras classes de poduto da hierarquia| Larissa Stéfane | 23/05/2025 |
+| 1.3 | Adição das fábricas de contudo | Larissa Stéfane | 23/05/2025 |
+| 1.4 | Adição das outras classes dos usuários| Larissa Stéfane | 23/05/2025 |
+| 1.5 | Adição das fábricas de Usuários | Larissa Stéfane | 23/05/2025 |
+
