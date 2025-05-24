@@ -9,6 +9,7 @@
   - [Preparação do Ambiente](#preparação-do-ambiente)
 - [Aplicação do Factory Method para Papéis de Conteúdo](#aplicação-do-factory-method-para-papéis-de-conteúdo)
   - [Criação das Classes de Produto da Hierarquia de Conteúdo](#criação-das-classes-de-produto-da-hierarquia-de-conteúdo)
+  - [Modelagem do Factory Method para Conteúdo](#Modelagem-do-Factory-Method-para-Conteúdo)
     - [Classe Abstrata Conteudo](#classe-abstrata-conteudo)
     - [Classe TipoVisibilidade](#classe-tipovisibilidade)
     - [Classe Concreta Artigo](#classe-concreta-artigo)
@@ -23,6 +24,7 @@
     - [Fábrica Concreta FabricaDeQuiz](#fábrica-concreta-fabricadequiz)
     - [Fábrica Concreta FabricaDeJogo](#fábrica-concreta-fabricadejogo)
 - [Aplicação do Factory Method para Papéis de Usuário](#aplicação-do-factory-method-para-papéis-de-usuário)
+  - [Modelagem do Factory Method para Usuário](Modelagem-do-Factory-Method-para-Usuário)
   - [Interface Produto PapelUsuario](#interface-produto-papelusuario)
   - [Classes Concretas de Produto e Papéis](#classes-concretas-de-produto-e-papéis)
     - [Classe Aluno](#classe-aluno)
@@ -95,9 +97,8 @@ A concepção das classes de produto e suas inter-relações serão guiadas por 
 4. Implementação das fábricas concretas (ConcreteCreator), cada uma responsável por instanciar um tipo específico de conteúdo ou usuário.
 5. Criação de uma classe Main para testes, na qual serão instanciadas as fábricas e verificado o retorno dos objetos criados.
 
-## Desenvolvimento e Implementação
 
-A seguir, detalha-se a configuração do ambiente de desenvolvimento e a implementação em Java das classes que compõem a solução com o padrão Factory Method.
+## Desenvolvimento e Implementação
 
 ### Preparação do Ambiente
 
@@ -106,9 +107,16 @@ A seguir, detalha-se a configuração do ambiente de desenvolvimento e a impleme
 - Para facilitar o desenvolvimento Java no VSCode, foi utilizado o pacote de extensões **"Extension Pack for Java"** da Microsoft, que provê funcionalidades como autocompletar, depuração e gerenciamento de projetos Java.
 - A estrutura de pastas do projeto foi organizada seguindo as convenções de pacotes Java, com o código fonte principal localizado na pasta `src`.
 
-### Criação das Classes de Produto da Hierarquia de Conteúdo
+## Criação das Classes de Produto da Hierarquia de Conteúdo
 
 A base para a aplicação do Factory Method é a existência de uma hierarquia de "produtos". No projeto "Galáxia Conectada", estes produtos são os diferentes tipos de conteúdo educacional que a plataforma oferecerá.
+
+### Modelagem do Factory Method para Conteúdo
+
+
+
+
+
 
 ### Aplicação do Factory Method para Papéis de Conteúdo
 
@@ -988,9 +996,18 @@ A figura 15 abaixo ilustra a estrutura da classe `FabricaDeJogo.java` no ambient
     <br>
 </div>
 
-### Aplicação do Factory Method para Papéis de Usuário
+## Aplicação do Factory Method para Papéis de Usuário
 
 Além da criação de diferentes tipos de `Conteudo`, o padrão Factory Method também foi aplicado para gerenciar a criação e atribuição de diferentes **papéis** aos usuários da plataforma "Galáxia Conectada". Isso permite que um objeto `Usuario` base possa assumir funcionalidades e atributos específicos de `Aluno`, `Instrutor`, `ProfessorVoluntario`, `Administrador` e `Moderador` , de forma flexível e desacoplada.
+
+### Modelagem do Factory Method para Usuário
+
+
+
+
+
+
+
 
 ### Interface Produto PapelUsuario
 
