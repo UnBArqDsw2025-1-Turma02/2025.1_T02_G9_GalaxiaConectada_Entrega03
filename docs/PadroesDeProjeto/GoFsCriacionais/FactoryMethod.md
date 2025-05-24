@@ -1491,7 +1491,9 @@ A figura 21 abaixo ilustra a estrutura da classe `Moderador.java` no ambiente de
 
 #### Fábrica Abstrata FabricaDePapelUsuario
 
+A classe FabricaDePapelUsuario é a "Creator" abstrata para os papéis de usuário. Ela declara o método fábrica abstrato criarPapel(), que será implementado pelas subclasses concretas para instanciar um tipo específico de PapelUsuario. Também inclui um método de conveniência, atribuirPapelParaUsuario(), que utiliza o método fábrica para criar e associar o papel a um objeto Usuario.
 
+Abaixo o código para `FabricaDePapelUsuario.java`
 
 ```
 
@@ -1521,6 +1523,10 @@ A figura 22 abaixo ilustra a estrutura da classe `FabricaDePapelUsuario.java` no
 
 #### Fábrica FabricaDeAluno
 
+FabricaDeAluno estende FabricaDePapelUsuario e implementa criarPapel() para instanciar e retornar objetos Aluno, utilizando os detalhes fornecidos para configurar o novo papel.
+
+Abaixo o código para `FabricaDeAluno.java`
+
 ```
 
 
@@ -1542,6 +1548,9 @@ A figura 23 abaixo ilustra a estrutura da classe `FabricaDeAluno.java` no ambien
 
 #### Fábrica FabricaDeInstrutor
 
+Esta fábrica é responsável por criar instâncias do papel Instrutor, configurando-o com dados como biografia e especialidades.
+
+Abaixo o código para `FabricaDeInstrutor.java`
 ```
 
 
@@ -1563,6 +1572,9 @@ A figura 24 abaixo ilustra a estrutura da classe `FabricaDeInstrutor.java` no am
 
 #### Fábrica FabricaDeProfessorVoluntario
 
+FabricaDeProfessorVoluntario cria instâncias do papel ProfessorVoluntario, configurando atributos como área de especialidade.
+
+Abaixo o código para `FabricaDeProfessorVoluntario.java`
 
 ```
 
@@ -1585,6 +1597,9 @@ A figura 25 abaixo ilustra a estrutura da classe `FabricaDeProfessorVoluntario.j
 
 #### Fábrica FabricaDeAdministrador
 
+Esta fábrica é especializada na criação de papéis de Administrador, configurando suas permissões e nível de acesso.
+
+Abaixo o código para `FabricaDeAdministrador.java`
 
 ```
 
@@ -1606,6 +1621,12 @@ A figura 26 abaixo ilustra a estrutura da classe `FabricaDeAdministrador.java` n
 </div>
 
 #### Fábrica FabricaDeModerador
+
+FabricaDeModerador é responsável por criar papéis de Moderador, definindo atributos como o nível de moderação.
+
+
+Abaixo o código para `FabricaDeModerador.java `
+
 
 ```
 
