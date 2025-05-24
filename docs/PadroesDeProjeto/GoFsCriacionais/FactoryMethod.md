@@ -1496,7 +1496,40 @@ A classe FabricaDePapelUsuario é a "Creator" abstrata para os papéis de usuár
 Abaixo o código para `FabricaDePapelUsuario.java`
 
 ```
+package com.galaxiaconectada.fabricas;
 
+    import com.galaxiaconectada.domain.Usuario;
+    import com.galaxiaconectada.domain.papeis.PapelUsuario; // A interface que os produtos implementam
+    import java.util.Map;
+
+    //Fábrica Abstrata (Creator) para criar diferentes tipos de PapelUsuario.
+     
+    public abstract class FabricaDePapelUsuario {
+
+        public abstract PapelUsuario criarPapel(Usuario usuarioReferencia, Map<String, Object> detalhesEspecificos);
+
+        /**
+         * Um método de conveniência que usa o factory method para criar um papel, em seguida, o atribui ao usuário fornecido.
+         *
+         * @param usuario O Usuário que receberá o novo papel.
+         * @param detalhesPapel Os detalhes para a criação do papel.
+         * @return O objeto Usuario atualizado com o novo papel, ou o próprio usuário se o papel não puder ser criado.
+         */
+        public Usuario atribuirPapelParaUsuario(Usuario usuario, Map<String, Object> detalhesPapel) {
+            PapelUsuario novoPapel = criarPapel(usuario, detalhesPapel);
+
+            if (novoPapel != null && usuario != null) {
+               
+                usuario.setPapelPrincipal(novoPapel);
+                System.out.println("[FÁBRICA DE PAPEL] Papel '" + novoPapel.getTipoPapel() + "' atribuído com sucesso ao usuário: " + usuario.getNome());
+            } else if (usuario == null) {
+                System.out.println("[FÁBRICA DE PAPEL ERRO] Usuário de referência não pode ser nulo para atribuir papel.");
+            } else {
+                System.out.println("[FÁBRICA DE PAPEL ERRO] Não foi possível criar o papel para o usuário: " + usuario.getNome());
+            }
+            return usuario;
+        }
+    }
 
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
@@ -1528,7 +1561,37 @@ FabricaDeAluno estende FabricaDePapelUsuario e implementa criarPapel() para inst
 Abaixo o código para `FabricaDeAluno.java`
 
 ```
+package com.galaxiaconectada.fabricas;
 
+import com.galaxiaconectada.domain.Usuario;
+import com.galaxiaconectada.domain.papeis.Aluno; // Importa a classe Aluno
+import com.galaxiaconectada.domain.papeis.PapelUsuario;
+import java.time.LocalDateTime;
+import java.util.Map;
+
+/**
+ * Fábrica Concreta (ConcreteCreator) especializada em criar objetos do tipo Aluno.
+ */
+public class FabricaDeAluno extends FabricaDePapelUsuario {
+
+    @Override
+    public PapelUsuario criarPapel(Usuario usuarioReferencia, Map<String, Object> detalhesEspecificos) {
+        System.out.println("[FabricaDeAluno] Criando papel de Aluno...");
+
+        // Extrai os detalhes específicos para um Aluno do Map.
+        float progressoGeral = 0.0f;
+        if (detalhesEspecificos.get("progressoGeral") instanceof Number) {
+            progressoGeral = ((Number) detalhesEspecificos.get("progressoGeral")).floatValue();
+        } else {
+            System.out.println("[FabricaDeAluno] 'progressoGeral' não fornecido ou tipo inválido, usando padrão: 0.0f");
+        }
+
+        LocalDateTime ultimoAcessoTrilha = (LocalDateTime) detalhesEspecificos.getOrDefault("ultimoAcessoTrilha", LocalDateTime.now());
+
+        // Cria e retorna uma nova instância de Aluno
+        return new Aluno(progressoGeral, ultimoAcessoTrilha);
+    }
+}
 
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
@@ -1552,7 +1615,37 @@ Esta fábrica é responsável por criar instâncias do papel Instrutor, configur
 
 Abaixo o código para `FabricaDeInstrutor.java`
 ```
+package com.galaxiaconectada.fabricas;
 
+import com.galaxiaconectada.domain.Usuario;
+import com.galaxiaconectada.domain.papeis.Instrutor; // Importa a classe Instrutor
+import com.galaxiaconectada.domain.papeis.PapelUsuario;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+
+//Fábrica Concreta especializada em criar objetos do tipo Instrutor.
+public class FabricaDeInstrutor extends FabricaDePapelUsuario {
+
+    @Override
+    public PapelUsuario criarPapel(Usuario usuarioReferencia, Map<String, Object> detalhesEspecificos) {
+        System.out.println("[FabricaDeInstrutor] Criando papel de Instrutor...");
+
+        String biografiaCurta = (String) detalhesEspecificos.getOrDefault("biografiaCurta", "Instrutor(a) da plataforma Galáxia Conectada.");
+
+        float avaliacaoMedia = 0.0f;
+        if (detalhesEspecificos.get("avaliacaoMedia") instanceof Number) {
+            avaliacaoMedia = ((Number) detalhesEspecificos.get("avaliacaoMedia")).floatValue();
+        } else {
+             System.out.println("[FabricaDeInstrutor] 'avaliacaoMedia' não fornecida ou tipo inválido, usando padrão: 0.0f");
+        }
+
+        @SuppressWarnings("unchecked") // Usado para suprimir aviso de cast não verificado, use com cautela
+        List<String> especialidades = (List<String>) detalhesEspecificos.getOrDefault("especialidades", new ArrayList<String>());
+
+        return new Instrutor(biografiaCurta, avaliacaoMedia, especialidades);
+    }
+}
 
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
@@ -1577,7 +1670,30 @@ FabricaDeProfessorVoluntario cria instâncias do papel ProfessorVoluntario, conf
 Abaixo o código para `FabricaDeProfessorVoluntario.java`
 
 ```
+package com.galaxiaconectada.fabricas;
 
+import com.galaxiaconectada.domain.Usuario;
+import com.galaxiaconectada.domain.papeis.ProfessorVoluntario;
+import com.galaxiaconectada.domain.papeis.PapelUsuario;
+import java.util.Map;
+
+public class FabricaDeProfessorVoluntario extends FabricaDePapelUsuario {
+
+    @Override
+    public PapelUsuario criarPapel(Usuario usuarioReferencia, Map<String, Object> detalhesEspecificos) {
+        System.out.println("[FabricaDeProfessorVoluntario] Criando papel de Professor Voluntário...");
+
+        String areaEspecialidade = (String) detalhesEspecificos.getOrDefault("areaEspecialidade", "Não especificada");
+        int artigosRevisados = 0;
+         if (detalhesEspecificos.get("artigosRevisados") instanceof Number) {
+             artigosRevisados = ((Number) detalhesEspecificos.get("artigosRevisados")).intValue();
+         } else {
+             System.out.println("[FabricaDeProfessorVoluntario] 'artigosRevisados' não fornecido ou tipo inválido, usando padrão: 0");
+         }
+
+        return new ProfessorVoluntario(areaEspecialidade, artigosRevisados);
+    }
+}
 
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
@@ -1602,6 +1718,34 @@ Esta fábrica é especializada na criação de papéis de Administrador, configu
 Abaixo o código para `FabricaDeAdministrador.java`
 
 ```
+package com.galaxiaconectada.fabricas;
+
+import com.galaxiaconectada.domain.Usuario;
+import com.galaxiaconectada.domain.papeis.Administrador;
+import com.galaxiaconectada.domain.papeis.PapelUsuario;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+
+public class FabricaDeAdministrador extends FabricaDePapelUsuario {
+
+    @Override
+    public PapelUsuario criarPapel(Usuario usuarioReferencia, Map<String, Object> detalhesEspecificos) {
+        System.out.println("[FabricaDeAdministrador] Criando papel de Administrador...");
+
+        @SuppressWarnings("unchecked")
+        List<String> permissoesGlobais = (List<String>) detalhesEspecificos.getOrDefault("permissoesGlobais", new ArrayList<String>());
+
+        int nivelAcesso = 1; // Nível padrão
+         if (detalhesEspecificos.get("nivelAcesso") instanceof Number) {
+             nivelAcesso = ((Number) detalhesEspecificos.get("nivelAcesso")).intValue();
+         } else {
+             System.out.println("[FabricaDeAdministrador] 'nivelAcesso' não fornecido ou tipo inválido, usando padrão: 1");
+         }
+
+        return new Administrador(permissoesGlobais, nivelAcesso);
+    }
+}
 
 
 ```
@@ -1629,6 +1773,26 @@ Abaixo o código para `FabricaDeModerador.java `
 
 
 ```
+package com.galaxiaconectada.fabricas;
+
+import com.galaxiaconectada.domain.Usuario;
+import com.galaxiaconectada.domain.papeis.Moderador;
+import com.galaxiaconectada.domain.papeis.PapelUsuario;
+import java.time.LocalDateTime;
+import java.util.Map;
+
+public class FabricaDeModerador extends FabricaDePapelUsuario {
+
+    @Override
+    public PapelUsuario criarPapel(Usuario usuarioReferencia, Map<String, Object> detalhesEspecificos) {
+        System.out.println("[FabricaDeModerador] Criando papel de Moderador...");
+
+        String nivelModeracao = (String) detalhesEspecificos.getOrDefault("nivelModeracao", "JUNIOR");
+        LocalDateTime dataInicioModeracao = (LocalDateTime) detalhesEspecificos.getOrDefault("dataInicioModeracao", LocalDateTime.now());
+
+        return new Moderador(nivelModeracao, dataInicioModeracao);
+    }
+}
 
 
 ```
