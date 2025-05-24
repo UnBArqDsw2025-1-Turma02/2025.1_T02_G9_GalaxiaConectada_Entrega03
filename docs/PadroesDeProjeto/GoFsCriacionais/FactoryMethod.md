@@ -1492,19 +1492,31 @@ A figura 21 abaixo ilustra a estrutura da classe `Moderador.java` no ambiente de
 #### Fábrica Abstrata FabricaDePapelUsuario
 
 
+
 ```
 
 
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+##### Imagem do código no VSCODE
+
+A figura 22 abaixo ilustra a estrutura da classe `FabricaDePapelUsuario.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 22: Fábrica Abstrata FabricaDePapelUsuario.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 
 #### Fábricas Concretas de Papel
 
-```
 
-
-```
-<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
 
 #### Fábrica FabricaDeAluno
@@ -1515,6 +1527,18 @@ A figura 21 abaixo ilustra a estrutura da classe `Moderador.java` no ambiente de
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+##### Imagem do código no VSCODE
+
+A figura 23 abaixo ilustra a estrutura da classe `FabricaDeAluno.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 23: Fábrica FabricaDeAluno.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 #### Fábrica FabricaDeInstrutor
 
@@ -1524,6 +1548,18 @@ A figura 21 abaixo ilustra a estrutura da classe `Moderador.java` no ambiente de
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+##### Imagem do código no VSCODE
+
+A figura 24 abaixo ilustra a estrutura da classe `FabricaDeInstrutor.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 24: Fábrica FabricaDeInstrutor.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 #### Fábrica FabricaDeProfessorVoluntario
 
@@ -1534,6 +1570,18 @@ A figura 21 abaixo ilustra a estrutura da classe `Moderador.java` no ambiente de
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+##### Imagem do código no VSCODE
+
+A figura 25 abaixo ilustra a estrutura da classe `FabricaDeProfessorVoluntario.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 25: Fábrica FabricaDeProfessorVoluntario.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 #### Fábrica FabricaDeAdministrador
 
@@ -1544,7 +1592,18 @@ A figura 21 abaixo ilustra a estrutura da classe `Moderador.java` no ambiente de
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+##### Imagem do código no VSCODE
 
+A figura 26 abaixo ilustra a estrutura da classe `FabricaDeAdministrador.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 26: Fábrica FabricaDeAdministrador.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 #### Fábrica FabricaDeModerador
 
@@ -1554,6 +1613,19 @@ A figura 21 abaixo ilustra a estrutura da classe `Moderador.java` no ambiente de
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+
+##### Imagem do código no VSCODE
+
+A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 27: Fábrica FabricaDeModerador.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 ### Classe de Teste AplicacaoGalaxia a Main
 
