@@ -7,9 +7,11 @@
 - [Objetivo](#objetivo)
 - [Metodologia](#metodologia)
 - [Desenvolvimento e Implementação](#desenvolvimento-e-implementação)
+- [Modelagem do Builder Para Módulo](#Modelagem-do-Builder-Para-Módulo)
 - [Builder para a Classe Modulo](#Builder-para-a-Classe-Modulo)
   - [Classe Produto Modulo](#Classe-Produto-Modulo)
   - [Classe Builder ModuloBuilder](#Classe-Builder-ModuloBuilder)
+- [Modelagem do Builder Para Trilhas de Aprendizado](#Modelagem-do-Builder-Para-Trilhas-de-Aprendizado)
 - [Builder para a Classe TrilhaEducacional](#Builder-para-a-Classe-TrilhaEducacional)
   -  [Classe Produto TrilhaEducacional](#Classe-Produto-TrilhaEducacional)
   -  [Classe Builder TrilhaEducacionalBuilder](#Classe-Builder-TrilhaEducacionalBuilder)
@@ -79,29 +81,139 @@ O padrão **Builder**, como já foi explicado, é um padrão de projeto criacion
 
 ## Desenvolvimento e Implementação
 
+A seguir, são apresentadas as classes envolvidas na implementação do padrão Builder para `Modulo` e `TrilhaEducacional`, os quais foram desenvolvidos ao utilizar o o [**Visual Studio Code (VSCode)**](https://code.visualstudio.com/) como IDE principal.
 
-## Builder para a Classe Modulo
+
+## Modelagem do Builder Para Módulo
+
+A figura 1 abaixo mostra a modelagem do campo Módulo
 
 
 ### Classe Produto Modulo
 
+A classe `Modulo` é um componente que funciona como um contêiner temático que agrupa e organiza diversos objetos `Conteudo` (como artigos, vídeos, quizzes e jogos) sobre um tema dentro do escopo maior de uma `TrilhaEducacional`. Isso porque, ao segmentar o aprendizado em módulos, facilita-se a progressão do usuário e a organização do material didático.
+
+ Cada `Modulo` é caracterizado por um identificador único (`id`), um `titulo` descritivo, uma `ordem` de apresentação dentro da trilha, uma `descricaoBreve` e, crucialmente, a coleção de `Conteudo`s que o compõem. 
+
+Abaixo o código para `Modulo.java` 
+
+```
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+##### Imagem do código no VSCODE
+
+A figura 2 abaixo ilustra a estrutura da classe `Modulo.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 2: Classe Produto Modulo.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
 ### Classe Builder ModuloBuilder
 
-## Builder para a Classe TrilhaEducacional
+O ModuloBuilder tem como objetivo principal simplificar e tornar mais robusto e legível o processo de criação de instâncias da classe Modulo. 
+- Dado que um módulo é definido por vários atributos (ID, título, ordem, descrição) e pode conter uma lista variável de Conteudos, o ModuloBuilder oferece uma interface fluente.
+
+Abaixo o código para `ModuloBuilder.java` 
+
+```
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+##### Imagem do código no VSCODE
+
+A figura 3 abaixo ilustra a estrutura da classe `ModuloBuilder.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 3: Classe ModuloBuilder.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+## Modelagem do Builder Para Trilhas de Aprendizado
+
+A figura 4 abaixo mostra a modelagem do campo Trilhas de Aprendizado
+
 
 
 ### Classe Produto TrilhaEducacional
 
+A TrilhaEducacional é a entidade central que organiza e define um percurso de aprendizado completo e estruturado dentro da plataforma "Galáxia Conectada". Dessa maneira, o objetivo principal é guiar o usuário através de uma sequência lógica e progressiva de Modulos, cada um focado em subtemas ou habilidades específicas. 
+- Além de agregar a coleção ordenada de Modulos, a TrilhaEducacional armazena metadados cruciais como seu id único, titulo principal, descricao detalhada, nivel de dificuldade (ex: Iniciante, Avançado), categoria temática, status de publicada e uma imagemUrl representativa. 
 
-### Classe Builder TrilhaEducacionalBuilder
+Abaixo o código para `TrilhaEducacional.java` 
+
+```
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+##### Imagem do código no VSCODE
+
+A figura 5 abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 5:  Classe Produto TrilhaEducacional.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+### Builder para a Classe TrilhaEducacional
+
+A TrilhaEducacionalBuilder é a classe designada para orquestrar e simplificar a construção de objetos TrilhaEducacional, por isso, o seu principal objetivo é fornecer uma API clara, intuitiva e fluente para montar uma trilha passo a passo ao configurar seus diversos atributos (como título, descrição, nível, categoria) e agregar os Modulos que a compõem (os quais podem ser, por sua vez, construídos usando o ModuloBuilder). 
+
+Abaixo o código para `TrilhaEducacionalBuilder.java` 
+
+```
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+##### Imagem do código no VSCODE
+
+A figura 6 abaixo ilustra a estrutura da classe `TrilhaEducacionalBuilder.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 6: Classe TrilhaEducacionalBuilder.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 ## Classe de Teste AplicacaoGalaxia
 
+Para testar as classes e os códigos, foi criada uma main chamada AplicacaoGalaxia. O código dela se encontra abaixo:
 
 
 ## Conclusão
 
-
+A aplicação do padrão Builder para a construção dos objetos Modulo e TrilhaEducacional no projeto "Galáxia Conectada" demonstrou ser uma estratégia eficaz para lidar com a complexidade inerente à criação desses objetos compostos. Com isso, o uso de uma interface fluente nos Builders (ModuloBuilder e TrilhaEducacionalBuilder) tornou o processo de instanciação mais legível, passo a passo e menos propenso a erros, especialmente quando comparado a construtores com um grande número de parâmetros.
 
 ## Bibliografia 
 
@@ -126,3 +238,4 @@ O padrão **Builder**, como já foi explicado, é um padrão de projeto criacion
 | Versão | Alteração | Responsável | Data |
 | - | - | - | - |
 | 1.0 | Elaboração do documento| Larissa Stéfane | 23/05/2025 |
+| 1.1 | Elaboração do da estrutura dos códigos | Larissa Stéfane | 23/05/2025 |
