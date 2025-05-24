@@ -8,11 +8,9 @@
 - [Metodologia](#metodologia)
 - [Desenvolvimento e Implementação](#desenvolvimento-e-implementação)
 - [Modelagem do Builder Para Módulo](#Modelagem-do-Builder-Para-Módulo)
-- [Builder para a Classe Modulo](#Builder-para-a-Classe-Modulo)
   - [Classe Produto Modulo](#Classe-Produto-Modulo)
   - [Classe Builder ModuloBuilder](#Classe-Builder-ModuloBuilder)
 - [Modelagem do Builder Para Trilhas de Aprendizado](#Modelagem-do-Builder-Para-Trilhas-de-Aprendizado)
-- [Builder para a Classe TrilhaEducacional](#Builder-para-a-Classe-TrilhaEducacional)
   -  [Classe Produto TrilhaEducacional](#Classe-Produto-TrilhaEducacional)
   -  [Classe Builder TrilhaEducacionalBuilder](#Classe-Builder-TrilhaEducacionalBuilder)
 - [Classe de Teste AplicacaoGalaxia](#Classe-de-Teste-AplicacaoGalaxia)
@@ -180,7 +178,7 @@ A figura 5 abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambi
     <br>
 </div>
 
-### Builder para a Classe TrilhaEducacional
+### Classe Builder TrilhaEducacionalBuilder
 
 A TrilhaEducacionalBuilder é a classe designada para orquestrar e simplificar a construção de objetos TrilhaEducacional, por isso, o seu principal objetivo é fornecer uma API clara, intuitiva e fluente para montar uma trilha passo a passo ao configurar seus diversos atributos (como título, descrição, nível, categoria) e agregar os Modulos que a compõem (os quais podem ser, por sua vez, construídos usando o ModuloBuilder). 
 
