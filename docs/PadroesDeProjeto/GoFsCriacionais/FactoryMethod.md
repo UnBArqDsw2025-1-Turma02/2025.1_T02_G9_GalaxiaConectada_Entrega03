@@ -7,6 +7,7 @@
 - [Metodologia](#Metodologia)
 - [Desenvolvimento e Implementação](#Desenvolvimento-e-Implementação)
     - [Preparação do Ambiente](#Preparação-do-Ambiente)
+- [Aplicação do Factory Method para Papéis de Conteúdo](#Aplicação-do-Factory-Method-para-Papéis-de-Usuário)
     - [Criação das Classes de Produto da Hierarquia de Conteúdo](Criação-das-Classes-de-Produto-da-Hierarquia-de-Conteúdo)
         - [Classe Abstrata Conteudo](#Classe-Abstrata-Conteudo)
         - [Classe TipoVisibilidade](#Classe-TipoVisibilidade)
@@ -21,6 +22,22 @@
         - [Fábrica Concreta FabricaDeVideo](#Fábrica-Concreta-FabricaDeVideo)
         - [Fábrica Concreta FabricaDeQuiz](#Fábrica-Concreta-FabricaDeQuiz)
         - [Fábrica Concreta FabricaDeJogo](#Fábrica-Concreta-FabricaDeJogo)
+- [Aplicação do Factory Method para Papéis de Usuário](#Aplicação-do-Factory-Method-para-Papéis-de-Usuário)
+        - [Interface Produto PapelUsuario](#Interface-Produto-PapelUsuario)
+        - [Classes Concretas de Produto e Papéis](#Classes-Concretas-de-Produto-e-Papéis)
+            - [Classe Aluno](#Classe-Aluno)
+            - [Classe Instrutor](#Classe-Instrutor)
+            - [Classe ProfessorVoluntario](#Classe-ProfessorVoluntario)
+            - [Classe Administrador](#Classe-Administrador)
+            - [Classe Moderador](#Classe-Moderador)
+      -[Criação das Classes de Produto da Hierarquia de Usuário](Criação-das-Classes-de-Produto-da-Hierarquia-de-Usuário)
+            - [Fábrica Abstrata FabricaDePapelUsuario](#Fábrica-Abstrata-FabricaDePapelUsuario)
+            - [Fábricas Concretas de Papel](#Fábricas-Concretas-de-Papel)
+                - [Fábrica FabricaDeAluno](#Fábrica-FabricaDeAluno)
+                - [Fábrica FabricaDeInstrutor](#Fábrica-FabricaDeInstrutor)
+                - [Fábrica FabricaDeProfessorVoluntario](#Fábrica-FabricaDeProfessorVoluntario)
+                - [Fábrica FabricaDeAdministrador](#Fábrica-FabricaDeAdministrador)
+                - [Fábrica FabricaDeModerador](#Fábrica-FabricaDeModerador)
     - [Classe de Teste AplicacaoGalaxia a Main](#Classe-de-Teste-AplicacaoGalaxia-a-Main)
 - [Conclusão](#Conclusão)
 - [Bibliografia](#Bibliografia)
@@ -66,6 +83,8 @@ A seguir, detalha-se a configuração do ambiente de desenvolvimento e a impleme
 ### Criação das Classes de Produto da Hierarquia de Conteúdo
 
 A base para a aplicação do Factory Method é a existência de uma hierarquia de "produtos". No projeto "Galáxia Conectada", estes produtos são os diferentes tipos de conteúdo educacional que a plataforma oferecerá.
+
+### Aplicação do Factory Method para Papéis de Conteúdo
 
 #### Classe Abstrata Conteudo
 
