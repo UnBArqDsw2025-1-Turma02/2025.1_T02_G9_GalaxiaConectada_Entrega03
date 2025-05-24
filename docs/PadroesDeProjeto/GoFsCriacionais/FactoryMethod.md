@@ -1840,6 +1840,408 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
 
 ### Classe de Teste AplicacaoGalaxia a Main
 
+Para testar as classes e os códigos, foi criada uma main chamada AplicacaoGalaxia. O código dela se encontra abaixo:
+
+```
+package com.galaxiaconectada.main;
+
+// Imports das fábricas de Conteúdo
+import com.galaxiaconectada.core.TipoVisibilidade;
+import com.galaxiaconectada.domain.Usuario;
+import com.galaxiaconectada.fabricas.FabricaDeAdministrador;
+import com.galaxiaconectada.fabricas.FabricaDeAluno;
+import com.galaxiaconectada.fabricas.FabricaDeArtigo;
+import com.galaxiaconectada.fabricas.FabricaDeConteudo;
+import com.galaxiaconectada.fabricas.FabricaDeInstrutor;
+import com.galaxiaconectada.fabricas.FabricaDeJogo;
+import com.galaxiaconectada.fabricas.FabricaDeModerador;
+import com.galaxiaconectada.fabricas.FabricaDePapelUsuario;
+import com.galaxiaconectada.fabricas.FabricaDeProfessorVoluntario;
+import com.galaxiaconectada.fabricas.FabricaDeQuiz;
+import com.galaxiaconectada.fabricas.FabricaDeVideo; // A interface de Papel
+import java.time.LocalDateTime;   // O Enum de Visibilidade
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class AplicacaoGalaxia {
+
+    // Fábrica para Conteúdo
+    private static FabricaDeConteudo fabricaDeConteudoAtual;
+    // Fábrica para PapelUsuario
+    private static FabricaDePapelUsuario fabricaDePapelAtual;
+
+    private static Scanner scanner = new Scanner(System.in);
+    // Lista para guardar usuários criados na sessão
+    private static List<Usuario> usuariosCadastrados = new ArrayList<>();
+
+    public static void main(String[] args) {
+        System.out.println("### Bem-vindo(a) à Plataforma Interativa Galáxia Conectada ###");
+        boolean continuarExecutando = true;
+
+        while (continuarExecutando) {
+            exibirMenuPrincipalGeral();
+            int escolha = lerOpcaoDoUsuarioNumerica();
+
+            switch (escolha) {
+                case 1:
+                    gerenciarPublicacaoDeConteudo();
+                    break;
+                case 2:
+                    gerenciarUsuariosEPapeis();
+                    break;
+                case 0:
+                    continuarExecutando = false;
+                    System.out.println("\n[SISTEMA] Desligando a plataforma. Até a próxima exploração estelar!");
+                    break;
+                default:
+                    System.out.println("\n[ERRO] Opção inválida! Por favor, escolha um número do menu.");
+            }
+        }
+        scanner.close();
+        System.out.println("### Plataforma Galáxia Conectada Finalizada ###");
+    }
+
+    public static void exibirMenuPrincipalGeral() {
+        System.out.println("\n--- MENU PRINCIPAL ---");
+        System.out.println("O que você gostaria de fazer?");
+        System.out.println("1. Gerenciar Publicação de Conteúdo");
+        System.out.println("2. Gerenciar Usuários e Papéis");
+        System.out.println("0. Sair da Plataforma");
+        System.out.print("Digite o número da sua opção: ");
+    }
+
+    public static int lerOpcaoDoUsuarioNumerica() {
+        try {
+            int opcao = scanner.nextInt();
+            scanner.nextLine(); // Importante: consumir o caractere de nova linha
+            return opcao;
+        } catch (InputMismatchException e) {
+            System.out.println("[ERRO] Entrada inválida. Por favor, digite um número.");
+            scanner.nextLine(); // Limpar o buffer do scanner em caso de erro
+            return -1; // Retorna um valor inválido para repetir o menu ou ser tratado
+        }
+    }
+
+    // ---- SEÇÃO DE GERENCIAMENTO DE CONTEÚDO ----
+    public static void gerenciarPublicacaoDeConteudo() {
+        boolean continuarNoMenuConteudo = true;
+        while (continuarNoMenuConteudo) {
+            exibirMenuPublicacaoConteudo();
+            int escolha = lerOpcaoDoUsuarioNumerica();
+
+            switch (escolha) {
+                case 1:
+                    processarPublicacaoDeTipoEspecifico("ARTIGO");
+                    break;
+                case 2:
+                    processarPublicacaoDeTipoEspecifico("VIDEO");
+                    break;
+                case 3:
+                    processarPublicacaoDeTipoEspecifico("QUIZ");
+                    break;
+                case 4:
+                    processarPublicacaoDeTipoEspecifico("JOGO");
+                    break;
+                case 0:
+                    continuarNoMenuConteudo = false;
+                    System.out.println("\n[SISTEMA] Voltando ao Menu Principal...");
+                    break;
+                default:
+                    System.out.println("\n[ERRO] Opção inválida! Por favor, escolha um número do menu.");
+            }
+        }
+    }
+
+    public static void exibirMenuPublicacaoConteudo() {
+        System.out.println("\n--- MENU DE PUBLICAÇÃO DE CONTEÚDO ---");
+        System.out.println("Qual tipo de conteúdo você gostaria de publicar hoje?");
+        System.out.println("1. Publicar um Artigo");
+        System.out.println("2. Publicar um Vídeo");
+        System.out.println("3. Publicar um Quiz");
+        System.out.println("4. Publicar um Jogo");
+        System.out.println("0. Voltar ao Menu Principal");
+        System.out.print("Digite o número da sua opção: ");
+    }
+
+    public static void processarPublicacaoDeTipoEspecifico(String tipoConteudo) {
+        System.out.println("\n=== Iniciando Publicação de um Novo " + tipoConteudo.toUpperCase() + " ===");
+        configurarFabricaDeConteudo(tipoConteudo);
+        System.out.println("[FÁBRICA SELECIONADA]: " + fabricaDeConteudoAtual.getClass().getSimpleName());
+        System.out.println("   ↳ Explicação: Esta fábrica é uma especialista! Ela sabe exatamente como construir um objeto do tipo '" + tipoConteudo + "'.");
+
+        System.out.println("\n--- Coletando Dados Comuns do Conteúdo ---");
+        System.out.print("ID do conteúdo (número): ");
+        int id = lerOpcaoDoUsuarioNumerica();
+
+        System.out.print("Título: ");
+        String titulo = scanner.nextLine();
+
+        System.out.print("Descrição: ");
+        String descricao = scanner.nextLine();
+
+        TipoVisibilidade.mostrarOpcoes();
+        System.out.print("Escolha o número da Visibilidade: ");
+        int escolhaVisibilidade = lerOpcaoDoUsuarioNumerica();
+        TipoVisibilidade visibilidadeSelecionada = TipoVisibilidade.fromOpcao(escolhaVisibilidade);
+
+        if (visibilidadeSelecionada == null) {
+            System.out.println("[ERRO] Opção de visibilidade inválida. Usando PUBLICO como padrão.");
+            visibilidadeSelecionada = TipoVisibilidade.PUBLICO;
+        }
+        System.out.println("[INFO] Visibilidade definida como: " + visibilidadeSelecionada.getDescricao());
+
+        Map<String, Object> detalhesEspecificos = new HashMap<>();
+        System.out.println("\n--- Coletando Dados Específicos para " + tipoConteudo.toUpperCase() + " ---");
+        if (tipoConteudo.equalsIgnoreCase("ARTIGO")) {
+            System.out.print("Texto HTML do Artigo: ");
+            detalhesEspecificos.put("textoHtml", scanner.nextLine());
+            System.out.print("Fonte do Artigo: ");
+            detalhesEspecificos.put("fonte", scanner.nextLine());
+        } else if (tipoConteudo.equalsIgnoreCase("VIDEO")) {
+            System.out.print("URL do Vídeo: ");
+            detalhesEspecificos.put("urlVideo", scanner.nextLine());
+            System.out.print("Duração em segundos (número): ");
+            detalhesEspecificos.put("duracaoSegundos", scanner.nextInt());
+            scanner.nextLine(); // Consumir nova linha
+            System.out.print("Transcrição do Vídeo: ");
+            detalhesEspecificos.put("transcricao", scanner.nextLine());
+        } else if (tipoConteudo.equalsIgnoreCase("QUIZ")) {
+            System.out.print("Tempo Limite em minutos (número): ");
+            detalhesEspecificos.put("tempoLimiteMin", scanner.nextInt());
+            scanner.nextLine(); // Consumir nova linha
+            System.out.print("Número de Tentativas Permitidas (número): ");
+            detalhesEspecificos.put("tentativasPermitidas", scanner.nextInt());
+            scanner.nextLine(); // Consumir nova linha
+        } else if (tipoConteudo.equalsIgnoreCase("JOGO")) {
+            System.out.print("Tipo do Jogo (ex: Puzzle, Estratégia): ");
+            detalhesEspecificos.put("tipoJogo", scanner.nextLine());
+            System.out.print("Nível de Dificuldade (número): ");
+            detalhesEspecificos.put("nivelDificuldade", scanner.nextInt());
+            scanner.nextLine(); // Consumir nova linha
+            System.out.print("URL do Jogo: ");
+            detalhesEspecificos.put("urlJogo", scanner.nextLine());
+        }
+
+        System.out.println("\n[INTERAÇÃO COM A FÁBRICA] " + fabricaDeConteudoAtual.getClass().getSimpleName() + " vai agora criar o objeto '" + tipoConteudo + "'.");
+        System.out.println("   ↳ A fábrica usa o 'Factory Method' (criarConteudo) para instanciar o tipo correto de Conteudo.");
+        fabricaDeConteudoAtual.iniciarPublicacaoDeConteudo(id, titulo, descricao, visibilidadeSelecionada, detalhesEspecificos);
+
+        System.out.println("O " + tipoConteudo.toUpperCase() + " '" + titulo + "' foi processado pela fábrica!");
+        System.out.println("==============================================");
+    }
+
+    public static void configurarFabricaDeConteudo(String tipoConteudo) {
+        if (tipoConteudo.equalsIgnoreCase("ARTIGO")) {
+            fabricaDeConteudoAtual = new FabricaDeArtigo();
+        } else if (tipoConteudo.equalsIgnoreCase("VIDEO")) {
+            fabricaDeConteudoAtual = new FabricaDeVideo();
+        } else if (tipoConteudo.equalsIgnoreCase("QUIZ")) {
+            fabricaDeConteudoAtual = new FabricaDeQuiz();
+        } else if (tipoConteudo.equalsIgnoreCase("JOGO")) {
+            fabricaDeConteudoAtual = new FabricaDeJogo();
+        } else {
+            throw new IllegalArgumentException("Tipo de conteúdo desconhecido para a fábrica: " + tipoConteudo);
+        }
+    }
+
+    // ---- SEÇÃO DE GERENCIAMENTO DE USUÁRIOS E PAPÉIS ----
+    public static void gerenciarUsuariosEPapeis() {
+        boolean continuarNoMenuUsuario = true;
+        while (continuarNoMenuUsuario) {
+            exibirMenuUsuariosEPapeis();
+            int escolha = lerOpcaoDoUsuarioNumerica();
+
+            switch (escolha) {
+                case 1:
+                    criarNovoUsuarioBaseInterativo();
+                    break;
+                case 2:
+                    atribuirPapelInterativo();
+                    break;
+                case 3:
+                    exibirInformacoesDeUsuarioInterativo();
+                    break;
+                case 0:
+                    continuarNoMenuUsuario = false;
+                    System.out.println("\n[SISTEMA] Voltando ao Menu Principal...");
+                    break;
+                default:
+                    System.out.println("\n[ERRO] Opção inválida! Por favor, escolha um número do menu.");
+            }
+        }
+    }
+
+    public static void exibirMenuUsuariosEPapeis() {
+        System.out.println("\n--- MENU DE GERENCIAMENTO DE USUÁRIOS E PAPÉIS ---");
+        System.out.println("1. Criar Novo Usuário Base");
+        System.out.println("2. Atribuir Papel a um Usuário Existente");
+        System.out.println("3. Exibir Informações de um Usuário");
+        System.out.println("0. Voltar ao Menu Principal");
+        System.out.print("Digite o número da sua opção: ");
+    }
+
+    public static void criarNovoUsuarioBaseInterativo() {
+        System.out.println("\n--- Criando Novo Usuário Base ---");
+        System.out.print("ID do usuário (número): ");
+        int id = lerOpcaoDoUsuarioNumerica();
+        System.out.print("Nome do usuário: ");
+        String nome = scanner.nextLine();
+        System.out.print("Email do usuário: ");
+        String email = scanner.nextLine();
+        System.out.print("Senha do usuário: ");
+        String senha = scanner.nextLine();
+
+        Usuario novoUsuario = new Usuario(id, nome, email, senha);
+        usuariosCadastrados.add(novoUsuario);
+        System.out.println("[USUÁRIO CRIADO] Usuário '" + nome + "' (ID: " + id + ") criado com sucesso sem papel específico.");
+        novoUsuario.exibirInformacoesCompletas();
+    }
+
+    public static void exibirInformacoesDeUsuarioInterativo() {
+        System.out.println("\n--- Exibir Informações de Usuário ---");
+        if (usuariosCadastrados.isEmpty()) {
+            System.out.println("[INFO] Nenhum usuário cadastrado nesta sessão ainda.");
+            return;
+        }
+
+        System.out.println("Usuários cadastrados nesta sessão (escolha pelo número):");
+        for (int i = 0; i < usuariosCadastrados.size(); i++) {
+            Usuario u = usuariosCadastrados.get(i);
+            String papelInfo = (u.getPapelPrincipal() != null) ? " (" + u.getPapelPrincipal().getTipoPapel() + ")" : " (Sem papel)";
+            System.out.println((i + 1) + ". " + u.getNome() + " (ID: " + u.getId() + ")" + papelInfo);
+        }
+        System.out.print("Digite o número do usuário para ver detalhes (ou 0 para cancelar): ");
+        int escolhaUsuarioNum = lerOpcaoDoUsuarioNumerica();
+
+        if (escolhaUsuarioNum > 0 && escolhaUsuarioNum <= usuariosCadastrados.size()) {
+            Usuario usuarioSelecionado = usuariosCadastrados.get(escolhaUsuarioNum - 1);
+            usuarioSelecionado.exibirInformacoesCompletas();
+        } else if (escolhaUsuarioNum != 0) {
+            System.out.println("[ERRO] Escolha de usuário inválida.");
+        }
+    }
+
+    public static void atribuirPapelInterativo() {
+        System.out.println("\n--- Atribuir Papel a Usuário ---");
+        if (usuariosCadastrados.isEmpty()) {
+            System.out.println("[INFO] Nenhum usuário cadastrado. Crie um usuário primeiro (Opção 1 do Menu de Usuários).");
+            return;
+        }
+
+        System.out.println("Usuários cadastrados (escolha pelo número):");
+         for (int i = 0; i < usuariosCadastrados.size(); i++) {
+            Usuario u = usuariosCadastrados.get(i);
+            String papelInfo = (u.getPapelPrincipal() != null) ? " (" + u.getPapelPrincipal().getTipoPapel() + ")" : " (Sem papel)";
+            System.out.println((i + 1) + ". " + u.getNome() + " (ID: " + u.getId() + ")" + papelInfo);
+        }
+        System.out.print("Digite o número do usuário ao qual deseja atribuir um papel (ou 0 para cancelar): ");
+        int escolhaUsuarioNum = lerOpcaoDoUsuarioNumerica();
+
+        if (escolhaUsuarioNum == 0) {
+            System.out.println("[INFO] Atribuição de papel cancelada.");
+            return;
+        }
+        if (escolhaUsuarioNum < 1 || escolhaUsuarioNum > usuariosCadastrados.size()) {
+            System.out.println("[ERRO] Escolha de usuário inválida.");
+            return;
+        }
+        Usuario usuarioEscolhido = usuariosCadastrados.get(escolhaUsuarioNum - 1);
+
+        System.out.println("\n--- Escolha o Papel para " + usuarioEscolhido.getNome() + " ---");
+        System.out.println("1. Aluno");
+        System.out.println("2. Instrutor");
+        System.out.println("3. Professor Voluntário");
+        System.out.println("4. Administrador");
+        System.out.println("5. Moderador");
+        System.out.println("0. Cancelar Atribuição");
+        System.out.print("Digite o número do papel: ");
+        int escolhaPapelNum = lerOpcaoDoUsuarioNumerica();
+
+        String tipoPapelString = null;
+        switch (escolhaPapelNum) {
+            case 1: tipoPapelString = "ALUNO"; break;
+            case 2: tipoPapelString = "INSTRUTOR"; break;
+            case 3: tipoPapelString = "PROFESSOR_VOLUNTARIO"; break;
+            case 4: tipoPapelString = "ADMINISTRADOR"; break;
+            case 5: tipoPapelString = "MODERADOR"; break;
+            case 0: System.out.println("[INFO] Atribuição de papel cancelada."); return;
+            default: System.out.println("[ERRO] Tipo de papel inválido."); return;
+        }
+
+        configurarFabricaDePapel(tipoPapelString);
+        System.out.println("[FÁBRICA DE PAPEL SELECIONADA]: " + fabricaDePapelAtual.getClass().getSimpleName());
+        System.out.println("   ↳ Explicação: Esta fábrica é especialista em criar o papel de '" + tipoPapelString + "'.");
+
+        Map<String, Object> detalhesPapel = new HashMap<>();
+        System.out.println("\n--- Coletando Dados Específicos para o Papel de " + tipoPapelString.toUpperCase() + " ---");
+
+        if (tipoPapelString.equalsIgnoreCase("ALUNO")) {
+            System.out.print("Progresso Geral do Aluno (ex: 75.5): ");
+            detalhesPapel.put("progressoGeral", scanner.nextFloat());
+            scanner.nextLine(); // Consumir nova linha
+            detalhesPapel.put("ultimoAcessoTrilha", LocalDateTime.now()); // Pode ser definido automaticamente
+        } else if (tipoPapelString.equalsIgnoreCase("INSTRUTOR")) {
+            System.out.print("Biografia Curta do Instrutor: ");
+            detalhesPapel.put("biografiaCurta", scanner.nextLine());
+            System.out.print("Avaliação Média (ex: 4.5): ");
+            detalhesPapel.put("avaliacaoMedia", scanner.nextFloat());
+            scanner.nextLine();
+            System.out.print("Especialidades (separadas por vírgula, ex: Astrofísica,Cosmologia): ");
+            String[] especialidadesArray = scanner.nextLine().split(",");
+            detalhesPapel.put("especialidades", List.of(especialidadesArray));
+        } else if (tipoPapelString.equalsIgnoreCase("PROFESSOR_VOLUNTARIO")) {
+            System.out.print("Área de Especialidade: ");
+            detalhesPapel.put("areaEspecialidade", scanner.nextLine());
+            System.out.print("Número de Artigos Revisados: ");
+            detalhesPapel.put("artigosRevisados", scanner.nextInt());
+            scanner.nextLine();
+        } else if (tipoPapelString.equalsIgnoreCase("ADMINISTRADOR")) {
+            System.out.print("Permissões Globais (separadas por vírgula, ex: GERENCIAR_USUARIOS,MODERAR_TUDO): ");
+            String[] permissoesArray = scanner.nextLine().split(",");
+            detalhesPapel.put("permissoesGlobais", List.of(permissoesArray));
+            System.out.print("Nível de Acesso (número): ");
+            detalhesPapel.put("nivelAcesso", scanner.nextInt());
+            scanner.nextLine();
+        } else if (tipoPapelString.equalsIgnoreCase("MODERADOR")) {
+            System.out.print("Nível de Moderação (ex: JUNIOR, SENIOR): ");
+            detalhesPapel.put("nivelModeracao", scanner.nextLine());
+            detalhesPapel.put("dataInicioModeracao", LocalDateTime.now()); // Pode ser definido automaticamente
+        }
+
+        System.out.println("\n[INTERAÇÃO COM A FÁBRICA DE PAPEL] " + fabricaDePapelAtual.getClass().getSimpleName() + " vai agora criar e atribuir o papel.");
+        System.out.println("   ↳ A fábrica usa o 'Factory Method' (criarPapel) para instanciar o tipo correto de PapelUsuario.");
+        fabricaDePapelAtual.atribuirPapelParaUsuario(usuarioEscolhido, detalhesPapel);
+        
+        System.out.println("\n--- Informações Atualizadas do Usuário ---");
+        usuarioEscolhido.exibirInformacoesCompletas();
+        System.out.println("==============================================");
+    }
+
+    public static void configurarFabricaDePapel(String tipoPapel) {
+        if (tipoPapel.equalsIgnoreCase("ALUNO")) {
+            fabricaDePapelAtual = new FabricaDeAluno();
+        } else if (tipoPapel.equalsIgnoreCase("INSTRUTOR")) {
+            fabricaDePapelAtual = new FabricaDeInstrutor();
+        } else if (tipoPapel.equalsIgnoreCase("PROFESSOR_VOLUNTARIO")) {
+            fabricaDePapelAtual = new FabricaDeProfessorVoluntario();
+        } else if (tipoPapel.equalsIgnoreCase("ADMINISTRADOR")) {
+            fabricaDePapelAtual = new FabricaDeAdministrador();
+        } else if (tipoPapel.equalsIgnoreCase("MODERADOR")) {
+            fabricaDePapelAtual = new FabricaDeModerador();
+        } else {
+            throw new IllegalArgumentException("Tipo de papel desconhecido para a fábrica: " + tipoPapel);
+        }
+    }
+} 
+
+```
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
 ## Conclusão
 
 A aplicação do padrão de projeto Factory Method no desenvolvimento da plataforma **Galáxia Conectada** demonstrou-se uma solução para promover flexibilidade, escalabilidade e baixo acoplamento na criação de objetos relacionados a conteúdos e usuários. Ao centralizar e especializar a lógica de instanciamento, foi possível garantir que novos tipos de conteúdo ou perfis de usuários possam ser adicionados com facilidade, sem impactar a estrutura já existente do sistema.
