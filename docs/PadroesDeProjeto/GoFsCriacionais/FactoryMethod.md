@@ -46,6 +46,11 @@
 
 ## Introdução
 
+Com base em [Factory Method](https://refactoring.guru/design-patterns/factory-method), o **Factory Method** é um padrão de projeto criacional que define uma interface para a criação de objetos, a qual permite que as subclasses decidam qual classe instanciar. Dessa maneira, em vez de instanciar objetos diretamente por meio de um operador, esse padrão propõe o uso de um método de fábrica especializado que centraliza e flexibiliza a lógica de criação. Consequentemente, como também é evidenciado em [Design Patterns - Parte 3 – Factory Method](https://medium.com/@jonesroberto/desing-patterns-factory-method-a7496ae071aa), isso traz diversos benefícios, como a redução do acoplamento, a facilidade de manutenção e a possibilidade de extensão futura do sistema sem grandes alterações no código existente. 
+
+No contexto da plataforma educacional **Galáxia Conectada**, que visa oferecer experiências interativas em astronomia, a aplicação desse padrão favorece a organização e escalabilidade do código. Portanto, o padrão Factory Method será utilizado para gerenciar duas categorias centrais do projeto: **Conteúdos e Usuários**. A categoria de usuários abrange diferentes perfis presentes na plataforma, como aluno, instrutor, professor voluntário, administrador e moderador — cada um com responsabilidades e permissões distintas. Já a categoria de conteúdos contempla os principais formatos educacionais oferecidos, como artigos, vídeos, quizzes e jogos. 
+
+**Observação**: A escolha dessas duas categorias se deu pelo fato de elas representarem núcleos de variação frequente dentro do sistema: novos perfis e formatos de conteúdo podem ser adicionados futuramente, e o uso do Factory Method garante que essas adições possam ocorrer sem a necessidade de modificar diretamente a lógica de criação ou o código.
 
 
 ## Objetivo
