@@ -1842,6 +1842,8 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
 
 ## Conclusão
 
+
+
 ## Bibliografia 
 
 <a name="ref1"></a>
@@ -1853,7 +1855,8 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
 <a name="ref3"></a>
 [3] REFACTORING.GURU. Factory Method. Disponível em: https://refactoring.guru/design-patterns/factory-method. Acesso em: 22 maio 2025.
 
-
+<a name="ref4"></a>
+[4] Thiengo. Padrão de Projeto: Factory Method. Disponível em: https://www.thiengo.com.br/padrao-de-projeto-factory-method#title-5. Acesso em: 23 maio 2025.
 
 ## Histórico de versão
 
@@ -1865,4 +1868,5 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
 | 1.3 | Adição das fábricas de contudo | Larissa Stéfane | 23/05/2025 |
 | 1.4 | Adição das outras classes dos usuários| Larissa Stéfane | 23/05/2025 |
 | 1.5 | Adição das fábricas de Usuários | Larissa Stéfane | 23/05/2025 |
+| 1.6 | Reorganização dos códigos | Larissa Stéfane | 24/05/2025 |
 
