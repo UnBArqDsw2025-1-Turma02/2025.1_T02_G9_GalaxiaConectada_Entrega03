@@ -779,7 +779,7 @@ A figura 11 abaixo ilustra a estrutura da classe `FabricaDeConteudo.java` no amb
 <div align="center">
     Figura 11:  Fábrica Abstrata FabricaDeConteudo.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c234bca6eb22c8a4caa7ef18d0391df6e6cb8271/docs/PadroesDeProjeto/Imagens/FabricaConteudo.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -827,7 +827,7 @@ A figura 12 abaixo ilustra a estrutura da classe `FabricaDeArtigo.java` no ambie
 <div align="center">
     Figura 12: Fábrica Concreta FabricaDeArtigo.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c234bca6eb22c8a4caa7ef18d0391df6e6cb8271/docs/PadroesDeProjeto/Imagens/FabricaArtigo.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -873,7 +873,7 @@ A figura 13 abaixo ilustra a estrutura da classe `FabricaDeVideo.java` no ambien
 <div align="center">
     Figura 13: Fábrica Concreta FabricaDeVideo.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c234bca6eb22c8a4caa7ef18d0391df6e6cb8271/docs/PadroesDeProjeto/Imagens/FabricaVideo.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -912,9 +912,9 @@ public class FabricaDeQuiz extends FabricaDeConteudo {
 A figura 14 abaixo ilustra a estrutura da classe `FabricaDeQuiz.java` no ambiente de desenvolvimento VSCode.
 
 <div align="center">
-    Figura 14: Fábrica Concreta FabricaDeVideo.java
+    Figura 14: Fábrica Concreta FabricaDeQuiz.java
     <br>
-    <img src="Fábrica Concreta FabricaDeQuiz.java" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c234bca6eb22c8a4caa7ef18d0391df6e6cb8271/docs/PadroesDeProjeto/Imagens/FabricaQUIZ.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -957,7 +957,7 @@ A figura 15 abaixo ilustra a estrutura da classe `FabricaDeJogo.java` no ambient
 <div align="center">
     Figura 15: Fábrica Concreta FabricaDeJogo.java
     <br>
-    <img src="Fábrica Concreta FabricaDeQuiz.java" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c234bca6eb22c8a4caa7ef18d0391df6e6cb8271/docs/PadroesDeProjeto/Imagens/FabricaJogo.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
