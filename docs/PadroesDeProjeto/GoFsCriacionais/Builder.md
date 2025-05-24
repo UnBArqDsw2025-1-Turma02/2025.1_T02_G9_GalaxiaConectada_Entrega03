@@ -7,8 +7,13 @@
 - [Objetivo](#objetivo)
 - [Metodologia](#metodologia)
 - [Desenvolvimento e Implementação](#desenvolvimento-e-implementação)
--
--
+- [Builder para a Classe Modulo](#Builder-para-a-Classe-Modulo)
+  - [Classe Produto Modulo](#Classe-Produto-Modulo)
+  - [Classe Builder ModuloBuilder](#Classe-Builder-ModuloBuilder)
+- [Builder para a Classe TrilhaEducacional](#Builder-para-a-Classe TrilhaEducacional)
+  -  [Classe Produto TrilhaEducacional](#Classe-Produto-TrilhaEducacional)
+  -  [Classe Builder TrilhaEducacionalBuilder](#Classe-Builder-TrilhaEducacionalBuilder)
+- [Classe de Teste AplicacaoGalaxia](#Classe-de-Teste-AplicacaoGalaxia)
 - [Conclusão](#conclusão)
 - [Bibliografia](#bibliografia)
 - [Histórico de Versão](#histórico-de-versão)
@@ -38,6 +43,31 @@ Ao compreender a função do Builder, ao utilizá-lo para implementar os **conte
 - Melhorar a manutenção e escalabilidade da plataforma, com foco em flexibilidade e reutilização de componentes.
 
 - Tornar os testes mais simples, ao possibilitar a criação de trilhas com apenas os elementos necessários para cada cenário.
+
+## Metodologia
+
+## Desenvolvimento e Implementação
+
+
+## Builder para a Classe Modulo
+
+
+### Classe Produto Modulo
+
+### Classe Builder ModuloBuilder
+
+## Builder para a Classe TrilhaEducacional
+
+
+### Classe Produto TrilhaEducacional
+
+
+### Classe Builder TrilhaEducacionalBuilder
+
+## 
+
+##
+
 
 
 ## Bibliografia 
