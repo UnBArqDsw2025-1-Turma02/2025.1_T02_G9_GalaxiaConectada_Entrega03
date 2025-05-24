@@ -46,6 +46,37 @@ Ao compreender a função do Builder, ao utilizá-lo para implementar os **conte
 
 ## Metodologia
 
+O padrão **Builder**, como já foi explicado, é um padrão de projeto criacional que separa o processo de construção de um objeto complexo de sua representação final. Isso permite que o mesmo processo de construção possa criar diferentes representações do objeto. Com isso, a metodologia para o seu desenvolvimento se baseou em:
+
+**Principais Componentes do Padrão Builder Aplicado, com base em [Design Patterns — Parte 6 — Builder](https://medium.com/@jonesroberto/desing-patterns-parte-6-builder-f20752fb0c35):**
+
+* **Product (Produto):** O objeto complexo que está sendo construído. No caso, são as classes `Modulo` e `TrilhaEducacional`.
+* **ConcreteBuilder (Construtor Concreto):** Implementa a interface do Builder (ou é a classe Builder em si) e mantém o controle da representação do produto que está sendo construído. Ele fornece métodos para construir as partes do produto e um método para retornar o produto finalizado. Exemplos: `ModuloBuilder` e `TrilhaEducacionalBuilder`.
+* **Director (Diretor):** Uma classe que controla o algoritmo de construção ao usar a interface do Builder. 
+
+
+**A concepção das classes de produto (`Modulo`, `TrilhaEducacional`) e suas inter-relações serão guiadas por diagrama previamente elaborados para o projeto:**
+
+* **Diagrama de Classes de Referência:** [Diagrama de Classes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaClasses).
+* **Diagrama de Classes de Componentes:** [Diagrama de Componentes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaComponentes).
+* **Diagrama de Pacotes:** [Diagrama de Pacotes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemOrganizacional/DiagramaPacotes).
+
+* **Diagrama de Classes de Referência:** [Diagrama de Classes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaClasses).
+  
+* **Diagrama de Casos de Uso:** [Diagrama de Casos de Uso - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemOrganizacional/DiagramaCasosUso).
+
+* **Diagrama de Atividades:** [Diagrama de Atividades - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemDinamica/DiagramaAtividades).
+
+
+**Passo a passo de desenvolvimento para o padrão Builder no projeto "Galáxia Conectada":**
+
+1. Identificação e Definição das Classes "Produto";
+2. Criação das Classes "Construtoras Concretas" (Builders);
+3. Implementação de Métodos de Configuração Fluentes;
+4. Desenvolvimento do Método de Construção Final (build());
+5. Integração dos Builders na classe AplicacaoGalaxia.java 
+
+
 ## Desenvolvimento e Implementação
 
 
@@ -64,9 +95,11 @@ Ao compreender a função do Builder, ao utilizá-lo para implementar os **conte
 
 ### Classe Builder TrilhaEducacionalBuilder
 
-## 
+## Classe de Teste AplicacaoGalaxia
 
-##
+
+
+## Conclusão
 
 
 
