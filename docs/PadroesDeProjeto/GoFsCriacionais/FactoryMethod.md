@@ -1802,6 +1802,16 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
 
 ## Bibliografia 
 
+<a name="ref1"></a>
+[1] IBM. Definindo um factory method. Atualizado pela última vez em 03 fev. 2025. Disponível em: https://www.ibm.com/docs/pt-br/cobol-zos/6.4.0?topic=section-defining-factory-method. Acesso em: 22 maio 2025.
+
+<a name="ref2"></a>
+[2] Nuzzi, Jones Roberto. Design Patterns – Parte 3: Factory Method. Medium, 07 out. 2019. Disponível em: https://medium.com/@jonesroberto/desing-patterns-factory-method-a7496ae071aa. Acesso em: 22 maio 2025.
+
+<a name="ref3"></a>
+[3] REFACTORING.GURU. Factory Method. Disponível em: https://refactoring.guru/design-patterns/factory-method. Acesso em: 22 maio 2025.
+
+
 
 ## Histórico de versão
 
