@@ -10,7 +10,7 @@
 - [Builder para a Classe Modulo](#Builder-para-a-Classe-Modulo)
   - [Classe Produto Modulo](#Classe-Produto-Modulo)
   - [Classe Builder ModuloBuilder](#Classe-Builder-ModuloBuilder)
-- [Builder para a Classe TrilhaEducacional](#Builder-para-a-Classe TrilhaEducacional)
+- [Builder para a Classe TrilhaEducacional](#Builder-para-a-Classe-TrilhaEducacional)
   -  [Classe Produto TrilhaEducacional](#Classe-Produto-TrilhaEducacional)
   -  [Classe Builder TrilhaEducacionalBuilder](#Classe-Builder-TrilhaEducacionalBuilder)
 - [Classe de Teste AplicacaoGalaxia](#Classe-de-Teste-AplicacaoGalaxia)
