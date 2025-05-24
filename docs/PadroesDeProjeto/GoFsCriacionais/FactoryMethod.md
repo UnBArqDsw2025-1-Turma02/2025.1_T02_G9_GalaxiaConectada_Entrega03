@@ -1526,7 +1526,7 @@ A figura 22 abaixo ilustra a estrutura da classe `FabricaDePapelUsuario.java` no
 <div align="center">
     Figura 22: Fábrica Abstrata FabricaDePapelUsuario.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/66c42dd46baccf8d6103799f83a7ad6ea74cd4bd/docs/PadroesDeProjeto/Imagens/FabricaPapelUsuario.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1587,7 +1587,7 @@ A figura 23 abaixo ilustra a estrutura da classe `FabricaDeAluno.java` no ambien
 <div align="center">
     Figura 23: Fábrica FabricaDeAluno.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/66c42dd46baccf8d6103799f83a7ad6ea74cd4bd/docs/PadroesDeProjeto/Imagens/FabricaAluno.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1641,7 +1641,7 @@ A figura 24 abaixo ilustra a estrutura da classe `FabricaDeInstrutor.java` no am
 <div align="center">
     Figura 24: Fábrica FabricaDeInstrutor.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/66c42dd46baccf8d6103799f83a7ad6ea74cd4bd/docs/PadroesDeProjeto/Imagens/FabricaInstrutor.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1689,7 +1689,7 @@ A figura 25 abaixo ilustra a estrutura da classe `FabricaDeProfessorVoluntario.j
 <div align="center">
     Figura 25: Fábrica FabricaDeProfessorVoluntario.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/66c42dd46baccf8d6103799f83a7ad6ea74cd4bd/docs/PadroesDeProjeto/Imagens/FabricaInstrutorVoluntario.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1742,7 +1742,7 @@ A figura 26 abaixo ilustra a estrutura da classe `FabricaDeAdministrador.java` n
 <div align="center">
     Figura 26: Fábrica FabricaDeAdministrador.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/66c42dd46baccf8d6103799f83a7ad6ea74cd4bd/docs/PadroesDeProjeto/Imagens/FabricaAdministrador.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1790,7 +1790,7 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
 <div align="center">
     Figura 27: Fábrica FabricaDeModerador.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/66c42dd46baccf8d6103799f83a7ad6ea74cd4bd/docs/PadroesDeProjeto/Imagens/FabricaModerador.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
