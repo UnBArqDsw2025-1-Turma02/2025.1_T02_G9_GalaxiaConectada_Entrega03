@@ -992,7 +992,7 @@ A figura 16 abaixo ilustra a estrutura da classe `PapelUsuario.java` no ambiente
 <div align="center">
     Figura 16: Interface PapelUsuario.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/4a1b879db59aaf07e072541edf89263eaa7bf839/docs/PadroesDeProjeto/Imagens/aaPapelUsuario.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1069,7 +1069,7 @@ A figura 17 abaixo ilustra a estrutura da classe `Aluno.java` no ambiente de des
 <div align="center">
     Figura 17: Classe Aluno.java (Papel)
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/4a1b879db59aaf07e072541edf89263eaa7bf839/docs/PadroesDeProjeto/Imagens/aaaluno.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1149,7 +1149,7 @@ A figura 18 abaixo ilustra a estrutura da classe `Instrutor.java` no ambiente de
 <div align="center">
     Figura 18: Classe Instrutor.java (Papel)
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/4a1b879db59aaf07e072541edf89263eaa7bf839/docs/PadroesDeProjeto/Imagens/aaInstrutor.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1240,7 +1240,7 @@ A figura 19 abaixo ilustra a estrutura da classe `ProfessorVoluntario.java` no a
 <div align="center">
     Figura 19: Classe ProfessorVoluntario.java (Papel)
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/4a1b879db59aaf07e072541edf89263eaa7bf839/docs/PadroesDeProjeto/Imagens/aaProfessorVoluntario.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1347,7 +1347,7 @@ A figura 20 abaixo ilustra a estrutura da classe `Administrador.java` no ambient
 <div align="center">
     Figura 20: Classe Administrador.java (Papel)
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/4a1b879db59aaf07e072541edf89263eaa7bf839/docs/PadroesDeProjeto/Imagens/aaAdministrador.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1465,7 +1465,7 @@ A figura 21 abaixo ilustra a estrutura da classe `Moderador.java` no ambiente de
 <div align="center">
     Figura 21: Classe Moderador.java (Papel)
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/4a1b879db59aaf07e072541edf89263eaa7bf839/docs/PadroesDeProjeto/Imagens/aaModerador.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
