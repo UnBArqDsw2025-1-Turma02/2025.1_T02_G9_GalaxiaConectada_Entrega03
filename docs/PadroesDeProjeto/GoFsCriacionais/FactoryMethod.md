@@ -1026,7 +1026,54 @@ A classe Aluno implementa PapelUsuario e encapsula os dados e funcionalidades es
 Abaixo o código para `Aluno.java`
 
 ```
+package com.galaxiaconectada.domain.papeis;
 
+import java.time.LocalDateTime;
+// Curso e TrilhaEducacional serão classes que serão definidas depois
+// import com.galaxiaconectada.core.Curso;
+// import com.galaxiaconectada.core.TrilhaEducacional;
+// import java.util.List;
+// import java.util.ArrayList;
+
+public class Aluno implements PapelUsuario {
+    private float progressoGeral;
+    private LocalDateTime ultimoAcessoTrilha;
+
+
+    public Aluno(float progressoGeral, LocalDateTime ultimoAcessoTrilha) {
+        this.progressoGeral = progressoGeral;
+        this.ultimoAcessoTrilha = ultimoAcessoTrilha;
+    }
+
+    @Override
+    public String getTipoPapel() {
+        return "Aluno";
+    }
+
+    @Override
+    public void exibirDetalhesDoPapel() {
+        System.out.println("  Detalhes do Papel Aluno:");
+        System.out.println("  Progresso Geral: " + progressoGeral + "%");
+        System.out.println("  Último Acesso à Trilha: " + ultimoAcessoTrilha);
+    }
+
+    // Métodos específicos do Aluno
+    public void listarCursosConcluidos() { // Deveria retornar List<Curso>
+        System.out.println("  [Aluno] Listando cursos concluídos...");
+       
+    }
+
+    public void listarTrilhasEmAndamento() { // Deveria retornar List<TrilhaEducacional>
+        System.out.println("  [Aluno] Listando trilhas em andamento...");
+        
+    }
+
+    // Getters e Setters para os atributos
+    public float getProgressoGeral() { return progressoGeral; }
+    public void setProgressoGeral(float progressoGeral) { this.progressoGeral = progressoGeral; }
+    public LocalDateTime getUltimoAcessoTrilha() { return ultimoAcessoTrilha; }
+    public void setUltimoAcessoTrilha(LocalDateTime ultimoAcessoTrilha) { this.ultimoAcessoTrilha = ultimoAcessoTrilha; }
+}
 
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
@@ -1052,6 +1099,60 @@ A classe Instrutor implementa PapelUsuario e representa um usuário com capacida
 Abaixo o código para `Instrutor.java` 
 
 ```
+package com.galaxiaconectada.domain.papeis;
+
+import java.util.ArrayList;
+import java.util.List;
+
+// Curso e TrilhaEducacional serão classes que serão definidas depois
+// import com.galaxiaconectada.core.TrilhaEducacional;
+
+public class Instrutor implements PapelUsuario {
+
+    private String biografiaCurta;
+    private float avaliacaoMedia;
+    private List<String> especialidades;
+
+    public Instrutor(String biografiaCurta, float avaliacaoMedia, List<String> especialidades) {
+        this.biografiaCurta = biografiaCurta;
+        this.avaliacaoMedia = avaliacaoMedia;
+        this.especialidades = especialidades != null ? especialidades : new ArrayList<>();
+    }
+
+    @Override
+    public String getTipoPapel() {
+        return "Instrutor";
+    }
+
+    @Override
+    public void exibirDetalhesDoPapel() {
+        System.out.println("  Detalhes do Papel Instrutor:");
+        System.out.println("  Biografia: " + biografiaCurta);
+        System.out.println("  Avaliação Média: " + avaliacaoMedia);
+        System.out.println("  Especialidades: " + String.join(", ", especialidades));
+    }
+
+    // Métodos específicos do Instrutor (da Tabela 1)
+    public void listarTrilhasCriadas() { // Deveria retornar List<TrilhaEducacional>
+        System.out.println("  [Instrutor] Listando trilhas criadas...");
+
+    }
+
+    public void listarConteudosCriados() { // Deveria retornar List<Conteudo>
+        System.out.println("  [Instrutor] Listando conteúdos criados...");
+        
+    }
+
+    // Getters e Setters
+    public String getBiografiaCurta() { return biografiaCurta; }
+    public void setBiografiaCurta(String biografiaCurta) { this.biografiaCurta = biografiaCurta; }
+    public float getAvaliacaoMedia() { return avaliacaoMedia; }
+    public void setAvaliacaoMedia(float avaliacaoMedia) { this.avaliacaoMedia = avaliacaoMedia; }
+    public List<String> getEspecialidades() { return especialidades; }
+    public void setEspecialidades(List<String> especialidades) { this.especialidades = especialidades; }
+}
+
+
 
 
 ```
@@ -1078,7 +1179,71 @@ Esta classe implementa PapelUsuario para usuários que atuam como professores vo
 Abaixo o código para `ProfessorVoluntario.java`
 
 ```
+package com.galaxiaconectada.domain.papeis;
 
+import com.galaxiaconectada.core.Artigo; // Artigo está em .core
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Representa o papel de um Professor Voluntário na plataforma,
+ * com suas especialidades e atividades de revisão.
+ */
+public class ProfessorVoluntario implements PapelUsuario {
+
+    private String areaEspecialidade;
+    private int artigosRevisados;
+
+    /**
+     * Construtor para o papel de Professor Voluntário.
+     * @param areaEspecialidade A área de conhecimento principal do professor.
+     * @param artigosRevisados A quantidade de artigos que este professor já revisou.
+     */
+    public ProfessorVoluntario(String areaEspecialidade, int artigosRevisados) {
+        this.areaEspecialidade = areaEspecialidade;
+        this.artigosRevisados = artigosRevisados;
+    }
+
+    @Override
+    public String getTipoPapel() {
+        return "ProfessorVoluntario";
+    }
+
+    @Override
+    public void exibirDetalhesDoPapel() {
+        System.out.println("  Detalhes do Papel Professor Voluntário:");
+        System.out.println("  Área de Especialidade: " + areaEspecialidade);
+        System.out.println("  Artigos Revisados: " + artigosRevisados);
+    }
+
+    /**
+     * Lista os artigos submetidos (ou associados) a este professor voluntário.
+     * (Placeholder: Retorna uma lista vazia por enquanto)
+     * @return Uma lista de Artigos.
+     */
+    public List<Artigo> listarArtigosSubmetidos() {
+        System.out.println("  [Professor Voluntário] Listando artigos submetidos/associados...");
+        // TODO: Implementar a lógica real para buscar e retornar os artigos.
+        return new ArrayList<>();
+    }
+
+    // Getters e Setters
+    public String getAreaEspecialidade() {
+        return areaEspecialidade;
+    }
+
+    public void setAreaEspecialidade(String areaEspecialidade) {
+        this.areaEspecialidade = areaEspecialidade;
+    }
+
+    public int getArtigosRevisados() {
+        return artigosRevisados;
+    }
+
+    public void setArtigosRevisados(int artigosRevisados) {
+        this.artigosRevisados = artigosRevisados;
+    }
+}
 
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
@@ -1106,7 +1271,87 @@ A classe Administrador implementa PapelUsuario e define as características e ca
 Abaixo o código para `Administrador.java`
 
 ```
+package com.galaxiaconectada.domain.papeis;
 
+import com.galaxiaconectada.domain.Usuario;
+// import com.galaxiaconectada.domain.PromocaoExterna; // Classe ainda não criada como placeholder
+import java.util.List;
+import java.util.ArrayList;
+
+/**
+ * Representa o papel de um Administrador na plataforma,
+ * com permissões globais e nível de acesso.
+ */
+public class Administrador implements PapelUsuario {
+
+    private List<String> permissoesGlobais;
+    private int nivelAcesso;
+
+    /**
+     * Construtor para o papel de Administrador.
+     * @param permissoesGlobais Lista de strings representando as permissões globais.
+     * @param nivelAcesso Nível numérico de acesso do administrador.
+     */
+    public Administrador(List<String> permissoesGlobais, int nivelAcesso) {
+        this.permissoesGlobais = permissoesGlobais != null ? new ArrayList<>(permissoesGlobais) : new ArrayList<>();
+        this.nivelAcesso = nivelAcesso;
+    }
+
+    @Override
+    public String getTipoPapel() {
+        return "Administrador";
+    }
+
+    @Override
+    public void exibirDetalhesDoPapel() {
+        System.out.println("  Detalhes do Papel Administrador:");
+        System.out.println("  Nível de Acesso: " + nivelAcesso);
+        System.out.println("  Permissões Globais: " + String.join(", ", permissoesGlobais));
+    }
+
+    /**
+     * Gerencia um usuário realizando uma determinada ação.
+     * (Placeholder)
+     * @param u O Usuário a ser gerenciado.
+     * @param acao A ação a ser realizada (ex: "ATIVAR", "SUSPENDER", "DELETAR").
+     * @return true se a ação foi bem-sucedida, false caso contrário.
+     */
+    public boolean gerenciarUsuario(Usuario u, String acao) {
+        System.out.println("  [Admin] Gerenciando usuário '" + (u != null ? u.getNome() : "N/A") + "' com ação: " + acao);
+        // TODO: Implementar a lógica real de gerenciamento de usuário.
+        return true;
+    }
+
+    /**
+     * Gerencia uma promoção realizando uma determinada ação.
+     * (Placeholder: Parâmetro PromocaoExterna comentado até a classe ser criada)
+     * @param acao A ação a ser realizada (ex: "APROVAR", "REJEITAR", "REMOVER").
+     * @return true se a ação foi bem-sucedida, false caso contrário.
+     */
+    public boolean gerenciarPromocao(/* PromocaoExterna p, */ String acao) {
+        // System.out.println("  [Admin] Gerenciando promoção '" + (p != null ? p.getNomeProduto() : "N/A") + "' com ação: " + acao);
+        System.out.println("  [Admin] Gerenciando promoção com ação: " + acao);
+        // TODO: Implementar a lógica real e descomentar o parâmetro PromocaoExterna.
+        return true;
+    }
+
+    // Getters e Setters
+    public List<String> getPermissoesGlobais() {
+        return new ArrayList<>(permissoesGlobais); // Retorna uma cópia para proteger a lista interna
+    }
+
+    public void setPermissoesGlobais(List<String> permissoesGlobais) {
+        this.permissoesGlobais = permissoesGlobais != null ? new ArrayList<>(permissoesGlobais) : new ArrayList<>();
+    }
+
+    public int getNivelAcesso() {
+        return nivelAcesso;
+    }
+
+    public void setNivelAcesso(int nivelAcesso) {
+        this.nivelAcesso = nivelAcesso;
+    }
+}
 
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
@@ -1131,7 +1376,100 @@ Implementando PapelUsuario, a classe Moderador representa usuários responsávei
 Abaixo o código para `Moderador.java`
 
 ```
+package com.galaxiaconectada.domain.papeis;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+// Placeholders para classes que serão definidas no pacote domain.forum
+// import com.galaxiaconectada.domain.forum.Subforum;
+// import com.galaxiaconectada.domain.forum.Postagem;
+// import com.galaxiaconectada.domain.forum.Topico;
+
+/**
+ * Representa o papel de um Moderador na plataforma,
+ * responsável por manter a ordem nos fóruns.
+ */
+public class Moderador implements PapelUsuario {
+
+    private String nivelModeracao; // Ex: "JUNIOR", "SENIOR", "GLOBAL"
+    private LocalDateTime dataInicioModeracao;
+
+    /**
+     * Construtor para o papel de Moderador.
+     * @param nivelModeracao O nível de moderação.
+     * @param dataInicioModeracao A data em que o usuário começou a moderar.
+     */
+    public Moderador(String nivelModeracao, LocalDateTime dataInicioModeracao) {
+        this.nivelModeracao = nivelModeracao;
+        this.dataInicioModeracao = dataInicioModeracao;
+    }
+
+    @Override
+    public String getTipoPapel() {
+        return "Moderador";
+    }
+
+    @Override
+    public void exibirDetalhesDoPapel() {
+        System.out.println("  Detalhes do Papel Moderador:");
+        System.out.println("  Nível de Moderação: " + nivelModeracao);
+        System.out.println("  Data Início Moderação: " + dataInicioModeracao);
+    }
+
+    /**
+     * Lista os subfóruns que este moderador está designado a moderar.
+     * (Placeholder: Retorna uma lista vazia de Object por enquanto)
+     * @return Uma lista de Object (deverá ser List<Subforum> quando a classe Subforum for definida).
+     */
+    // MÉTODO CORRIGIDO ABAIXO:
+    public List<Object> listarSubforumsModerados() { // Alterado para List<Object> temporariamente
+        System.out.println("  [Moderador] Listando subfóruns moderados...");
+        // TODO: Implementar a lógica real e alterar o tipo de retorno para List<Subforum>.
+        return new ArrayList<>(); // Retorna uma lista vazia
+    }
+
+    /**
+     * Realiza uma ação de moderação em uma postagem.
+     * (Placeholder: Parâmetro Postagem comentado até a classe ser criada)
+     * @param acao A ação a ser realizada (ex: "APROVAR", "EDITAR", "REMOVER").
+     * @return true se a ação foi bem-sucedida, false caso contrário.
+     */
+    public boolean moderarPostagem(/* Postagem p, */ String acao) {
+        System.out.println("  [Moderador] Moderando postagem com ação: " + acao);
+        // TODO: Implementar a lógica real.
+        return true;
+    }
+
+    /**
+     * Realiza uma ação de moderação em um tópico.
+     * (Placeholder: Parâmetro Topico comentado até a classe ser criada)
+     * @param acao A ação a ser realizada (ex: "FIXAR", "FECHAR", "MOVER").
+     * @return true se a ação foi bem-sucedida, false caso contrário.
+     */
+    public boolean moderarTopico(/* Topico t, */ String acao) {
+        System.out.println("  [Moderador] Moderando tópico com ação: " + acao);
+        // TODO: Implementar a lógica real.
+        return true;
+    }
+
+    // Getters e Setters
+    public String getNivelModeracao() {
+        return nivelModeracao;
+    }
+
+    public void setNivelModeracao(String nivelModeracao) {
+        this.nivelModeracao = nivelModeracao;
+    }
+
+    public LocalDateTime getDataInicioModeracao() {
+        return dataInicioModeracao;
+    }
+
+    public void setDataInicioModeracao(LocalDateTime dataInicioModeracao) {
+        this.dataInicioModeracao = dataInicioModeracao;
+    }
+}
 
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
