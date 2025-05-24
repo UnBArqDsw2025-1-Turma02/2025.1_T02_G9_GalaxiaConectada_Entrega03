@@ -1842,7 +1842,7 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
 
 ## Conclusão
 
-
+A aplicação do padrão de projeto Factory Method no desenvolvimento da plataforma **Galáxia Conectada** demonstrou-se uma solução para promover flexibilidade, escalabilidade e baixo acoplamento na criação de objetos relacionados a conteúdos e usuários. Ao centralizar e especializar a lógica de instanciamento, foi possível garantir que novos tipos de conteúdo ou perfis de usuários possam ser adicionados com facilidade, sem impactar a estrutura já existente do sistema.
 
 ## Bibliografia 
 
