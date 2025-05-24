@@ -174,7 +174,7 @@ A figura 2 abaixo ilustra a estrutura da classe `Modulo.java` no ambiente de des
 <div align="center">
     Figura 2: Classe Produto Modulo.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c4ce743072a50e4b00f32fe3e68be7ae87c7fe93/docs/PadroesDeProjeto/Imagens/BuilderModulo.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -267,7 +267,7 @@ A figura 3 abaixo ilustra a estrutura da classe `ModuloBuilder.java` no ambiente
 <div align="center">
     Figura 3: Classe ModuloBuilder.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c4ce743072a50e4b00f32fe3e68be7ae87c7fe93/docs/PadroesDeProjeto/Imagens/BuilderTRilhaEducacionalBuilder.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -393,7 +393,7 @@ A figura 5 abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambi
 <div align="center">
     Figura 5:  Classe Produto TrilhaEducacional.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c4ce743072a50e4b00f32fe3e68be7ae87c7fe93/docs/PadroesDeProjeto/Imagens/BuilderTrilhaEducacional.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -493,7 +493,7 @@ A figura 6 abaixo ilustra a estrutura da classe `TrilhaEducacionalBuilder.java` 
 <div align="center">
     Figura 6: Classe TrilhaEducacionalBuilder.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c4ce743072a50e4b00f32fe3e68be7ae87c7fe93/docs/PadroesDeProjeto/Imagens/builderModuloBuilder.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -970,3 +970,4 @@ A aplicação do padrão Builder para a construção dos objetos Modulo e Trilha
 | 1.0 | Elaboração do documento| Larissa Stéfane | 23/05/2025 |
 | 1.1 | Elaboração do da estrutura dos códigos | Larissa Stéfane | 23/05/2025 |
 | 1.2 | Adição dos códigos | Larissa Stéfane | 24/05/2025 |
+| 1.3 | Adição das imagens | Larissa Stéfane | 24/05/2025 |
