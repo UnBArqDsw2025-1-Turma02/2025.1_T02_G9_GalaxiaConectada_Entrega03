@@ -969,3 +969,4 @@ A aplicação do padrão Builder para a construção dos objetos Modulo e Trilha
 | - | - | - | - |
 | 1.0 | Elaboração do documento| Larissa Stéfane | 23/05/2025 |
 | 1.1 | Elaboração do da estrutura dos códigos | Larissa Stéfane | 23/05/2025 |
+| 1.2 | Adição dos códigos | Larissa Stéfane | 24/05/2025 |
