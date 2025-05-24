@@ -979,6 +979,37 @@ A figura 15 abaixo ilustra a estrutura da classe `FabricaDeJogo.java` no ambient
     <br>
 </div>
 
+### Aplicação do Factory Method para Papéis de Usuário
+
+### Interface Produto PapelUsuario
+
+#### Classes Concretas de Produto e Papéis
+
+#### Classe Aluno
+
+#### Classe Instrutor
+
+#### Classe ProfessorVoluntario
+
+#### Classe Administrador
+
+#### Classe Moderador
+
+### Criação das Classes de Produto da Hierarquia de Usuário
+
+#### Fábrica Abstrata FabricaDePapelUsuario
+
+#### Fábricas Concretas de Papel
+
+#### Fábrica FabricaDeAluno
+
+#### Fábrica FabricaDeInstrutor
+
+#### Fábrica FabricaDeProfessorVoluntario
+
+#### Fábrica FabricaDeAdministrador
+
+#### Fábrica FabricaDeModerador
 
 ### Classe de Teste AplicacaoGalaxia a Main
 
