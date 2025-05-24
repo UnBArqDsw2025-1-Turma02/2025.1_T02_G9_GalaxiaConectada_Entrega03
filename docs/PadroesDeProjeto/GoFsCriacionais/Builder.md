@@ -267,7 +267,7 @@ A figura 3 abaixo ilustra a estrutura da classe `ModuloBuilder.java` no ambiente
 <div align="center">
     Figura 3: Classe ModuloBuilder.java
     <br>
-    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c4ce743072a50e4b00f32fe3e68be7ae87c7fe93/docs/PadroesDeProjeto/Imagens/BuilderTRilhaEducacionalBuilder.png" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c4ce743072a50e4b00f32fe3e68be7ae87c7fe93/docs/PadroesDeProjeto/Imagens/builderModuloBuilder.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -493,7 +493,7 @@ A figura 6 abaixo ilustra a estrutura da classe `TrilhaEducacionalBuilder.java` 
 <div align="center">
     Figura 6: Classe TrilhaEducacionalBuilder.java
     <br>
-    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c4ce743072a50e4b00f32fe3e68be7ae87c7fe93/docs/PadroesDeProjeto/Imagens/builderModuloBuilder.png" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/c4ce743072a50e4b00f32fe3e68be7ae87c7fe93/docs/PadroesDeProjeto/Imagens/BuilderTRilhaEducacionalBuilder.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
