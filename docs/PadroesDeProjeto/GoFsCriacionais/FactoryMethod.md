@@ -1047,6 +1047,9 @@ A figura 17 abaixo ilustra a estrutura da classe `Aluno.java` no ambiente de des
 
 #### Classe Instrutor
 
+A classe Instrutor implementa PapelUsuario e representa um usuário com capacidades de criação e gerenciamento de conteúdo educacional, possuindo atributos como biografia, avaliação e especialidades.
+
+Abaixo o código para `Instrutor.java` 
 
 ```
 
@@ -1070,6 +1073,9 @@ A figura 18 abaixo ilustra a estrutura da classe `Instrutor.java` no ambiente de
 
 #### Classe ProfessorVoluntario
 
+Esta classe implementa PapelUsuario para usuários que atuam como professores voluntários, com atributos como área de especialidade e contagem de artigos revisados.
+
+Abaixo o código para `ProfessorVoluntario.java`
 
 ```
 
@@ -1095,6 +1101,9 @@ A figura 19 abaixo ilustra a estrutura da classe `ProfessorVoluntario.java` no a
 
 #### Classe Administrador
 
+A classe Administrador implementa PapelUsuario e define as características e capacidades de um usuário com privilégios administrativos na plataforma, incluindo permissões globais e nível de acesso.
+
+Abaixo o código para `Administrador.java`
 
 ```
 
@@ -1116,6 +1125,10 @@ A figura 20 abaixo ilustra a estrutura da classe `Administrador.java` no ambient
 </div>
 
 #### Classe Moderador
+
+Implementando PapelUsuario, a classe Moderador representa usuários responsáveis pela moderação de conteúdo em fóruns, possuindo atributos como nível de moderação e data de início da atividade.
+
+Abaixo o código para `Moderador.java`
 
 ```
 
