@@ -793,41 +793,25 @@ FabricaDeArtigo é uma "ConcreteCreator" que também herda de FabricaDeConteudo.
 Abaixo o código para FabricaDeArtigo.java:
 
 ```
-package com.galaxiaconectada.fabricas; // Pertence ao pacote 'fabricas'
+package com.galaxiaconectada.fabricas; // Mesmo pacote da FabricaDeConteudo
 
-// Importa a classe base Conteudo e a interface Map
+import com.galaxiaconectada.core.Artigo;
 import com.galaxiaconectada.core.Conteudo;
-import com.galaxiaconectada.core.TipoVisibilidade;
+import com.galaxiaconectada.core.TipoVisibilidade; 
 import java.util.Map;
 
-// Ela não pode ser instanciada diretamente.
-public abstract class FabricaDeConteudo {
 
-    /**
-     * FACTORY METHOD (Método de Fábrica) abstrato.
-     * Cada fábrica concreta (FabricaDeArtigo ou FabricaDeVideo) precisará implementar este método para criar seu tipo específico de Conteudo.
-     *
-     * @param id O ID do conteúdo.
-     * @param titulo O título do conteúdo.
-     * @param descricao A descrição do conteúdo.
-     * @param visibilidade A visibilidade do conteúdo.
-     * @param detalhes Um Map contendo atributos específicos para o tipo de conteúdo a ser criado
-     * (ex: para Artigo pode ter "textoHtml", "fonte"; para Video "urlVideo", "duracaoSegundos").
-     * @return Uma instância de uma subclasse de Conteudo.
-     */
-    public abstract Conteudo criarConteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade, Map<String, Object> detalhes);
+public class FabricaDeArtigo extends FabricaDeConteudo {
 
 
-     public void iniciarPublicacaoDeConteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade, Map<String, Object> detalhes) {
-        // Chama o factory method para obter o objeto Produto.
-        Conteudo conteudo = criarConteudo(id, titulo, descricao, visibilidade, detalhes);
+    @Override
+    public Conteudo criarConteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade, Map<String, Object> detalhes) {
 
-        // Agora usa o produto.
-        System.out.println("\n--- Nova Publicação Iniciada pela Fábrica ---");
-        System.out.println("Fábrica: " + this.getClass().getSimpleName() + " está trabalhando...");
-        System.out.println("Conteúdo criado: " + conteudo.getTitulo() + " (ID: " + conteudo.getId() + ")");
-        conteudo.exibir(); // Chama o método exibir() do produto específico
-        System.out.println("--- Publicação Concluída ---");
+        String textoHtml = (String) detalhes.getOrDefault("textoHtml", "<p>Conteúdo do artigo não fornecido.</p>");
+        String fonte = (String) detalhes.getOrDefault("fonte", "Fonte não especificada");
+
+        // Cria e retorna uma nova instância de Artigo
+        return new Artigo(id, titulo, descricao, visibilidade, textoHtml, fonte);
     }
 }
 
