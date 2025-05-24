@@ -96,7 +96,71 @@ A classe `Modulo` é um componente que funciona como um contêiner temático que
 Abaixo o código para `Modulo.java` 
 
 ```
+package com.galaxiaconectada.trilhas;
 
+  import com.galaxiaconectada.core.Conteudo; // Usa a classe Conteudo
+  import java.util.List;
+  import java.util.ArrayList;
+
+  /**
+   * Representa um Módulo educacional dentro de uma Trilha.
+   * Um módulo agrupa diversos Conteúdos.
+   */
+  public class Modulo {
+      private int id;
+      private String titulo;
+      private int ordem; // Ordem de exibição do módulo na trilha
+      private String descricaoBreve;
+      private List<Conteudo> conteudos; // Lista de conteúdos pertencentes a este módulo
+
+      // Construtor será usado pelo ModuloBuilder
+      Modulo(int id, String titulo, int ordem, String descricaoBreve, List<Conteudo> conteudos) {
+          this.id = id;
+          this.titulo = titulo;
+          this.ordem = ordem;
+          this.descricaoBreve = descricaoBreve;
+          this.conteudos = conteudos != null ? new ArrayList<>(conteudos) : new ArrayList<>();
+      }
+
+      // Getters
+      public int getId() { return id; }
+      public String getTitulo() { return titulo; }
+      public int getOrdem() { return ordem; }
+      public String getDescricaoBreve() { return descricaoBreve; }
+      public List<Conteudo> getConteudos() { return new ArrayList<>(conteudos); } // Retorna cópia
+
+      /**
+       * Adiciona um conteúdo a este módulo.
+       */
+      public void adicionarConteudoInterno(Conteudo conteudo) {
+          if (this.conteudos == null) {
+              this.conteudos = new ArrayList<>();
+          }
+          this.conteudos.add(conteudo);
+      }
+
+
+      public void exibirDetalhes() {
+          System.out.println("  --- Módulo: " + titulo + " (ID: " + id + ", Ordem: " + ordem + ") ---");
+          System.out.println("  Descrição Breve: " + descricaoBreve);
+          if (conteudos.isEmpty()) {
+              System.out.println("    Este módulo ainda não possui conteúdos.");
+          } else {
+              System.out.println("    Conteúdos do Módulo:");
+              for (Conteudo c : conteudos) {
+                  System.out.println("      - " + c.getTitulo() + " (Tipo: " + c.getClass().getSimpleName() + ")");
+                  // Poderia chamar c.exibir() se quisesse todos os detalhes aqui
+              }
+          }
+          System.out.println("  ----------------------------------");
+      }
+
+      // toString para facilitar a visualização (opcional)
+      @Override
+      public String toString() {
+          return "Modulo [id=" + id + ", titulo=" + titulo + ", ordem=" + ordem + ", conteudos=" + conteudos.size() + "]";
+      }
+  }
 
 ```
 
@@ -125,7 +189,72 @@ O ModuloBuilder tem como objetivo principal simplificar e tornar mais robusto e 
 Abaixo o código para `ModuloBuilder.java` 
 
 ```
+package com.galaxiaconectada.trilhas;
 
+   import com.galaxiaconectada.core.Conteudo; // Para a lista de conteúdos
+   import java.util.List;
+   import java.util.ArrayList;
+
+   // Builder para a classe Modulo.
+
+   public class ModuloBuilder {
+       // Atributos que o Modulo final terá, guardados temporariamente aqui
+       private int id;
+       private String titulo;
+       private int ordem = 0; 
+       private String descricaoBreve = ""; // Valor padrão
+       private List<Conteudo> conteudos;
+
+       /**
+        * Construtor do ModuloBuilder.
+        * @param id O ID do módulo.
+        * @param titulo O título do módulo.
+        */
+       public ModuloBuilder(int id, String titulo) {
+           this.id = id;
+           this.titulo = titulo;
+           this.conteudos = new ArrayList<>(); // Inicializa a lista de conteúdos
+       }
+
+       //Define a ordem de exibição do módulo.
+       
+       public ModuloBuilder comOrdem(int ordem) {
+           this.ordem = ordem;
+           return this; // Retorna a própria instância para chamadas fluentes
+       }
+
+       public ModuloBuilder comDescricaoBreve(String descricao) {
+           this.descricaoBreve = descricao;
+           return this;
+       }
+
+       public ModuloBuilder adicionarConteudo(Conteudo conteudo) {
+           if (conteudo != null) {
+               this.conteudos.add(conteudo);
+           }
+           return this;
+       }
+
+       //Define uma lista inteira de Conteudos para o módulo,
+       
+       public ModuloBuilder comListaDeConteudos(List<Conteudo> listaConteudos) {
+           if (listaConteudos != null) {
+               this.conteudos = new ArrayList<>(listaConteudos); // Cria uma nova lista baseada na fornecida
+           } else {
+               this.conteudos = new ArrayList<>();
+           }
+           return this;
+       }
+
+       public Modulo build() {
+           // Validação simples: garante que o título foi fornecido
+           if (this.titulo == null || this.titulo.trim().isEmpty()) {
+               throw new IllegalStateException("O título do módulo é obrigatório e não pode ser vazio.");
+           }
+           // Chama o construtor de Modulo
+           return new Modulo(this.id, this.titulo, this.ordem, this.descricaoBreve, this.conteudos);
+       }
+   }
 
 ```
 
@@ -159,6 +288,98 @@ A TrilhaEducacional é a entidade central que organiza e define um percurso de a
 Abaixo o código para `TrilhaEducacional.java` 
 
 ```
+package com.galaxiaconectada.trilhas;
+
+  import java.util.ArrayList;
+  import java.util.List;
+  // Se precisar, importe Usuario aqui se métodos como inscreverUsuario forem implementados agora
+  // import com.galaxiaconectada.domain.Usuario;
+  // import com.galaxiaconectada.domain.ProgressoUsuarioTrilha; // Placeholder
+
+  /**
+   * Representa uma Trilha Educacional na plataforma.
+   * Uma trilha é um conjunto ordenado de Módulos sobre um tema específico.
+   */
+  public class TrilhaEducacional {
+      private int id;
+      private String titulo;
+      private String descricao;
+      private String nivel; // Ex: "Iniciante", "Intermediário", "Avançado"
+      private String categoria; // Ex: "Astronomia Básica", "Cosmologia", "Astrofísica"
+      private boolean publicada;
+      private String imagemUrl;
+      private List<Modulo> modulos; // Lista de módulos que compõem a trilha
+
+      // Construtor será usado pelo TrilhaEducacionalBuilder
+      TrilhaEducacional(int id, String titulo, String descricao, String nivel,
+                          String categoria, boolean publicada, String imagemUrl, List<Modulo> modulos) {
+          this.id = id;
+          this.titulo = titulo;
+          this.descricao = descricao;
+          this.nivel = nivel;
+          this.categoria = categoria;
+          this.publicada = publicada;
+          this.imagemUrl = imagemUrl;
+          this.modulos = modulos != null ? new ArrayList<>(modulos) : new ArrayList<>();
+      }
+
+      // Getters
+      public int getId() { return id; }
+      public String getTitulo() { return titulo; }
+      public String getDescricao() { return descricao; }
+      public String getNivel() { return nivel; }
+      public String getCategoria() { return categoria; }
+      public boolean isPublicada() { return publicada; }
+      public String getImagemUrl() { return imagemUrl; }
+      public List<Modulo> getModulos() { return new ArrayList<>(modulos); } // Retorna cópia
+
+      // Métodos da sua tabela (implementações placeholder ou básicas)
+      public float calcularProgressoMedio() {
+          // Lógica placeholder
+          System.out.println("[TrilhaEducacional] Calculando progresso médio para: " + titulo);
+          return 50.0f; // Exemplo
+      }
+
+      public boolean publicarTrilha() {
+          this.publicada = true;
+          System.out.println("[TrilhaEducacional] Trilha '" + titulo + "' publicada com sucesso!");
+          return true;
+      }
+
+      // public ProgressoUsuarioTrilha inscreverUsuario(Usuario u) {
+      //     System.out.println("[TrilhaEducacional] Usuário " + u.getNome() + " inscrito na trilha: " + titulo);
+      //     return null;
+      // }
+
+      public void exibirDetalhesCompletos() {
+          System.out.println("==============================================");
+          System.out.println("DETALHES DA TRILHA EDUCACIONAL");
+          System.out.println("==============================================");
+          System.out.println("ID: " + id);
+          System.out.println("Título: " + titulo);
+          System.out.println("Descrição: " + descricao);
+          System.out.println("Nível: " + nivel);
+          System.out.println("Categoria: " + categoria);
+          System.out.println("Publicada: " + (publicada ? "Sim" : "Não"));
+          System.out.println("URL da Imagem: " + imagemUrl);
+          System.out.println("----------------------------------------------");
+          if (modulos.isEmpty()) {
+              System.out.println("Esta trilha ainda não possui módulos.");
+          } else {
+              System.out.println("Módulos da Trilha (" + modulos.size() + "):");
+              for (Modulo m : modulos) {
+                  m.exibirDetalhes(); // Chama o exibirDetalhes de cada módulo
+              }
+          }
+          System.out.println("==============================================");
+      }
+
+
+      @Override
+      public String toString() {
+          return "TrilhaEducacional [id=" + id + ", titulo=" + titulo + ", modulos=" + modulos.size() + "]";
+      }
+  }
 
 
 ```
@@ -185,7 +406,81 @@ A TrilhaEducacionalBuilder é a classe designada para orquestrar e simplificar a
 Abaixo o código para `TrilhaEducacionalBuilder.java` 
 
 ```
+ package com.galaxiaconectada.trilhas;
 
+  import java.util.ArrayList;
+  import java.util.List;
+
+  public class TrilhaEducacionalBuilder {
+      // Atributos da TrilhaEducacional que estamos construindo
+      private int id;
+      private String titulo;
+      private String descricao = ""; // Valor padrão
+      private String nivel = "Indefinido"; // Valor padrão
+      private String categoria = "Geral"; // Valor padrão
+      private boolean publicada = false; // Valor padrão
+      private String imagemUrl = ""; // Valor padrão
+      private List<Modulo> modulos; // Lista para guardar os módulos da trilha
+
+      //Construtor do TrilhaEducacionalBuilder.
+      public TrilhaEducacionalBuilder(int id, String titulo) {
+          this.id = id;
+          this.titulo = titulo;
+          this.modulos = new ArrayList<>(); // Inicializa a lista de módulos
+      }
+
+      public TrilhaEducacionalBuilder comDescricao(String descricao) {
+          this.descricao = descricao;
+          return this;
+      }
+
+      
+      public TrilhaEducacionalBuilder comNivel(String nivel) {
+          this.nivel = nivel;
+          return this;
+      }
+
+      public TrilhaEducacionalBuilder comCategoria(String categoria) {
+          this.categoria = categoria;
+          return this;
+      }
+
+      public TrilhaEducacionalBuilder definirComoPublicada(boolean publicada) {
+          this.publicada = publicada;
+          return this;
+      }
+
+      public TrilhaEducacionalBuilder comImagemUrl(String imagemUrl) {
+          this.imagemUrl = imagemUrl;
+          return this;
+      }
+
+      public TrilhaEducacionalBuilder adicionarModulo(Modulo modulo) {
+          if (modulo != null) {
+              this.modulos.add(modulo);
+          }
+          return this;
+      }
+
+      public TrilhaEducacionalBuilder comListaDeModulos(List<Modulo> listaModulos) {
+          if (listaModulos != null) {
+              this.modulos = new ArrayList<>(listaModulos); // Cria uma cópia da lista
+          } else {
+              this.modulos = new ArrayList<>();
+          }
+          return this;
+      }
+
+      public TrilhaEducacional build() {
+          // Validação simples: garante que o título foi fornecido
+          if (this.titulo == null || this.titulo.trim().isEmpty()) {
+              throw new IllegalStateException("O título da trilha é obrigatório e não pode ser vazio.");
+          }
+          // Chama o construtor de TrilhaEducacional que preparamos
+          return new TrilhaEducacional(this.id, this.titulo, this.descricao, this.nivel,
+                                       this.categoria, this.publicada, this.imagemUrl, this.modulos);
+      }
+  }
 
 ```
 
@@ -207,6 +502,443 @@ A figura 6 abaixo ilustra a estrutura da classe `TrilhaEducacionalBuilder.java` 
 ## Classe de Teste AplicacaoGalaxia
 
 Para testar as classes e os códigos, foi criada uma main chamada AplicacaoGalaxia. O código dela se encontra abaixo:
+
+
+```
+
+package com.galaxiaconectada.main;
+
+// Imports das fábricas de Conteúdo
+import com.galaxiaconectada.core.Conteudo;
+import com.galaxiaconectada.core.TipoVisibilidade;
+import com.galaxiaconectada.domain.Usuario;
+import com.galaxiaconectada.fabricas.FabricaDeAdministrador;
+import com.galaxiaconectada.fabricas.FabricaDeAluno;
+import com.galaxiaconectada.fabricas.FabricaDeArtigo;
+import com.galaxiaconectada.fabricas.FabricaDeConteudo;
+import com.galaxiaconectada.fabricas.FabricaDeInstrutor;
+import com.galaxiaconectada.fabricas.FabricaDeJogo;
+import com.galaxiaconectada.fabricas.FabricaDeModerador;
+import com.galaxiaconectada.fabricas.FabricaDePapelUsuario;
+import com.galaxiaconectada.fabricas.FabricaDeProfessorVoluntario;
+import com.galaxiaconectada.fabricas.FabricaDeQuiz;
+import com.galaxiaconectada.fabricas.FabricaDeVideo; // Para usar como tipo de retorno e na lista de módulos
+import com.galaxiaconectada.trilhas.Modulo;
+import com.galaxiaconectada.trilhas.ModuloBuilder;
+import com.galaxiaconectada.trilhas.TrilhaEducacional;
+import com.galaxiaconectada.trilhas.TrilhaEducacionalBuilder;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class AplicacaoGalaxia {
+
+    // Fábrica para Conteúdo
+    private static FabricaDeConteudo fabricaDeConteudoAtual;
+    // Fábrica para PapelUsuario
+    private static FabricaDePapelUsuario fabricaDePapelAtual;
+
+    private static Scanner scanner = new Scanner(System.in);
+    // Lista para guardar usuários criados na sessão
+    private static List<Usuario> usuariosCadastrados = new ArrayList<>();
+    // NOVA LISTA para guardar trilhas criadas na sessão
+    private static List<TrilhaEducacional> trilhasCriadas = new ArrayList<>();
+
+
+    public static void main(String[] args) {
+        System.out.println("### Bem-vindo(a) à Plataforma Interativa Galáxia Conectada ###");
+        boolean continuarExecutando = true;
+
+        while (continuarExecutando) {
+            exibirMenuPrincipalGeral(); // MENU PRINCIPAL ATUALIZADO
+            int escolha = lerOpcaoDoUsuarioNumerica();
+
+            switch (escolha) {
+                case 1:
+                    gerenciarPublicacaoDeConteudo();
+                    break;
+                case 2:
+                    gerenciarUsuariosEPapeis();
+                    break;
+                case 3: // NOVA OPÇÃO
+                    gerenciarCriacaoDeTrilha();
+                    break;
+                case 0:
+                    continuarExecutando = false;
+                    System.out.println("\n[SISTEMA] Desligando a plataforma. Até a próxima exploração estelar!");
+                    break;
+                default:
+                    System.out.println("\n[ERRO] Opção inválida! Por favor, escolha um número do menu.");
+            }
+        }
+        scanner.close();
+        System.out.println("### Plataforma Galáxia Conectada Finalizada ###");
+    }
+
+    public static void exibirMenuPrincipalGeral() {
+        System.out.println("\n--- MENU PRINCIPAL ---");
+        System.out.println("O que você gostaria de fazer?");
+        System.out.println("1. Gerenciar Publicação de Conteúdo");
+        System.out.println("2. Gerenciar Usuários e Papéis");
+        System.out.println("3. Criar Nova Trilha Educacional"); // NOVA OPÇÃO ADICIONADA
+        System.out.println("0. Sair da Plataforma");
+        System.out.print("Digite o número da sua opção: ");
+    }
+
+    public static int lerOpcaoDoUsuarioNumerica() {
+        try {
+            int opcao = scanner.nextInt();
+            scanner.nextLine(); // Importante: consumir o caractere de nova linha
+            return opcao;
+        } catch (InputMismatchException e) {
+            System.out.println("[ERRO] Entrada inválida. Por favor, digite um número.");
+            scanner.nextLine(); // Limpar o buffer do scanner em caso de erro
+            return -1;
+        }
+    }
+
+    // ---- SEÇÃO DE GERENCIAMENTO DE CONTEÚDO (código que você já tinha) ----
+    public static void gerenciarPublicacaoDeConteudo() {
+        boolean continuarNoMenuConteudo = true;
+        while (continuarNoMenuConteudo) {
+            exibirMenuPublicacaoConteudo();
+            int escolha = lerOpcaoDoUsuarioNumerica();
+
+            switch (escolha) {
+                case 1: processarPublicacaoDeTipoEspecifico("ARTIGO"); break;
+                case 2: processarPublicacaoDeTipoEspecifico("VIDEO"); break;
+                case 3: processarPublicacaoDeTipoEspecifico("QUIZ"); break;
+                case 4: processarPublicacaoDeTipoEspecifico("JOGO"); break;
+                case 0: continuarNoMenuConteudo = false; System.out.println("\n[SISTEMA] Voltando ao Menu Principal..."); break;
+                default: System.out.println("\n[ERRO] Opção inválida!");
+            }
+        }
+    }
+
+    public static void exibirMenuPublicacaoConteudo() {
+        System.out.println("\n--- MENU DE PUBLICAÇÃO DE CONTEÚDO ---");
+        System.out.println("1. Publicar um Artigo");
+        System.out.println("2. Publicar um Vídeo");
+        System.out.println("3. Publicar um Quiz");
+        System.out.println("4. Publicar um Jogo");
+        System.out.println("0. Voltar ao Menu Principal");
+        System.out.print("Digite o número da sua opção: ");
+    }
+
+    public static void processarPublicacaoDeTipoEspecifico(String tipoConteudo) {
+        System.out.println("\n=== Iniciando Publicação de um Novo " + tipoConteudo.toUpperCase() + " ===");
+        configurarFabricaDeConteudo(tipoConteudo);
+        System.out.println("[FÁBRICA SELECIONADA]: " + fabricaDeConteudoAtual.getClass().getSimpleName());
+        System.out.println("   ↳ Explicação: Esta fábrica é uma especialista! Ela sabe exatamente como construir um objeto do tipo '" + tipoConteudo + "'.");
+
+        System.out.println("\n--- Coletando Dados Comuns do Conteúdo ---");
+        System.out.print("ID do conteúdo (número): "); int id = lerOpcaoDoUsuarioNumerica();
+        System.out.print("Título: "); String titulo = scanner.nextLine();
+        System.out.print("Descrição: "); String descricao = scanner.nextLine();
+
+        TipoVisibilidade.mostrarOpcoes();
+        System.out.print("Escolha o número da Visibilidade: "); int escVis = lerOpcaoDoUsuarioNumerica();
+        TipoVisibilidade visibilidadeSel = TipoVisibilidade.fromOpcao(escVis);
+        if (visibilidadeSel == null) { visibilidadeSel = TipoVisibilidade.PUBLICO; System.out.println("[INFO] Visibilidade inválida, usando PUBLICO."); }
+        System.out.println("[INFO] Visibilidade definida como: " + visibilidadeSel.getDescricao());
+
+        Map<String, Object> detalhes = new HashMap<>();
+        System.out.println("\n--- Coletando Dados Específicos para " + tipoConteudo.toUpperCase() + " ---");
+        if (tipoConteudo.equalsIgnoreCase("ARTIGO")) {
+            System.out.print("Texto HTML do Artigo: "); detalhes.put("textoHtml", scanner.nextLine());
+            System.out.print("Fonte do Artigo: "); detalhes.put("fonte", scanner.nextLine());
+        } else if (tipoConteudo.equalsIgnoreCase("VIDEO")) {
+            System.out.print("URL do Vídeo: "); detalhes.put("urlVideo", scanner.nextLine());
+            System.out.print("Duração em segundos (número): "); detalhes.put("duracaoSegundos", scanner.nextInt()); scanner.nextLine();
+            System.out.print("Transcrição do Vídeo: "); detalhes.put("transcricao", scanner.nextLine());
+        } else if (tipoConteudo.equalsIgnoreCase("QUIZ")) {
+            System.out.print("Tempo Limite em minutos (número): "); detalhes.put("tempoLimiteMin", scanner.nextInt()); scanner.nextLine();
+            System.out.print("Número de Tentativas Permitidas (número): "); detalhes.put("tentativasPermitidas", scanner.nextInt()); scanner.nextLine();
+        } else if (tipoConteudo.equalsIgnoreCase("JOGO")) {
+            System.out.print("Tipo do Jogo (ex: Puzzle, Estratégia): "); detalhes.put("tipoJogo", scanner.nextLine());
+            System.out.print("Nível de Dificuldade (número): "); detalhes.put("nivelDificuldade", scanner.nextInt()); scanner.nextLine();
+            System.out.print("URL do Jogo: "); detalhes.put("urlJogo", scanner.nextLine());
+        }
+
+        System.out.println("\n[INTERAÇÃO COM A FÁBRICA] " + fabricaDeConteudoAtual.getClass().getSimpleName() + " vai agora criar o objeto '" + tipoConteudo + "'.");
+        System.out.println("   ↳ A fábrica usa o 'Factory Method' (criarConteudo) para instanciar o tipo correto de Conteudo.");
+        fabricaDeConteudoAtual.iniciarPublicacaoDeConteudo(id, titulo, descricao, visibilidadeSel, detalhes);
+
+        System.out.println("O " + tipoConteudo.toUpperCase() + " '" + titulo + "' foi processado pela fábrica!");
+        System.out.println("==============================================");
+    }
+
+    public static void configurarFabricaDeConteudo(String tipoConteudo) {
+        if (tipoConteudo.equalsIgnoreCase("ARTIGO")) fabricaDeConteudoAtual = new FabricaDeArtigo();
+        else if (tipoConteudo.equalsIgnoreCase("VIDEO")) fabricaDeConteudoAtual = new FabricaDeVideo();
+        else if (tipoConteudo.equalsIgnoreCase("QUIZ")) fabricaDeConteudoAtual = new FabricaDeQuiz();
+        else if (tipoConteudo.equalsIgnoreCase("JOGO")) fabricaDeConteudoAtual = new FabricaDeJogo();
+        else throw new IllegalArgumentException("Tipo de conteúdo desconhecido para a fábrica: " + tipoConteudo);
+    }
+
+    // ---- SEÇÃO DE GERENCIAMENTO DE USUÁRIOS E PAPÉIS (código que você já tinha) ----
+    public static void gerenciarUsuariosEPapeis() {
+        boolean continuarNoMenuUsuario = true;
+        while (continuarNoMenuUsuario) {
+            exibirMenuUsuariosEPapeis();
+            int escolha = lerOpcaoDoUsuarioNumerica();
+            switch (escolha) {
+                case 1: criarNovoUsuarioBaseInterativo(); break;
+                case 2: atribuirPapelInterativo(); break;
+                case 3: exibirInformacoesDeUsuarioInterativo(); break;
+                case 0: continuarNoMenuUsuario = false; System.out.println("\n[SISTEMA] Voltando ao Menu Principal..."); break;
+                default: System.out.println("\n[ERRO] Opção inválida!");
+            }
+        }
+    }
+
+    public static void exibirMenuUsuariosEPapeis() {
+        System.out.println("\n--- MENU DE GERENCIAMENTO DE USUÁRIOS E PAPÉIS ---");
+        System.out.println("1. Criar Novo Usuário Base");
+        System.out.println("2. Atribuir Papel a um Usuário Existente");
+        System.out.println("3. Exibir Informações de um Usuário");
+        System.out.println("0. Voltar ao Menu Principal");
+        System.out.print("Digite o número da sua opção: ");
+    }
+
+    public static void criarNovoUsuarioBaseInterativo() {
+        System.out.println("\n--- Criando Novo Usuário Base ---");
+        System.out.print("ID do usuário (número): "); int id = lerOpcaoDoUsuarioNumerica();
+        System.out.print("Nome do usuário: "); String nome = scanner.nextLine();
+        System.out.print("Email do usuário: "); String email = scanner.nextLine();
+        System.out.print("Senha do usuário: "); String senha = scanner.nextLine();
+        Usuario novoUsuario = new Usuario(id, nome, email, senha);
+        usuariosCadastrados.add(novoUsuario);
+        System.out.println("[USUÁRIO CRIADO] Usuário '" + nome + "' (ID: " + id + ") criado com sucesso sem papel específico.");
+        novoUsuario.exibirInformacoesCompletas();
+    }
+
+    public static void exibirInformacoesDeUsuarioInterativo() {
+        System.out.println("\n--- Exibir Informações de Usuário ---");
+        if (usuariosCadastrados.isEmpty()) { System.out.println("[INFO] Nenhum usuário cadastrado nesta sessão ainda."); return; }
+        System.out.println("Usuários cadastrados nesta sessão (escolha pelo número):");
+        for (int i = 0; i < usuariosCadastrados.size(); i++) {
+            Usuario u = usuariosCadastrados.get(i);
+            String papelInfo = (u.getPapelPrincipal() != null) ? " (" + u.getPapelPrincipal().getTipoPapel() + ")" : " (Sem papel)";
+            System.out.println((i + 1) + ". " + u.getNome() + " (ID: " + u.getId() + ")" + papelInfo);
+        }
+        System.out.print("Digite o número do usuário para ver detalhes (ou 0 para cancelar): "); int escolha = lerOpcaoDoUsuarioNumerica();
+        if (escolha > 0 && escolha <= usuariosCadastrados.size()) {
+            usuariosCadastrados.get(escolha - 1).exibirInformacoesCompletas();
+        } else if (escolha != 0) { System.out.println("[ERRO] Escolha de usuário inválida."); }
+    }
+
+    public static void atribuirPapelInterativo() {
+        System.out.println("\n--- Atribuir Papel a Usuário ---");
+        if (usuariosCadastrados.isEmpty()) { System.out.println("[INFO] Nenhum usuário cadastrado. Crie um usuário primeiro."); return; }
+        System.out.println("Usuários cadastrados (escolha pelo número):");
+        for (int i = 0; i < usuariosCadastrados.size(); i++) {
+            Usuario u = usuariosCadastrados.get(i);
+            String papelInfo = (u.getPapelPrincipal() != null) ? " (" + u.getPapelPrincipal().getTipoPapel() + ")" : " (Sem papel)";
+            System.out.println((i + 1) + ". " + u.getNome() + " (ID: " + u.getId() + ")" + papelInfo);
+        }
+        System.out.print("Número do usuário (ou 0 para cancelar): "); int escolhaUsuarioNum = lerOpcaoDoUsuarioNumerica();
+        if (escolhaUsuarioNum == 0) { System.out.println("[INFO] Atribuição cancelada."); return; }
+        if (escolhaUsuarioNum < 1 || escolhaUsuarioNum > usuariosCadastrados.size()) { System.out.println("[ERRO] Escolha inválida."); return; }
+        Usuario usuarioEscolhido = usuariosCadastrados.get(escolhaUsuarioNum - 1);
+
+        System.out.println("\n--- Escolha o Papel para " + usuarioEscolhido.getNome() + " ---");
+        System.out.println("1. Aluno"); System.out.println("2. Instrutor"); System.out.println("3. Professor Voluntário");
+        System.out.println("4. Administrador"); System.out.println("5. Moderador"); System.out.println("0. Cancelar");
+        System.out.print("Número do papel: "); int escolhaPapelNum = lerOpcaoDoUsuarioNumerica();
+        String tipoPapelStr = null;
+        switch (escolhaPapelNum) {
+            case 1: tipoPapelStr = "ALUNO"; break; case 2: tipoPapelStr = "INSTRUTOR"; break;
+            case 3: tipoPapelStr = "PROFESSOR_VOLUNTARIO"; break; case 4: tipoPapelStr = "ADMINISTRADOR"; break;
+            case 5: tipoPapelStr = "MODERADOR"; break; case 0: System.out.println("[INFO] Cancelado."); return;
+            default: System.out.println("[ERRO] Papel inválido."); return;
+        }
+
+        configurarFabricaDePapel(tipoPapelStr);
+        System.out.println("[FÁBRICA DE PAPEL SELECIONADA]: " + fabricaDePapelAtual.getClass().getSimpleName());
+        System.out.println("   ↳ Explicação: Esta fábrica é especialista em criar o papel de '" + tipoPapelStr + "'.");
+        Map<String, Object> detalhesPapel = new HashMap<>();
+        System.out.println("\n--- Coletando Dados Específicos para o Papel de " + tipoPapelStr.toUpperCase() + " ---");
+        if (tipoPapelStr.equalsIgnoreCase("ALUNO")) {
+            System.out.print("Progresso Geral do Aluno (ex: 75.5): "); detalhesPapel.put("progressoGeral", scanner.nextFloat()); scanner.nextLine();
+            detalhesPapel.put("ultimoAcessoTrilha", LocalDateTime.now());
+        } else if (tipoPapelStr.equalsIgnoreCase("INSTRUTOR")) {
+            System.out.print("Biografia Curta: "); detalhesPapel.put("biografiaCurta", scanner.nextLine());
+            System.out.print("Avaliação Média (ex: 4.5): "); detalhesPapel.put("avaliacaoMedia", scanner.nextFloat()); scanner.nextLine();
+            System.out.print("Especialidades (separadas por vírgula): ");
+            detalhesPapel.put("especialidades", List.of(scanner.nextLine().split(",")));
+        } else if (tipoPapelStr.equalsIgnoreCase("PROFESSOR_VOLUNTARIO")) {
+            System.out.print("Área de Especialidade: "); detalhesPapel.put("areaEspecialidade", scanner.nextLine());
+            System.out.print("Número de Artigos Revisados: "); detalhesPapel.put("artigosRevisados", scanner.nextInt()); scanner.nextLine();
+        } else if (tipoPapelStr.equalsIgnoreCase("ADMINISTRADOR")) {
+            System.out.print("Permissões Globais (separadas por vírgula): ");
+            detalhesPapel.put("permissoesGlobais", List.of(scanner.nextLine().split(",")));
+            System.out.print("Nível de Acesso (número): "); detalhesPapel.put("nivelAcesso", scanner.nextInt()); scanner.nextLine();
+        } else if (tipoPapelStr.equalsIgnoreCase("MODERADOR")) {
+            System.out.print("Nível de Moderação: "); detalhesPapel.put("nivelModeracao", scanner.nextLine());
+            detalhesPapel.put("dataInicioModeracao", LocalDateTime.now());
+        }
+
+        System.out.println("\n[INTERAÇÃO COM A FÁBRICA DE PAPEL] " + fabricaDePapelAtual.getClass().getSimpleName() + " vai agora criar e atribuir o papel.");
+        System.out.println("   ↳ A fábrica usa o 'Factory Method' (criarPapel) para instanciar o tipo correto de PapelUsuario.");
+        fabricaDePapelAtual.atribuirPapelParaUsuario(usuarioEscolhido, detalhesPapel);
+        
+        System.out.println("\n--- Informações Atualizadas do Usuário ---");
+        usuarioEscolhido.exibirInformacoesCompletas();
+        System.out.println("==============================================");
+    }
+
+    public static void configurarFabricaDePapel(String tipoPapel) {
+        if (tipoPapel.equalsIgnoreCase("ALUNO")) fabricaDePapelAtual = new FabricaDeAluno();
+        else if (tipoPapel.equalsIgnoreCase("INSTRUTOR")) fabricaDePapelAtual = new FabricaDeInstrutor();
+        else if (tipoPapel.equalsIgnoreCase("PROFESSOR_VOLUNTARIO")) fabricaDePapelAtual = new FabricaDeProfessorVoluntario();
+        else if (tipoPapel.equalsIgnoreCase("ADMINISTRADOR")) fabricaDePapelAtual = new FabricaDeAdministrador();
+        else if (tipoPapel.equalsIgnoreCase("MODERADOR")) fabricaDePapelAtual = new FabricaDeModerador();
+        else throw new IllegalArgumentException("Tipo de papel desconhecido: " + tipoPapel);
+    }
+
+    // ---- NOVA SEÇÃO PARA CRIAR TRILHAS EDUCACIONAIS ----
+    public static void gerenciarCriacaoDeTrilha() {
+        System.out.println("\n========= CRIAR NOVA TRILHA EDUCACIONAL =========");
+
+        System.out.print("ID da Trilha (número): ");
+        int idTrilha = lerOpcaoDoUsuarioNumerica();
+        System.out.print("Título da Trilha: ");
+        String tituloTrilha = scanner.nextLine();
+
+        TrilhaEducacionalBuilder trilhaBuilder = new TrilhaEducacionalBuilder(idTrilha, tituloTrilha);
+        System.out.println("\n[BUILDER TRILHA] Iniciado para: '" + tituloTrilha + "'. Vamos configurar os detalhes.");
+
+        System.out.print("Descrição da Trilha: ");
+        trilhaBuilder.comDescricao(scanner.nextLine());
+        System.out.print("Nível da Trilha (ex: Iniciante, Intermediário, Avançado): ");
+        trilhaBuilder.comNivel(scanner.nextLine());
+        System.out.print("Categoria da Trilha (ex: Astronomia, Robótica): ");
+        trilhaBuilder.comCategoria(scanner.nextLine());
+        System.out.print("URL da Imagem da Trilha (opcional, deixe em branco se não houver): ");
+        trilhaBuilder.comImagemUrl(scanner.nextLine());
+        System.out.print("Deseja publicar a trilha imediatamente? (s/n): ");
+        boolean publicada = scanner.nextLine().trim().equalsIgnoreCase("s");
+        trilhaBuilder.definirComoPublicada(publicada);
+
+        System.out.print("\nQuantos módulos você deseja adicionar a esta trilha? ");
+        int numModulos = lerOpcaoDoUsuarioNumerica();
+
+        for (int i = 0; i < numModulos; i++) {
+            System.out.println("\n--- Configurando Módulo " + (i + 1) + " de " + numModulos + " ---");
+            System.out.print("ID do Módulo (número): ");
+            int idModulo = lerOpcaoDoUsuarioNumerica();
+            System.out.print("Título do Módulo: ");
+            String tituloModulo = scanner.nextLine();
+
+            ModuloBuilder moduloBuilder = new ModuloBuilder(idModulo, tituloModulo);
+            System.out.println("[BUILDER MÓDULO] Iniciado para: '" + tituloModulo + "'.");
+
+            System.out.print("Ordem do Módulo na trilha (número, ex: 1, 2...): ");
+            moduloBuilder.comOrdem(lerOpcaoDoUsuarioNumerica());
+            System.out.print("Descrição breve do Módulo: ");
+            moduloBuilder.comDescricaoBreve(scanner.nextLine());
+
+            System.out.print("\nQuantos conteúdos você quer adicionar a este módulo '" + tituloModulo + "'? ");
+            int numConteudos = lerOpcaoDoUsuarioNumerica();
+            for (int j = 0; j < numConteudos; j++) {
+                System.out.println("\n  --- Adicionando Conteúdo " + (j + 1) + " ao Módulo '" + tituloModulo + "' ---");
+                Conteudo novoConteudo = criarConteudoInterativoParaModulo(); // Usando o método auxiliar
+                if (novoConteudo != null) {
+                    moduloBuilder.adicionarConteudo(novoConteudo);
+                    System.out.println("  [BUILDER MÓDULO] Conteúdo '" + novoConteudo.getTitulo() + "' (Tipo: " + novoConteudo.getClass().getSimpleName() + ") adicionado ao módulo.");
+                }
+            }
+            Modulo moduloConstruido = moduloBuilder.build();
+            trilhaBuilder.adicionarModulo(moduloConstruido);
+            System.out.println("[BUILDER TRILHA] Módulo '" + moduloConstruido.getTitulo() + "' construído e adicionado à trilha '" + tituloTrilha + "'.");
+        }
+
+        System.out.println("\n[BUILDER TRILHA] Finalizando a construção da Trilha Educacional completa...");
+        TrilhaEducacional trilhaFinal = trilhaBuilder.build();
+        trilhasCriadas.add(trilhaFinal); 
+
+        System.out.println("\n🎉 Trilha Educacional '" + trilhaFinal.getTitulo() + "' criada com sucesso! 🎉");
+        trilhaFinal.exibirDetalhesCompletos();
+        System.out.println("===================================================");
+    }
+
+    // Método auxiliar para criar um Conteúdo interativamente (para ser adicionado a um Módulo)
+    public static Conteudo criarConteudoInterativoParaModulo() {
+        exibirMenuTiposDeConteudoParaModulo();
+        int escolhaTipoConteudo = lerOpcaoDoUsuarioNumerica();
+        String tipoConteudoString = null;
+
+        switch (escolhaTipoConteudo) {
+            case 1: tipoConteudoString = "ARTIGO"; break;
+            case 2: tipoConteudoString = "VIDEO"; break;
+            case 3: tipoConteudoString = "QUIZ"; break;
+            case 4: tipoConteudoString = "JOGO"; break;
+            case 0: System.out.println("[INFO] Criação de conteúdo para módulo cancelada."); return null;
+            default: System.out.println("[ERRO] Tipo de conteúdo inválido."); return null;
+        }
+
+        System.out.println("\n  --- Coletando Dados para o Novo " + tipoConteudoString.toUpperCase() + " (para o módulo) ---");
+        configurarFabricaDeConteudo(tipoConteudoString); // Configura a fábrica de CONTEÚDO
+        System.out.println("  [FÁBRICA CONTEÚDO SELECIONADA]: " + fabricaDeConteudoAtual.getClass().getSimpleName());
+
+        System.out.print("  ID do conteúdo (número): ");
+        int id = lerOpcaoDoUsuarioNumerica();
+        System.out.print("  Título do conteúdo: ");
+        String titulo = scanner.nextLine();
+        System.out.print("  Descrição do conteúdo: ");
+        String descricao = scanner.nextLine();
+
+        TipoVisibilidade.mostrarOpcoes();
+        System.out.print("  Escolha o número da Visibilidade para este conteúdo: ");
+        int escolhaVis = lerOpcaoDoUsuarioNumerica();
+        TipoVisibilidade visibilidadeSel = TipoVisibilidade.fromOpcao(escolhaVis);
+        if (visibilidadeSel == null) {
+            visibilidadeSel = TipoVisibilidade.PUBLICO; 
+            System.out.println("  [INFO] Visibilidade inválida para conteúdo, usando PUBLICO.");
+        }
+        System.out.println("  [INFO] Visibilidade do conteúdo definida como: " + visibilidadeSel.getDescricao());
+
+        Map<String, Object> detalhes = new HashMap<>();
+        if (tipoConteudoString.equalsIgnoreCase("ARTIGO")) {
+            System.out.print("  Texto HTML: "); detalhes.put("textoHtml", scanner.nextLine());
+            System.out.print("  Fonte: "); detalhes.put("fonte", scanner.nextLine());
+        } else if (tipoConteudoString.equalsIgnoreCase("VIDEO")) {
+            System.out.print("  URL: "); detalhes.put("urlVideo", scanner.nextLine());
+            System.out.print("  Duração (s): "); detalhes.put("duracaoSegundos", scanner.nextInt()); scanner.nextLine();
+            System.out.print("  Transcrição: "); detalhes.put("transcricao", scanner.nextLine());
+        } else if (tipoConteudoString.equalsIgnoreCase("QUIZ")) {
+            System.out.print("  Tempo Limite (min): "); detalhes.put("tempoLimiteMin", scanner.nextInt()); scanner.nextLine();
+            System.out.print("  Tentativas: "); detalhes.put("tentativasPermitidas", scanner.nextInt()); scanner.nextLine();
+        } else if (tipoConteudoString.equalsIgnoreCase("JOGO")) {
+            System.out.print("  Tipo Jogo: "); detalhes.put("tipoJogo", scanner.nextLine());
+            System.out.print("  Dificuldade (1-5): "); detalhes.put("nivelDificuldade", scanner.nextInt()); scanner.nextLine();
+            System.out.print("  URL Jogo: "); detalhes.put("urlJogo", scanner.nextLine());
+        }
+        
+        return fabricaDeConteudoAtual.criarConteudo(id, titulo, descricao, visibilidadeSel, detalhes);
+    }
+
+    // Menu específico para quando estamos adicionando conteúdo a um módulo
+    public static void exibirMenuTiposDeConteudoParaModulo() {
+        System.out.println("\n  Qual tipo de conteúdo deseja adicionar a este módulo?");
+        System.out.println("  1. Artigo");
+        System.out.println("  2. Vídeo");
+        System.out.println("  3. Quiz");
+        System.out.println("  4. Jogo");
+        System.out.println("  0. Concluir adição de conteúdos a este módulo");
+        System.out.print("  Digite sua opção: ");
+    }
+
+} // Fim da classe AplicacaoGalaxia3
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
 
 ## Conclusão
