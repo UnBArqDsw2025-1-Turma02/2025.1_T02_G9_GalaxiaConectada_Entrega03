@@ -40,7 +40,7 @@
       - [Fábrica FabricaDeProfessorVoluntario](#fábrica-fabricadeprofessorvoluntario)
       - [Fábrica FabricaDeAdministrador](#fábrica-fabricadeadministrador)
       - [Fábrica FabricaDeModerador](#fábrica-fabricademoderador)
-- [Classe de Teste AplicacaoGalaxia (Main)](#classe-de-teste-aplicacaogalaxia-main)
+- [Classe de Teste AplicacaoGalaxia](#Classe-de-Teste-AplicacaoGalaxia)
 - [Conclusão](#conclusão)
 - [Bibliografia](#bibliografia)
 - [Histórico de Versão](#histórico-de-versão)
@@ -1838,7 +1838,7 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
     <br>
 </div>
 
-### Classe de Teste AplicacaoGalaxia a Main
+## Classe de Teste AplicacaoGalaxia
 
 Para testar as classes e os códigos, foi criada uma main chamada AplicacaoGalaxia. O código dela se encontra abaixo:
 
