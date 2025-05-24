@@ -55,25 +55,45 @@ No contexto da plataforma educacional **Galáxia Conectada**, que visa oferecer 
 
 ## Objetivo
 
+A aplicação do padrão de projeto Factory Method na plataforma Galáxia Conectada visa promover uma arquitetura de software mais flexível, reutilizável e preparada para evoluções futuras. Sendo assim, ao organizar a criação de objetos relacionados aos usuários e aos conteúdos educacionais por meio de fábricas especializadas, o sistema  deve se tornar de fácil manutenção. 
+
+Os principais objetivos ao utilizar o padrão Factory Method no projeto, com base em [Padrão de Projeto: Factory Method](https://www.thiengo.com.br/padrao-de-projeto-factory-method#title-5) e em [Factory Method](https://refactoring.guru/design-patterns/factory-method) são:
+
+- Reduzir o acoplamento entre as classes que utilizam objetos e as classes concretas que os implementam.
+
+- Facilitar a adição de novos tipos de conteúdo e usuários sem impactar a lógica central do sistema.
+
+- Centralizar a lógica de criação dos objeto e tornar o código mais consistente.
+
+- Promover a reutilização de códig ao permitir que as subclasses reutilizem a estrutura básica das superclasses.
+
+- Aumentar a escalabilidade e manutenção do sistema.
 
 
 ## Metodologia
 
-O **Factory Method** é um padrão de projeto criacional que propõe uma solução para o problema de criação de objetos sem que a classe cliente precise especificar a classe concreta do objeto a ser criado. Com isso, ele define uma interface (ou classe abstrata) com um método para criar um objeto – o "método fábrica" – mas permite que as subclasses alterem o tipo de objeto que será efetivamente criado. Isso promove o baixo acoplamento, pois o cliente interage com a interface da fábrica e do produto, desconhecendo as implementações concretas.
+Como foi citado, o **Factory Method** é um padrão de projeto criacional que propõe uma solução para o problema de criação de objetos sem que a classe cliente precise especificar a classe concreta do objeto a ser criado. Com isso, ele define uma interface (ou classe abstrata) com um método para criar um objeto – o "método fábrica" – mas permite que as subclasses alterem o tipo de objeto que será efetivamente criado.
 
-No sistema "Galáxia Conectada", identificou-se a necessidade de criar diferentes tipos de `Conteudo` educacional. Assim, a aplicação do Factory Method permite que a lógica de instanciação de cada tipo específico de `Conteudo` (`Artigo`, `Video`, `Quiz`, `Jogo`) seja encapsulada em suas respectivas fábricas concretas, enquanto o sistema cliente interage apenas com uma fábrica abstrata de conteúdo.
+**Principais Componentes do Padrão Aplicado, com base em [Design Patterns - Parte 3 – Factory Method](https://medium.com/@jonesroberto/desing-patterns-factory-method-a7496ae071aa):**
 
-**Principais Componentes do Padrão Aplicado:**
+* **Product (Produto):** Interface ou classe abstrata que define os métodos que todos os tipos de conteúdo ou usuários devem implementar.
+* **ConcreteProduct (Produto Concreto):** mplementações concretas da interface Product, como Artigo, Vídeo, Quiz, Aluno, Instrutor, entre outros.
+* **Creator (Criador):** Classe base que declara o método de fábrica createProduct(), que deve ser sobrescrito pelas subclasses.
+* **ConcreteCreator (Criador Concreto):** Subclasses que implementam o método de fábrica e retornam instâncias específicas dos ConcreteProduct.
 
-* **Product (Produto):** A interface ou classe abstrata `Conteudo`, que define o tipo de objeto que o método fábrica criará.
-* **ConcreteProduct (Produto Concreto):** As classes `Artigo`, `Video`, `Quiz` e `Jogo`, que implementam/estendem `Conteudo`.
-* **Creator (Criador):** A classe abstrata `FabricaDeConteudo`, que declara o método fábrica abstrato `criarConteudo()`.
-* **ConcreteCreator (Criador Concreto):** As classes `FabricaDeArtigo`, `FabricaDeVideo`, `FabricaDeQuiz` e `FabricaDeJogo`, que sobrescrevem o método fábrica para retornar uma instância de um Produto Concreto específico.
+A concepção das classes de produto e suas inter-relações serão guiadas por diagrama previamente elaborados para o projeto:
 
-A concepção das classes de produto e suas inter-relações foi guiada pelo Diagrama de Classes previamente elaborado para o projeto:
 * **Diagrama de Classes de Referência:** [Diagrama de Classes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaClasses).
-* * **Diagrama de Classes de Componentes:** [Diagrama de Componentes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaComponentes).
+* **Diagrama de Classes de Componentes:** [Diagrama de Componentes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaComponentes).
+* **Diagrama de Pacotes:** [Diagrama de Pacotes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemOrganizacional/DiagramaPacotes).
 
+**Passo a passo de desenvolvimento:**
+
+1. Definição das interfaces ou classes abstratas para Product, representando tanto os conteúdos educacionais quanto os usuários da plataforma.
+2. Criação das classes concretas (ConcreteProduct) como Artigo, Vídeo, Quiz, Jogo, além de Aluno, Instrutor, Administrador, entre outras.
+3. Desenvolvimento da classe criadora (Creator) com o método de fábrica abstrato.
+4. Implementação das fábricas concretas (ConcreteCreator), cada uma responsável por instanciar um tipo específico de conteúdo ou usuário.
+5. Criação de uma classe Main para testes, na qual serão instanciadas as fábricas e verificado o retorno dos objetos criados.
 
 ## Desenvolvimento e Implementação
 
