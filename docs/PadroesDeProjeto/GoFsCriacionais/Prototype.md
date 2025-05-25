@@ -115,7 +115,7 @@ A interface `PrototipoClonavel` estabelece o contrato que todas as classes prot√
 
 Abaixo o c√≥digo para `PrototipoClonavel.java`
 
-```
+```java
 package com.galaxiaconectada.prototipos;
 
   // Define uma interface para objetos que podem ser clonados.
