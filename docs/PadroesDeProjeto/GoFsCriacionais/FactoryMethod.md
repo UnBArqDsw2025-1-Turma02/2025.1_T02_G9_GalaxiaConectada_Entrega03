@@ -1745,7 +1745,7 @@ Esta fábrica é especializada na criação de papéis de Administrador, configu
 
 Abaixo o código para `FabricaDeAdministrador.java`
 
-```
+```java
 package com.galaxiaconectada.fabricas;
 
 import com.galaxiaconectada.domain.Usuario;
@@ -1800,7 +1800,7 @@ FabricaDeModerador é responsável por criar papéis de Moderador, definindo atr
 Abaixo o código para `FabricaDeModerador.java `
 
 
-```
+```java
 package com.galaxiaconectada.fabricas;
 
 import com.galaxiaconectada.domain.Usuario;
@@ -1844,7 +1844,7 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
 
 Para testar as classes e os códigos, foi criada uma main chamada AplicacaoGalaxia. O código dela se encontra abaixo:
 
-```
+```java
 package com.galaxiaconectada.main;
 
 // Imports das fábricas de Conteúdo
