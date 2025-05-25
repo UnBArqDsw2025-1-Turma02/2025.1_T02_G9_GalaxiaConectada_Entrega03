@@ -125,7 +125,8 @@ A base para a aplicação do Factory Method é a existência de uma hierarquia d
 A classe `Conteudo` serve como a **superclasse abstrata** para todos os tipos de materiais de estudo. Assim, ela define atributos comuns como `id`, `titulo`, `descricao`, `dataPublicacao` e `visibilidade`, além de um método abstrato `exibir()` que será implementado de forma específica por cada subclasse para determinar como o conteúdo é apresentado.
 
 Abaixo o código para `Conteudo.java`:
-```
+
+```java
 package com.galaxiaconectada.core; 
 
 import com.galaxiaconectada.domain.Usuario;
@@ -223,7 +224,7 @@ O TipoVisibilidade foi criado para representar de forma segura e clara os difere
 
 Abaixo o código para TipoVisibilidade.java:
 
-```
+```java
 package com.galaxiaconectada.core;
 
 public enum TipoVisibilidade {
