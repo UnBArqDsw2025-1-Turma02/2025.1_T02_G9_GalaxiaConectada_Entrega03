@@ -95,7 +95,7 @@ A classe `Modulo` é um componente que funciona como um contêiner temático que
 
 Abaixo o código para `Modulo.java` 
 
-```
+```java
 package com.galaxiaconectada.trilhas;
 
   import com.galaxiaconectada.core.Conteudo; // Usa a classe Conteudo
@@ -188,7 +188,7 @@ O ModuloBuilder tem como objetivo principal simplificar e tornar mais robusto e 
 
 Abaixo o código para `ModuloBuilder.java` 
 
-```
+```java
 package com.galaxiaconectada.trilhas;
 
    import com.galaxiaconectada.core.Conteudo; // Para a lista de conteúdos
@@ -287,7 +287,7 @@ A TrilhaEducacional é a entidade central que organiza e define um percurso de a
 
 Abaixo o código para `TrilhaEducacional.java` 
 
-```
+```java
 package com.galaxiaconectada.trilhas;
 
   import java.util.ArrayList;
