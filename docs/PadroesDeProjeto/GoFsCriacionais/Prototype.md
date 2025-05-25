@@ -135,7 +135,7 @@ A figura 3 abaixo ilustra a estrutura da classe `PrototipoClonavel.java` no ambi
 <div align="center">
     Figura 3: Interface PrototipoClonavel.java
     <br>
-    <img src="" width="900">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/633bd9122d9c05604bdc8687a4e377af146e5ba6/docs/PadroesDeProjeto/Imagens/prototypePrototipoClonavel.png" width="900">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -232,7 +232,7 @@ A figura 4 abaixo ilustra a estrutura da classe `Conquista.java` no ambiente de 
 <div align="center">
     Figura 4:  Classe Conquista.java como Protótipo
     <br>
-    <img src="" width="900">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/633bd9122d9c05604bdc8687a4e377af146e5ba6/docs/PadroesDeProjeto/Imagens/PrototypeConquista.png" width="900">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
