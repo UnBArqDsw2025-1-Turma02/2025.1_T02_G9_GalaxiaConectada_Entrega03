@@ -31,8 +31,8 @@
 
 
 O principal objetivo da aplicação do padrão Prototype no projeto "Galáxia Conectada" é fornecer um mecanismo eficiente e flexível para a criação de novas instâncias de objetos `Conquista` e `Notificacao`. Busca-se com isso:
-* Reduzir o acoplamento, permitindo que o sistema crie novos objetos sem conhecer suas classes concretas em tempo de compilação (apenas o protótipo).
-* Melhorar a performance em cenários onde a instanciação direta é custosa, aproveitando a clonagem de objetos pré-configurados.
+* Reduzir o acoplamento ao permitir que o sistema crie novos objetos sem conhecer suas classes concretas em tempo de compilação (apenas o protótipo).
+* Melhorar a performance em cenários onde a instanciação direta é custosa.
 * Facilitar a gestão de "modelos" ou "templates" de conquistas e notificações que podem ser rapidamente duplicados e adaptados.
 * Manter a consistência na criação de objetos que compartilham uma base comum de atributos.
 
