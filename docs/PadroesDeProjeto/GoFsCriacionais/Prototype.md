@@ -104,3 +104,8 @@ O padrão **Prototype** especifica os tipos de objetos a criar usando uma instâ
 | Versão | Alteração | Responsável | Data |
 | - | - | - | - |
 | 1.0 | Elaboração do documento| Larissa Stéfane | 24/05/2025 |
+| 1.1 | Adição da Metodologia | Larissa Stéfane | 24/05/2025 |
+| 1.2 | Elaboração dos códigos | Larissa Stéfane | 24/05/2025 |
+| 1.3 | Reestruturação dos códigos | Larissa Stéfane | 24/05/2025 |
+| 1.4 | Adição das imagens | Larissa Stéfane | 24/05/2025 |
+| 1.5 | Reorganização | Larissa Stéfane | 24/05/2025 |
