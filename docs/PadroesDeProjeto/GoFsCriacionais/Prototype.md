@@ -263,3 +263,4 @@ A figura 6 abaixo ilustra a estrutura da classe `Notificacao.java` no ambiente d
 | 1.3 | Reestruturação dos códigos | Larissa Stéfane | 24/05/2025 |
 | 1.4 | Adição das imagens | Larissa Stéfane | 24/05/2025 |
 | 1.5 | Reorganização | Larissa Stéfane | 24/05/2025 |
+| 1.6 | Adição da conclusão | Larissa Stéfane | 24/05/2025 |
