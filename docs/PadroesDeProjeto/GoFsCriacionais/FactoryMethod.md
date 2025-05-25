@@ -290,7 +290,7 @@ A classe Artigo é uma especialização de Conteudo, a qual representa conteúdo
 
 Abaixo o código para Artigo.java:
 
-```
+```java
 package com.galaxiaconectada.core; // Mesmo pacote da classe Conteudo
 
 // É um tipo de Conteudo e herda seus atributos e métodos (como getTitulo(), adicionarComentario()
@@ -353,7 +353,7 @@ A classe **Video** estende **Conteudo** para representar conteúdo audiovisual. 
 
 Abaixo o código para Video.java:
 
-```
+```java
 package com.galaxiaconectada.core;
 
 public class Video extends Conteudo {
@@ -430,7 +430,7 @@ Como um tipo de Conteudo interativo, a classe Quiz é destinada a avaliações o
 
 Abaixo o código para Quiz.java:
 
-```
+```java
 package com.galaxiaconectada.core;
 
 import com.galaxiaconectada.domain.Usuario; // É preciso da classe Usuario para os métodos iniciar e submeter
