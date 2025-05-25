@@ -52,6 +52,23 @@ O padrão **Prototype** especifica os tipos de objetos a criar usando uma instâ
 
 **Observação:** A clonagem em Java é tipicamente realizada ao sobreescrever o método `clone()` da classe `Object` e implementando a interface `Cloneable`.
 
+**A concepção das classes de produto (`Conquista`, `Notificacao`) e suas inter-relações foi guiada pelos seguintes artefatos do projeto:**
+
+* **Diagrama de Classes de Referência:** [Diagrama de Classes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaClasses).
+* **Diagrama de Classes de Componentes:** [Diagrama de Componentes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaComponentes).
+* **Diagrama de Pacotes:** [Diagrama de Pacotes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemOrganizacional/DiagramaPacotes).
+
+* **Diagrama de Classes de Referência:** [Diagrama de Classes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaClasses).
+  
+* **Diagrama de Casos de Uso:** [Diagrama de Casos de Uso - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemOrganizacional/DiagramaCasosUso).
+
+**Passo a passo de desenvolvimento para o padrão Prototype no projeto "Galáxia Conectada":**
+
+1.  Definição da Interface de Clonagem que é a criação da interface `PrototipoClonavel`.
+2.  Implementação das Classes "Protótipo Concreto.
+3.  Criação de um Gerenciador de Protótipos: Desenvolvimento da classe `RegistroDePrototipos` para armazenar, gerenciar e fornecer acesso facilitado aos objetos protótipo através de chaves textuais.
+4.  Carregamento de Instâncias Protótipo na classe `AplicacaoGalaxia`.
+
 
 ## Desenvolvimento e Implementação
 
