@@ -19,7 +19,7 @@
 - [Classe de Teste AplicacaoGalaxia](#Classe-de-Teste-AplicacaoGalaxia)
 - [Conclusão](#conclusão)
 - [Bibliografia](#bibliografia)
-- [Histórico de Versão](#histórico-de-versão)s
+- [Histórico de Versão](#histórico-de-versão)
 
 
 
