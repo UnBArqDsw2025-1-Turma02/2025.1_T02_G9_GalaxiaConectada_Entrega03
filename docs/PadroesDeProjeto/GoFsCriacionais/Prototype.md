@@ -25,7 +25,9 @@
 
 ## Introdução
 
+O padrão de projeto **Prototype** (ou Protótipo) é um padrão criacional que, conforme elucidado por fontes como [Prototype](https://refactoring.guru/pt-br/design-patterns/prototype), permite a criação de novos objetos através da cópia de instâncias existentes, denominadas protótipos. Com isso, em vez de construir um objeto do zero, o que pode ser custoso ou complexo, o padrão Prototype delega o processo de instanciação ao próprio objeto protótipo. Isso é vantajoso quando o sistema precisa de múltiplas variações de objetos que compartilham uma estrutura e estado base, ou quando as classes a serem instanciadas são definidas em tempo de execução.
 
+No contexto do projeto "Galáxia Conectada", o padrão Prototype foi aplicado estrategicamente na criação de objetos das classes **`Conquista`** e **`Notificacao`**. A escolha se justifica pela necessidade de ter um conjunto de conquistas e modelos de notificação padrão que podem ser rapidamente duplicados e personalizados para usuários ou situações específicas. Por exemplo, uma conquista padrão como "Primeira Trilha Concluída" pode ser clonada e associada a um usuário, ou um modelo de notificação de "Boas-Vindas" pode ser clonado e ter seu texto particularizado. Esta abordagem visa otimizar a criação desses objetos, garantir consistência e reduzir a complexidade de configuração repetitiva.
 
 ## Objetivo
 
