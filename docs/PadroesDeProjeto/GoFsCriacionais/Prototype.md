@@ -247,7 +247,7 @@ A classe AplicacaoGalaxia.java foi atualizada para incluir uma seção de teste 
 
 ## Conclusão
 
-
+A implementação do padrão Prototype para as classes Conquista e Notificacao no projeto "Galáxia Conectada" ofereceu uma maneira eficiente de criar novas instâncias desses objetos a partir de modelos pré-definidos.
 
 ## Bibliografia 
 
