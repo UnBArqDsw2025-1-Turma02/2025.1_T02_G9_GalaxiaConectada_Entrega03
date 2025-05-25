@@ -41,8 +41,28 @@
 ## Modelagem do Prototype Para Conquistas
 
 
-## 
+## Definição da Interface de Clonagem
 
+
+### Interface PrototipoClonavel
+
+
+## Implementação dos Protótipos Concretos
+
+
+### Classe Conquista como Protótipo
+
+
+### Classe Notificacao como Protótipo
+
+
+## Gerenciamento de Protótipos com RegistroDePrototipos
+
+## Classe RegistroDePrototipos
+
+## Classe de Teste AplicacaoGalaxia
+
+## Conclusão
 
 ## Bibliografia 
 
