@@ -1125,7 +1125,7 @@ A classe Instrutor implementa PapelUsuario e representa um usuário com capacida
 
 Abaixo o código para `Instrutor.java` 
 
-```
+```java
 package com.galaxiaconectada.domain.papeis;
 
 import java.util.ArrayList;
@@ -1205,7 +1205,7 @@ Esta classe implementa PapelUsuario para usuários que atuam como professores vo
 
 Abaixo o código para `ProfessorVoluntario.java`
 
-```
+```java
 package com.galaxiaconectada.domain.papeis;
 
 import com.galaxiaconectada.core.Artigo; // Artigo está em .core
@@ -1297,7 +1297,7 @@ A classe Administrador implementa PapelUsuario e define as características e ca
 
 Abaixo o código para `Administrador.java`
 
-```
+```java
 package com.galaxiaconectada.domain.papeis;
 
 import com.galaxiaconectada.domain.Usuario;
@@ -1402,7 +1402,7 @@ Implementando PapelUsuario, a classe Moderador representa usuários responsávei
 
 Abaixo o código para `Moderador.java`
 
-```
+```java
 package com.galaxiaconectada.domain.papeis;
 
 import java.time.LocalDateTime;
