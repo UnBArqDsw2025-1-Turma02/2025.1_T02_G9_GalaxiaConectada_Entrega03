@@ -80,9 +80,9 @@ A seguir, serão detalhadas as modelagens e as implementações das classes envo
 Abaixo está o diagrama UML para o Prototype de Notificações:
 
 <div align="center">
-    Figura 1 (Prototype): Modelagem UML do Padrão Prototype para Notificações
+    Figura 1: Modelagem UML do Padrão Prototype para Notificações
     <br>
-    <img src="" width="700">
+    <img src="" width="900">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -90,9 +90,22 @@ Abaixo está o diagrama UML para o Prototype de Notificações:
 
 ## Modelagem do Prototype Para Conquistas
 
+Similarmente à seção anterior, esta parte deve apresentar um diagrama UML focado na aplicação do padrão Prototype à classe `Conquista`.
+
+Abaixo o espaço para o seu diagrama UML para o Prototype de Conquistas:
+<div align="center">
+    Figura 2: Modelagem UML do Padrão Prototype para Conquistas
+    <br>
+    <img src="" width="900">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 
 ## Definição da Interface de Clonagem
 
+Para padronizar a operação de clonagem dos protótipos foi definida uma interface simples, apresentada como `PrototipoClonavel`
 
 ### Interface PrototipoClonavel
 
