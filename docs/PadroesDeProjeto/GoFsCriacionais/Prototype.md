@@ -18,17 +18,17 @@
 
 ## Bibliografia 
 
-CLIMACO, Tácio. Design Pattern: Prototype. Medium, [s.d.]. Disponível em: https://climaco.medium.com/design-pattern-prototype-8930c565d995. Acesso em: 24 maio 2025.
+[1] CLIMACO, Tácio. Design Pattern: Prototype. Medium, [s.d.]. Disponível em: https://climaco.medium.com/design-pattern-prototype-8930c565d995. Acesso em: 24 maio 2025.
 
-CODE WITH TECH. Prototype Design Pattern: A Real-World Example. Medium, [s.d.]. Disponível em: https://medium.com/@CodeWithTech/efficient-object-creation-using-the-prototype-pattern-with-real-world-examples-ba87082befba. Acesso em: 24 maio 2025.
+[2] CODE WITH TECH. Prototype Design Pattern: A Real-World Example. Medium, [s.d.]. Disponível em: https://medium.com/@CodeWithTech/efficient-object-creation-using-the-prototype-pattern-with-real-world-examples-ba87082befba. Acesso em: 24 maio 2025.
 
-DIAS, Diogo Moreira. Padrão Prototype. GitBook, [s.d.]. Disponível em: https://diogomoreira.gitbook.io/padroes-de-projeto/padroes-gof-criacionais/padrao-prototype. Acesso em: 24 maio 2025.
+[3] DIAS, Diogo Moreira. Padrão Prototype. GitBook, [s.d.]. Disponível em: https://diogomoreira.gitbook.io/padroes-de-projeto/padroes-gof-criacionais/padrao-prototype. Acesso em: 24 maio 2025.
 
-ELEMAR JR. Utilizando o Padrão Prototype para Criação Eficiente de Objetos Complexos. Clube de Estudos, [s.d.]. Disponível em: https://elemarjr.com/clube-de-estudos/artigos/utilizando-o-padrao-prototype-para-criacao-eficiente-de-objetos-complexos/. Acesso em: 24 maio 2025.
+[4] ELEMAR JR. Utilizando o Padrão Prototype para Criação Eficiente de Objetos Complexos. Clube de Estudos, [s.d.]. Disponível em: https://elemarjr.com/clube-de-estudos/artigos/utilizando-o-padrao-prototype-para-criacao-eficiente-de-objetos-complexos/. Acesso em: 24 maio 2025.
 
-PYTHON ACADEMY. Padrões de Projeto em Python (Design Patterns): Prototype. Python Academy, [s.d.]. Disponível em: https://pythonacademy.com.br/blog/padroes-de-projeto-em-python-prototype. Acesso em: 24 maio 2025.
+[5] PYTHON ACADEMY. Padrões de Projeto em Python (Design Patterns): Prototype. Python Academy, [s.d.]. Disponível em: https://pythonacademy.com.br/blog/padroes-de-projeto-em-python-prototype. Acesso em: 24 maio 2025.
 
-REFACTORING GURU. Prototype: Também conhecido como: Protótipo, Clone. Refactoring.Guru, [s.d.]. Disponível em: https://refactoring.guru/pt-br/design-patterns/prototype. Acesso em: 24 maio 2025.
+[6] REFACTORING GURU. Prototype: Também conhecido como: Protótipo, Clone. Refactoring.Guru, [s.d.]. Disponível em: https://refactoring.guru/pt-br/design-patterns/prototype. Acesso em: 24 maio 2025.
 
 
 
