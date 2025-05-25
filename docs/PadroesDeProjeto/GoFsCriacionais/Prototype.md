@@ -327,7 +327,7 @@ A figura 5 abaixo ilustra a estrutura da classe `Notificacao.java` no ambiente d
 <div align="center">
     Figura 5: Classe Notificacao.java como Protótipo
     <br>
-    <img src="" width="900">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/633bd9122d9c05604bdc8687a4e377af146e5ba6/docs/PadroesDeProjeto/Imagens/prototypeNotificacao.png" width="900">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -415,12 +415,12 @@ package com.galaxiaconectada.prototipos;
 
 ##### Imagem do código no VSCODE
 
-A figura 6 abaixo ilustra a estrutura da classe `Notificacao.java` no ambiente de desenvolvimento VSCode.
+A figura 6 abaixo ilustra a estrutura da classe `RegistroDePrototipos.java` no ambiente de desenvolvimento VSCode.
 
 <div align="center">
     Figura 6: Classe RegistroDePrototipos.java
     <br>
-    <img src="" width="900">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/633bd9122d9c05604bdc8687a4e377af146e5ba6/docs/PadroesDeProjeto/Imagens/prototypeRegistroDePrototipo.png" width="900">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
