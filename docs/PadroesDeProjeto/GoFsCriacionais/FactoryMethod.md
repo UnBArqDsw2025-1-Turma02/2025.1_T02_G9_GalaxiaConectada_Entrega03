@@ -505,7 +505,7 @@ A classe Jogo representa conteúdo educacional em formato interativo e lúdico. 
 
 Abaixo o código para Jogo.java:
 
-```
+```java
 package com.galaxiaconectada.core;
 
 import com.galaxiaconectada.domain.Usuario; // Precisa da classe Usuario para os métodos
@@ -585,7 +585,7 @@ A classe Usuario, localizada no pacote com.galaxiaconectada.domain, é fundament
 
 Abaixo o código para Usuario.java:
 
-```
+```java
 package com.galaxiaconectada.domain;
 
 import java.time.LocalDateTime;
@@ -763,7 +763,7 @@ A fábrica abstrata também possui um método concreto, **iniciarPublicacaoDeCon
 
 Abaixo o código para FabricaDeConteudo.java:
 
-```
+```java
 package com.galaxiaconectada.fabricas; // Pertence ao pacote 'fabricas'
 
 // Importa a classe base Conteudo e a interface Map
@@ -826,7 +826,7 @@ FabricaDeArtigo é uma "ConcreteCreator" que também herda de FabricaDeConteudo.
 
 Abaixo o código para FabricaDeArtigo.java:
 
-```
+```java
 package com.galaxiaconectada.fabricas; // Mesmo pacote da FabricaDeConteudo
 
 import com.galaxiaconectada.core.Artigo;
