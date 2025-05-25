@@ -26,10 +26,29 @@
 ## Introdução
 
 
+
 ## Objetivo
 
 
+O principal objetivo da aplicação do padrão Prototype no projeto "Galáxia Conectada" é fornecer um mecanismo eficiente e flexível para a criação de novas instâncias de objetos `Conquista` e `Notificacao`. Busca-se com isso:
+* Reduzir o acoplamento, permitindo que o sistema crie novos objetos sem conhecer suas classes concretas em tempo de compilação (apenas o protótipo).
+* Melhorar a performance em cenários onde a instanciação direta é custosa, aproveitando a clonagem de objetos pré-configurados.
+* Facilitar a gestão de "modelos" ou "templates" de conquistas e notificações que podem ser rapidamente duplicados e adaptados.
+* Manter a consistência na criação de objetos que compartilham uma base comum de atributos.
+
+
 ## Metodologia
+
+O padrão **Prototype** especifica os tipos de objetos a criar usando uma instância prototípica e cria novos objetos copiando (clonando) este protótipo. Com isso, a ideia central é ter um objeto "molde" e, em vez de instanciar um novo objeto com `new` e configurar todos os seus atributos, solicita-se ao molde que ele crie uma cópia de si mesmo.
+
+**Componentes do Padrão Aplicado:**
+
+* **Prototype (Protótipo Abstrato/Interface):** Define a interface para clonagem.
+* **ConcretePrototype (Protótipo Concreto):** Implementa a operação de clonagem. Assim, as classes `Conquista` e `Notificacao` atuam como Protótipos Concretos ao implementar o método `clonar()`.
+* **Client (Cliente):** Cria um novo objeto ao pedir a um protótipo para se clonar.
+* **Registry (Registro de Protótipos - Opcional, mas usado):** A classe `RegistroDePrototipos` gerencia um conjunto de protótipos pré-configurados, o que facilita o acesso e a clonagem por meio de uma chave identificadora.
+
+**Observação:** A clonagem em Java é tipicamente realizada ao sobreescrever o método `clone()` da classe `Object` e implementando a interface `Cloneable`.
 
 
 ## Desenvolvimento e Implementação
