@@ -209,6 +209,30 @@ A classe RegistroDePrototipos atua como um gerenciador centralizado para os obje
 
 **Funcionamento:**  O cliente pode então solicitar um clone de um protótipo específico fornecendo sua chave, sem precisar conhecer a classe concreta do protótipo ou como ele é clonado internamente. 
 
+Abaixo o código para `RegistroDePrototipos.java` 
+
+```
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+##### Imagem do código no VSCODE
+
+A figura 6 abaixo ilustra a estrutura da classe `Notificacao.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 6: Classe RegistroDePrototipos.java
+    <br>
+    <img src="" width="900">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
 ## Classe de Teste AplicacaoGalaxia
 
 ## Conclusão
