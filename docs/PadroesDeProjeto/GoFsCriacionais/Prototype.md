@@ -72,9 +72,21 @@ O padrão **Prototype** especifica os tipos de objetos a criar usando uma instâ
 
 ## Desenvolvimento e Implementação
 
+A seguir, serão detalhadas as modelagens e as implementações das classes envolvidas na aplicação do padrão Prototype.
+
 
 ## Modelagem do Prototype Para Notificações
 
+Abaixo está o diagrama UML para o Prototype de Notificações:
+
+<div align="center">
+    Figura 1 (Prototype): Modelagem UML do Padrão Prototype para Notificações
+    <br>
+    <img src="" width="700">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 ## Modelagem do Prototype Para Conquistas
 
