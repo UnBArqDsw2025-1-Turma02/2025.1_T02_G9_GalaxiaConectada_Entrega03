@@ -148,6 +148,15 @@ A classe Conquista representa um prêmio ou reconhecimento dentro da plataforma.
 
 Abaixo o código para `Conquista.java`
 
+
+```
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
 ##### Imagem do código no VSCODE
 
 A figura 4 abaixo ilustra a estrutura da classe `Conquista.java` no ambiente de desenvolvimento VSCode.
@@ -163,6 +172,31 @@ A figura 4 abaixo ilustra a estrutura da classe `Conquista.java` no ambiente de 
 
 
 ### Classe Notificacao como Protótipo
+
+A classe Notificacao é responsável por representar mensagens do sistema para os usuários. Assim, ao aplicar o padrão Prototype, instâncias de Notificacao podem ser clonadas para criar novas notificações baseadas em modelos pré-definidos (ex: notificação de boas-vindas, notificação de nova mensagem). O método clonar() também utiliza super.clone(). 
+
+Abaixo o código para `Notificacao.java` 
+
+```
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+##### Imagem do código no VSCODE
+
+A figura 5 abaixo ilustra a estrutura da classe `Notificacao.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 5: Classe Notificacao.java como Protótipo
+    <br>
+    <img src="" width="900">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 
 ## Gerenciamento de Protótipos com RegistroDePrototipos
