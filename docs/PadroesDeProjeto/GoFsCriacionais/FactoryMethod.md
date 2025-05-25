@@ -1522,7 +1522,7 @@ A classe FabricaDePapelUsuario é a "Creator" abstrata para os papéis de usuár
 
 Abaixo o código para `FabricaDePapelUsuario.java`
 
-```
+```java
 package com.galaxiaconectada.fabricas;
 
     import com.galaxiaconectada.domain.Usuario;
@@ -1587,7 +1587,7 @@ FabricaDeAluno estende FabricaDePapelUsuario e implementa criarPapel() para inst
 
 Abaixo o código para `FabricaDeAluno.java`
 
-```
+```java
 package com.galaxiaconectada.fabricas;
 
 import com.galaxiaconectada.domain.Usuario;
@@ -1620,7 +1620,7 @@ public class FabricaDeAluno extends FabricaDePapelUsuario {
     }
 }
 
-```
+``` 
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
 ##### Imagem do código no VSCODE
@@ -1641,7 +1641,8 @@ A figura 23 abaixo ilustra a estrutura da classe `FabricaDeAluno.java` no ambien
 Esta fábrica é responsável por criar instâncias do papel Instrutor, configurando-o com dados como biografia e especialidades.
 
 Abaixo o código para `FabricaDeInstrutor.java`
-```
+
+```java
 package com.galaxiaconectada.fabricas;
 
 import com.galaxiaconectada.domain.Usuario;
@@ -1696,7 +1697,7 @@ FabricaDeProfessorVoluntario cria instâncias do papel ProfessorVoluntario, conf
 
 Abaixo o código para `FabricaDeProfessorVoluntario.java`
 
-```
+```java
 package com.galaxiaconectada.fabricas;
 
 import com.galaxiaconectada.domain.Usuario;
