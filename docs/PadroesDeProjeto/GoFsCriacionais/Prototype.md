@@ -109,6 +109,21 @@ Para padronizar a operação de clonagem dos protótipos foi definida uma interf
 
 ### Interface PrototipoClonavel
 
+A interface `PrototipoClonavel` estabelece o contrato que todas as classes protótipo devem seguir ao definir um método `clonar()`. Além disso, embora o Java forneça a interface marcadora `Cloneable` e o método `Object.clone()`, esta interface visa tornar o contrato de clonagem mais claro com a função. 
+
+**Observação Importante:** As classes que implementam `PrototipoClonavel` também devem implementar `java.lang.Cloneable` para utilizar `super.clone()` de forma eficaz.
+
+Abaixo o código para `PrototipoClonavel.java`
+
+```
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+
 
 ## Implementação dos Protótipos Concretos
 
