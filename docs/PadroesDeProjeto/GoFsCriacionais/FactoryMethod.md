@@ -875,7 +875,7 @@ Especializada na criação de objetos Video, a FabricaDeVideo implementa o méto
 Abaixo o código para FabricaDeVideo.java
 
 
-```
+```java
 package com.galaxiaconectada.fabricas;
 
 import com.galaxiaconectada.core.Conteudo;
@@ -919,7 +919,7 @@ FabricaDeQuiz é a fábrica concreta encarregada de instanciar objetos do tipo Q
 
 Abaixo o código para FabricaDeQuiz.java:
 
-```
+```java
 package com.galaxiaconectada.fabricas;
 
 import com.galaxiaconectada.core.Conteudo;
@@ -961,7 +961,7 @@ A FabricaDeJogo é a fábrica concreta especializada na criação de instâncias
 
 Abaixo o código para FabricaDeJogo.java:
 
-```
+```java
 package com.galaxiaconectada.fabricas;
 
 import com.galaxiaconectada.core.Conteudo;
@@ -1016,7 +1016,7 @@ A interface `PapelUsuario` define o contrato comum para todos os papéis especí
 
 Abaixo o código para `PapelUsuario.java`:
 
-```
+```java
 package com.galaxiaconectada.domain.papeis;
 
   public interface PapelUsuario {
@@ -1052,7 +1052,7 @@ A classe Aluno implementa PapelUsuario e encapsula os dados e funcionalidades es
 
 Abaixo o código para `Aluno.java`
 
-```
+```java
 package com.galaxiaconectada.domain.papeis;
 
 import java.time.LocalDateTime;
