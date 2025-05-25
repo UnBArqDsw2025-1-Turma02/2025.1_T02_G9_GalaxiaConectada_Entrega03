@@ -201,7 +201,13 @@ A figura 5 abaixo ilustra a estrutura da classe `Notificacao.java` no ambiente d
 
 ## Gerenciamento de Protótipos com RegistroDePrototipos
 
+Para facilitar o acesso e a clonagem dos objetos protótipo, foi implementada uma classe de registro.
+
 ## Classe RegistroDePrototipos
+
+A classe RegistroDePrototipos atua como um gerenciador centralizado para os objetos protótipo (Conquista, Notificacao). Seu objetivo é armazenar instâncias pré-configuradas desses protótipos, associadas a uma chave textual única.
+
+**Funcionamento:**  O cliente pode então solicitar um clone de um protótipo específico fornecendo sua chave, sem precisar conhecer a classe concreta do protótipo ou como ele é clonado internamente. 
 
 ## Classe de Teste AplicacaoGalaxia
 
