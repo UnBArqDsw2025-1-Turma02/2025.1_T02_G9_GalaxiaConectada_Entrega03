@@ -122,13 +122,44 @@ Abaixo o código para `PrototipoClonavel.java`
 
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+##### Imagem do código no VSCODE
 
+A figura 3 abaixo ilustra a estrutura da classe `PrototipoClonavel.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 3: Interface PrototipoClonavel.java
+    <br>
+    <img src="" width="900">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 
 ## Implementação dos Protótipos Concretos
 
+As classes Conquista e Notificacao foram adaptadas para atuar como protótipos concretos.
 
 ### Classe Conquista como Protótipo
+
+A classe Conquista representa um prêmio ou reconhecimento dentro da plataforma. Ao implementar PrototipoClonavel e Cloneable, ela pode servir como um molde para criar novas instâncias de conquistas. Isso é particularmente útil para definir um conjunto padrão de conquistas no sistema que podem ser clonadas quando um usuário as alcança. 
+
+**Observação:** O método clonar() utiliza super.clone() para realizar uma cópia superficial, que é suficiente para seus atributos.
+
+Abaixo o código para `Conquista.java`
+
+##### Imagem do código no VSCODE
+
+A figura 4 abaixo ilustra a estrutura da classe `Conquista.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 4:  Classe Conquista.java como Protótipo
+    <br>
+    <img src="" width="900">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 
 ### Classe Notificacao como Protótipo
