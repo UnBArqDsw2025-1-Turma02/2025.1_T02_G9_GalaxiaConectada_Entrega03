@@ -29,9 +29,27 @@ Os principais objetivos ao aplicar o padrão Singleton à classe `Forum` são:
 * **Controle sobre a Instanciação:** Centralizar o controle da criação da instância do `Forum` dentro da própria classe e evitar instanciações acidentais ou múltiplas.
 
 
-
 ## Metodologia
 
+O padrão de projeto criacional **Singleton** foi selecionado para a classe `Forum` devido à necessidade de que exista apenas uma única instância do fórum principal. Assim, como foi descrito em [Padrão de design Singleton: Implementação e Exemplos de Uso](https://elemarjr.com/clube-de-estudos/artigos/padrao-de-design-singleton-implementacao-e-exemplos-de-uso/), esta abordagem garante um ponto de acesso global e controlado. 
+
+A implementação do padrão Singleton para a classe `Forum` será realizada em Java, utilizando o Visual Studio Code (VSCode) como ambiente de desenvolvimento integrado, com o apoio das suas ferramentas e extensões para desenvolvimento Java. O processo de desenvolvimento seguirá as práticas padrão de codificação e organização em pacotes, conforme detalhado nas seções subsequentes.
+
+**A concepção da classe `Forum` será guiada pela análise dos seguintes artefatos de modelagem previamente desenvolvidos:**
+
+* **Diagrama de Classes de Referência:** [Diagrama de Classes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaClasses) - Este diagrama estabeleceu a classe `Forum` como uma entidade central e definiu seus atributos e métodos iniciais, além de seus relacionamentos com outras classes como `Subforum` e `Usuario`.
+* **Diagrama de Componentes:** [Diagrama de Componentes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaComponentes) - A análise deste diagrama ajudou a situar o `Forum` dentro de um componente de serviço de backend apropriado (ex: "Subsistema Comunidade"), reforçando a ideia de um serviço centralizado.
+* **Diagrama de Pacotes:** [Diagrama de Pacotes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemOrganizacional/DiagramaPacotes) - Orientou a decisão de localizar a classe `Forum` e suas classes relacionadas (como `Subforum`) dentro de um pacote específico e coeso (ex: `com.galaxiaconectada.domain.forum`).
+* **Diagrama de Casos de Uso:** [Diagrama de Casos de Uso - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemOrganizacional/DiagramaCasosUso) - A análise dos casos de uso que envolvem interação com o fórum (ex: "Criar Tópico", "Visualizar Subfóruns") evidenciou que os usuários sempre interagem com "o" fórum da plataforma, e não com múltiplas instâncias de fóruns diferentes, justificando a abordagem de instância única.
+
+**O desenvolvimento e implementação da classe `Forum` como um Singleton seguiram os seguintes passos:**
+
+1.  **Identificação da Necessidade de Unicidade:** Foi constatado, a partir da análise dos requisitos funcionais e do Diagrama de Casos de Uso, que a plataforma "Galáxia Conectada" deveria possuir um único Fórum Principal. Este fórum centraliza todas as discussões e subfóruns, e a existência de múltiplas instâncias seria conceitualmente incorreta e logisticamente problemática.
+2.  **Escolha do Padrão Singleton:** Diante da exigência de uma única instância globalmente acessível, o padrão de projeto criacional Singleton foi escolhido como a solução de design mais direta e apropriada.
+3.  **Definição da Estrutura da Classe `Forum`:**  Criação do arquivo `Forum.java`.
+4.  **Implementação dos Elementos Característicos do Singleto**
+5.  **Definição dos Métodos de Negócio do Fórum**
+6.  **Integração e Teste na Aplicação Cliente (`AplicacaoGalaxia.java`):**
 
 ## Desenvolvimento e Implementação
 
