@@ -214,6 +214,94 @@ As figuras 2 e 3 abaixo ilustra a estrutura da classe `Forum.java` no ambiente d
 
 ### Classe Auxiliar Subforum
 
+Para que a classe Forum pudesse gerenciar seus subfóruns, uma classe Subforum foi definida. Esta classe representa uma seção temática dentro do fórum principal e possui atributos como ID, nome e descrição. A instância de Forum mantém uma lista desses objetos e pode criar novos Subforums. 
+
+**Observação:** Embora a implementação completa de Subforum e suas interações não sejam o foco deste documento sobre Singleton, sua existência é necessária para a funcionalidade da classe Forum.
+
+Abaixo o código para Subforum.java:
+
+```java
+
+package com.galaxiaconectada.domain.forum;
+
+// import java.util.List; // Para futuros tópicos
+// import java.util.ArrayList; // Para futuros tópicos
+
+// Representa um Subforum dentro do Forum principal.
+public class Subforum {
+    private int id;
+    private String nome;
+    private String descricao;
+    private int ordemExibicao; 
+    
+    // Construtor
+    public Subforum(int id, String nome, String descricao) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.ordemExibicao = 0; // Valor padrão
+        System.out.println("[Subforum Criado] ID: " + id + ", Nome: " + nome); // Opcional
+    }
+
+    // Construtor
+    public Subforum(int id, String nome, String descricao, int ordemExibicao) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.ordemExibicao = ordemExibicao;
+    }
+
+    // Getters e Setters 
+    public int getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public int getOrdemExibicao() {
+        return ordemExibicao;
+    }
+
+    public void setOrdemExibicao(int ordemExibicao) {
+        this.ordemExibicao = ordemExibicao;
+    }
+
+    public void exibirDetalhes() {
+        System.out.println("  Subforum ID: " + id + " | Nome: " + nome + " | Ordem: " + ordemExibicao);
+        System.out.println("    Descrição: " + descricao);
+    }
+}
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+##### Imagem do código no VSCODE
+
+A figura 4 abaixo ilustra a estrutura da classe `Subforum.java` no ambiente de desenvolvimento VSCode.
+
+
+<div align="center">
+    Figura 4: Classe Auxiliar Subforum.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 ## Classe de Teste AplicacaoGalaxia
 
