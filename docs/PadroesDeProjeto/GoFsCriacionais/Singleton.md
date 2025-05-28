@@ -17,7 +17,9 @@
 
 ## Introdução
 
+Como explicado em [Singleton](https://refactoring.guru/pt-br/design-patterns/singleton), o padrão de projeto Singleton é uma solução criacional utilizada para garantir que uma determinada classe possua apenas uma instância ao longo da execução de um programa. Com isso, ele oferece um ponto de acesso global e controlado a essa instância, o que o torna especialmente útil para gerenciar recursos compartilhados, como conexões com banco de dados, arquivos ou componentes centrais do sistema. 
 
+No contexto do projeto Galáxia Conectada, o padrão Singleton foi aplicado à classe Forum, responsável por centralizar as interações entre os usuários. Assim, essa decisão arquitetural foi tomada para assegurar que haja apenas um fórum global no sistema e evitar a criação acidental de múltiplos fóruns e facilitar o gerenciamento das discussões. 
 
 ## Objetivo
 
