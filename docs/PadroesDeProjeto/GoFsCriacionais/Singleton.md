@@ -23,6 +23,11 @@ No contexto do projeto Galáxia Conectada, o padrão Singleton foi aplicado à c
 
 ## Objetivo
 
+Os principais objetivos ao aplicar o padrão Singleton à classe `Forum` são:
+* **Garantir Instância Única:** Assegurar que apenas um objeto `Forum` seja criado e utilizado em todo o ciclo de vida da aplicação.
+* **Ponto de Acesso Global:** Fornecer um método bem definido e acessível globalmente (`getInstance()`) para que outras partes do sistema possam obter a referência à instância única do `Forum` sem a necessidade de passá-la como parâmetro por múltiplas camadas.
+* **Controle sobre a Instanciação:** Centralizar o controle da criação da instância do `Forum` dentro da própria classe e evitar instanciações acidentais ou múltiplas.
+
 
 
 ## Metodologia
