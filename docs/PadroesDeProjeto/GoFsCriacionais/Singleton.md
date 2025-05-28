@@ -51,6 +51,29 @@ A implementação do padrão Singleton para a classe `Forum` será realizada em 
 5.  **Definição dos Métodos de Negócio do Fórum**
 6.  **Integração e Teste na Aplicação Cliente (`AplicacaoGalaxia.java`):**
 
+
+**Principais Componentes e Características da Implementação do Singleton:**
+
+* **Construtor Privado:** Impede que a classe seja instanciada diretamente de fora dela mesma com o operador `new`.
+* **Instância Estática Privada:** A classe mantém uma referência estática à sua própria instância única. Como a que se encontra abaixo:
+
+
+    ```java
+    private static Forum instancia;
+    ```
+* **Método Estático Público `getInstance()`:** Este método é o único ponto de acesso para obter a instância da classe. Ele verifica se a instância já foi criada; se não, ele a cria e a armazena na variável estática. Se já existe, ele simplesmente a retorna. Para garantir segurança em ambientes com múltiplas threads (concorrência), este método pode ser sincronizado.
+    ```java
+    public static synchronized Forum getInstance() {
+        if (instancia == null) {
+            instancia = new Forum(...); // Criação na primeira chamada
+        }
+        return instancia;
+    }
+    ```
+
+No contexto do "Galáxia Conectada", a classe `Forum` deve encapsular seus dados (como nome, descrição e a lista de `Subforum`s) e a lógica para gerenciá-los, enquanto o padrão Singleton controla sua criação e acesso.
+
+
 ## Desenvolvimento e Implementação
 
 
