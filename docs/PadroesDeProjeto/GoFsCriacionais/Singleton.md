@@ -6,7 +6,7 @@
 - [Objetivo](#Objetivo)
 - [Metodologia](#Metodologia)
 - [Desenvolvimento e Implementação](#Desenvolvimento-e-Implementação)
-- [Modelagem do SIngleton para o Fórum](#Modelagem-do-Singleton-para-o-Fórum)
+- [Modelagem do Singleton para o Fórum](#Modelagem-do-Singleton-para-o-Fórum)
     - [Implementação a Classe Forum](#Implementação-a-Classe-Forum.java)
     - [Classe Auxiliar Subforum](#Classe-Auxiliar-Subforum)
 - [Classe de Teste AplicacaoGalaxia](#Classe-de-Teste-AplicacaoGalaxia)
@@ -76,9 +76,20 @@ No contexto do "Galáxia Conectada", a classe `Forum` deve encapsular seus dados
 
 ## Desenvolvimento e Implementação
 
+A seguir, são detalhadas a modelagem e a implementação da classe `Forum` como um Singleton e sua interação com outras partes do sistema.
 
-## Modelagem do SIngleton para o Fórum
 
+## Modelagem do Singleton para o Fórum
+
+Abaixo o espaço para o seu diagrama UML para o Singleton do `Forum`:
+<div align="center">
+    Figura 1 (Singleton): Modelagem UML do Padrão Singleton para a Classe Forum
+    <br>
+    <img src="" alt="Modelagem UML do Singleton para Forum" width="700">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 ### Implementação a Classe Forum
 
