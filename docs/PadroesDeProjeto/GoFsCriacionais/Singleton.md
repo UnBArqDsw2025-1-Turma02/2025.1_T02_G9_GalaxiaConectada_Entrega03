@@ -868,7 +868,7 @@ A escolha de utilizar o padrão Singleton para a classe Forum foi ponderada, con
 
 ## Conclusão
 
-
+A implementação da classe Forum utilizando o padrão Singleton atendeu ao requisito de garantir uma única instância para o fórum principal da plataforma e fornecer um ponto de acesso global e controlado a ele. 
 
 ## Referências
 
