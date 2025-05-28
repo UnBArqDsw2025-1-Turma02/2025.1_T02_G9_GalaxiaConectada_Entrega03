@@ -886,3 +886,9 @@ A escolha de utilizar o padrão Singleton para a classe Forum foi ponderada, con
 | Versão | Alteração | Responsável | Data |
 | - | - | - | - |
 | 1.0 | Elaboração do documento| Larissa Stéfane | 26/05/2025 |
+| 1.1 | Complementação da Metodologia | Larissa Stéfane | 26/05/2025 |
+| 1.2 | Elaboração e adição dos códigos | Larissa Stéfane | 27/05/2025 |
+| 1.3 | Adição dos subfórum | Larissa Stéfane | 27/05/2025 |
+| 1.4 | Adição das imagens | Larissa Stéfane | 28/05/2025 |
+| 1.5 | Reorganização | Larissa Stéfane | 28/05/2025 |
+| 1.6 | Adição da conclusão | Larissa Stéfane | 28/05/2025 |
