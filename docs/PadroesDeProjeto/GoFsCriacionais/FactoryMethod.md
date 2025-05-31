@@ -795,6 +795,9 @@ A fábrica abstrata também possui um método concreto, **iniciarPublicacaoDeCon
 
 Abaixo o código para FabricaDeConteudo.java:
 
+<details>
+  <summary><strong>Código para FabricaDeConteudo.java</strong></summary>
+
 ```java
 package com.galaxiaconectada.fabricas; // Pertence ao pacote 'fabricas'
 
@@ -851,6 +854,7 @@ A figura 11 abaixo ilustra a estrutura da classe `FabricaDeConteudo.java` no amb
     <br>
 </div>
 
+</details>
 
 #### Fábrica Concreta FabricaDeArtigo
 
