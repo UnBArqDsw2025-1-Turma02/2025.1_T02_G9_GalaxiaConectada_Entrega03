@@ -964,6 +964,10 @@ FabricaDeQuiz é a fábrica concreta encarregada de instanciar objetos do tipo Q
 
 Abaixo o código para FabricaDeQuiz.java:
 
+<details>
+  <summary><strong>Código para FabricaDeQuiz.java</strong></summary>
+
+
 ```java
 package com.galaxiaconectada.fabricas;
 
@@ -999,6 +1003,7 @@ A figura 14 abaixo ilustra a estrutura da classe `FabricaDeQuiz.java` no ambient
     <br>
 </div>
 
+</details>
 
 #### Fábrica Concreta FabricaDeJogo
 
