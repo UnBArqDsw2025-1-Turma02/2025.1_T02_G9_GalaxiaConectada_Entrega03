@@ -221,7 +221,7 @@ As figuras 1 e 2 abaixo ilustra a estrutura da classe `Conteudo.java` no ambient
 
 </details>
 
-#### Classe TipoVisibilidade
+## Classe TipoVisibilidade
 
 O TipoVisibilidade foi criado para representar de forma segura e clara os diferentes níveis de acesso que um Conteudo pode ter. Assim, ao utilizar essa classe é possível evitar erros de digitação e torna o código mais robusto e legível. 
 
