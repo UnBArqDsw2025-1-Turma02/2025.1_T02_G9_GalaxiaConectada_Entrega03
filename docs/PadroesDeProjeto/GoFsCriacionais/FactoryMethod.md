@@ -1901,7 +1901,7 @@ A figura 26 abaixo ilustra a estrutura da classe `FabricaDeAdministrador.java` n
 
 </details>
 
-#### Fábrica FabricaDeModerador
+## Fábrica FabricaDeModerador
 
 FabricaDeModerador é responsável por criar papéis de Moderador, definindo atributos como o nível de moderação.
 
