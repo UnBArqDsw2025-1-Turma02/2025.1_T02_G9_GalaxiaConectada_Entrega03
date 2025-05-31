@@ -1673,6 +1673,11 @@ FabricaDeAluno estende FabricaDePapelUsuario e implementa criarPapel() para inst
 
 Abaixo o código para `FabricaDeAluno.java`
 
+
+<details>
+  <summary><strong>Código para `FabricaDeAluno.java`</strong></summary>
+
+
 ```java
 package com.galaxiaconectada.fabricas;
 
@@ -1721,6 +1726,8 @@ A figura 23 abaixo ilustra a estrutura da classe `FabricaDeAluno.java` no ambien
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 #### Fábrica FabricaDeInstrutor
 
