@@ -442,7 +442,7 @@ A figura 5 abaixo ilustra a estrutura da classe `Video.java` no ambiente de dese
 
 </details>
 
-#### Classe Concreta Quiz
+## Classe Concreta Quiz
 
 Como um tipo de Conteudo interativo, a classe Quiz é destinada a avaliações ou testes de conhecimento. Dessa maneira, ela herda de Conteudo e adiciona atributos como tempoLimiteMin e tentativasPermitidas.
 
