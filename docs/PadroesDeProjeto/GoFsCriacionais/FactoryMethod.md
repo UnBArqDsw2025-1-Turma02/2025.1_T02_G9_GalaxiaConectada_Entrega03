@@ -856,7 +856,7 @@ A figura 11 abaixo ilustra a estrutura da classe `FabricaDeConteudo.java` no amb
 
 </details>
 
-#### Fábrica Concreta FabricaDeArtigo
+## Fábrica Concreta FabricaDeArtigo
 
 FabricaDeArtigo é uma "ConcreteCreator" que também herda de FabricaDeConteudo. Assim, sua responsabilidade é implementar o método criarConteudo() para instanciar e retornar especificamente objetos Artigo. Ela extrai os dados necessários para um artigo (como textoHtml e fonte) do Map de detalhes fornecido.
 
