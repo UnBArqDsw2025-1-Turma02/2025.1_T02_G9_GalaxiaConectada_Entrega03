@@ -290,7 +290,7 @@ A figura 3 abaixo ilustra a estrutura da classe `TipoVisibilidade.java` no ambie
 </details>
 
 
-#### Classe Concreta Artigo
+## Classe Concreta Artigo
 
 A classe Artigo é uma especialização de Conteudo, a qual representa conteúdo textual. Além dos atributos herdados, possui textoHtml para o corpo do artigo e fonte para referências. 
 
