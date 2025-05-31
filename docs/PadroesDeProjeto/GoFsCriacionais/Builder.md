@@ -297,6 +297,9 @@ A TrilhaEducacional é a entidade central que organiza e define um percurso de a
 
 Abaixo o código para `TrilhaEducacional.java` 
 
+<details>
+  <summary><strong>Código para `TrilhaEducacional.java`</strong></summary>
+
 ```java
 package com.galaxiaconectada.trilhas;
 
@@ -408,6 +411,8 @@ A figura 5 abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambi
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 ### Classe Builder TrilhaEducacionalBuilder
 
