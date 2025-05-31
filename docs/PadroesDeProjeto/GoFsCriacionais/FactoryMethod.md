@@ -1188,6 +1188,10 @@ A classe Instrutor implementa PapelUsuario e representa um usuário com capacida
 
 Abaixo o código para `Instrutor.java` 
 
+<details>
+  <summary><strong>Código para `Instrutor.java`</strong></summary>
+
+
 ```java
 package com.galaxiaconectada.domain.papeis;
 
@@ -1261,6 +1265,7 @@ A figura 18 abaixo ilustra a estrutura da classe `Instrutor.java` no ambiente de
     <br>
 </div>
 
+</details>
 
 ## Classe ProfessorVoluntario
 
