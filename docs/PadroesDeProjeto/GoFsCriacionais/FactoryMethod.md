@@ -359,7 +359,7 @@ A figura 4 abaixo ilustra a estrutura da classe `Artigo.java` no ambiente de des
 
 </details>
 
-#### Classe Concreta Video
+## Classe Concreta Video
 
 A classe **Video** estende **Conteudo** para representar conteúdo audiovisual. Com isso, contém atributos específicos como urlVideo, duracaoSegundos e transcricao. 
 
