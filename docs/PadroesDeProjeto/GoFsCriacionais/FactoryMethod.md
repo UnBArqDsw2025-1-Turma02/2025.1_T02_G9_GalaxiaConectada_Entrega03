@@ -1011,6 +1011,9 @@ A FabricaDeJogo é a fábrica concreta especializada na criação de instâncias
 
 Abaixo o código para FabricaDeJogo.java:
 
+<details>
+  <summary><strong>Código para FabricaDeJogo.java</strong></summary>
+
 ```java
 package com.galaxiaconectada.fabricas;
 
@@ -1046,6 +1049,8 @@ A figura 15 abaixo ilustra a estrutura da classe `FabricaDeJogo.java` no ambient
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 ## Aplicação do Factory Method para Papéis de Usuário
 
