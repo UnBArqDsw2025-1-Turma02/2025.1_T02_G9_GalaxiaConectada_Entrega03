@@ -1363,7 +1363,7 @@ A figura 19 abaixo ilustra a estrutura da classe `ProfessorVoluntario.java` no a
 
 </details>
 
-#### Classe Administrador
+## Classe Administrador
 
 A classe Administrador implementa PapelUsuario e define as características e capacidades de um usuário com privilégios administrativos na plataforma, incluindo permissões globais e nível de acesso.
 
