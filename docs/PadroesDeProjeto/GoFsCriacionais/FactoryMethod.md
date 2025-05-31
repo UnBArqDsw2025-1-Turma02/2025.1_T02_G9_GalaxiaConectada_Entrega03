@@ -1105,7 +1105,7 @@ A figura 16 abaixo ilustra a estrutura da classe `PapelUsuario.java` no ambiente
 
 As classes concretas a seguir implementam a interface PapelUsuario e representam os diferentes papéis que um usuário pode ter, cada uma com seus atributos e comportamentos específicos, conforme definido na tabela de classes do projeto.
 
-#### Classe Aluno
+## Classe Aluno
 
 A classe Aluno implementa PapelUsuario e encapsula os dados e funcionalidades específicas de um usuário enquanto estudante na plataforma, como seu progresso geral e o último acesso a trilhas educacionais.
 
