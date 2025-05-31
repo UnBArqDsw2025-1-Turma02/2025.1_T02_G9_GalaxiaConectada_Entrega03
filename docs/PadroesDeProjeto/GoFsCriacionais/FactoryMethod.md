@@ -1958,6 +1958,10 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
 
 Para testar as classes e os códigos, foi criada uma main chamada AplicacaoGalaxia. O código dela se encontra abaixo:
 
+<details>
+  <summary><strong>Código</strong></summary>
+
+
 ```java
 package com.galaxiaconectada.main;
 
@@ -2357,6 +2361,7 @@ public class AplicacaoGalaxia {
 ```
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+</details>
 
 ## Conclusão
 
