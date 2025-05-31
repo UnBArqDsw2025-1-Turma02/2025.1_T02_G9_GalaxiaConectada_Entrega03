@@ -186,7 +186,7 @@ A figura 2 abaixo ilustra a estrutura da classe `Modulo.java` no ambiente de des
 
 </details>
 
-### Classe Builder ModuloBuilder
+## Classe Builder ModuloBuilder
 
 O ModuloBuilder tem como objetivo principal simplificar e tornar mais robusto e legível o processo de criação de instâncias da classe Modulo. 
 - Dado que um módulo é definido por vários atributos (ID, título, ordem, descrição) e pode conter uma lista variável de Conteudos, o ModuloBuilder oferece uma interface fluente.
