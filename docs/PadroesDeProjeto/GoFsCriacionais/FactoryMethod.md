@@ -915,6 +915,8 @@ Especializada na criação de objetos Video, a FabricaDeVideo implementa o méto
 
 Abaixo o código para FabricaDeVideo.java
 
+<details>
+  <summary><strong>Código para FabricaDeVideo.java</strong></summary>
 
 ```java
 package com.galaxiaconectada.fabricas;
@@ -953,6 +955,8 @@ A figura 13 abaixo ilustra a estrutura da classe `FabricaDeVideo.java` no ambien
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 #### Fábrica Concreta FabricaDeQuiz
 
