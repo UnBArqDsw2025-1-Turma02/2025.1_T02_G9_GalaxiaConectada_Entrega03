@@ -290,7 +290,7 @@ A figura 4 abaixo mostra a modelagem do campo Trilhas de Aprendizado
 
 
 
-### Classe Produto TrilhaEducacional
+## Classe Produto TrilhaEducacional
 
 A TrilhaEducacional é a entidade central que organiza e define um percurso de aprendizado completo e estruturado dentro da plataforma "Galáxia Conectada". Dessa maneira, o objetivo principal é guiar o usuário através de uma sequência lógica e progressiva de Modulos, cada um focado em subtemas ou habilidades específicas. 
 - Além de agregar a coleção ordenada de Modulos, a TrilhaEducacional armazena metadados cruciais como seu id único, titulo principal, descricao detalhada, nivel de dificuldade (ex: Iniciante, Avançado), categoria temática, status de publicada e uma imagemUrl representativa. 
