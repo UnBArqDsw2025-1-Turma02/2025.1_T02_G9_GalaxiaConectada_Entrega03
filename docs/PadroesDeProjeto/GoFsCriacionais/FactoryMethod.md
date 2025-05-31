@@ -1111,6 +1111,9 @@ A classe Aluno implementa PapelUsuario e encapsula os dados e funcionalidades es
 
 Abaixo o código para `Aluno.java`
 
+<details>
+  <summary><strong>Código para `Aluno.java`</strong></summary>
+
 ```java
 package com.galaxiaconectada.domain.papeis;
 
@@ -1177,6 +1180,7 @@ A figura 17 abaixo ilustra a estrutura da classe `Aluno.java` no ambiente de des
     <br>
 </div>
 
+</details>
 
 #### Classe Instrutor
 
