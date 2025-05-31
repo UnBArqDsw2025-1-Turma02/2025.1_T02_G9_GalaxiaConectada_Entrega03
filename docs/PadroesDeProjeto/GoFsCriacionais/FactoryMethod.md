@@ -1598,7 +1598,7 @@ A figura 21 abaixo ilustra a estrutura da classe `Moderador.java` no ambiente de
 
 ### Criação das Classes de Produto da Hierarquia de Usuário
 
-#### Fábrica Abstrata FabricaDePapelUsuario
+## Fábrica Abstrata FabricaDePapelUsuario
 
 A classe FabricaDePapelUsuario é a "Creator" abstrata para os papéis de usuário. Ela declara o método fábrica abstrato criarPapel(), que será implementado pelas subclasses concretas para instanciar um tipo específico de PapelUsuario. Também inclui um método de conveniência, atribuirPapelParaUsuario(), que utiliza o método fábrica para criar e associar o papel a um objeto Usuario.
 
