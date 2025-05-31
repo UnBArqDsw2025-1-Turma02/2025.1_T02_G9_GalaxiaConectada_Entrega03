@@ -1479,6 +1479,9 @@ Implementando PapelUsuario, a classe Moderador representa usuários responsávei
 
 Abaixo o código para `Moderador.java`
 
+<details>
+  <summary><strong>Código para `Moderador.java`</strong></summary>
+
 ```java
 package com.galaxiaconectada.domain.papeis;
 
@@ -1590,6 +1593,8 @@ A figura 21 abaixo ilustra a estrutura da classe `Moderador.java` no ambiente de
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 ### Criação das Classes de Produto da Hierarquia de Usuário
 
