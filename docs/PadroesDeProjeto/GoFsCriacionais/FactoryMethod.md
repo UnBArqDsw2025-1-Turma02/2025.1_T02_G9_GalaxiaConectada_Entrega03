@@ -1795,6 +1795,9 @@ FabricaDeProfessorVoluntario cria instâncias do papel ProfessorVoluntario, conf
 
 Abaixo o código para `FabricaDeProfessorVoluntario.java`
 
+<details>
+  <summary><strong>Código para `FabricaDeProfessorVoluntario.java`</strong></summary>
+
 ```java
 package com.galaxiaconectada.fabricas;
 
@@ -1836,6 +1839,8 @@ A figura 25 abaixo ilustra a estrutura da classe `FabricaDeProfessorVoluntario.j
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 #### Fábrica FabricaDeAdministrador
 
