@@ -87,7 +87,7 @@ A seguir, são apresentadas as classes envolvidas na implementação do padrão 
 A figura 1 abaixo mostra a modelagem do campo Módulo
 
 
-### Classe Produto Modulo
+## Classe Produto Modulo
 
 A classe `Modulo` é um componente que funciona como um contêiner temático que agrupa e organiza diversos objetos `Conteudo` (como artigos, vídeos, quizzes e jogos) sobre um tema dentro do escopo maior de uma `TrilhaEducacional`. Isso porque, ao segmentar o aprendizado em módulos, facilita-se a progressão do usuário e a organização do material didático.
 
