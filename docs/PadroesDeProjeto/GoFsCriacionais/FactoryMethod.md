@@ -1789,7 +1789,7 @@ A figura 24 abaixo ilustra a estrutura da classe `FabricaDeInstrutor.java` no am
 
 </details>
 
-#### Fábrica FabricaDeProfessorVoluntario
+## Fábrica FabricaDeProfessorVoluntario
 
 FabricaDeProfessorVoluntario cria instâncias do papel ProfessorVoluntario, configurando atributos como área de especialidade.
 
