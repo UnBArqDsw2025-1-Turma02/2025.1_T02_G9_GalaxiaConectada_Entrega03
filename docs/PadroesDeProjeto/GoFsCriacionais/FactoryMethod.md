@@ -448,6 +448,9 @@ Como um tipo de Conteudo interativo, a classe Quiz é destinada a avaliações o
 
 Abaixo o código para Quiz.java:
 
+<details>
+  <summary><strong>Código para Quiz.java</strong></summary>
+
 ```java
 package com.galaxiaconectada.core;
 
@@ -516,6 +519,8 @@ A figura 6 abaixo ilustra a estrutura da classe `Quiz.java` no ambiente de desen
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 #### Classe Concreta Jogo
 
