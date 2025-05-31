@@ -1473,7 +1473,7 @@ A figura 20 abaixo ilustra a estrutura da classe `Administrador.java` no ambient
 
 </details>
 
-#### Classe Moderador
+## Classe Moderador
 
 Implementando PapelUsuario, a classe Moderador representa usuários responsáveis pela moderação de conteúdo em fóruns, possuindo atributos como nível de moderação e data de início da atividade.
 
