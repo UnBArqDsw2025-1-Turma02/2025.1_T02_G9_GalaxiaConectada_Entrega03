@@ -1005,7 +1005,7 @@ A figura 14 abaixo ilustra a estrutura da classe `FabricaDeQuiz.java` no ambient
 
 </details>
 
-#### Fábrica Concreta FabricaDeJogo
+## Fábrica Concreta FabricaDeJogo
 
 A FabricaDeJogo é a fábrica concreta especializada na criação de instâncias da classe Jogo. Desse modo, ela implementa o método criarConteudo() para configurar e retornar objetos Jogo com seus detalhes como tipoJogo, nivelDificuldade e urlJogo.
 
