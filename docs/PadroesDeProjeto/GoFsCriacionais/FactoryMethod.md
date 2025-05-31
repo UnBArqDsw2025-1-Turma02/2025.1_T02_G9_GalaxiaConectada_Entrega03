@@ -1604,6 +1604,9 @@ A classe FabricaDePapelUsuario é a "Creator" abstrata para os papéis de usuár
 
 Abaixo o código para `FabricaDePapelUsuario.java`
 
+<details>
+  <summary><strong>Código para `FabricaDePapelUsuario.java`</strong></summary>
+
 ```java
 package com.galaxiaconectada.fabricas;
 
@@ -1657,6 +1660,7 @@ A figura 22 abaixo ilustra a estrutura da classe `FabricaDePapelUsuario.java` no
     <br>
 </div>
 
+</details>
 
 #### Fábricas Concretas de Papel
 
