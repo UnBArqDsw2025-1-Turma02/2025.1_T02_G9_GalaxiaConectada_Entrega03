@@ -1182,7 +1182,7 @@ A figura 17 abaixo ilustra a estrutura da classe `Aluno.java` no ambiente de des
 
 </details>
 
-#### Classe Instrutor
+## Classe Instrutor
 
 A classe Instrutor implementa PapelUsuario e representa um usuário com capacidades de criação e gerenciamento de conteúdo educacional, possuindo atributos como biografia, avaliação e especialidades.
 
