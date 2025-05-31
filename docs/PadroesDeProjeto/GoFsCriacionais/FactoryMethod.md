@@ -787,7 +787,7 @@ A figura 8 abaixo ilustra a estrutura da classe `Usuario.java` no ambiente de de
 Com os "produtos" (Conteudo e suas subclasses) definidos, foram implementadas as fábricas responsáveis pela sua criação, seguindo o padrão Factory Method.
 
 
-#### Fábrica Abstrata FabricaDeConteudo
+## Fábrica Abstrata FabricaDeConteudo
 
 FabricaDeConteudo é a classe "Creator" abstrata. Com isso, ela define o contrato para todas as fábricas de conteúdo ao declarar o método fábrica abstrato criarConteudo(). Este método recebe os parâmetros comuns para a criação de qualquer Conteudo, incluindo o TipoVisibilidade, e um Map para os detalhes específicos de cada subclasse de Conteudo. 
 
