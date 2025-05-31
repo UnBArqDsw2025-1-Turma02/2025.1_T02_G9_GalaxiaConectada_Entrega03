@@ -604,7 +604,7 @@ A figura 7 abaixo ilustra a estrutura da classe `Jogo.java` no ambiente de desen
 
 </details>
 
-#### Classe Auxiliar Usuario
+## Classe Auxiliar Usuario
 
 A classe Usuario, localizada no pacote com.galaxiaconectada.domain, é fundamental para o sistema, pois representa os participantes da plataforma. Assim, no contexto desta implementação do Factory Method, ela é utilizada por métodos dentro das classes de Conteudo (ex: adicionarComentario) e para simular interações em Quiz e Jogo. 
 
