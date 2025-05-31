@@ -120,7 +120,7 @@ A base para a aplicação do Factory Method é a existência de uma hierarquia d
 
 ### Aplicação do Factory Method para Papéis de Conteúdo
 
-#### Classe Abstrata Conteudo
+## Classe Abstrata Conteudo
 
 A classe `Conteudo` serve como a **superclasse abstrata** para todos os tipos de materiais de estudo. Assim, ela define atributos comuns como `id`, `titulo`, `descricao`, `dataPublicacao` e `visibilidade`, além de um método abstrato `exibir()` que será implementado de forma específica por cada subclasse para determinar como o conteúdo é apresentado.
 
