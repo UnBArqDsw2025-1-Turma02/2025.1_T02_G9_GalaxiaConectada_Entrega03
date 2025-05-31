@@ -1273,6 +1273,10 @@ Esta classe implementa PapelUsuario para usuários que atuam como professores vo
 
 Abaixo o código para `ProfessorVoluntario.java`
 
+<details>
+  <summary><strong>Código para `ProfessorVoluntario.java`</strong></summary>
+
+
 ```java
 package com.galaxiaconectada.domain.papeis;
 
@@ -1357,7 +1361,7 @@ A figura 19 abaixo ilustra a estrutura da classe `ProfessorVoluntario.java` no a
     <br>
 </div>
 
-
+</details>
 
 #### Classe Administrador
 
