@@ -523,6 +523,9 @@ A classe Jogo representa conteúdo educacional em formato interativo e lúdico. 
 
 Abaixo o código para Jogo.java:
 
+<details>
+  <summary><strong>Código para Jogo.java</strong></summary>
+
 ```java
 package com.galaxiaconectada.core;
 
@@ -594,6 +597,9 @@ A figura 7 abaixo ilustra a estrutura da classe `Jogo.java` no ambiente de desen
     <br>
 </div>
 
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+</details>
 
 #### Classe Auxiliar Usuario
 
