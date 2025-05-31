@@ -1071,6 +1071,9 @@ A interface `PapelUsuario` define o contrato comum para todos os papéis especí
 
 Abaixo o código para `PapelUsuario.java`:
 
+<details>
+  <summary><strong>Código para `PapelUsuario.java`</strong></summary>
+  
 ```java
 package com.galaxiaconectada.domain.papeis;
 
@@ -1096,6 +1099,7 @@ A figura 16 abaixo ilustra a estrutura da classe `PapelUsuario.java` no ambiente
     <br>
 </div>
 
+</details>
 
 #### Classes Concretas de Produto e Papéis
 
