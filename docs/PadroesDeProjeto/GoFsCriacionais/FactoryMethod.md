@@ -1842,7 +1842,7 @@ A figura 25 abaixo ilustra a estrutura da classe `FabricaDeProfessorVoluntario.j
 
 </details>
 
-#### Fábrica FabricaDeAdministrador
+## Fábrica FabricaDeAdministrador
 
 Esta fábrica é especializada na criação de papéis de Administrador, configurando suas permissões e nível de acesso.
 
