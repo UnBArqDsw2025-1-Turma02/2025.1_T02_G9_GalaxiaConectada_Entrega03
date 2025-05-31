@@ -522,7 +522,7 @@ A figura 6 abaixo ilustra a estrutura da classe `Quiz.java` no ambiente de desen
 
 </details>
 
-#### Classe Concreta Jogo
+## Classe Concreta Jogo
 
 A classe Jogo representa conteúdo educacional em formato interativo e lúdico. Sendo uma subclasse de Conteudo, ela inclui atributos específicos como tipoJogo, nivelDificuldade e urlJogo. 
 
