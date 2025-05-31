@@ -612,7 +612,8 @@ A classe Usuario, localizada no pacote com.galaxiaconectada.domain, é fundament
 
 Abaixo o código para Usuario.java:
 
-
+<details>
+  <summary><strong>Código para Usuario.java</strong></summary>
 
 ```java
 package com.galaxiaconectada.domain;
@@ -778,6 +779,8 @@ A figura 8 abaixo ilustra a estrutura da classe `Usuario.java` no ambiente de de
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 ### Criação das Classes de Fábrica de Conteudo
 
