@@ -1908,6 +1908,9 @@ FabricaDeModerador é responsável por criar papéis de Moderador, definindo atr
 
 Abaixo o código para `FabricaDeModerador.java `
 
+<details>
+  <summary><strong>Código para `FabricaDeModerador.java `</strong></summary>
+
 
 ```java
 package com.galaxiaconectada.fabricas;
@@ -1948,6 +1951,8 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details> 
 
 ## Classe de Teste AplicacaoGalaxia
 
