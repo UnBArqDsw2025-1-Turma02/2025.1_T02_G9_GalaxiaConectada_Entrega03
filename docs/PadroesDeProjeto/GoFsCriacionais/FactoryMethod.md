@@ -958,7 +958,7 @@ A figura 13 abaixo ilustra a estrutura da classe `FabricaDeVideo.java` no ambien
 
 </details>
 
-#### Fábrica Concreta FabricaDeQuiz
+## Fábrica Concreta FabricaDeQuiz
 
 FabricaDeQuiz é a fábrica concreta encarregada de instanciar objetos do tipo Quiz. Ela implementa criarConteudo() para configurar e retornar um Quiz com seus atributos específicos, como tempoLimiteMin e tentativasPermitidas.
 
