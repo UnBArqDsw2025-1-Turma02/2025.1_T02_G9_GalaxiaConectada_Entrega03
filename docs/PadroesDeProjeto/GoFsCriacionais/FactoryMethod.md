@@ -298,6 +298,9 @@ A classe Artigo é uma especialização de Conteudo, a qual representa conteúdo
 
 Abaixo o código para Artigo.java:
 
+<details>
+  <summary><strong>Código para Artigo.java</strong></summary>
+
 ```java
 package com.galaxiaconectada.core; // Mesmo pacote da classe Conteudo
 
@@ -354,6 +357,7 @@ A figura 4 abaixo ilustra a estrutura da classe `Artigo.java` no ambiente de des
     <br>
 </div>
 
+</details>
 
 #### Classe Concreta Video
 
