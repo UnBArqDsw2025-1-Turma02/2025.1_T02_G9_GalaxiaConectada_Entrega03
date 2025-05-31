@@ -862,6 +862,10 @@ FabricaDeArtigo é uma "ConcreteCreator" que também herda de FabricaDeConteudo.
 
 Abaixo o código para FabricaDeArtigo.java:
 
+<details>
+  <summary><strong>Código para FabricaDeArtigo.java</strong></summary>
+
+
 ```java
 package com.galaxiaconectada.fabricas; // Mesmo pacote da FabricaDeConteudo
 
@@ -903,6 +907,7 @@ A figura 12 abaixo ilustra a estrutura da classe `FabricaDeArtigo.java` no ambie
     <br>
 </div>
 
+</details>
 
 #### Fábrica Concreta FabricaDeVideo
 
