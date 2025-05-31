@@ -193,6 +193,10 @@ O ModuloBuilder tem como objetivo principal simplificar e tornar mais robusto e 
 
 Abaixo o código para `ModuloBuilder.java` 
 
+<details>
+  <summary><strong>Código para `ModuloBuilder.java`</strong></summary>
+
+
 ```java
 package com.galaxiaconectada.trilhas;
 
@@ -278,6 +282,7 @@ A figura 3 abaixo ilustra a estrutura da classe `ModuloBuilder.java` no ambiente
     <br>
 </div>
 
+</details>
 
 ## Modelagem do Builder Para Trilhas de Aprendizado
 
