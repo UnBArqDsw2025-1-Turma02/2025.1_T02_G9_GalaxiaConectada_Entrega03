@@ -1735,6 +1735,9 @@ Esta fábrica é responsável por criar instâncias do papel Instrutor, configur
 
 Abaixo o código para `FabricaDeInstrutor.java`
 
+<details>
+  <summary><strong>Código para `FabricaDeInstrutor.java`</strong></summary>
+
 ```java
 package com.galaxiaconectada.fabricas;
 
@@ -1783,6 +1786,8 @@ A figura 24 abaixo ilustra a estrutura da classe `FabricaDeInstrutor.java` no am
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 #### Fábrica FabricaDeProfessorVoluntario
 
