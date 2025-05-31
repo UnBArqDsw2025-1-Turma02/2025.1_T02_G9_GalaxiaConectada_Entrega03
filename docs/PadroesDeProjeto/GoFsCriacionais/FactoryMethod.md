@@ -1848,6 +1848,10 @@ Esta fábrica é especializada na criação de papéis de Administrador, configu
 
 Abaixo o código para `FabricaDeAdministrador.java`
 
+<details>
+  <summary><strong>Código para `FabricaDeAdministrador.java`</strong></summary>
+
+
 ```java
 package com.galaxiaconectada.fabricas;
 
@@ -1894,6 +1898,8 @@ A figura 26 abaixo ilustra a estrutura da classe `FabricaDeAdministrador.java` n
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 #### Fábrica FabricaDeModerador
 
