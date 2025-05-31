@@ -1254,7 +1254,7 @@ A figura 18 abaixo ilustra a estrutura da classe `Instrutor.java` no ambiente de
 </div>
 
 
-#### Classe ProfessorVoluntario
+## Classe ProfessorVoluntario
 
 Esta classe implementa PapelUsuario para usuários que atuam como professores voluntários, com atributos como área de especialidade e contagem de artigos revisados.
 
