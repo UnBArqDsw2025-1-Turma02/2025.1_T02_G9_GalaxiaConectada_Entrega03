@@ -1729,7 +1729,7 @@ A figura 23 abaixo ilustra a estrutura da classe `FabricaDeAluno.java` no ambien
 
 </details>
 
-#### Fábrica FabricaDeInstrutor
+## Fábrica FabricaDeInstrutor
 
 Esta fábrica é responsável por criar instâncias do papel Instrutor, configurando-o com dados como biografia e especialidades.
 
