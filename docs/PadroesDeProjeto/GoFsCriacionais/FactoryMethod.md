@@ -126,6 +126,9 @@ A classe `Conteudo` serve como a **superclasse abstrata** para todos os tipos de
 
 Abaixo o código para `Conteudo.java`:
 
+<details>
+  <summary><strong>Código para `Conteudo.java`</strong></summary>
+
 ```java
 package com.galaxiaconectada.core; 
 
@@ -215,6 +218,8 @@ As figuras 1 e 2 abaixo ilustra a estrutura da classe `Conteudo.java` no ambient
     <br>
 </div>
 
+
+</details>
 
 #### Classe TipoVisibilidade
 
