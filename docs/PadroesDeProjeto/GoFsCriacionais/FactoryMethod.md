@@ -1667,7 +1667,7 @@ A figura 22 abaixo ilustra a estrutura da classe `FabricaDePapelUsuario.java` no
 
 
 
-#### Fábrica FabricaDeAluno
+## Fábrica FabricaDeAluno
 
 FabricaDeAluno estende FabricaDePapelUsuario e implementa criarPapel() para instanciar e retornar objetos Aluno, utilizando os detalhes fornecidos para configurar o novo papel.
 
