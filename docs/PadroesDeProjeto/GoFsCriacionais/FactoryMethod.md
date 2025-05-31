@@ -230,7 +230,7 @@ O TipoVisibilidade foi criado para representar de forma segura e clara os difere
 Abaixo o código para TipoVisibilidade.java:
 
 <details>
-  <summary><strong>Tabela 1: Código para TipoVisibilidade.java</strong></summary>
+  <summary><strong>Código para TipoVisibilidade.java</strong></summary>
 
 ```java
 package com.galaxiaconectada.core;
