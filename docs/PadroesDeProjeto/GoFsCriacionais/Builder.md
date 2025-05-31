@@ -95,6 +95,10 @@ A classe `Modulo` é um componente que funciona como um contêiner temático que
 
 Abaixo o código para `Modulo.java` 
 
+<details>
+  <summary><strong>Código para `Modulo.java`</strong></summary>
+
+
 ```java
 package com.galaxiaconectada.trilhas;
 
@@ -180,6 +184,7 @@ A figura 2 abaixo ilustra a estrutura da classe `Modulo.java` no ambiente de des
     <br>
 </div>
 
+</details>
 
 ### Classe Builder ModuloBuilder
 
