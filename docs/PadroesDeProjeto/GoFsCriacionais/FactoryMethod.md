@@ -361,6 +361,10 @@ A classe **Video** estende **Conteudo** para representar conteúdo audiovisual. 
 
 Abaixo o código para Video.java:
 
+<details>
+  <summary><strong>Código para Video.java</strong></summary>
+
+
 ```java
 package com.galaxiaconectada.core;
 
@@ -431,6 +435,8 @@ A figura 5 abaixo ilustra a estrutura da classe `Video.java` no ambiente de dese
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 #### Classe Concreta Quiz
 
