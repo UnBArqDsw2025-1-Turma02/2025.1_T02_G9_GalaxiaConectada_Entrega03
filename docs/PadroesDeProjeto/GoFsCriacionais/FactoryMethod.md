@@ -1369,6 +1369,9 @@ A classe Administrador implementa PapelUsuario e define as características e ca
 
 Abaixo o código para `Administrador.java`
 
+<details>
+  <summary><strong>Código para `Administrador.java`</strong></summary>
+
 ```java
 package com.galaxiaconectada.domain.papeis;
 
@@ -1467,6 +1470,8 @@ A figura 20 abaixo ilustra a estrutura da classe `Administrador.java` no ambient
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 #### Classe Moderador
 
