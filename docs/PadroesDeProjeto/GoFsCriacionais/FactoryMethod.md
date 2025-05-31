@@ -597,8 +597,6 @@ A figura 7 abaixo ilustra a estrutura da classe `Jogo.java` no ambiente de desen
     <br>
 </div>
 
-<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-
 </details>
 
 #### Classe Auxiliar Usuario
@@ -608,6 +606,8 @@ A classe Usuario, localizada no pacote com.galaxiaconectada.domain, é fundament
 **Observação:** Foi baseada no diagrama de [classes do projeto.](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaClasses)
 
 Abaixo o código para Usuario.java:
+
+
 
 ```java
 package com.galaxiaconectada.domain;
