@@ -224,6 +224,9 @@ Para que a classe Forum pudesse gerenciar seus subfóruns, uma classe Subforum f
 
 Abaixo o código para Subforum.java:
 
+<details>
+  <summary><strong>Código para Subforum.java</strong></summary>
+
 ```java
 
 package com.galaxiaconectada.domain.forum;
@@ -306,6 +309,8 @@ A figura 4 abaixo ilustra a estrutura da classe `Subforum.java` no ambiente de d
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 ## Classe de Teste AplicacaoGalaxia
 
