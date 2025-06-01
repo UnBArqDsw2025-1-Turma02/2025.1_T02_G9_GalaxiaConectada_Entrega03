@@ -216,7 +216,7 @@ As figuras 2 e 3 abaixo ilustra a estrutura da classe `Forum.java` no ambiente d
 
 </details>
 
-### Classe Auxiliar Subforum
+## Classe Auxiliar Subforum
 
 Para que a classe Forum pudesse gerenciar seus subfóruns, uma classe Subforum foi definida. Esta classe representa uma seção temática dentro do fórum principal e possui atributos como ID, nome e descrição. A instância de Forum mantém uma lista desses objetos e pode criar novos Subforums. 
 
