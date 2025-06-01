@@ -438,6 +438,7 @@ A figura 6 abaixo ilustra a estrutura da classe `RegistroDePrototipos.java` no a
     <br>
 </div>
 
+</details>
 
 ## Classe de Teste AplicacaoGalaxia
 
