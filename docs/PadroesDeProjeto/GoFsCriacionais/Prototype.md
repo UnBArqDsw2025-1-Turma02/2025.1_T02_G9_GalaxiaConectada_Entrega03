@@ -112,6 +112,9 @@ A interface `PrototipoClonavel` estabelece o contrato que todas as classes prot�
 
 Abaixo o código para `PrototipoClonavel.java`
 
+<details>
+  <summary><strong>Código para `PrototipoClonavel.java`</strong></summary>
+
 ```java
 package com.galaxiaconectada.prototipos;
 
@@ -138,6 +141,7 @@ A figura 3 abaixo ilustra a estrutura da classe `PrototipoClonavel.java` no ambi
     <br>
 </div>
 
+</details>
 
 ## Implementação dos Protótipos Concretos
 
