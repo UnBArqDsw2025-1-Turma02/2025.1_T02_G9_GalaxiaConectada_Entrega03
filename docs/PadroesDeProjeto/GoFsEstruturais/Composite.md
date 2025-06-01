@@ -173,3 +173,44 @@ As principais modificações em `Quiz.java` para esta integração incluem:
     Como um `Quiz` é um elemento "folha" na estrutura Composite (ele não contém outros `ComponenteTrilha`s), para os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) definidos na interface `ComponenteTrilha`, a classe `Quiz` (através da herança de `Conteudo`) utiliza as implementações padrão da interface. Estas implementações corretamente lançam uma `UnsupportedOperationException`, que é o comportamento esperado para elementos folha que não podem ter filhos.
 
 Com estas adaptações, a classe `Quiz` se integra de forma coesa à estrutura Composite, permitindo que seja tratada uniformemente com outros componentes da trilha de aprendizado, ao mesmo tempo em que mantém a capacidade de exibir suas características únicas de maneira organizada e hierárquica.
+
+###### Classe Concreta `Video.java` como Folha (Leaf)
+
+A classe `Video.java`, destinada a representar conteúdo audiovisual dentro da plataforma, também foi refatorada para se integrar à estrutura do padrão Composite, atuando como um elemento "Folha" (Leaf). Como uma subclasse de `Conteudo`, ela herda a conformidade com a interface `ComponenteTrilha`.
+
+As modificações chave em `Video.java` para esta adaptação foram:
+
+1.  **Herança de `Conteudo`:**
+    A classe `Video` continua sua herança da classe `Conteudo`. Com `Conteudo` implementando `ComponenteTrilha`, `Video` consequentemente se torna um `ComponenteTrilha`, habilitado a fazer parte da composição hierárquica do sistema de trilhas de aprendizado.
+
+2.  **Substituição do Método `exibir()` por `exibirDetalhesEspecificos(String indentacao)`:**
+    De forma análoga às outras subclasses de `Conteudo`, o método `public void exibir()` original da classe `Video` foi substituído pela implementação do novo método abstrato `public void exibirDetalhesEspecificos(String indentacao)`, definido na superclasse `Conteudo`.
+    * **Responsabilidade do Novo Método:** Este método foca em apresentar apenas as informações que são particulares a um `Video`. Isso inclui a `urlVideo`, a `duracaoSegundos` e informações sobre a disponibilidade da `transcricao`.
+    * **Uso da Indentação:** O parâmetro `indentacao` é empregado para formatar adequadamente a saída no console, garantindo que os detalhes do vídeo sejam exibidos de maneira alinhada e clara dentro da estrutura hierárquica, especialmente quando o vídeo é um componente de um `Modulo`.
+    * **Dados Comuns:** A responsabilidade pela exibição de informações gerais partilhadas por todos os `Conteudo`s (como ID, título principal, descrição geral, visibilidade e data de publicação) é do método `exibirInformacoes(String indentacao)` da superclasse `Conteudo`, que internamente invoca `exibirDetalhesEspecificos()`.
+
+    Exemplo da implementação em `Video.java`:
+    ```java
+    // Dentro da classe Video.java
+    @Override
+    public void exibirDetalhesEspecificos(String indentacao) {
+        // A classe Conteudo.exibirInformacoes() já imprimiu os dados comuns.
+        // Aqui, imprimimos apenas o que é específico do Vídeo.
+        System.out.println(indentacao + "Tipo de Mídia: Vídeo");
+        System.out.println(indentacao + "URL: " + (this.urlVideo != null ? this.urlVideo : "Não disponível"));
+        System.out.println(indentacao + "Duração: " + this.duracaoSegundos + " segundos");
+        if (this.transcricao != null && !this.transcricao.isEmpty()) {
+            System.out.println(indentacao + "Transcrição: Disponível (prévia: " + this.transcricao.substring(0, Math.min(this.transcricao.length(), 30)) + "...)");
+        } else {
+            System.out.println(indentacao + "Transcrição: Não disponível.");
+        }
+    }
+    ```
+
+3.  **Métodos Específicos de Vídeo (`play`, `pause`):**
+    Os métodos `play()` e `pause()`, que representam comportamentos intrínsecos a um objeto `Video`, foram mantidos. Eles podem ser chamados independentemente ou, opcionalmente, invocados como parte da lógica de `exibirDetalhesEspecificos` se a exibição automática for desejada.
+
+4.  **Operações de Gerenciamento de Filhos:**
+    Como um `Video` funciona como um nó "folha" na estrutura Composite (ou seja, não possui outros `ComponenteTrilha`s como filhos), para os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) da interface `ComponenteTrilha`, a classe `Video` (via herança de `Conteudo`) utiliza as implementações padrão da interface. Estas implementações corretamente lançam uma `UnsupportedOperationException`, o que é o comportamento adequado para elementos folha que não podem agregar outros componentes.
+
+Com estas alterações, a classe `Video` se alinha ao padrão Composite, podendo ser tratada de forma uniforme com outros `ComponenteTrilha` e exibindo suas informações de forma hierárquica e organizada quando parte de uma estrutura maior como um `Modulo` ou `TrilhaEducacional`.
