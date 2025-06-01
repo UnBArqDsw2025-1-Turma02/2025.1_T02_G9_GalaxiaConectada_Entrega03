@@ -275,3 +275,49 @@ As principais alterações e características da classe `Modulo` como um Composi
     O método `getTitulo()`, já existente, foi mantido e anotado com `@Override` para cumprir o contrato da interface `ComponenteTrilha`.
 
 Através dessas modificações, a classe `Modulo` não apenas agrupa `Conteudo`s, mas também participa ativamente da estrutura Composite, permitindo que operações sejam aplicadas de forma uniforme em toda a hierarquia da `TrilhaEducacional`. A adaptação do `ModuloBuilder` (discutida em sua respectiva seção) foi necessária para garantir que ele construísse instâncias de `Modulo` compatíveis com esta nova estrutura.
+
+
+
+###### Adaptação da Classe `ModuloBuilder.java` para o Padrão Composite
+
+Com a refatoração da classe `Modulo` para atuar como um elemento "Composite" (capaz de conter filhos do tipo `ComponenteTrilha`), a classe `ModuloBuilder.java` também necessitou de atualizações para construir instâncias de `Modulo` compatíveis com esta nova estrutura. O objetivo do `ModuloBuilder` continua sendo fornecer uma interface fluente para a construção passo a passo de objetos `Modulo`, mas agora ele lida com a agregação de `ComponenteTrilha` (que, no contexto de um `Modulo`, serão instâncias de `Conteudo`).
+
+As principais modificações na classe `ModuloBuilder` foram:
+
+1.  **Tipo da Lista de Filhos Interna:**
+    * O atributo interno do builder que armazena os componentes filhos do módulo foi alterado de `private List<Conteudo> conteudos;` para `private List<ComponenteTrilha> componentesFilhos;`.
+    * Esta mudança reflete que um `Modulo` agora gerencia uma coleção de `ComponenteTrilha`, alinhando o builder com o produto que ele constrói.
+
+2.  **Atualização dos Métodos de Adição de Componentes:**
+    * O método `adicionarConteudo(Conteudo c)` foi renomeado para `adicionarComponente(ComponenteTrilha componente)`. Embora um `Modulo` na nossa regra de negócio específica só deva conter `Conteudo`s como filhos diretos, o método agora aceita `ComponenteTrilha` para ser consistente com a lista interna. Uma verificação `instanceof Conteudo` foi adicionada dentro deste método para garantir que apenas instâncias de `Conteudo` (ou suas subclasses) sejam efetivamente adicionadas à lista de filhos do módulo.
+    * Similarmente, o método `comListaDeConteudos(List<Conteudo> lc)` foi atualizado para `comListaDeComponentes(List<ComponenteTrilha> listaComponentes)`, também com a verificação de tipo para cada elemento da lista.
+
+    Exemplo da assinatura e lógica do novo método de adição:
+    ```java
+    // Dentro da classe ModuloBuilder.java
+    public ModuloBuilder adicionarComponente(ComponenteTrilha componente) {
+        if (componente instanceof com.galaxiaconectada.core.Conteudo) {
+            this.componentesFilhos.add(componente);
+        } else if (componente != null) {
+            System.out.println("[AVISO ModuloBuilder] Tentativa de adicionar tipo de componente não-Conteudo a um Módulo. Ignorado.");
+        }
+        return this;
+    }
+    ```
+
+3.  **Atualização do Método `build()`:**
+    * O método `build()`, responsável por finalizar a construção e retornar a instância de `Modulo`, foi ajustado para chamar o construtor da classe `Modulo` que agora espera uma `List<ComponenteTrilha>` como parâmetro para seus componentes filhos.
+
+    Exemplo da chamada ao construtor no método `build()`:
+    ```java
+    // Dentro da classe ModuloBuilder.java
+    public Modulo build() {
+        if (this.titulo == null || this.titulo.trim().isEmpty()) {
+            throw new IllegalStateException("O título do módulo é obrigatório e não pode ser vazio.");
+        }
+        // Passa a lista de componentesFilhos (List<ComponenteTrilha>) para o construtor de Modulo
+        return new Modulo(this.id, this.titulo, this.ordem, this.descricaoBreve, this.componentesFilhos);
+    }
+    ```
+
+Com estas adaptações, o `ModuloBuilder` continua a oferecer uma forma conveniente e robusta para criar objetos `Modulo`, agora totalmente compatível com o papel do `Modulo` como um elemento "Composite" na estrutura hierárquica do padrão. Ele garante que os `Modulo`s sejam construídos corretamente com seus `Conteudo`s (que são `ComponenteTrilha`s) e possam ser integrados em componentes de nível superior, como a `TrilhaEducacional`.
