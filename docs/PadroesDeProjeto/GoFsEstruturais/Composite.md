@@ -90,3 +90,40 @@ A classe `Artigo.java`, sendo uma especialização de `Conteudo`, representa um 
     Como um `Artigo` é um elemento "folha" na estrutura Composite, ele não possui filhos. Portanto, para os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) definidos na interface `ComponenteTrilha`, a classe `Artigo` (através da herança de `Conteudo`) utiliza as implementações padrão da interface, que lançam uma `UnsupportedOperationException`. Este comportamento é o esperado e correto para elementos folha.
 
 Com essas modificações, a classe `Artigo` se integra perfeitamente à estrutura Composite, permitindo que seja tratada de forma uniforme com outros `ComponenteTrilha` (sejam eles outras folhas ou elementos compostos como `Modulo`), ao mesmo tempo em que exibe suas informações características de maneira hierarquicamente organizada. Adaptações similares foram realizadas nas classes `Video.java`, `Quiz.java` e `Jogo.java`.
+
+
+###### Classe Concreta `Jogo.java` como Folha (Leaf)
+
+A classe `Jogo.java`, representando um conteúdo educacional interativo e lúdico, também foi adaptada para funcionar como um elemento "Folha" dentro da estrutura do padrão Composite. Sendo uma subclasse de `Conteudo`, ela herda a implementação da interface `ComponenteTrilha`.
+
+As principais modificações em `Jogo.java` para essa integração foram:
+
+1.  **Herança de `Conteudo`:**
+    A classe `Jogo` continua estendendo `Conteudo`. Com `Conteudo` agora implementando `ComponenteTrilha`, a classe `Jogo` também se torna um `ComponenteTrilha`, conformando-se ao contrato necessário para participar da composição hierárquica.
+
+2.  **Substituição do Método `exibir()` por `exibirDetalhesEspecificos(String indentacao)`:**
+    Assim como nas outras subclasses de `Conteudo`, o método `public void exibir()` original foi substituído pela implementação do novo método abstrato `public void exibirDetalhesEspecificos(String indentacao)`, herdado de `Conteudo`.
+    * **Responsabilidade do Novo Método:** Este método é agora encarregado de exibir apenas as informações que são particulares a um `Jogo`, como seu `tipoJogo`, `nivelDificuldade` e a `urlJogo`.
+    * **Uso da Indentação:** O parâmetro `indentacao` é crucial para formatar a saída no console, garantindo que os detalhes do jogo sejam apresentados de forma alinhada e hierárquica quando o jogo for parte de um `Modulo`.
+    * **Dados Comuns:** A exibição de informações gerais (ID, título principal, descrição, visibilidade, data de publicação) é gerenciada pelo método `exibirInformacoes(String indentacao)` da superclasse `Conteudo`, que, por sua vez, invoca `exibirDetalhesEspecificos()`.
+
+    Exemplo da implementação em `Jogo.java`:
+    ```java
+    // Dentro da classe Jogo.java
+    @Override
+    public void exibirDetalhesEspecificos(String indentacao) {
+        // A classe Conteudo.exibirInformacoes() já imprimiu os dados comuns.
+        // Aqui, imprimimos apenas o que é específico do Jogo.
+        System.out.println(indentacao + "Tipo de Jogo: " + (this.tipoJogo != null ? this.tipoJogo : "Não especificado"));
+        System.out.println(indentacao + "Nível de Dificuldade: " + this.nivelDificuldade);
+        System.out.println(indentacao + "URL para Jogar: " + (this.urlJogo != null ? this.urlJogo : "Não disponível"));
+    }
+    ```
+
+3.  **Métodos Específicos de Jogo (`iniciar`, `registrarPontuacao`):**
+    Os métodos `iniciar(Usuario usuario)` e `registrarPontuacao(Object sessaoJogo)` foram mantidos, pois representam comportamentos específicos da entidade `Jogo`. Suas saídas no console podem, opcionalmente, também utilizar a indentação se forem chamados como parte de uma exibição hierárquica detalhada.
+
+4.  **Operações de Gerenciamento de Filhos:**
+    Sendo um elemento "folha", um `Jogo` não contém outros `ComponenteTrilha` filhos. Assim, para os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) definidos na interface `ComponenteTrilha`, a classe `Jogo` (via `Conteudo`) utiliza as implementações padrão da interface, que corretamente lançam uma `UnsupportedOperationException`.
+
+Estas adaptações asseguram que a classe `Jogo` se integre harmoniosamente à estrutura Composite, permitindo que seja tratada de maneira uniforme junto a outros componentes da trilha educacional, ao mesmo tempo em que exibe suas informações características de forma organizada e hierárquica.
