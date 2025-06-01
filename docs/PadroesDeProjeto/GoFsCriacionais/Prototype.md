@@ -446,7 +446,8 @@ A classe AplicacaoGalaxia.java foi atualizada para incluir uma seção de teste 
 
 O código se encontra abaixo:
 
-
+<details>
+  <summary><strong>Código da AplicacaoGalaxia</strong></summary>
 
 ```Java
 
@@ -920,6 +921,7 @@ public class AplicacaoGalaxia {
 
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+</details>
 
 ## Conclusão
 
