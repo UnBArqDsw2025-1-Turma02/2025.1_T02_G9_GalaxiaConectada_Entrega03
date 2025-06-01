@@ -39,6 +39,24 @@ Este documento apresenta o cronograma planejado para a execução dos três mód
 
 ## Planejamento Módulo GoFs Estruturais
 
+## Planejamento Módulo GoFs Estruturais – Cronograma Atualizado
+
+| Data   | Padrão    | Tarefa                                                        | Tempo Estimado |
+|--------|-----------|----------------------------------------------------------------|----------------|
+| 28/05  | Composite | Pesquisa aprofundada sobre o padrão                           | 1h30           |
+| 28/05  | Composite | Revisar diagramas UML e exemplos                              | 1h             |
+| 29/05  | Composite | Criar estrutura base do código (setup)                        | 1h             |
+| 29/05  | Composite | Implementar classes principais e hierarquia                   | 2h30           |
+| 30/05  | Composite | Testar, corrigir, documentar e realizar push                  | 2h30           |
+| 30/05  | Facade    | Pesquisa aprofundada sobre o padrão                           | 1h             |
+| 30/05  | Facade    | Estudar exemplos + planejar encapsulamento                    | 1h30           |
+| 31/05  | Facade    | Criar estrutura + implementar classes principais              | 2h30           |
+| 01/06  | Facade    | Testes, ajustes, documentação e push final                    | 2h30           |
+| 01/06  | Proxy     | Pesquisa aprofundada + revisão de UML e casos de uso          | 1h30           |
+| 02/06  | Proxy     | Setup do código + criação da estrutura base                   | 1h             |
+| 02/06  | Proxy     | Implementação completa (proxy real e virtual)                 | 3h             |
+| 03/06  | Proxy     | Testes, documentação e push final                             | 2h             |
+
 
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
