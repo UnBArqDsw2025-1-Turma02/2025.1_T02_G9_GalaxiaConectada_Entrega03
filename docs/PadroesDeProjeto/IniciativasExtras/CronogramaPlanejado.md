@@ -12,8 +12,28 @@ Este documento apresenta o cronograma planejado para a execução dos três mód
 
 ## Planejamento Módulo GoFs Criacionais
 
-| Data    | Tarefa                                                       | Tempo Estimado |
-|---------|-------------------------------------------------------------|----------------|
+## Planejamento Módulo GoFs Criacionais – Cronograma Atualizado
+
+| Data   | Padrão         | Tarefa                                                        | Tempo Estimado |
+|--------|----------------|----------------------------------------------------------------|----------------|
+| 19/05  | Factory Method | Pesquisa aprofundada sobre o padrão                           | 1h30           |
+| 19/05  | Factory Method | Revisar diagramas UML existentes                              | 1h             |
+| 20/05  | Factory Method | Criar estrutura base do código (setup do projeto)             | 1h             |
+| 20/05  | Factory Method | Implementar classes principais e métodos                      | 3h             |
+| 21/05  | Factory Method | Testes, correções, push e documentação                         | 3h             |
+| 22/05  | Builder        | Pesquisa e revisão de exemplos e UML                          | 2h             |
+| 22/05  | Builder        | Setup + implementação base                                    | 1h30           |
+| 23/05  | Builder        | Implementação completa (métodos, objetos complexos etc.)      | 3h             |
+| 23/05  | Builder        | Testes, documentação e push final                             | 3h             |
+| 24/05  | Prototype      | Pesquisa e revisão de UML                                     | 1h30           |
+| 24/05  | Prototype      | Setup + implementação básica                                  | 1h             |
+| 25/05  | Prototype      | Implementar clone e variações                                 | 3h             |
+| 25/05  | Prototype      | Testes, documentação e revisão final                          | 2h30           |
+| 26/05  | Singleton      | Pesquisa, revisão e anotações                                 | 1h             |
+| 26/05  | Singleton      | Setup do projeto + estrutura inicial                          | 1h             |
+| 27/05  | Singleton      | Implementação, testes, ajustes                                | 3h             |
+| 27/05  | Singleton      | Documentação e push final                                     | 2h             |
+
 
 
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
