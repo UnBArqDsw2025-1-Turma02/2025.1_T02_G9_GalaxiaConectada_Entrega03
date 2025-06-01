@@ -319,3 +319,64 @@ As principais modificações na classe `ModuloBuilder` foram:
     ```
 
 Com estas adaptações, o `ModuloBuilder` continua a oferecer uma forma conveniente e robusta para criar objetos `Modulo`, agora totalmente compatível com o papel do `Modulo` como um elemento "Composite" na estrutura hierárquica do padrão. Ele garante que os `Modulo`s sejam construídos corretamente com seus `Conteudo`s (que são `ComponenteTrilha`s) e possam ser integrados em componentes de nível superior, como a `TrilhaEducacional`.
+
+
+# Adaptação da Classe `TrilhaEducacional.java` como Elemento Composto de Alto Nível (Composite)
+
+A classe `TrilhaEducacional.java`, que representa o percurso de aprendizado completo na plataforma, foi adaptada para funcionar como o elemento "Composite" de mais alto nível na hierarquia de componentes educacionais. Esta transformação permite que uma `TrilhaEducacional` não apenas agrupe `Modulo`s, mas também seja tratada como um `ComponenteTrilha`, participando de forma uniforme em operações que percorrem a estrutura hierárquica.
+
+As principais modificações e características da classe `TrilhaEducacional` como um Composite são:
+
+1.  **Implementação da Interface `ComponenteTrilha`:**
+    A classe `TrilhaEducacional` agora implementa a interface `ComponenteTrilha`. Isso a estabelece formalmente como um nó na estrutura Composite, capaz de ser tratada de forma polimórfica junto com `Modulo`s e `Conteudo`s.
+
+2.  **Gerenciamento de Componentes Filhos (Módulos):**
+    * A lista interna que anteriormente armazenava `Modulo` diretamente (`List<Modulo> modulos`) foi alterada para `private List<ComponenteTrilha> componentesFilhos;`. Como a classe `Modulo` também foi adaptada para implementar `ComponenteTrilha`, esta lista pode agora armazenar os `Modulo`s que compõem a trilha.
+    * Foram implementados os métodos de gerenciamento de filhos definidos na interface `ComponenteTrilha`:
+        * `adicionar(ComponenteTrilha componente)`: Adiciona um `ComponenteTrilha` à lista de filhos da trilha. Neste contexto, uma verificação `instanceof Modulo` foi incluída para garantir que apenas instâncias de `Modulo` sejam adicionadas como filhos diretos de uma `TrilhaEducacional`.
+        * `remover(ComponenteTrilha componente)`: Remove um módulo filho.
+        * `getFilho(int index)`: Retorna um módulo filho específico.
+
+    Exemplo da lógica no método `adicionar`:
+    ```java
+    // Dentro da classe TrilhaEducacional.java
+    @Override
+    public void adicionar(ComponenteTrilha componente) {
+        if (componente instanceof Modulo) { // Só permite adicionar Modulos
+            this.componentesFilhos.add(componente);
+        } else {
+            System.out.println("[ERRO na Trilha '" + getTitulo() + "'] Tentativa de adicionar um tipo de componente inválido. Apenas Módulos são permitidos.");
+        }
+    }
+    ```
+
+3.  **Implementação Recursiva de `exibirInformacoes(String indentacao)`:**
+    O método `exibirInformacoes` na `TrilhaEducacional` é crucial para demonstrar o padrão Composite em ação. Ele foi implementado para:
+    * Primeiro, exibir os detalhes da própria trilha (ID, título, nível, categoria, etc.) utilizando a `indentacao` fornecida.
+    * Em seguida, iterar sobre sua lista de `componentesFilhos` (que são os `Modulo`s). Para cada `Modulo` filho, o método `exibirInformacoes()` daquele módulo é chamado recursivamente, passando uma string de indentação aumentada.
+    * Essa recursão continua até que os elementos "Folha" (`Conteudo`) sejam alcançados e exibam seus detalhes específicos, resultando na impressão de toda a estrutura hierárquica da trilha.
+
+    Trecho da lógica recursiva em `exibirInformacoes`:
+    ```java
+    // Dentro da classe TrilhaEducacional.java
+    @Override
+    public void exibirInformacoes(String indentacao) {
+        System.out.println(indentacao + "Trilha Educacional (ID: " + id + "): " + titulo);
+        // ... (impressão de outros dados da trilha com indentação) ...
+
+        if (componentesFilhos.isEmpty()) {
+            System.out.println(indentacao + "  -> Esta trilha ainda não possui módulos.");
+        } else {
+            System.out.println(indentacao + "  Módulos da Trilha (" + componentesFilhos.size() + "):");
+            for (ComponenteTrilha componenteModulo : componentesFilhos) {
+                // Chama o exibirInformacoes de cada Modulo filho
+                componenteModulo.exibirInformacoes(indentacao + "    "); 
+            }
+        }
+    }
+    ```
+
+4.  **Satisfação do Contrato `getTitulo()`:**
+    O método `getTitulo()`, que já existia, foi mantido e anotado com `@Override` para cumprir o contrato da interface `ComponenteTrilha`.
+
+Com estas modificações, `TrilhaEducacional` se torna um poderoso contêiner Composite, capaz de gerenciar seus `Modulo`s (que são eles mesmos Composites) e de participar em operações que percorrem toda a árvore de componentes de forma uniforme. A adaptação do `TrilhaEducacionalBuilder` (detalhada na próxima seção do seu documento) foi essencial para permitir a construção de instâncias de `TrilhaEducacional` que respeitam esta nova estrutura Composite.
