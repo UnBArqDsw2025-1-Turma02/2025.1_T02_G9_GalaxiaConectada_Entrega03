@@ -37,7 +37,6 @@ Este documento apresenta o cronograma planejado para a execução dos três mód
 
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
-## Planejamento Módulo GoFs Estruturais
 
 ## Planejamento Módulo GoFs Estruturais – Cronograma Atualizado
 
@@ -79,3 +78,4 @@ Este documento apresenta o cronograma planejado para a execução dos três mód
 | Versão | Alteração | Responsável | Data |
 | - | - | - | - |
 | 1.0 | Elaboração do documento| Larissa Stéfane | 18/05/2025 |
+| 1.0 | Reestruturação e Atualização das tabelas dos criacionais e estruturais | Larissa Stéfane | 30/05/2025 |
