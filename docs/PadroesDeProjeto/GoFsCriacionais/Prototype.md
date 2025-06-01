@@ -249,6 +249,9 @@ A classe Notificacao é responsável por representar mensagens do sistema para o
 
 Abaixo o código para `Notificacao.java` 
 
+<details>
+  <summary><strong>Código para `Notificacao.java`</strong></summary>
+
 ```Java
 package com.galaxiaconectada.domain.comunicacao;
 
@@ -337,6 +340,7 @@ A figura 5 abaixo ilustra a estrutura da classe `Notificacao.java` no ambiente d
     <br>
 </div>
 
+</details>
 
 ## Gerenciamento de Protótipos com RegistroDePrototipos
 
