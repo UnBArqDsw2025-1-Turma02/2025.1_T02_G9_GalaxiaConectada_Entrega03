@@ -809,18 +809,6 @@ import java.util.Map;
 // Ela não pode ser instanciada diretamente.
 public abstract class FabricaDeConteudo {
 
-    /**
-     * FACTORY METHOD (Método de Fábrica) abstrato.
-     * Cada fábrica concreta (FabricaDeArtigo ou FabricaDeVideo) precisará implementar este método para criar seu tipo específico de Conteudo.
-     *
-     * @param id O ID do conteúdo.
-     * @param titulo O título do conteúdo.
-     * @param descricao A descrição do conteúdo.
-     * @param visibilidade A visibilidade do conteúdo.
-     * @param detalhes Um Map contendo atributos específicos para o tipo de conteúdo a ser criado
-     * (ex: para Artigo pode ter "textoHtml", "fonte"; para Video "urlVideo", "duracaoSegundos").
-     * @return Uma instância de uma subclasse de Conteudo.
-     */
     public abstract Conteudo criarConteudo(int id, String titulo, String descricao, TipoVisibilidade visibilidade, Map<String, Object> detalhes);
 
 
