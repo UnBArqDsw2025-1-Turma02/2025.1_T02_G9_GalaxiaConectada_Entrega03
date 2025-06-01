@@ -10,7 +10,6 @@
 
 Este documento apresenta o cronograma planejado para a execução dos três módulos exigidos na terceira entrega da disciplina. Tendo isso em mente, o planejamento foi elaborado ao considerar a disponibilidade diária, o tempo estimado para estudo e produção de cada diagrama, e a necessidade de organização adaptada.
 
-## Planejamento Módulo GoFs Criacionais
 
 ## Planejamento Módulo GoFs Criacionais – Cronograma Atualizado
 
