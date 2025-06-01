@@ -91,7 +91,7 @@ Abaixo o espaço para o seu diagrama UML para o Singleton do `Forum`:
     <br>
 </div>
 
-### Implementação a Classe Forum
+## Implementação a Classe Forum
 
 A classe `Forum` foi implementada no pacote `com.galaxiaconectada.domain.forum` para representar o fórum principal da plataforma. Ela contém um construtor privado para impedir a instanciação externa, um atributo estático privado para armazenar sua única instância, e um método estático público `getInstance()` que controla o acesso a essa instância, criando-a apenas na primeira chamada. A classe também gerencia uma lista de `Subforum`s e fornece métodos para interagir com eles.
 
