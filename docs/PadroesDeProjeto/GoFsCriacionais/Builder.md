@@ -524,6 +524,8 @@ A figura 6 abaixo ilustra a estrutura da classe `TrilhaEducacionalBuilder.java` 
 
 Para testar as classes e os códigos, foi criada uma main chamada AplicacaoGalaxia. O código dela se encontra abaixo:
 
+<details>
+  <summary><strong>Código da  AplicacaoGalaxia</strong></summary>
 
 ```java
 
@@ -961,6 +963,7 @@ public class AplicacaoGalaxia {
 
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
+</details>
 
 ## Conclusão
 
