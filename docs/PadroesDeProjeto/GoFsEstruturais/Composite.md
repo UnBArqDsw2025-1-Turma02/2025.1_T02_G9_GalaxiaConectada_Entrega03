@@ -61,6 +61,119 @@
 - [Histórico de Versão](#Histórico-de-Versão)
 
 
+## Introdução
+
+## Objetivo
+
+## Metodologia
+
+## Motivação para o Padrão Composite
+
+## Desenvolvimento e Implementação
+
+## Modelagem UML do Padrão Composite
+
+## Definição da Interface Componente ComponenteTrilha
+
+### Descrição e Objetivos da Interface
+
+### Código da Interface ComponenteTrilha
+
+### Imagem do Código no VSCode
+
+## Adaptação das Classes Folha Leaf
+
+### Adaptação da Classe Abstrata Conteudo
+
+#### Descrição das Mudanças
+
+#### Código Atualizado da Classe Conteudo
+
+#### Imagens do Código no VSCode
+
+### Adaptação da Classe Concreta Artigo
+
+#### Descrição das Mudanças
+
+#### Código Atualizado da Classe Artigo
+
+#### Imagem do Código no VSCode
+
+### Adaptação da Classe Concreta Video
+
+#### Descrição das Mudanças
+
+#### Código Atualizado da Classe Video
+
+#### Imagem do Código no VSCode
+
+### Adaptação da Classe Concreta Quiz
+
+#### Descrição das Mudanças
+
+#### Código Atualizado da Classe Quiz
+
+#### Imagem do Código no VSCode
+
+### Adaptação da Classe Concreta Jogo
+
+#### Descrição das Mudanças
+
+#### Código Atualizado da Classe Jogo
+
+#### Imagem do Código no VSCode
+
+## Implementação dos Elementos Compostos Composite
+
+### Adaptação da Classe Modulo
+
+#### Descrição das Mudanças
+
+#### Código Atualizado da Classe Modulo
+
+#### Imagem do Código no VSCode
+
+### Adaptação da Classe TrilhaEducacional
+
+#### Descrição das Mudanças
+
+#### Código Atualizado da Classe TrilhaEducacional
+
+#### Imagem do Código no VSCode
+
+## Atualização das Classes Builder
+
+### Adaptação da Classe ModuloBuilder
+
+#### Descrição das Mudanças
+
+#### Código Atualizado da Classe ModuloBuilder
+
+#### Imagem do Código no VSCode
+
+### Adaptação da Classe TrilhaEducacionalBuilder
+
+#### Descrição das Mudanças
+
+#### Código Atualizado da Classe TrilhaEducacionalBuilder
+
+#### Imagem do Código no VSCode
+
+## Demonstração de Uso na AplicacaoGalaxia
+
+### Descrição da Interação e Testes
+
+### Código Relevante da Classe AplicacaoGalaxia
+
+### Imagem do Código no VSCode
+
+### Vídeo da Execução
+
+## Conclusão
+
+## Bibliografia
+
+## Histórico de Versão
 
 
 
