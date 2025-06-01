@@ -380,3 +380,50 @@ As principais modificações e características da classe `TrilhaEducacional` co
     O método `getTitulo()`, que já existia, foi mantido e anotado com `@Override` para cumprir o contrato da interface `ComponenteTrilha`.
 
 Com estas modificações, `TrilhaEducacional` se torna um poderoso contêiner Composite, capaz de gerenciar seus `Modulo`s (que são eles mesmos Composites) e de participar em operações que percorrem toda a árvore de componentes de forma uniforme. A adaptação do `TrilhaEducacionalBuilder` (detalhada na próxima seção do seu documento) foi essencial para permitir a construção de instâncias de `TrilhaEducacional` que respeitam esta nova estrutura Composite.
+
+
+# Adaptação da Classe `TrilhaEducacionalBuilder.java` para o Padrão Composite
+
+Após a refatoração da classe `TrilhaEducacional` para atuar como um nó "Composite" de alto nível (capaz de conter `Modulo`s, que por sua vez são `ComponenteTrilha`s), a classe `TrilhaEducacionalBuilder.java` também foi atualizada. O objetivo dessas modificações foi garantir que o builder construísse instâncias de `TrilhaEducacional` compatíveis com a nova estrutura hierárquica e a interface `ComponenteTrilha`.
+
+As principais alterações na classe `TrilhaEducacionalBuilder` foram:
+
+1.  **Tipo da Lista de Filhos Interna:**
+    * O atributo interno do builder, que armazena os módulos da trilha durante a construção, foi modificado de `private List<Modulo> modulos;` para `private List<ComponenteTrilha> componentesFilhos;`.
+    * Esta alteração é fundamental, pois a classe `TrilhaEducacional` agora espera uma lista de `ComponenteTrilha` em seu construtor (sabendo que, no contexto de uma trilha, esses componentes serão instâncias de `Modulo`).
+
+2.  **Atualização dos Métodos de Adição de Componentes (Módulos):**
+    * O método `adicionarModulo(Modulo m)` foi renomeado e adaptado para `adicionarComponente(ComponenteTrilha componente)`. Embora o método agora aceite um `ComponenteTrilha` de forma genérica, uma verificação interna (`instanceof Modulo`) foi adicionada para assegurar que apenas instâncias de `Modulo` sejam efetivamente adicionadas como filhos diretos de uma `TrilhaEducacional`, conforme a regra de negócio estabelecida.
+    * Da mesma forma, o método `comListaDeModulos(List<Modulo> lm)` foi atualizado para `comListaDeComponentes(List<ComponenteTrilha> listaComponentes)`, incorporando a mesma lógica de verificação de tipo para cada elemento da lista.
+
+    Exemplo da assinatura e lógica do novo método de adição no builder:
+    ```java
+    // Dentro da classe TrilhaEducacionalBuilder.java
+    public TrilhaEducacionalBuilder adicionarComponente(ComponenteTrilha componente) {
+        // Uma Trilha Educacional, no nosso design, só contém Módulos como filhos diretos.
+        if (componente instanceof Modulo) {
+            this.componentesFilhos.add(componente);
+        } else if (componente != null) {
+            System.out.println("[AVISO TrilhaBuilder] Tentativa de adicionar um tipo de componente não-Modulo (" + componente.getClass().getSimpleName() + ") a uma Trilha. Ignorado.");
+        }
+        return this;
+    }
+    ```
+
+3.  **Atualização do Método `build()`:**
+    * O método `build()`, que finaliza a construção e retorna a instância de `TrilhaEducacional`, foi ajustado para invocar o construtor da classe `TrilhaEducacional` que agora espera uma `List<ComponenteTrilha>` como parâmetro para seus módulos.
+
+    Exemplo da chamada ao construtor no método `build()`:
+    ```java
+    // Dentro da classe TrilhaEducacionalBuilder.java
+    public TrilhaEducacional build() {
+        if (this.titulo == null || this.titulo.trim().isEmpty()) {
+            throw new IllegalStateException("O título da trilha é obrigatório e não pode ser vazio.");
+        }
+        // Passa a lista de componentesFilhos (List<ComponenteTrilha>) para o construtor de TrilhaEducacional
+        return new TrilhaEducacional(this.id, this.titulo, this.descricao, this.nivel,
+                                   this.categoria, this.publicada, this.imagemUrl, this.componentesFilhos);
+    }
+    ```
+
+Com essas adaptações, o `TrilhaEducacionalBuilder` permanece consistente com o produto `TrilhaEducacional` que ele constrói, assegurando que as trilhas sejam montadas corretamente dentro da estrutura do padrão Composite. Ele continua a oferecer uma interface fluente para a criação passo a passo de trilhas complexas, agora plenamente integrado à hierarquia de `ComponenteTrilha`.
