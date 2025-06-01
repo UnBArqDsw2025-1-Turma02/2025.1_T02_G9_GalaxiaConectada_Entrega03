@@ -243,7 +243,7 @@ A figura 4 abaixo ilustra a estrutura da classe `Conquista.java` no ambiente de 
 
 </details>
 
-### Classe Notificacao como Protótipo
+## Classe Notificacao como Protótipo
 
 A classe Notificacao é responsável por representar mensagens do sistema para os usuários. Assim, ao aplicar o padrão Prototype, instâncias de Notificacao podem ser clonadas para criar novas notificações baseadas em modelos pré-definidos (ex: notificação de boas-vindas, notificação de nova mensagem). O método clonar() também utiliza super.clone(). 
 
