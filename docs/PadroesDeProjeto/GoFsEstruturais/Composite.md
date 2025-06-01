@@ -53,3 +53,40 @@ As principais modificações realizadas foram:
     Como a classe `Conteudo` e suas subclasses atuam como elementos "Folha" no padrão Composite (ou seja, não possuem outros `ComponenteTrilha` como filhos), elas não precisam de uma implementação própria para os métodos de gerenciamento de filhos (`adicionar(ComponenteTrilha c)`, `remover(ComponenteTrilha c)`, `getFilho(int index)`). Elas utilizam as implementações `default` fornecidas pela interface `ComponenteTrilha`, que corretamente lançam uma `UnsupportedOperationException` se esses métodos forem chamados em um objeto `Conteudo`. Isso está alinhado com o comportamento esperado para um nó folha em uma estrutura Composite transparente.
 
 Essas adaptações permitiram que os objetos `Conteudo` fossem integrados de maneira coesa à estrutura Composite, sendo tratados uniformemente como `ComponenteTrilha` pelas classes compostas (`Modulo` e `TrilhaEducacional`), ao mesmo tempo em que mantêm a capacidade de exibir seus detalhes específicos de forma hierárquica.
+
+
+#### Adaptação da Classe Concreta `Artigo.java` como Folha (Leaf)
+
+A classe `Artigo.java`, sendo uma especialização de `Conteudo`, representa um dos elementos finais (ou "folhas") na hierarquia da estrutura Composite de uma `TrilhaEducacional`. Para se alinhar com o padrão e com as modificações na superclasse `Conteudo`, as seguintes adaptações foram realizadas:
+
+1.  **Herança de `Conteudo` (e indiretamente `ComponenteTrilha`):**
+    A classe `Artigo` continua a estender `Conteudo`. Como `Conteudo` agora implementa a interface `ComponenteTrilha`, a classe `Artigo` automaticamente também se torna um `ComponenteTrilha`, herdando a obrigação de participar da estrutura Composite.
+
+2.  **Substituição do Método `exibir()` por `exibirDetalhesEspecificos(String indentacao)`:**
+    Seguindo a refatoração da superclasse `Conteudo`, o método `public void exibir()` original da classe `Artigo` foi substituído pela implementação do novo método abstrato `public void exibirDetalhesEspecificos(String indentacao)`.
+    * **Responsabilidade:** Este novo método é agora responsável por exibir apenas as informações que são *exclusivas* de um `Artigo`, como seu `textoHtml` (ou uma prévia dele) e a `fonte`.
+    * **Uso da Indentação:** O parâmetro `indentacao` é utilizado para formatar a saída no console, garantindo que os detalhes do artigo apareçam corretamente alinhados dentro da estrutura hierárquica quando exibidos como parte de um `Modulo` ou `TrilhaEducacional`.
+    * **Dados Comuns:** A exibição dos dados comuns a todos os `Conteudo`s (como ID, título principal, descrição geral, visibilidade e data de publicação) é gerenciada pelo método `exibirInformacoes(String indentacao)` da superclasse `Conteudo`, que por sua vez chama `exibirDetalhesEspecificos()`.
+
+    Exemplo da implementação em `Artigo.java`:
+    ```java
+    // Dentro da classe Artigo.java
+    @Override
+    public void exibirDetalhesEspecificos(String indentacao) {
+        // A classe Conteudo.exibirInformacoes() já imprimiu os dados comuns.
+        // Aqui, imprimimos apenas o que é específico do Artigo.
+        System.out.println(indentacao + "Fonte: " + (this.fonte != null && !this.fonte.isEmpty() ? this.fonte : "Não especificada"));
+        System.out.println(indentacao + "Conteúdo HTML (prévia):");
+        if (this.textoHtml != null && !this.textoHtml.isEmpty()) {
+            String previaHtml = this.textoHtml.replaceAll("<[^>]*>", ""); 
+            System.out.println(indentacao + "  " + previaHtml.substring(0, Math.min(previaHtml.length(), 100)) + (previaHtml.length() > 100 ? "..." : ""));
+        } else {
+            System.out.println(indentacao + "  [Conteúdo HTML não disponível]");
+        }
+    }
+    ```
+
+3.  **Operações de Gerenciamento de Filhos:**
+    Como um `Artigo` é um elemento "folha" na estrutura Composite, ele não possui filhos. Portanto, para os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) definidos na interface `ComponenteTrilha`, a classe `Artigo` (através da herança de `Conteudo`) utiliza as implementações padrão da interface, que lançam uma `UnsupportedOperationException`. Este comportamento é o esperado e correto para elementos folha.
+
+Com essas modificações, a classe `Artigo` se integra perfeitamente à estrutura Composite, permitindo que seja tratada de forma uniforme com outros `ComponenteTrilha` (sejam eles outras folhas ou elementos compostos como `Modulo`), ao mesmo tempo em que exibe suas informações características de maneira hierarquicamente organizada. Adaptações similares foram realizadas nas classes `Video.java`, `Quiz.java` e `Jogo.java`.
