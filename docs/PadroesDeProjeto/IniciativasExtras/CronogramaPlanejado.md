@@ -39,16 +39,6 @@ Este documento apresenta o cronograma planejado para a execução dos três mód
 
 ## Planejamento Módulo GoFs Estruturais
 
-| Data    | Tarefa                                                       | Tempo Estimado |
-|---------|-------------------------------------------------------------|----------------|
-| 26/05   | Pesquisa aprofundada sobre o padrão escolhido               | 1h             |
-| 26/05   | Revisar diagramas UML existentes                             | 1h             |
-| 27/05   | Criar estrutura base do código                               | 1h             |
-| 27/05   | Implementar classes principais do padrão                    | 2h             |
-| 27/05   | Implementar métodos e comportamentos                         | 1h             |
-| 28/05   | Testar funcionalidades básicas                              | 1h             |
-| 28/05   | Corrigir erros e ajustar código                              | 2h             |
-| 28/05   | Commit, push e escrever documentação inicial                | 1h             |
 
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
