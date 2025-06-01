@@ -214,3 +214,64 @@ As modificações chave em `Video.java` para esta adaptação foram:
     Como um `Video` funciona como um nó "folha" na estrutura Composite (ou seja, não possui outros `ComponenteTrilha`s como filhos), para os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) da interface `ComponenteTrilha`, a classe `Video` (via herança de `Conteudo`) utiliza as implementações padrão da interface. Estas implementações corretamente lançam uma `UnsupportedOperationException`, o que é o comportamento adequado para elementos folha que não podem agregar outros componentes.
 
 Com estas alterações, a classe `Video` se alinha ao padrão Composite, podendo ser tratada de forma uniforme com outros `ComponenteTrilha` e exibindo suas informações de forma hierárquica e organizada quando parte de uma estrutura maior como um `Modulo` ou `TrilhaEducacional`.
+
+
+
+#### Adaptação da Classe `Modulo.java` como Elemento Composto (Composite)
+
+A classe `Modulo.java`, que representa um agrupamento temático de `Conteudo`s dentro de uma `TrilhaEducacional`, foi fundamentalmente adaptada para atuar como um "Composite" no padrão de projeto de mesmo nome. Esta transformação permite que um `Modulo` seja tratado como um `ComponenteTrilha`, assim como seus conteúdos filhos, mas com a capacidade adicional de agregar e gerenciar esses filhos.
+
+As principais alterações e características da classe `Modulo` como um Composite são:
+
+1.  **Implementação da Interface `ComponenteTrilha`:**
+    `Modulo` agora implementa diretamente a interface `ComponenteTrilha`. Isso a integra à hierarquia Composite, permitindo que seja tratada de forma uniforme com outros componentes, sejam eles folhas (`Conteudo`) ou outros compostos (`TrilhaEducacional`).
+
+2.  **Gerenciamento de Componentes Filhos:**
+    * A lista interna que antes armazenava `Conteudo` foi modificada para `private List<ComponenteTrilha> componentesFilhos;`. Como a classe `Conteudo` (e suas subclasses) agora também implementa `ComponenteTrilha`, esta lista pode armazenar os diversos tipos de conteúdo que compõem o módulo.
+    * Foram implementados os métodos de gerenciamento de filhos definidos na interface `ComponenteTrilha`:
+        * `adicionar(ComponenteTrilha componente)`: Adiciona um `ComponenteTrilha` (que neste contexto deve ser uma instância de `Conteudo`) à lista de filhos do módulo. Uma verificação foi incluída para garantir que apenas `Conteudo`s sejam adicionados.
+        * `remover(ComponenteTrilha componente)`: Remove um componente filho.
+        * `getFilho(int index)`: Retorna um componente filho específico.
+
+    Exemplo do método `adicionar`:
+    ```java
+    // Dentro da classe Modulo.java
+    @Override
+    public void adicionar(ComponenteTrilha componente) {
+        if (componente instanceof com.galaxiaconectada.core.Conteudo) { // Verifica se é um Conteudo
+             this.componentesFilhos.add(componente);
+        } else {
+            System.out.println("[ERRO Modulo] Só é possível adicionar Conteudos a um Módulo.");
+        }
+    }
+    ```
+
+3.  **Implementação Recursiva de `exibirInformacoes(String indentacao)`:**
+    Este é um dos aspectos centrais do padrão Composite. O método `exibirInformacoes` em `Modulo` foi implementado para:
+    * Primeiro, exibir os detalhes do próprio módulo (ID, título, ordem, descrição breve) utilizando a `indentacao` fornecida.
+    * Em seguida, iterar sobre sua lista de `componentesFilhos`. Para cada filho, o método `exibirInformacoes()` do filho é chamado recursivamente, passando uma string de indentação aumentada (ex: `indentacao + "    "`).
+    * Isso resulta em uma exibição hierárquica e indentada de toda a estrutura do módulo e seus conteúdos no console.
+
+    Exemplo da lógica recursiva em `exibirInformacoes`:
+    ```java
+    // Dentro da classe Modulo.java
+    @Override
+    public void exibirInformacoes(String indentacao) {
+        System.out.println(indentacao + "Modulo (ID: " + id + "): " + titulo + " [Ordem: " + ordem + "]");
+        System.out.println(indentacao + "  Descrição Breve: " + descricaoBreve);
+
+        if (componentesFilhos.isEmpty()) {
+            System.out.println(indentacao + "  -> Este módulo ainda não possui conteúdos.");
+        } else {
+            System.out.println(indentacao + "  Conteúdos do Módulo:");
+            for (ComponenteTrilha componente : componentesFilhos) {
+                componente.exibirInformacoes(indentacao + "    "); // Chamada recursiva
+            }
+        }
+    }
+    ```
+
+4.  **Satisfação do Contrato `getTitulo()`:**
+    O método `getTitulo()`, já existente, foi mantido e anotado com `@Override` para cumprir o contrato da interface `ComponenteTrilha`.
+
+Através dessas modificações, a classe `Modulo` não apenas agrupa `Conteudo`s, mas também participa ativamente da estrutura Composite, permitindo que operações sejam aplicadas de forma uniforme em toda a hierarquia da `TrilhaEducacional`. A adaptação do `ModuloBuilder` (discutida em sua respectiva seção) foi necessária para garantir que ele construísse instâncias de `Modulo` compatíveis com esta nova estrutura.
