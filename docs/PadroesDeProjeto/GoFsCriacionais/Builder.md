@@ -420,6 +420,10 @@ A TrilhaEducacionalBuilder é a classe designada para orquestrar e simplificar a
 
 Abaixo o código para `TrilhaEducacionalBuilder.java` 
 
+<details>
+  <summary><strong>Código para `TrilhaEducacionalBuilder.java`</strong></summary>
+
+
 ```java
  package com.galaxiaconectada.trilhas;
 
@@ -513,6 +517,8 @@ A figura 6 abaixo ilustra a estrutura da classe `TrilhaEducacionalBuilder.java` 
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
+
+</details>
 
 ## Classe de Teste AplicacaoGalaxia
 
