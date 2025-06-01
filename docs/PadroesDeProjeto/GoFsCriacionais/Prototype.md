@@ -444,6 +444,10 @@ A figura 6 abaixo ilustra a estrutura da classe `RegistroDePrototipos.java` no a
 
 A classe AplicacaoGalaxia.java foi atualizada para incluir uma seção de teste dedicada ao padrão Prototype. No início da aplicação, o método carregarPrototiposIniciais() popula o RegistroDePrototipos com instâncias modelo de Conquista e Notificacao. Em seguida, um novo menu interativo permite ao usuário listar os protótipos disponíveis, escolher um pela sua chave, solicitar um clone e, opcionalmente, modificar atributos do objeto clonado. A exibição dos detalhes do clone antes e depois das modificações demonstra que o objeto clonado é uma instância independente do protótipo original, validando a correta aplicação do padrão.
 
+O código se encontra abaixo:
+
+
+
 ```Java
 
 package com.galaxiaconectada.main;
