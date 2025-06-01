@@ -354,6 +354,10 @@ A classe RegistroDePrototipos atua como um gerenciador centralizado para os obje
 
 Abaixo o código para `RegistroDePrototipos.java` 
 
+<details>
+  <summary><strong>Código para `RegistroDePrototipos.java` </strong></summary>
+
+
 ```Java
 
 package com.galaxiaconectada.prototipos;
