@@ -155,6 +155,8 @@ A classe Conquista representa um prêmio ou reconhecimento dentro da plataforma.
 
 Abaixo o código para `Conquista.java`
 
+<details>
+  <summary><strong>Código para `Conquista.java`</strong></summary>
 
 ```Java
 package com.galaxiaconectada.prototipos;
@@ -239,6 +241,7 @@ A figura 4 abaixo ilustra a estrutura da classe `Conquista.java` no ambiente de 
     <br>
 </div>
 
+</details>
 
 ### Classe Notificacao como Protótipo
 
