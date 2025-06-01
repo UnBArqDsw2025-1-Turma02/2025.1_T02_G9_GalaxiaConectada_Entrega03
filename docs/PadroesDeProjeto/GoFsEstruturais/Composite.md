@@ -5,7 +5,7 @@
 
 
 
-### Adaptação da Classe Abstrata `Conteudo.java` para o Padrão Composite
+# Adaptação da Classe Abstrata `Conteudo.java` para o Padrão Composite
 
 Para integrar a hierarquia de `Conteudo` ao padrão Composite, permitindo que tanto conteúdos individuais quanto agrupamentos (como `Modulo` e `TrilhaEducacional`) fossem tratados de forma uniforme, a classe abstrata `Conteudo.java` passou por adaptações significativas. Ela agora serve como a classe base para os elementos "Folha" (Leaf) dentro da estrutura Composite da trilha de aprendizado.
 
@@ -54,8 +54,7 @@ As principais modificações realizadas foram:
 
 Essas adaptações permitiram que os objetos `Conteudo` fossem integrados de maneira coesa à estrutura Composite, sendo tratados uniformemente como `ComponenteTrilha` pelas classes compostas (`Modulo` e `TrilhaEducacional`), ao mesmo tempo em que mantêm a capacidade de exibir seus detalhes específicos de forma hierárquica.
 
-
-#### Adaptação da Classe Concreta `Artigo.java` como Folha (Leaf)
+# Adaptação da Classe Concreta `Artigo.java` como Folha (Leaf)
 
 A classe `Artigo.java`, sendo uma especialização de `Conteudo`, representa um dos elementos finais (ou "folhas") na hierarquia da estrutura Composite de uma `TrilhaEducacional`. Para se alinhar com o padrão e com as modificações na superclasse `Conteudo`, as seguintes adaptações foram realizadas:
 
@@ -92,7 +91,7 @@ A classe `Artigo.java`, sendo uma especialização de `Conteudo`, representa um 
 Com essas modificações, a classe `Artigo` se integra perfeitamente à estrutura Composite, permitindo que seja tratada de forma uniforme com outros `ComponenteTrilha` (sejam eles outras folhas ou elementos compostos como `Modulo`), ao mesmo tempo em que exibe suas informações características de maneira hierarquicamente organizada. Adaptações similares foram realizadas nas classes `Video.java`, `Quiz.java` e `Jogo.java`.
 
 
-###### Classe Concreta `Jogo.java` como Folha (Leaf)
+# Classe Concreta `Jogo.java` como Folha (Leaf)
 
 A classe `Jogo.java`, representando um conteúdo educacional interativo e lúdico, também foi adaptada para funcionar como um elemento "Folha" dentro da estrutura do padrão Composite. Sendo uma subclasse de `Conteudo`, ela herda a implementação da interface `ComponenteTrilha`.
 
@@ -128,7 +127,7 @@ As principais modificações em `Jogo.java` para essa integração foram:
 
 Estas adaptações asseguram que a classe `Jogo` se integre harmoniosamente à estrutura Composite, permitindo que seja tratada de maneira uniforme junto a outros componentes da trilha educacional, ao mesmo tempo em que exibe suas informações características de forma organizada e hierárquica.
 
-##### Classe Concreta `Quiz.java` como Folha (Leaf)
+# Classe Concreta `Quiz.java` como Folha (Leaf)
 
 A classe `Quiz.java`, que representa um conteúdo interativo de avaliação de conhecimento, foi igualmente adaptada para funcionar como um elemento "Folha" (Leaf) na estrutura do padrão Composite. Sendo uma subclasse de `Conteudo`, ela herda a implementação da interface `ComponenteTrilha`.
 
@@ -174,7 +173,7 @@ As principais modificações em `Quiz.java` para esta integração incluem:
 
 Com estas adaptações, a classe `Quiz` se integra de forma coesa à estrutura Composite, permitindo que seja tratada uniformemente com outros componentes da trilha de aprendizado, ao mesmo tempo em que mantém a capacidade de exibir suas características únicas de maneira organizada e hierárquica.
 
-###### Classe Concreta `Video.java` como Folha (Leaf)
+# Classe Concreta `Video.java` como Folha (Leaf)
 
 A classe `Video.java`, destinada a representar conteúdo audiovisual dentro da plataforma, também foi refatorada para se integrar à estrutura do padrão Composite, atuando como um elemento "Folha" (Leaf). Como uma subclasse de `Conteudo`, ela herda a conformidade com a interface `ComponenteTrilha`.
 
@@ -216,8 +215,7 @@ As modificações chave em `Video.java` para esta adaptação foram:
 Com estas alterações, a classe `Video` se alinha ao padrão Composite, podendo ser tratada de forma uniforme com outros `ComponenteTrilha` e exibindo suas informações de forma hierárquica e organizada quando parte de uma estrutura maior como um `Modulo` ou `TrilhaEducacional`.
 
 
-
-#### Adaptação da Classe `Modulo.java` como Elemento Composto (Composite)
+# Adaptação da Classe `Modulo.java` como Elemento Composto (Composite)
 
 A classe `Modulo.java`, que representa um agrupamento temático de `Conteudo`s dentro de uma `TrilhaEducacional`, foi fundamentalmente adaptada para atuar como um "Composite" no padrão de projeto de mesmo nome. Esta transformação permite que um `Modulo` seja tratado como um `ComponenteTrilha`, assim como seus conteúdos filhos, mas com a capacidade adicional de agregar e gerenciar esses filhos.
 
@@ -278,7 +276,7 @@ Através dessas modificações, a classe `Modulo` não apenas agrupa `Conteudo`s
 
 
 
-###### Adaptação da Classe `ModuloBuilder.java` para o Padrão Composite
+#  Adaptação da Classe `ModuloBuilder.java` para o Padrão Composite
 
 Com a refatoração da classe `Modulo` para atuar como um elemento "Composite" (capaz de conter filhos do tipo `ComponenteTrilha`), a classe `ModuloBuilder.java` também necessitou de atualizações para construir instâncias de `Modulo` compatíveis com esta nova estrutura. O objetivo do `ModuloBuilder` continua sendo fornecer uma interface fluente para a construção passo a passo de objetos `Modulo`, mas agora ele lida com a agregação de `ComponenteTrilha` (que, no contexto de um `Modulo`, serão instâncias de `Conteudo`).
 
