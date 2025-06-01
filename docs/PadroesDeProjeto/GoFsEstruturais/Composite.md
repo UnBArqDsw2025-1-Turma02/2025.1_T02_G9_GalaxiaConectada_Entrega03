@@ -127,3 +127,49 @@ As principais modificações em `Jogo.java` para essa integração foram:
     Sendo um elemento "folha", um `Jogo` não contém outros `ComponenteTrilha` filhos. Assim, para os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) definidos na interface `ComponenteTrilha`, a classe `Jogo` (via `Conteudo`) utiliza as implementações padrão da interface, que corretamente lançam uma `UnsupportedOperationException`.
 
 Estas adaptações asseguram que a classe `Jogo` se integre harmoniosamente à estrutura Composite, permitindo que seja tratada de maneira uniforme junto a outros componentes da trilha educacional, ao mesmo tempo em que exibe suas informações características de forma organizada e hierárquica.
+
+##### Classe Concreta `Quiz.java` como Folha (Leaf)
+
+A classe `Quiz.java`, que representa um conteúdo interativo de avaliação de conhecimento, foi igualmente adaptada para funcionar como um elemento "Folha" (Leaf) na estrutura do padrão Composite. Sendo uma subclasse de `Conteudo`, ela herda a implementação da interface `ComponenteTrilha`.
+
+As principais modificações em `Quiz.java` para esta integração incluem:
+
+1.  **Herança de `Conteudo`:**
+    A classe `Quiz` mantém sua herança da classe `Conteudo`. Com a alteração em `Conteudo` para implementar `ComponenteTrilha`, a classe `Quiz` também se torna, por consequência, um `ComponenteTrilha`, apta a participar da estrutura hierárquica do padrão.
+
+2.  **Substituição do Método `exibir()` por `exibirDetalhesEspecificos(String indentacao)`:**
+    Em conformidade com a refatoração da superclasse `Conteudo`, o método original `public void exibir()` da classe `Quiz` foi substituído pela implementação do novo método abstrato `public void exibirDetalhesEspecificos(String indentacao)`.
+    * **Responsabilidade do Novo Método:** Este método é agora focado em apresentar apenas as informações que são intrínsecas a um `Quiz`, como o `tempoLimiteMin`, o número de `tentativasPermitidas` e a simulação da exibição das perguntas que compõem o quiz.
+    * **Uso da Indentação:** O parâmetro `indentacao` é utilizado para formatar a saída no console, assegurando que os detalhes do quiz sejam exibidos de forma alinhada e clara dentro da estrutura hierárquica, especialmente quando o quiz é um componente de um `Modulo`.
+    * **Dados Comuns:** Informações gerais como ID, título principal, descrição, visibilidade e data de publicação são exibidas pelo método `exibirInformacoes(String indentacao)` da superclasse `Conteudo`, que subsequentemente invoca `exibirDetalhesEspecificos()`.
+
+    Exemplo da implementação em `Quiz.java`:
+    ```java
+    // Dentro da classe Quiz.java
+    @Override
+    public void exibirDetalhesEspecificos(String indentacao) {
+        // A classe Conteudo.exibirInformacoes() já imprimiu os dados comuns.
+        // Aqui, imprimimos apenas o que é específico do Quiz.
+        System.out.println(indentacao + "Tipo de Interação: Quiz Avaliativo");
+        System.out.println(indentacao + "Tempo Limite: " + this.tempoLimiteMin + " minutos");
+        System.out.println(indentacao + "Tentativas Permitidas: " + this.tentativasPermitidas);
+        System.out.println(indentacao + "Perguntas (simulação):");
+        // Lógica placeholder para simular a exibição de perguntas
+        if (getTitulo().toLowerCase().contains("planetas")) {
+            System.out.println(indentacao + "  1. Qual o maior planeta do Sistema Solar?");
+            System.out.println(indentacao + "     a) Terra");
+            // ... mais opções e perguntas ...
+        } else {
+            System.out.println(indentacao + "  1. Pergunta Genérica A sobre " + getTitulo() + "?");
+            // ... mais opções ...
+        }
+    }
+    ```
+
+3.  **Métodos Específicos de Quiz (`iniciar`, `submeter`):**
+    Os métodos `iniciar(Usuario usuario)` e `submeter(Object tentativaQuiz)` foram mantidos, pois representam comportamentos específicos da entidade `Quiz`. Suas saídas no console foram ligeiramente ajustadas para incluir indentação, melhorando a visualização quando são chamados no contexto de uma exibição hierárquica.
+
+4.  **Operações de Gerenciamento de Filhos:**
+    Como um `Quiz` é um elemento "folha" na estrutura Composite (ele não contém outros `ComponenteTrilha`s), para os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) definidos na interface `ComponenteTrilha`, a classe `Quiz` (através da herança de `Conteudo`) utiliza as implementações padrão da interface. Estas implementações corretamente lançam uma `UnsupportedOperationException`, que é o comportamento esperado para elementos folha que não podem ter filhos.
+
+Com estas adaptações, a classe `Quiz` se integra de forma coesa à estrutura Composite, permitindo que seja tratada uniformemente com outros componentes da trilha de aprendizado, ao mesmo tempo em que mantém a capacidade de exibir suas características únicas de maneira organizada e hierárquica.
