@@ -320,6 +320,9 @@ Após a criação do fórum, o usuário pode então interagir com o fórum, como
 
 Abaixo o código relevante da classe AplicacaoGalaxia.java que demonstra o uso do Singleton Forum:
 
+<details>
+  <summary><strong>Código da AplicacaoGalaxia.java</strong></summary>
+
 ```java
 
 package com.galaxiaconectada.main;
@@ -851,7 +854,7 @@ public class AplicacaoGalaxia {
 
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
-
+</details>
 
 ## Discussão Vantagens e Desvantagens do Singleton
 
