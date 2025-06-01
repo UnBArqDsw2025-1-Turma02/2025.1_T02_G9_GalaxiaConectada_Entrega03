@@ -97,6 +97,9 @@ A classe `Forum` foi implementada no pacote `com.galaxiaconectada.domain.forum` 
 
 Abaixo o código para `Forum.java`:
 
+<details>
+  <summary><strong>Código para `Forum.java`:</strong></summary>
+
 ```java
 package com.galaxiaconectada.domain.forum;
 
@@ -211,6 +214,7 @@ As figuras 2 e 3 abaixo ilustra a estrutura da classe `Forum.java` no ambiente d
     <br>
 </div>
 
+</details>
 
 ### Classe Auxiliar Subforum
 
