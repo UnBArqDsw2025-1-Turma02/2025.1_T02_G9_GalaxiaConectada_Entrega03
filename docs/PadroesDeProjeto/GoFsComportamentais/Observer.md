@@ -213,9 +213,72 @@ A figura 4 abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambi
 
 ### Implementação dos Observadores Concretos
 
+Os Observadores Concretos são as classes que implementam a interface `ObservadorTrilha` e definem a ação específica a ser tomada quando são notificadas pelo sujeito (`TrilhaEducacional`) sobre a publicação de uma nova trilha. Para o projeto "Galáxia Conectada", foram implementados dois exemplos de observadores concretos.
+
 #### Classe NotificadorPlataforma
 
+A classe `NotificadorPlataforma` atua como um Observador Concreto cuja responsabilidade é simular um sistema de notificação geral da plataforma "Galáxia Conectada". Ao ser informado sobre a publicação de uma nova `TrilhaEducacional` (através da implementação do método `notificarTrilhaPublicada` da interface `ObservadorTrilha`), este componente exibe no console uma mensagem de alerta geral, detalhando a trilha recém-disponibilizada. Dessa maneira, esta classe poderia ser responsável por interagir com mecanismos reais de envio de notificações, como e-mails para usuários interessados, alertas push em aplicativos móveis, ou a criação de um item na seção de "Novidades" da plataforma. 
+
+Abaixo o código para `NotificadorPlataforma.java`
+
+<details>
+  <summary><strong>Código para `NotificadorPlataforma.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+### Imagem do Código no VSCode
+
+A figura 5 abaixo ilustra a estrutura da classe `NotificadorPlataforma.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 5: NotificadorPlataforma.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
+
 #### Classe AnunciadorForum
+
+A classe AnunciadorForum é outro Observador Concreto, projetado para reagir à publicação de uma TrilhaEducacional através da criação de um anúncio no fórum principal da plataforma. Ao implementar o método notificarTrilhaPublicada da interface ObservadorTrilha, esta classe obtém a instância Singleton do Forum e simula a criação de um subfórum de anúncios (ou a utilização de um existente) e, em seguida, a postagem de um novo tópico informando a comunidade sobre a nova trilha. Em um sistema completo, esta classe utilizaria um TopicoBuilder para a criação formal do tópico e da postagem inicial. 
+
+Abaixo o código para `AnunciadorForum.java`
+
+<details>
+  <summary><strong>Código para `AnunciadorForum.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+### Imagem do Código no VSCode
+
+A figura 6 abaixo ilustra a estrutura da classe `AnunciadorForum.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 6: AnunciadorForum.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
+
 
 ### Demonstração de Uso na AplicacaoGalaxia
 
