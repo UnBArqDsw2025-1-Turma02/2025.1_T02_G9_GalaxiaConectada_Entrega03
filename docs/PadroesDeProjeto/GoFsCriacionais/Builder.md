@@ -14,6 +14,7 @@
 - [Modelagem do Builder Para Trilhas de Aprendizado](#Modelagem-do-Builder-Para-Trilhas-de-Aprendizado)
   -  [Classe Produto TrilhaEducacional](#Classe-Produto-TrilhaEducacional)
   -  [Classe Builder TrilhaEducacionalBuilder](#Classe-Builder-TrilhaEducacionalBuilder)
+- [Vídeo Explicação e Execução do Builder para Trilhas Educacionais](#Vídeo-Explicação-e-Execução-do-Builder-para-Trilhas-Educacionais)
 - [Classe de Teste AplicacaoGalaxia](#Classe-de-Teste-AplicacaoGalaxia)
 - [Conclusão](#conclusão)
 - [Bibliografia](#bibliografia)
@@ -445,19 +446,6 @@ A figura 5 abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambi
 
 </details>
 
-## Vídeo Explicação e Execução do Builder para Trilhas Educacionais
-
-O vídeo 2 abaixo mostra explicação e a execução do Builder para Trilhas Educacionais
-
-<div align="center">
-    Vídeo 2: Builder para Trilhas Educacionais
-    <br>
-   <iframe width="1321" height="743" src="https://www.youtube.com/embed/U6YGJTvpZlw" title="Galáxia Conectada: Explicação e Execução do Builder para Trilhas de Aprendizado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-   <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
-
 
 ## Classe Builder TrilhaEducacionalBuilder
 
@@ -564,6 +552,20 @@ A figura 6 abaixo ilustra a estrutura da classe `TrilhaEducacionalBuilder.java` 
 </div>
 
 </details>
+
+## Vídeo Explicação e Execução do Builder para Trilhas Educacionais
+
+O vídeo 2 abaixo mostra explicação e a execução do Builder para Trilhas Educacionais
+
+<div align="center">
+    Vídeo 2: Builder para Trilhas Educacionais
+    <br>
+   <iframe width="1321" height="743" src="https://www.youtube.com/embed/U6YGJTvpZlw" title="Galáxia Conectada: Explicação e Execução do Builder para Trilhas de Aprendizado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 
 ## Classe de Teste AplicacaoGalaxia
 
