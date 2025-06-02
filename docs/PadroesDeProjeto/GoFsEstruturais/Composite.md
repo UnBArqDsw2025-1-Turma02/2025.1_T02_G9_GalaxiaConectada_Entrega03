@@ -52,9 +52,6 @@
     - [Código Atualizado da Classe TrilhaEducacionalBuilder](#Código-Atualizado-da-Classe-TrilhaEducacionalBuilder)
     - [Imagem do Código no VSCode](#Imagem-do-Código-no-VSCode)
 - [Demonstração de Uso na AplicacaoGalaxia](#Demonstração-de-Uso-na-AplicacaoGalaxia)
-  - [Descrição da Interação e Testes](#Descrição-da-Interação-e-Testes)
-  - [Código Relevante da Classe AplicacaoGalaxia](#Código-Relevante-da-Classe-AplicacaoGalaxia)
-  - [Imagem do Código no VSCode](#Imagem-do-Código-no-VSCode)
   - [Vídeo da Execução](#Vídeo-da-Execução)
 - [Conclusão](#Conclusão)
 - [Bibliografia](#Bibliografia)
@@ -521,31 +518,116 @@ A figura 7 abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambi
 
 ## Atualização das Classes Builder
 
-
+Com as classes `Conteudo`, `Modulo` e `TrilhaEducacional` adaptadas para implementar a interface `ComponenteTrilha` e funcionar dentro da estrutura Composite, foi necessário também ajustar suas respectivas classes Builder (`ModuloBuilder` e `TrilhaEducacionalBuilder`). Essas atualizações garantem que os builders construam objetos compatíveis com a nova hierarquia e que possam gerenciar seus filhos como `ComponenteTrilha`.
 
 ### Adaptação da Classe ModuloBuilder
 
+A classe `ModuloBuilder` é responsável pela construção passo a passo de objetos `Modulo`. Para que ela pudesse criar `Modulo`s que agora atuam como "Composites" (contendo `Conteudo`s, que são `ComponenteTrilha`s).
+
 #### Descrição das Mudanças
+
+1.  **Tipo da Coleção Interna de Filhos:** O `ModuloBuilder` armazena internamente os componentes que farão parte do `Modulo` sendo construído. Anteriormente, esta era uma `List<Conteudo>`. Para se alinhar com o padrão Composite, onde `Modulo` agora gerencia uma `List<ComponenteTrilha>`,
+  
+2.  **Atualização dos Métodos de Adição de Filhos:** O método `adicionarConteudo(Conteudo c)` foi modificado para `adicionarComponente(ComponenteTrilha componente)`. Uma verificação interna (`instanceof Conteudo`) foi mantida para assegurar que, no contexto de um `Modulo`, apenas objetos que são efetivamente `Conteudo`s sejam adicionados.
+
+3.  **Atualização do Método `build()`:**
+    O método `build()`, que finaliza a construção e retorna a instância de `Modulo`, foi ajustado para chamar o construtor da classe `Modulo` que agora espera uma `List<ComponenteTrilha>` como parâmetro para seus componentes filhos.
+
 
 #### Código Atualizado da Classe ModuloBuilder
 
-#### Imagem do Código no VSCode
+Abaixo o código atualizado para `ModuloBuilder.java`:
+
+<details>
+  <summary><strong>Código para `ModuloBuilder.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+#### Imagens do Código no VSCode
+
+A figura 8 abaixo ilustra a estrutura da classe `ModuloBuilder.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 8: Classe Abstrata ModuloBuilder.java 
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
+
 
 ### Adaptação da Classe TrilhaEducacionalBuilder
 
+A classe `TrilhaEducacionalBuilder` é responsável por orquestrar a construção de objetos `TrilhaEducacional`, que são os elementos de mais alto nível na hierarquia de aprendizado da plataforma "Galáxia Conectada". Com a adaptação da `TrilhaEducacional` para atuar como um "Composite" (capaz de conter `Modulo`s, que são também `ComponenteTrilha`s), o `TrilhaEducacionalBuilder` necessitou de ajustes correspondentes para garantir a correta montagem dessa estrutura.
+
 #### Descrição das Mudanças
+
+As modificações implementadas na classe `TrilhaEducacionalBuilder` para alinhá-la com o padrão Composite foram:
+
+1.  **Tipo da Coleção Interna de Filhos (Módulos):** O atributo interno do builder, que armazena os módulos da trilha durante o processo de construção, foi alterado de `private List<Modulo> modulos;` para `private List<ComponenteTrilha> componentesFilhos;`.
+  
+2.  **Atualização dos Métodos de Adição de Componentes (Módulos):** O método `adicionarModulo(Modulo m)` foi renomeado e adaptado para `adicionarComponente(ComponenteTrilha componente)`. Embora o método aceite agora um `ComponenteTrilha` de forma mais genérica, uma verificação interna com `instanceof Modulo` foi mantida. Isso assegura que, de acordo com as regras de negócio da plataforma, apenas instâncias de `Modulo` sejam adicionadas como filhos diretos de uma `TrilhaEducacional`.
+
+3.  **Atualização do Método `build()`:** O método `build()`, que é responsável por finalizar o processo de construção e retornar a instância de `TrilhaEducacional`, foi ajustado. Agora, ele invoca o construtor da classe `TrilhaEducacional` que espera uma `List<ComponenteTrilha>` como parâmetro para sua coleção de módulos.
+
 
 #### Código Atualizado da Classe TrilhaEducacionalBuilder
 
-#### Imagem do Código no VSCode
+Abaixo o código atualizado para `TrilhaEducacionalBuilder.java`:
+
+<details>
+  <summary><strong>Código para `TrilhaEducacionalBuilder.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+#### Imagens do Código no VSCode
+
+A figura 9 abaixo ilustra a estrutura da classe `TrilhaEducacionalBuilder.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 9: Classe Abstrata TrilhaEducacionalBuilder.java 
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
 
 ## Demonstração de Uso na AplicacaoGalaxia
 
-### Descrição da Interação e Testes
+Abaixo está o código da aplicação:
 
-### Código Relevante da Classe AplicacaoGalaxia
+<details>
+  <summary><strong>Código para `TAplicacaoGalaxia.java` </strong></summary>
 
-### Imagem do Código no VSCode
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+</details>
 
 ### Vídeo da Execução
 
