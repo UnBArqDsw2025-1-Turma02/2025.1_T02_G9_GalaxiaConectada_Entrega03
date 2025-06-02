@@ -128,8 +128,36 @@ A figura 2 abaixo ilustra a estrutura da classe `ObservadorTrilha.java` no ambie
 
 #### Interface SujeitoTrilhaObservavel
 
+A interface `SujeitoTrilhaObservavel` desempenha o papel do Subject (ou Observable) no padrão Observer, especificamente para o contexto de eventos relacionados a TrilhaEducacional. Seu objetivo é definir o contrato para qualquer classe que possa ser "observada" por instâncias de ObservadorTrilha. Este contrato inclui métodos para que os observadores possam se registrar (adicionarObservador) e cancelar seu registro (removerObservador), bem como um método (notificarObservadoresDaPublicacao) que o sujeito utilizará para informar a todos os seus observadores registrados sobre a ocorrência do evento de publicação. 
+
+Abaixo o código para `SujeitoTrilhaObservavel.java`
 
 
+<details>
+  <summary><strong>Código para `SujeitoTrilhaObservavel.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+### Imagem do Código no VSCode
+
+A figura 3 abaixo ilustra a estrutura da classe `SujeitoTrilhaObservavel.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 3: SujeitoTrilhaObservavel.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
 
 
 ### Adaptação da Classe TrilhaEducacional como Sujeito Concreto
@@ -148,6 +176,21 @@ A figura 2 abaixo ilustra a estrutura da classe `ObservadorTrilha.java` no ambie
 
 ### Demonstração de Uso na AplicacaoGalaxia
 
+Abaixo está o código da aplicação:
+
+<details>
+  <summary><strong>Código para `TAplicacaoGalaxia.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+</details>
+
 ## Conclusão
 
 ## Referências
@@ -163,3 +206,10 @@ A figura 2 abaixo ilustra a estrutura da classe `ObservadorTrilha.java` no ambie
 [5] GEEKSFORGEEKS. Observer Design Pattern. Disponível em: https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/. Acesso em: 1 jun. 2025.
 
 ## Histórico de Versão
+
+
+| Versão | Alteração | Responsável | Data |
+| - | - | - | - |
+| 1.0 | Elaboração do documento| Larissa Stéfane | 31/06/2025 |
+| 1.1 | Adição do código | Larissa Stéfane | 31/06/2025 |
+| 1.2 | Organização e adição das mudanças | Larissa Stéfane | 01/06/2025 |
