@@ -30,3 +30,58 @@ Padrão Comportamental Observer
 - [Referências](#Referências)  
 - [Histórico de Versão](#Histórico-de-Versão)  
 
+
+
+## Introdução
+
+### Contexto da Notificação no Galáxia Conectada
+
+## Objetivo
+
+## Metodologia - O Padrão Observer
+
+### Definição e Participantes do Padrão Observer
+
+### Aplicação no Cenário de Publicação de Trilhas
+
+## Desenvolvimento e Implementação
+
+### Modelagem UML do Padrão Observer
+
+### Definição das Interfaces do Padrão
+
+#### Interface ObservadorTrilha
+
+#### Interface SujeitoTrilhaObservavel
+
+### Adaptação da Classe TrilhaEducacional como Sujeito Concreto
+
+#### Descrição das Modificações
+
+#### Código Atualizado da Classe TrilhaEducacional
+
+#### Imagem do Código no VSCode
+
+### Implementação dos Observadores Concretos
+
+#### Classe NotificadorPlataforma
+
+#### Classe AnunciadorForum
+
+### Demonstração de Uso na AplicacaoGalaxia
+
+#### Descrição da Interação e Testes
+
+#### Código Relevante da Classe AplicacaoGalaxia
+
+#### Imagem do Código no VSCode
+
+#### Vídeo da Execução
+
+## Vantagens da Utilização do Observer no Projeto
+
+## Conclusão
+
+## Referências
+
+## Histórico de Versão
