@@ -10,6 +10,14 @@
     - [3.3. Padrões de Projeto GoFs Comportamentais](/PadroesDeProjeto/3.3.GoFsComportamentais.md)
     - [3.4. Participações - Padrões de Projeto](/PadroesDeProjeto/3.4.ParticipacoesPadroes.md)
     - [3.5. Iniciativas Extras - Padrões de Projeto](/PadroesDeProjeto/3.5.IniciativasExtras.md)
+   
+- 3.1 Padrões de Projeto GoFs Criacionais
+    - [3.1.1 Factory Method](/PadroesDeProjeto/GoFsCriacionais/FactoryMethod.md)
+    - [3.1.2 Builder](/PadroesDeProjeto/GoFsCriacionais/Builder.md)
+    - [3.1.3 Prototype](/PadroesDeProjeto/GoFsCriacionais/Prototype.md)
+    - [3.1.4 Singleton](/PadroesDeProjeto/GoFsCriacionais/Singleton.md)
+ 
+    
   
 
 - **3.5 Iniciativas Extras** 
