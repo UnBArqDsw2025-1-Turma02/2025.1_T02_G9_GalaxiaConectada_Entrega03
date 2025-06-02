@@ -297,7 +297,7 @@ A figura 3 abaixo ilustra a estrutura da classe `ModuloBuilder.java` no ambiente
 A figura 4 abaixo mostra a modelagem do campo Trilhas de Aprendizado
 
 <div align="center">
-    Figura 4: modelagem do campo Módulo
+    Figura 4: modelagem do campo das Trilhas Educacionais
     <br>
     <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/39881e2d2affcb8bc7d22a69fca398282bee8025/docs/PadroesDeProjeto/Imagens/NovaModelagem_Builder_TrilhaEducacional.drawio.png" width="1200">
     <br>
