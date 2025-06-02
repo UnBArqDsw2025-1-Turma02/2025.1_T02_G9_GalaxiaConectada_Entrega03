@@ -105,7 +105,14 @@ Abaixo o código para `ObservadorTrilha.java`
 
 
 ```java
+package com.galaxiaconectada.observer;
 
+import com.galaxiaconectada.trilhas.TrilhaEducacional; // Importa a classe do objeto que será observado
+
+// Define o método de atualização que será chamado quando o Sujeito (TrilhaEducacional) notificar
+public interface ObservadorTrilha {
+    void notificarTrilhaPublicada(TrilhaEducacional trilhaPublicada);
+}
 
 ```
 
@@ -138,7 +145,17 @@ Abaixo o código para `SujeitoTrilhaObservavel.java`
 
 
 ```java
+package com.galaxiaconectada.observer;
 
+//Interface Subject (Sujeito Observável): define os métodos para que os Observadores possam se registrar e cancelar o registro.
+
+public interface SujeitoTrilhaObservavel {
+    void adicionarObservador(ObservadorTrilha observador);
+
+    void removerObservador(ObservadorTrilha observador);
+
+    void notificarObservadoresDaPublicacao();
+}
 
 ```
 
