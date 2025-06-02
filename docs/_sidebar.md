@@ -18,7 +18,12 @@
     - [3.1.4 Singleton](/PadroesDeProjeto/GoFsCriacionais/Singleton.md)
     - [3.1.5 Código Fonte](/PadroesDeProjeto/GoFsCriacionais/CriacionalCodigoHospedado.md)
  
-    
+
+- 3.2 Padrões de Projeto GoFs Estruturais
+    - [3.2.1 Composite](/PadroesDeProjeto/GoFsEstruturais/Composite.md)
+    - [3.2.2 Facade](/PadroesDeProjeto/GoFsEstruturais/Facade.md)
+    - [3.2.3 Código Fonte](/PadroesDeProjeto/GoFsEstruturais/EstruturaCodigoFonte.md)
+   
   
 
 - **3.5 Iniciativas Extras** 
