@@ -125,7 +125,7 @@ A figura 2 abaixo ilustra a estrutura da classe `ObservadorTrilha.java` no ambie
 <div align="center">
     Figura 2: Classe ObservadorTrilha.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/f26dc103e37355c4a69b3203bf7ecf4ade5c0870/docs/PadroesDeProjeto/Imagens/Observer_ObservadorTrilha.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -168,7 +168,7 @@ A figura 3 abaixo ilustra a estrutura da classe `SujeitoTrilhaObservavel.java` n
 <div align="center">
     Figura 3: SujeitoTrilhaObservavel.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/f26dc103e37355c4a69b3203bf7ecf4ade5c0870/docs/PadroesDeProjeto/Imagens/Observer_SujeitoTrilhaObservavel.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -386,12 +386,30 @@ public class TrilhaEducacional implements ComponenteTrilha, SujeitoTrilhaObserva
 
 ### Imagem do Código no VSCode
 
-A figura 4 abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambiente de desenvolvimento VSCode.
+As figuras 4,5 e 6  abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambiente de desenvolvimento VSCode.
 
 <div align="center">
-    Figura 4: TrilhaEducacional.java
+    Figura 4: TrilhaEducacional.java - Parte 1
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/f26dc103e37355c4a69b3203bf7ecf4ade5c0870/docs/PadroesDeProjeto/Imagens/Observer_TrilhaEducacional1.png" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 5: TrilhaEducacional.java Parte 2
+    <br>
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/f26dc103e37355c4a69b3203bf7ecf4ade5c0870/docs/PadroesDeProjeto/Imagens/Observer_TrilhaEducacional2.png" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 6: TrilhaEducacional.java Parte 3
+    <br>
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/f26dc103e37355c4a69b3203bf7ecf4ade5c0870/docs/PadroesDeProjeto/Imagens/Observer_TrilhaEducacional3.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -447,12 +465,12 @@ public class NotificadorPlataforma implements ObservadorTrilha {
 
 ### Imagem do Código no VSCode
 
-A figura 5 abaixo ilustra a estrutura da classe `NotificadorPlataforma.java` no ambiente de desenvolvimento VSCode.
+A figura 7 abaixo ilustra a estrutura da classe `NotificadorPlataforma.java` no ambiente de desenvolvimento VSCode.
 
 <div align="center">
-    Figura 5: NotificadorPlataforma.java
+    Figura 7: NotificadorPlataforma.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/f26dc103e37355c4a69b3203bf7ecf4ade5c0870/docs/PadroesDeProjeto/Imagens/Observer_NotificadorPlataforma.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -520,12 +538,12 @@ public class AnunciadorForum implements ObservadorTrilha {
 
 ### Imagem do Código no VSCode
 
-A figura 6 abaixo ilustra a estrutura da classe `AnunciadorForum.java` no ambiente de desenvolvimento VSCode.
+A figura 8 abaixo ilustra a estrutura da classe `AnunciadorForum.java` no ambiente de desenvolvimento VSCode.
 
 <div align="center">
-    Figura 6: AnunciadorForum.java
+    Figura 8: AnunciadorForum.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/f26dc103e37355c4a69b3203bf7ecf4ade5c0870/docs/PadroesDeProjeto/Imagens/Observer_AnunciadorForum.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
