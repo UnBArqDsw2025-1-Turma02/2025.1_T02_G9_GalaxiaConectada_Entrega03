@@ -5,7 +5,6 @@
 - [Introdução](#Introdução)
 - [Objetivo](#Objetivo)
 - [Metodologia](#Metodologia)
-  - [Aplicação no Contexto do Projeto](#Aplicação-no-Contexto-do-Projeto)
 - [Desenvolvimento e Implementação](#Desenvolvimento-e-Implementação)
   - [Modelagem UML do Padrão Facade](#Modelagem-UML-do-Padrão-Facade)
   - [A Classe Facade PlataformaGalaxiaFacade](#A-Classe-Facade-PlataformaGalaxiaFacade)
@@ -76,12 +75,22 @@ A decisão de introduzir uma Facade e o design de seus métodos foram informados
 3.  **Implementação da Lógica de Coordenação na Facade**
 4.  **Teste da Funcionalidade** Execução da `AplicacaoGalaxia.java` para verificar se a operação através da Facade produz o resultado esperado.
 
-
-### Aplicação no Contexto do Projeto
-
 ## Desenvolvimento e Implementação
 
+Para concretizar a simplificação da interface com os diversos subsistemas da "Galáxia Conectada", foi desenvolvida e implementada a classe `PlataformaGalaxiaFacade`. Esta seção detalha a sua modelagem UML, a estrutura da classe Facade em si, como ela interage com os componentes dos subsistemas subjacentes, e a forma como o cliente (`AplicacaoGalaxia.java`) a utiliza para executar operações complexas de maneira simplificada. Todo o desenvolvimento foi conduzido em Java, utilizando o Visual Studio Code (VSCode).
+
 ### Modelagem UML do Padrão Facade
+
+A figura 1 abaixo mostra a modelagem do Padrão Facade
+
+<div align="center">
+    Figura 1: modelagem do Padrão Facade
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 ### A Classe Facade PlataformaGalaxiaFacade
 
