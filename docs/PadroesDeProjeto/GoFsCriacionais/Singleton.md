@@ -10,6 +10,7 @@
     - [Implementação a Classe Forum](#Implementação-a-Classe-Forum.java)
     - [Classe Auxiliar Subforum](#Classe-Auxiliar-Subforum)
 - [Classe de Teste AplicacaoGalaxia](#Classe-de-Teste-AplicacaoGalaxia)
+- [Vídeo Explicação e Execução do Singleton para Fórum](#Vídeo-Explicação-e-Execução-do-Singleton-para-Fórum)
 - [Discussão Vantagens e Desvantagens do Singleton](#Discussão-Vantagens-e-Desvantagens-do-Singleton)
 - [Conclusão](#Conclusão)
 - [Referências](#Referências)
@@ -855,6 +856,21 @@ public class AplicacaoGalaxia {
 <b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
 
 </details>
+
+## Vídeo Explicação e Execução do Singleton para Fórum
+
+O vídeo 1 abaixo mostra explicação e a execução do Singleton para Fórum
+
+
+<div align="center">
+    Vídeo 1: Singleton para Fórum
+    <br>
+    <iframe width="1321" height="743" src="https://www.youtube.com/embed/NS2kunMM120" title="Galáxia Conectada: Explicação e Execução do Singleton para Fórum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 
 ## Discussão Vantagens e Desvantagens do Singleton
 
