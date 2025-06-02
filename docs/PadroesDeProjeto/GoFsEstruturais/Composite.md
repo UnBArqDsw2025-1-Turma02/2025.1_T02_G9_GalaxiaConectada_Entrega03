@@ -190,9 +190,9 @@ public interface ComponenteTrilha {
 A figura 2 abaixo ilustra a estrutura da classe `ComponenteTrilha` no ambiente de desenvolvimento VSCode.
 
 <div align="center">
-    Figura 2: Classe Produto Modulo.java
+    Figura 2: Classe ComponenteTrilha
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/2e4d5981c91f003db2b2a015caea3d8798dd4436/docs/PadroesDeProjeto/Imagens/composite_componenteTrilha.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -317,7 +317,7 @@ A figura 3 abaixo ilustra a estrutura da classe `Conteudo.java` no ambiente de d
 <div align="center">
     Figura 3: Classe Abstrata Conteudo.java 
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/2e4d5981c91f003db2b2a015caea3d8798dd4436/docs/PadroesDeProjeto/Imagens/composite_conteudo.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -400,7 +400,7 @@ A figura 4 abaixo ilustra a estrutura da classe `Artigo.java` no ambiente de des
 <div align="center">
     Figura 4: Classe Abstrata Artigo.java 
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/2e4d5981c91f003db2b2a015caea3d8798dd4436/docs/PadroesDeProjeto/Imagens/composite_artigo.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -508,7 +508,7 @@ A figura 5 abaixo ilustra a estrutura da classe `Video.java` no ambiente de dese
 <div align="center">
     Figura 5: Classe Abstrata Video.java 
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/2e4d5981c91f003db2b2a015caea3d8798dd4436/docs/PadroesDeProjeto/Imagens/composite_video.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -608,7 +608,7 @@ A figura 6 abaixo ilustra a estrutura da classe `Quiz.java` no ambiente de desen
 <div align="center">
     Figura 6: Classe Abstrata Quiz.java 
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/2e4d5981c91f003db2b2a015caea3d8798dd4436/docs/PadroesDeProjeto/Imagens/composite_quiz.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -702,7 +702,7 @@ A figura 6 abaixo ilustra a estrutura da classe `Jogo.java` no ambiente de desen
 <div align="center">
     Figura 6: Classe Abstrata Jogo.java 
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/2e4d5981c91f003db2b2a015caea3d8798dd4436/docs/PadroesDeProjeto/Imagens/composite_jogo.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -850,7 +850,7 @@ A figura 7 abaixo ilustra a estrutura da classe `Modulo.java` no ambiente de des
 <div align="center">
     Figura 7: Classe Abstrata Modulo.java 
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/2e4d5981c91f003db2b2a015caea3d8798dd4436/docs/PadroesDeProjeto/Imagens/composite_Modulo.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1006,7 +1006,7 @@ A figura 7 abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambi
 <div align="center">
     Figura 7: Classe Abstrata Modulo.java 
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/2e4d5981c91f003db2b2a015caea3d8798dd4436/docs/PadroesDeProjeto/Imagens/composite_trilhaEducacional.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1121,7 +1121,7 @@ A figura 8 abaixo ilustra a estrutura da classe `ModuloBuilder.java` no ambiente
 <div align="center">
     Figura 8: Classe Abstrata ModuloBuilder.java 
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/2e4d5981c91f003db2b2a015caea3d8798dd4436/docs/PadroesDeProjeto/Imagens/composite_ModuloBuilder.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -1255,7 +1255,7 @@ A figura 9 abaixo ilustra a estrutura da classe `TrilhaEducacionalBuilder.java` 
 <div align="center">
     Figura 9: Classe Abstrata TrilhaEducacionalBuilder.java 
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/2e4d5981c91f003db2b2a015caea3d8798dd4436/docs/PadroesDeProjeto/Imagens/composite_TrilhaEducacionalBuilder.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
