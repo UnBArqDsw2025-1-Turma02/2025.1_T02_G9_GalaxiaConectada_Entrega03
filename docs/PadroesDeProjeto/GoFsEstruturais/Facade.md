@@ -19,7 +19,6 @@
     - [Interação com o Fórum (uso do Singleton)](#Interação-com-o-Fórum-uso-do-Singleton)
   - [Utilização da Facade na AplicacaoGalaxia](#Utilização-da-Facade-na-AplicacaoGalaxia)
     - [Vídeo da Execução Demonstrando a Facade](#Vídeo-da-Execução-Demonstrando-a-Facade)
-- [Vantagens da Utilização da Facade no Projeto](#Vantagens-da-Utilização-da-Facade-no-Projeto)
 - [Conclusão](#Conclusão)
 - [Referências](#Referências)
 - [Histórico de Versão](#Histórico-de-Versão)
@@ -179,12 +178,29 @@ Para anunciar a nova trilha à comunidade, o método `instrutorCriaPublicaTrilha
 
 ### Utilização da Facade na AplicacaoGalaxia
 
+Abaixo está o código da aplicação:
+
+<details>
+  <summary><strong>Código para `TAplicacaoGalaxia.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+</details>
 
 #### Vídeo da Execução Demonstrando a Facade
 
-## Vantagens da Utilização da Facade no Projeto
-
 ## Conclusão
+
+A implementação do padrão de projeto Facade, através da classe `PlataformaGalaxiaFacade`, demonstrou ser uma adição estratégica e benéfica à arquitetura do sistema "Galáxia Conectada". Com isso, ao fornecer uma interface simplificada para operações complexas que orquestram múltiplos subsistemas – como a criação e publicação de trilhas educacionais com suas respectivas notificações e anúncios no fórum – o padrão cumpriu seu objetivo de reduzir a complexidade percebida pelo cliente e de promover um menor acoplamento entre as diferentes camadas e componentes da aplicação.
+
+Observou-se também que a utilização da Facade tornou o código cliente mais enxuto, legível e focado nas intenções de negócio, delegando a complexidade da coordenação para a classe Facade. 
+
 
 ## Referências
 
