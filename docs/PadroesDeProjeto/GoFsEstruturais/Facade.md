@@ -94,15 +94,73 @@ A figura 1 abaixo mostra a modelagem do Padrão Facade
 
 ### A Classe Facade PlataformaGalaxiaFacade
 
+A classe `PlataformaGalaxiaFacade.java` é a concretização do padrão Facade no projeto "Galáxia Conectada". Com isso, ela serve como um ponto de entrada simplificado para funcionalidades que, de outra forma, exigiriam que o código main (ou cliente) interagisse diretamente com múltiplos componentes e subsistemas.
+
 #### Descrição Objetivos e Responsabilidades
+
+A `PlataformaGalaxiaFacade` é uma classe que oferece uma interface de alto nível para um conjunto de operações complexas dentro da plataforma.
+
+**Importante**: Ela não adiciona novas funcionalidades por si só, mas simplifica o acesso às funcionalidades existentes ao orquestrar as interações entre diferentes partes do sistema.
+
+**Objetivos Principais:**
+- **Simplificar o Uso de Funcionalidades Compostas:** O objetivo primário é fornecer métodos que representem casos de uso comuns ou operações de alto nível que envolvem múltiplos passos ou a coordenação de diferentes subsistemas (como criação de conteúdo, gerenciamento de trilhas, notificações e interações com o fórum).
+- **Reduzir Acoplamento:** Desacoplar o código cliente (ex: `AplicacaoGalaxia.java` ou futuras camadas de interface de usuário/API) da complexidade interna dos subsistemas. O cliente precisa conhecer apenas a interface da Facade, não os detalhes de cada componente que ela utiliza.
+  
+**Responsabilidades:**
+- Conhecer e interagir com os componentes dos subsistemas que ela coordena (ex: Builders para Trilhas e Módulos, Fábricas para Conteúdo e Papéis, o Registro de Protótipos para Notificações, o Singleton do Fórum).
+- Orquestrar a sequência correta de chamadas a esses componentes para executar a tarefa solicitada pelo cliente.
 
 #### Atributos e Construtor (Gerenciamento de Dependências dos Subsistemas)
 
+**Descrição:** Para cumprir suas responsabilidades de coordenação, a `PlataformaGalaxiaFacade` precisa acessar os pontos de entrada ou as instâncias principais dos subsistemas com os quais interage. Isso é gerenciado através de seus atributos e inicializado em seu construtor.
+
+**Atributos:** A classe `PlataformaGalaxiaFacade` mantém referências a componentes chave, como:
+* `private RegistroDePrototipos registroPrototipos;`: Para acessar e clonar protótipos de `Notificacao` e `Conquista`.
+* `private Forum forumPrincipal;`: Para interagir com a instância única do fórum principal do sistema.
+
+**Construtor:** O construtor da `PlataformaGalaxiaFacade` é responsável por obter ou inicializar suas dependências. Por exemplo, ele recebe a instância global do `RegistroDePrototipos` (criada na `AplicacaoGalaxia`) e obtém a instância única do `Forum` através de `Forum.getInstance()`. Isso garante que a Facade esteja pronta para operar assim que for criada. 
+
 #### Método de Fachada Principal instrutorCriaPublicaTrilhaSimples()
+
+**Descrição:** O método public TrilhaEducacional instrutorCriaPublicaTrilhaSimples(...) é um exemplo chave de como a PlataformaGalaxiaFacade simplifica uma operação complexa.
+
+**Objetivo do Método:** Permitir que, com uma única chamada de método, um Instrutor possa realizar todo o processo de:
+
+1. Criar uma nova TrilhaEducacional básica.
+2. Marcar essa trilha como publicada.
+3. Gerar uma Notificacao para anunciar a nova trilha.
+4. Criar um "anúncio" (simulado como uma interação com o Subforum) no Forum sobre a nova trilha.
 
 #### Código da Classe PlataformaGalaxiaFacade
 
-#### Imagem do Código no VSCode
+Abaixo o código para `PlataformaGalaxiaFacade.java` 
+
+<details>
+  <summary><strong>Código para `PlataformaGalaxiaFacade.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+### Imagem do Código no VSCode
+
+A figura 2 abaixo ilustra a estrutura da classe `PlataformaGalaxiaFacade.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 2: Classe PlataformaGalaxiaFacade.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
+
 
 ### Interação da Facade com os Subsistemas
 
