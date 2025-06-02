@@ -173,9 +173,27 @@
 
 ## Bibliografia
 
+<a name="ref1"></a>
+[1] CLIMACO. Design Pattern: Composite. Medium, 2021. Disponível em: https://climaco.medium.com/design-pattern-composite-7fcc39c08ff2. Acesso em: 30 maio–1 jun. 2025.
+
+[2] ENGSOFT MODERNA. Criando objetos compostos com o padrão Composite. Disponível em: https://engsoftmoderna.info/artigos/composite.html. Acesso em: 30 maio–1 jun. 2025.
+
+[3] GURU, Refactoring. Composite – Também conhecido como: Árvore de objetos, Object tree. Disponível em: https://refactoring.guru/pt-br/design-patterns/composite. Acesso em: 30 maio–1 jun. 2025.
+
+[4] JONES, Roberto. Design Patterns — Parte 10 — Composite. Medium, 2019. Disponível em: https://medium.com/@jonesroberto/desing-patterns-parte-10-composite-f7600cb3aad7. Acesso em: 30 maio–1 jun. 2025.
+
+[5] MOREIRA, Diogo. Padrão Composite. In: GitBook. Disponível em: https://diogomoreira.gitbook.io/padroes-de-projeto/padrao-composite. Acesso em: 30 maio–1 jun. 2025.
+
+[6] SOFTPLAN. Composite Design Pattern: What is it, pros and cons and how to implement it?. Disponível em: https://www.softplan.com.br/en/tech-writers/tech-writers-composite. Acesso em: 30 maio–1 jun. 2025.
+
+[7] STACK OVERFLOW. Como funciona na teoria o padrão de projeto Composite?. 2018. Disponível em: https://pt.stackoverflow.com/questions/377303/como-funciona-na-teoria-o-padr%c3%a3o-de-projeto-composite. Acesso em: 30 maio–1 jun. 2025.
+
 ## Histórico de Versão
 
-
+| Versão | Alteração | Responsável | Data |
+| - | - | - | - |
+| 1.0 | Elaboração do documento| Larissa Stéfane | 30/05/2025 |
+| 1.1 | Adição das mudanças do código | Larissa Stéfane | 30/05/2025 |
 
 
 
