@@ -90,9 +90,47 @@ A figura 1 abaixo mostra a modelagem do Padrão Observer
 
 ### Definição das Interfaces do Padrão
 
+A implementação do padrão Observer no projeto "Galáxia Conectada" inicia-se com a definição de duas interfaces cruciais: uma para os Observadores (`ObservadorTrilha`) e outra para o Sujeito observável (`SujeitoTrilhaObservavel`). Essas interfaces estabelecem o contrato de comunicação e garantem o desacoplamento entre os componentes.
+
 #### Interface ObservadorTrilha
 
+A interface `ObservadorTrilha` representa o papel do **Observer** no padrão. Seu principal objetivo é definir um método de atualização comum (`notificarTrilhaPublicada`) que todas as classes concretas interessadas em serem notificadas sobre a publicação de uma `TrilhaEducacional` devem implementar. 
+
+Quando uma trilha é publicada, o sujeito (a `TrilhaEducacional`) invocará este método em cada um dos seus observadores registrados, passando a instância da trilha publicada como parâmetro. Isso permite que cada observador reaja ao evento de forma específica e apropriada ao seu contexto.
+
+Abaixo o código para `ObservadorTrilha.java` 
+
+<details>
+  <summary><strong>Código para `ObservadorTrilha.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+### Imagem do Código no VSCode
+
+A figura 2 abaixo ilustra a estrutura da classe `ObservadorTrilha.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 2: Classe ObservadorTrilha.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
+
 #### Interface SujeitoTrilhaObservavel
+
+
+
+
 
 ### Adaptação da Classe TrilhaEducacional como Sujeito Concreto
 
