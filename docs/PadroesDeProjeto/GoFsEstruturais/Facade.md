@@ -258,7 +258,7 @@ A figura 2 abaixo ilustra a estrutura da classe `PlataformaGalaxiaFacade.java` n
 <div align="center">
     Figura 2: Classe PlataformaGalaxiaFacade.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/06978c13b511d1b1196cef7619bc83c50286d7b1/docs/PadroesDeProjeto/Imagens/Facade_PlataformaGalaxiaFacade.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
