@@ -5,8 +5,6 @@
 - [Introdução](#Introdução)  
 - [Objetivo](#Objetivo)  
 - [Metodologia](#Metodologia---O-Padrão-Observer)  
-  - [Definição e Participantes do Padrão Observer](#Definição-e-Participantes-do-Padrão-Observer)  
-  - [Aplicação no Cenário de Publicação de Trilhas](#Aplicação-no-Cenário-de-Publicação-de-Trilhas)  
 - [Desenvolvimento e Implementação](#Desenvolvimento-e-Implementação)  
   - [Modelagem UML do Padrão Observer](#Modelagem-UML-do-Padrão-Observer)  
   - [Definição das Interfaces do Padrão](#Definição-das-Interfaces-do-Padrão)  
@@ -33,14 +31,25 @@
 
 ## Introdução
 
+O padrão de projeto comportamental **Observer** (Observador) define uma dependência um-para-muitos entre objetos, de forma que quando um objeto, conhecido como "sujeito" (ou "observável"), muda seu estado, todos os seus dependentes, chamados "observadores", são notificados e atualizados automaticamente. Conforme descrito em [Observer](https://refactoring.guru/pt-br/design-patterns/observer#:~:text=O%20Observer%20%C3%A9%20um%20padr%C3%A3o,objeto%20que%20eles%20est%C3%A3o%20observando.), com isso, este padrão promove um baixo acoplamento entre o sujeito e seus observadores ao permitir que interajam sem conhecer os detalhes concretos uns dos outros. O sujeito apenas mantém uma lista de observadores e notifica-os sobre eventos, enquanto cada observador define como reagirá a essa notificação.
+
+Assim, no contexto da plataforma "Galáxia Conectada", o padrão Observer foi escolhido para gerenciar de forma eficiente e desacoplada as reações a eventos significativos do sistema, como a publicação de uma nova `TrilhaEducacional`. Quando uma trilha é publicada, diversas partes do sistema podem ter interesse nessa informação – por exemplo, um sistema de notificação geral da plataforma ou um mecanismo para anunciar a novidade no fórum. Além disso, a utilização do Observer permite que a `TrilhaEducacional` (o sujeito) simplesmente anuncie sua publicação, e todos os componentes registrados como observadores (como `NotificadorPlataforma` ou `AnunciadorForum`) reajam a esse evento de maneira independente e específica, sem que a trilha precise conhecer os detalhes de cada um desses componentes.
 
 ## Objetivo
 
+A aplicação do padrão de projeto Observer na plataforma "Galáxia Conectada", especificamente no cenário de publicação de `TrilhaEducacional`, visa estabelecer um mecanismo de comunicação flexível e desacoplado entre objetos. Portanto, o propósito central é permitir que múltiplos objetos (observadores) sejam notificados e reajam automaticamente a mudanças de estado ou eventos ocorridos em um objeto central (o sujeito).
+
+Os principais objetivos ao utilizar o padrão Observer neste contexto, inspirados em referências como [Padrão Observer](https://diogomoreira.gitbook.io/padroes-de-projeto/padroes-gof-comportamentais/padrao-observer) são:
+
+* **Promover o Baixo Acoplamento:** Desvincular a `TrilhaEducacional` (sujeito) das classes que precisam reagir à sua publicação (observadores como `NotificadorPlataforma`, `AnunciadorForum`), o que permite que ambos variem e evoluam independentemente.
+* **Suporte à Extensibilidade:** Facilitar a adição de novos tipos de observadores no futuro sem a necessidade de modificar o código da classe `TrilhaEducacional`.
+* **Consistência na Notificação:** Garantir que todos os componentes interessados sejam notificados de forma consistente e automática quando uma trilha educacional for publicada.
+* **Manutenibilidade e Organização:** Centralizar a lógica de disparo da notificação no sujeito e encapsular a lógica de reação em cada observador individual.
+* **Reutilização dos Observadores:** Permitir que os mesmos observadores possam, potencialmente, se registrar para eventos de diferentes sujeitos.
+
+
 ## Metodologia
 
-### Definição e Participantes do Padrão Observer
-
-### Aplicação no Cenário de Publicação de Trilhas
 
 ## Desenvolvimento e Implementação
 
