@@ -293,6 +293,20 @@ A figura 3 abaixo ilustra a estrutura da classe `ModuloBuilder.java` no ambiente
 
 </details>
 
+## Vídeo Explicação e Execução do Builder para Módulo
+
+O vídeo 1 abaixo mostra explicação e a execução do Builder para Módulo
+
+<div align="center">
+    Vídeo 1: Builder para Módulo
+    <br>
+   <iframe width="1321" height="743" src="https://www.youtube.com/embed/t6IU4vyFwkE" title="Galáxia Conectada: Explicação e Execução do Builder para Módulo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
 ## Modelagem do Builder Para Trilhas de Aprendizado
 
 A figura 4 abaixo mostra a modelagem do campo Trilhas de Aprendizado
@@ -306,18 +320,6 @@ A figura 4 abaixo mostra a modelagem do campo Trilhas de Aprendizado
     <br>
 </div>
 
-## Vídeo Explicação e Execução do Builder para Módulo
-
-O vídeo 1 abaixo mostra explicação e a execução do Builder para Módulo
-
-<div align="center">
-    Vídeo 1: Builder para Módulo
-    <br>
-   <iframe width="1321" height="743" src="https://www.youtube.com/embed/t6IU4vyFwkE" title="Galáxia Conectada: Explicação e Execução do Builder para Módulo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-   <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
 
 ## Classe Produto TrilhaEducacional
 
@@ -442,6 +444,20 @@ A figura 5 abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambi
 </div>
 
 </details>
+
+## Vídeo Explicação e Execução do Builder para Trilhas Educacionais
+
+O vídeo 2 abaixo mostra explicação e a execução do Builder para Trilhas Educacionais
+
+<div align="center">
+    Vídeo 2: Builder para Trilhas Educacionais
+    <br>
+   <iframe width="1321" height="743" src="https://www.youtube.com/embed/U6YGJTvpZlw" title="Galáxia Conectada: Explicação e Execução do Builder para Trilhas de Aprendizado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 
 ## Classe Builder TrilhaEducacionalBuilder
 
