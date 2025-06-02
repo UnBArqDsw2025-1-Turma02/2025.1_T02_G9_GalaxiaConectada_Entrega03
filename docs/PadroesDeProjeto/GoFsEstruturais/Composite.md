@@ -109,7 +109,7 @@ A concepção da hierarquia de `TrilhaEducacional`, `Modulo` e `Conteudo`, e a d
 **Passo a passo de desenvolvimento da implementação do Composite:**
 
 1.  Identificação da Hierarquia Parte-Todo
-2.  Definição da Interface Componente Comum:
+2.  Definição da Interface Componente Comum
 3.  Adaptação das Classes "Folha" (Leaf)
 4.  Implementação das Classes "Compostas" (Composite)
 5.  Atualização das Classes Builder
