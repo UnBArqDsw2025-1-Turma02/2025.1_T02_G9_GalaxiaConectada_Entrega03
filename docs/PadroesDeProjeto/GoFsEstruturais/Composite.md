@@ -333,19 +333,99 @@ A figura 5 abaixo ilustra a estrutura da classe `Video.java` no ambiente de dese
 
 ### Adaptação da Classe Concreta Quiz
 
+A classe `Quiz.java`, que representa um conteúdo interativo destinado à avaliação de conhecimento na plataforma "Galáxia Conectada", foi ajustada para se comportar como um elemento "Folha" (Leaf) na estrutura do padrão Composite.
+
 #### Descrição das Mudanças
+
+As modificações aplicadas à classe `Quiz.java` para sua integração ao padrão Composite foram as seguintes:
+
+1.  **Herança da Classe `Conteudo`:**
+    `Quiz` mantém sua herança da classe `Conteudo`. Com a adaptação de `Conteudo` para implementar `ComponenteTrilha`, a classe `Quiz` também se qualifica como um `ComponenteTrilha`, o que permite sua participação uniforme na hierarquia de componentes educacionais.
+
+2.  **Implementação do Método `exibirDetalhesEspecificos(String indentacao)`:**
+    Seguindo o padrão estabelecido na superclasse `Conteudo`, o método `exibir()` que existia anteriormente em `Quiz.java` foi substituído pela implementação do novo método abstrato `public void exibirDetalhesEspecificos(String indentacao)`.
+
+3.  **Operações de Gerenciamento de Filhos:**
+    Sendo um elemento "folha", um `Quiz` não possui componentes filhos dentro da estrutura Composite. Assim, para os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) definidos na interface `ComponenteTrilha`, a classe `Quiz` utiliza as implementações padrão herdadas de `Conteudo` (que por sua vez vêm da interface `ComponenteTrilha`).
 
 #### Código Atualizado da Classe Quiz
 
-#### Imagem do Código no VSCode
+Abaixo o código atualizado para `Quiz.java`:
+
+<details>
+  <summary><strong>Código para `Quiz.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+#### Imagens do Código no VSCode
+
+A figura 6 abaixo ilustra a estrutura da classe `Quiz.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 6: Classe Abstrata Quiz.java 
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
 
 ### Adaptação da Classe Concreta Jogo
 
+A classe `Jogo.java`, que representa conteúdo educacional em formato de jogo interativo na plataforma "Galáxia Conectada", também foi devidamente ajustada para operar como um elemento "Folha" (Leaf) dentro da arquitetura do padrão Composite. Como uma subclasse de `Conteudo`, ela herda a implementação da interface `ComponenteTrilha`, o que permite a sua integração uniforme na hierarquia de componentes educacionais.
+
 #### Descrição das Mudanças
+
+As principais modificações efetuadas na classe `Jogo.java` para seu alinhamento com o padrão Composite incluem:
+
+1.  **Herança da Classe `Conteudo`:**
+    `Jogo` prossegue estendendo a classe `Conteudo`. Através desta herança, e com a adaptação de `Conteudo` para implementar `ComponenteTrilha`, a classe `Jogo` também se torna um `ComponenteTrilha`, habilitada a participar da estrutura hierárquica do padrão.
+
+2.  **Implementação do Método `exibirDetalhesEspecificos(String indentacao)`:**
+    Conforme o padrão estabelecido na superclasse `Conteudo` e nas demais classes de conteúdo concreto, o método `exibir()` preexistente em `Jogo.java` foi substituído pela implementação do novo método abstrato `public void exibirDetalhesEspecificos(String indentacao)`.
+
+3.  **Operações de Gerenciamento de Filhos:**
+    Por ser um elemento "folha", um `Jogo` não possui componentes filhos na estrutura Composite. Desta forma, para os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) especificados na interface `ComponenteTrilha`, a classe `Jogo` (por meio da herança de `Conteudo`).
 
 #### Código Atualizado da Classe Jogo
 
-#### Imagem do Código no VSCode
+Abaixo o código atualizado para `Jogo.java`:
+
+<details>
+  <summary><strong>Código para `Jogo.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+#### Imagens do Código no VSCode
+
+A figura 6 abaixo ilustra a estrutura da classe `Jogo.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 6: Classe Abstrata Jogo.java 
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
 
 ## Implementação dos Elementos Compostos Composite
 
