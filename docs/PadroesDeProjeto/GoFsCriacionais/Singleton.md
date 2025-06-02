@@ -198,7 +198,7 @@ As figuras 2 e 3 abaixo ilustra a estrutura da classe `Forum.java` no ambiente d
 <div align="center">
     Figura 2: Classe Forum.java implementando Singleton
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/50463d85bbfd18989892b0a5c19e7c70d583b11c/docs/PadroesDeProjeto/Imagens/singleton_Forum1.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -208,7 +208,7 @@ As figuras 2 e 3 abaixo ilustra a estrutura da classe `Forum.java` no ambiente d
 <div align="center">
     Figura 3: Classe Forum.java implementando Singleton
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/50463d85bbfd18989892b0a5c19e7c70d583b11c/docs/PadroesDeProjeto/Imagens/Singleton_Forum2.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -304,7 +304,7 @@ A figura 4 abaixo ilustra a estrutura da classe `Subforum.java` no ambiente de d
 <div align="center">
     Figura 4: Classe Auxiliar Subforum.java
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/50463d85bbfd18989892b0a5c19e7c70d583b11c/docs/PadroesDeProjeto/Imagens/singleton_Subforum.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
