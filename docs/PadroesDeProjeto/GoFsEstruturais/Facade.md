@@ -82,7 +82,7 @@ A figura 1 abaixo mostra a modelagem do Padrão Facade
 <div align="center">
     Figura 1: modelagem do Padrão Facade
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/9cd255264ddedd760cb43204772b5299dad2f8aa/docs/PadroesDeProjeto/Imagens/ModelagemFacade.drawio.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
