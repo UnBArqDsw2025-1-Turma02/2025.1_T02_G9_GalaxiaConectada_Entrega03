@@ -162,11 +162,54 @@ A figura 3 abaixo ilustra a estrutura da classe `SujeitoTrilhaObservavel.java` n
 
 ### Adaptação da Classe TrilhaEducacional como Sujeito Concreto
 
+A classe `TrilhaEducacional.java`, que representa um percurso de aprendizado completo na plataforma, é a entidade cujo evento de "publicação" vai ser observado. Para que ela pudesse notificar outros objetos sobre essa mudança de estado, ela foi adaptada para atuar como um Sujeito Concreto no padrão Observer.
+
 #### Descrição das Modificações
+
+As seguintes modificações foram realizadas na classe `TrilhaEducacional.java` para implementar as responsabilidades de um Sujeito Concreto:
+
+1.  **Implementação da Interface `SujeitoTrilhaObservavel`:** A classe `TrilhaEducacional` passou a implementar a interface `SujeitoTrilhaObservavel`. 
+
+2.  **Armazenamento de Observadores:** Foi adicionado um atributo privado para manter uma lista dos observadores registrados interessados nos eventos desta trilha
+
+3.  **Implementação dos Métodos de Gerenciamento de Observadores:**
+    * **`adicionarObservador(ObservadorTrilha observador)`:** Este método permite que um novo observador se registre para receber notificações da trilha. Ele adiciona o observador à lista interna.
+    * **`removerObservador(ObservadorTrilha observador)`:** Este método permite que um observador cancele seu registro, sendo removido da lista de notificações.
+    Ambos os métodos foram implementados com a palavra-chave `synchronized` para garantir a segurança em caso de acesso concorrente à lista de observadores.
+
+4.  **Implementação do Método de Notificação:** Este método é o responsável por percorrer a lista de observadores registrados e invocar o método `notificarTrilhaPublicada(this)` em cada um deles. 
 
 #### Código Atualizado da Classe TrilhaEducacional
 
-#### Imagem do Código no VSCode
+Abaixo o código para `TrilhaEducacional.java`
+
+
+<details>
+  <summary><strong>Código para `TrilhaEducacional.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+### Imagem do Código no VSCode
+
+A figura 4 abaixo ilustra a estrutura da classe `TrilhaEducacional.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 4: TrilhaEducacional.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
+
 
 ### Implementação dos Observadores Concretos
 
