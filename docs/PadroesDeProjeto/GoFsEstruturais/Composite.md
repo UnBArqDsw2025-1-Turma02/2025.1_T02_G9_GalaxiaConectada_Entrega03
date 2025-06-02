@@ -183,21 +183,101 @@ A figura 2 abaixo ilustra a estrutura da classe `ComponenteTrilha` no ambiente d
 
 ## Adaptação das Classes Folha Leaf
 
+Os elementos "Folha" (Leaf) são os componentes mais básicos na hierarquia do padrão Composite, pois representam os objetos individuais que não possuem filhos. No contexto do projeto "Galáxia Conectada", as diversas formas de `Conteudo` educacional (Artigos, Vídeos, Quizzes, Jogos) atuam como essas folhas. Para integrá-los à estrutura Composite, a classe abstrata `Conteudo` e suas subclasses concretas foram devidamente adaptadas.
+
 ### Adaptação da Classe Abstrata Conteudo
 
+A classe `Conteudo.java` serve como a superclasse para todos os tipos de materiais de estudo e, portanto, foi o ponto central para integrar os elementos folha ao padrão Composite.
+
 #### Descrição das Mudanças
+
+Para que `Conteudo` e suas especializações pudessem ser tratados uniformemente dentro da hierarquia da `TrilhaEducacional` através da interface `ComponenteTrilha`, as seguintes modificações foram implementadas na classe abstrata `Conteudo.java`:
+
+1.  **Implementação da Interface `ComponenteTrilha`:** A mudança mais significativa foi declarar que `Conteudo` implementa `ComponenteTrilha`. Isso assegura que todo objeto `Conteudo` possa ser tratado **polimorficamente** como um `ComponenteTrilha`.
+
+2.  **Método `getTitulo()`:** A classe `Conteudo` já possuía este método, que agora satisfaz um dos requisitos da interface `ComponenteTrilha`. 
+
+3.  **Novo Método de Exibição Hierárquica - `exibirInformacoes(String indentacao)`:** Este método, exigido pela interface `ComponenteTrilha`, foi implementado para se tornar o principal responsável pela exibição das informações do `Conteudo` de forma hierárquica. Ele utiliza o parâmetro `indentacao` para formatar a saída no console.
+
+4.  **Criação do Método Abstrato `exibirDetalhesEspecificos(String indentacao)`:** Para permitir que cada subclasse de `Conteudo` (como `Artigo`, `Video`, etc.) apresente suas informações particulares.
+
+5.  **Tratamento das Operações de Gerenciamento de Filhos:** Como os objetos `Conteudo` são elementos "folha" e, por definição, não possuem filhos na estrutura Composite, os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) herdados da interface `ComponenteTrilha` não foram sobrescritos.
 
 #### Código Atualizado da Classe Conteudo
 
+Abaixo o código atualizado para `Conteudo.java`:
+
+<details>
+  <summary><strong>Código para `Conteudo.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
 #### Imagens do Código no VSCode
+
+A figura 3 abaixo ilustra a estrutura da classe `Conteudo.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 3: Classe Abstrata Conteudo.java 
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
 
 ### Adaptação da Classe Concreta Artigo
 
+A classe `Artigo.java`, que representa um conteúdo textual na plataforma "Galáxia Conectada", é uma das especializações de `Conteudo` e, portanto, atua como um elemento "Folha" (Leaf) na estrutura Composite. Sua adaptação buscou garantir a correta integração e o comportamento uniforme dentro da hierarquia de componentes educacionais.
+
 #### Descrição das Mudanças
+
+As principais adaptações realizadas na classe `Artigo.java` para alinhá-la ao padrão Composite, seguindo as modificações da superclasse `Conteudo`, foram:
+
+1.  **Herança de `Conteudo` Mantida:** `Artigo` continua estendendo `Conteudo`. Como `Conteudo` agora implementa `ComponenteTrilha`, a classe `Artigo` herda essa característica, tornando-se um `ComponenteTrilha` e sendo obrigada a respeitar o contrato definido.
+
+2.  **Implementação de `exibirDetalhesEspecificos(String indentacao)`:** A mudança mais significativa foi a substituição do método `exibir()` original pela implementação do método abstrato `exibirDetalhesEspecificos(String indentacao)`, herdado de `Conteudo`.
+
+3.  **Operações de Gerenciamento de Filhos:** Sendo um elemento "folha", um `Artigo` não possui componentes filhos. Portanto, para os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) da interface `ComponenteTrilha`, a classe `Artigo` depende da implementação padrão fornecida pela superclasse `Conteudo`.
 
 #### Código Atualizado da Classe Artigo
 
-#### Imagem do Código no VSCode
+Abaixo o código atualizado para `Artigo.java`:
+
+<details>
+  <summary><strong>Código para `Artigo.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+#### Imagens do Código no VSCode
+
+A figura 4 abaixo ilustra a estrutura da classe `Artigo.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 4: Classe Abstrata Artigo.java 
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
 
 ### Adaptação da Classe Concreta Video
 
