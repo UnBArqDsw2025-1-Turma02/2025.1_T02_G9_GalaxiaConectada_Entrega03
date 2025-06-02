@@ -24,7 +24,9 @@
     - [3.2.2 Facade](/PadroesDeProjeto/GoFsEstruturais/Facade.md)
     - [3.2.3 Código Fonte](/PadroesDeProjeto/GoFsEstruturais/EstruturaCodigoFonte.md)
    
-  
+- 3.3 Padrões de Projeto GoFs Comportamentais
+    - [3.3.1 Observer](/PadroesDeProjeto/GoFsComportamentais/Observer.md)
+    - [3.3.2 Código Fonte](/PadroesDeProjeto/GoFsComportamentais/ComportamentalCodigoFonte.md)
 
 - **3.5 Iniciativas Extras** 
   - [3.5.1 Cronograma Planejado](/PadroesDeProjeto/IniciativasExtras/CronogramaPlanejado.md)
