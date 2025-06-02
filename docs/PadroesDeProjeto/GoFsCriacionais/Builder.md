@@ -10,6 +10,7 @@
 - [Modelagem do Builder Para Módulo](#Modelagem-do-Builder-Para-Módulo)
   - [Classe Produto Modulo](#Classe-Produto-Modulo)
   - [Classe Builder ModuloBuilder](#Classe-Builder-ModuloBuilder)
+- [Vídeo Explicação e Execução do Builder para Módulo](#Vídeo-Explicação-e-Execução-do-Builder-para-Módulo)
 - [Modelagem do Builder Para Trilhas de Aprendizado](#Modelagem-do-Builder-Para-Trilhas-de-Aprendizado)
   -  [Classe Produto TrilhaEducacional](#Classe-Produto-TrilhaEducacional)
   -  [Classe Builder TrilhaEducacionalBuilder](#Classe-Builder-TrilhaEducacionalBuilder)
@@ -305,12 +306,12 @@ A figura 4 abaixo mostra a modelagem do campo Trilhas de Aprendizado
     <br>
 </div>
 
-## Vídeo Explicação e Execução do Builder para Conteúdo
+## Vídeo Explicação e Execução do Builder para Módulo
 
-O vídeo 1 abaixo mostra explicação e a execução do Builder para Conteúdo
+O vídeo 1 abaixo mostra explicação e a execução do Builder para Módulo
 
 <div align="center">
-    Vídeo 1: Builder para Conteúdo
+    Vídeo 1: Builder para Módulo
     <br>
    <iframe width="1321" height="743" src="https://www.youtube.com/embed/t6IU4vyFwkE" title="Galáxia Conectada: Explicação e Execução do Builder para Módulo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
    <br>
