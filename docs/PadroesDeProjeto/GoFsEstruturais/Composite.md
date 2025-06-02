@@ -633,6 +633,8 @@ Abaixo está o código da aplicação:
 
 ## Conclusão
 
+A implementação do padrão de projeto estrutural Composite para a organização hierárquica das Trilhas Educacionais, Módulos e Conteúdos na plataforma "Galáxia Conectada" demonstrou ser uma solução arquitetural de grande valia, uma vez que endereça de forma eficaz a necessidade de tratar tanto componentes individuais quanto agrupamentos complexos de forma uniforme. Através da introdução da interface ComponenteTrilha e da adaptação das classes Conteudo (e suas especializações como Artigo, Video, Quiz, Jogo) para atuarem como elementos "folha" (Leaf), e das classes Modulo e TrilhaEducacional para funcionarem como elementos "compostos" (Composite), o sistema ganhou flexibilidade.
+
 ## Bibliografia
 
 <a name="ref1"></a>
@@ -656,5 +658,8 @@ Abaixo está o código da aplicação:
 | - | - | - | - |
 | 1.0 | Elaboração do documento| Larissa Stéfane | 30/05/2025 |
 | 1.1 | Adição das mudanças do código | Larissa Stéfane | 30/05/2025 |
-
+| 1.2 | Organização e adição das mudanças | Larissa Stéfane | 01/05/2025 |
+| 1.3 | Reestruturação | Larissa Stéfane | 01/05/2025 |
+| 1.4 | Adição dos códigos | Larissa Stéfane | 01/05/2025 |
+| 1.5 | Adição das imagens | Larissa Stéfane | 01/05/2025 |
 
