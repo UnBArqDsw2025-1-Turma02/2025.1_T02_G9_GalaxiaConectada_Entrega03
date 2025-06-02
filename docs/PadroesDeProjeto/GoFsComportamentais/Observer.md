@@ -299,6 +299,11 @@ Abaixo está o código da aplicação:
 
 ## Conclusão
 
+A implementação do padrão de projeto comportamental **Observer** para o gerenciamento de notificações após a publicação de uma `TrilhaEducacional` na plataforma "Galáxia Conectada" demonstrou ser uma solução arquitetural eficaz e elegante. Ao estabelecer uma clara separação entre o objeto que origina o evento (o "Sujeito", representado pela `TrilhaEducacional`) e os objetos que precisam reagir a esse evento (os "Observadores", como `NotificadorPlataforma` e `AnunciadorForum`), o padrão promoveu um design significativamente mais desacoplado e flexível.
+
+O principal benefício observado foi a capacidade de adicionar ou modificar comportamentos de reação à publicação de trilhas sem a necessidade de alterar a classe `TrilhaEducacional`. 
+
+
 ## Referências
 
 [1] REFACTORING.GURU. Observer. Disponível em: https://refactoring.guru/pt-br/design-patterns/observer. Acesso em: 31 maio 2025.
