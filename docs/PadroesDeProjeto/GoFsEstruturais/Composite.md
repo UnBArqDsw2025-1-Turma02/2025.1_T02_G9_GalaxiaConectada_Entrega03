@@ -132,7 +132,7 @@ A figura 1 abaixo mostra a modelagem do Padrão Composite
 <div align="center">
     Figura 1: modelagem do Padrão Composite
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/6d69b48f4a257dafae3dc150213c50b6bdc64949/docs/PadroesDeProjeto/Imagens/ModelagemComposite.drawio.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
