@@ -247,7 +247,7 @@ public class Subforum {
         this.nome = nome;
         this.descricao = descricao;
         this.ordemExibicao = 0; // Valor padrão
-        System.out.println("[Subforum Criado] ID: " + id + ", Nome: " + nome); // Opcional
+        System.out.println("[Subforum Criado] ID: " + id + ", Nome: " + nome); 
     }
 
     // Construtor
