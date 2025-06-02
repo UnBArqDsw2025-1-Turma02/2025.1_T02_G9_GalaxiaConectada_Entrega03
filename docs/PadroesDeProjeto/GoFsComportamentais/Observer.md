@@ -82,7 +82,7 @@ A figura 1 abaixo mostra a modelagem do Padrão Observer
 <div align="center">
     Figura 1: modelagem do Padrão Observer
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/d2cebb15c1f84195134f1f4ec29bf753f1ac2e01/docs/PadroesDeProjeto/Imagens/ModelagemComportamentalObserver.drawio.png" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
