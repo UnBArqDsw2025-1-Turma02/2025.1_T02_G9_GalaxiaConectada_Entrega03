@@ -113,8 +113,16 @@ A base para a aplicação do Factory Method é a existência de uma hierarquia d
 
 ### Modelagem do Factory Method para Conteúdo
 
+A figura 1 abaixo mostra a modelagem do campo Conteúdo
 
-
+<div align="center">
+    Figura 1: modelagem do campo Conteúdo
+    <br>
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/ce4d51b502d06da32ac4a38423e26586ef0bba4c/docs/PadroesDeProjeto/Imagens/NovaModelagem_FactoryMethod_Conteudo.drawio.png" width="1200">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 
 
