@@ -12,8 +12,10 @@
 - [Implementação dos Protótipos Concretos](#Implementação-dos-Protótipos-Concretos)
 - [Modelagem do Prototype Para Conquistas](#Modelagem-do-Prototype-Para-Conquistas)
   - [Classe Conquista como Protótipo](#Classe-Conquista-como-Protótipo)
+- [Vídeo Explicação e Execução do Prototype para Conquista](#Vídeo-Explicação-e-Execuçã-do-Prototype-para-Conquista)
 - [Modelagem do Prototype Para Notificações](#Modelagem-do-Prototype-Para-Notificações)
   - [Classe Notificacao como Protótipo](#Classe-Notificacao-como-Protótipo)
+- [Vídeo Explicação e Execução do Prototype para Notificação](#Vídeo-Explicação-e-Execuçã-do-Prototype-para-Notificação)
 - [Gerenciamento de Protótipos com RegistroDePrototipos](#Gerenciamento-de-Protótipos-com-RegistroDePrototipos)
 - [Classe RegistroDePrototipos](#Classe-RegistroDePrototipos)
 - [Classe de Teste AplicacaoGalaxia](#Classe-de-Teste-AplicacaoGalaxia)
@@ -244,6 +246,21 @@ Abaixo está o diagrama UML para o Prototype de Notificações:
     <br>
 </div>
 
+## Vídeo Explicação e Execução do Prototype para Conquista
+
+O vídeo 1 abaixo mostra explicação e a execução do Prototype para Conquista
+
+
+<div align="center">
+    Vídeo 1: Prototype para Conquista
+    <br>
+   <iframe width="1321" height="743" src="https://www.youtube.com/embed/2_ONmRJvRkw" title="Galáxia Conectada: Explicação e Execução do Prototype para Conquistas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
 ## Classe Notificacao como Protótipo
 
 A classe Notificacao é responsável por representar mensagens do sistema para os usuários. Assim, ao aplicar o padrão Prototype, instâncias de Notificacao podem ser clonadas para criar novas notificações baseadas em modelos pré-definidos (ex: notificação de boas-vindas, notificação de nova mensagem). O método clonar() também utiliza super.clone(). 
@@ -342,6 +359,21 @@ A figura 5 abaixo ilustra a estrutura da classe `Notificacao.java` no ambiente d
 </div>
 
 </details>
+
+## Vídeo Explicação e Execução do Prototype para Notificação
+
+O vídeo 2 abaixo mostra explicação e a execução do Prototype para Notificação
+
+
+<div align="center">
+    Vídeo 2: Prototype para Notificação
+    <br>
+    <iframe width="1321" height="743" src="https://www.youtube.com/embed/i-DBm39kKwM" title="Galáxia Conectada: Explicação e Execução do Prototype para Notificação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 
 ## Gerenciamento de Protótipos com RegistroDePrototipos
 
