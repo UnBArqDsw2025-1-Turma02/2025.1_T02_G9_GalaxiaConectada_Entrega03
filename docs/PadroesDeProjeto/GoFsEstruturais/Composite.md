@@ -281,11 +281,55 @@ A figura 4 abaixo ilustra a estrutura da classe `Artigo.java` no ambiente de des
 
 ### Adaptação da Classe Concreta Video
 
+A classe `Video.java`, representando conteúdo audiovisual na plataforma "Galáxia Conectada", também foi ajustada para se comportar como um elemento "Folha" (Leaf) dentro da estrutura Composite. Ela estende `Conteudo` e, consequentemente, implementa a interface `ComponenteTrilha`.
+
 #### Descrição das Mudanças
+
+As adaptações realizadas em `Video.java` para sua integração ao padrão Composite foram as seguintes:
+
+1.  **Herança de `Conteudo`:**
+    A classe `Video` mantém sua relação de herança com a classe `Conteudo`. Dessa forma, ela herda a implementação da interface `ComponenteTrilha`, o que a qualifica para participar da estrutura hierárquica de componentes educacionais.
+
+2.  **Implementação de `exibirDetalhesEspecificos(String indentacao)`:**
+    Seguindo a refatoração da superclasse `Conteudo`, o método `public void exibir()` que existia anteriormente em `Video.java` foi substituído pela implementação do método abstrato `public void exibirDetalhesEspecificos(String indentacao)`.
+    * **Foco nos Detalhes do Vídeo:** Este novo método é responsável por exibir unicamente as informações que são específicas de um objeto `Video`, como a `urlVideo`, a `duracaoSegundos` e a disponibilidade da `transcricao`.
+    * **Uso da Indentação:** O parâmetro `indentacao` é utilizado para que a saída dessas informações seja corretamente alinhada.
+    * **Informações Comuns:** A exibição dos dados genéricos de `Conteudo` (como ID, título principal, descrição geral, visibilidade e data de publicação) é tratada pelo método `exibirInformacoes(String indentacao)` da superclasse `Conteudo`, o qual, por sua vez, chama `exibirDetalhesEspecificos()`.
+
+3.  **Operações de Gerenciamento de Filhos:**
+    Como um `Video` é um elemento "folha" e não pode conter outros `ComponenteTrilha`s, os métodos de gerenciamento de filhos (`adicionar()`, `remover()`, `getFilho()`) da interface `ComponenteTrilha` são tratados pela implementação padrão herdada de `Conteudo` (que utiliza os métodos `default` da interface, lançando `UnsupportedOperationException`). 
+
 
 #### Código Atualizado da Classe Video
 
-#### Imagem do Código no VSCode
+Abaixo o código atualizado para `Video.java`:
+
+<details>
+  <summary><strong>Código para `Video.java` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
+
+#### Imagens do Código no VSCode
+
+A figura 5 abaixo ilustra a estrutura da classe `Video.java` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 5: Classe Abstrata Video.java 
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
 
 ### Adaptação da Classe Concreta Quiz
 
