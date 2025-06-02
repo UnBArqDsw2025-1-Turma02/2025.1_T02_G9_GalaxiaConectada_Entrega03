@@ -637,7 +637,7 @@ A implementação do padrão de projeto estrutural Composite para a organizaçã
 
 ## Bibliografia
 
-<a name="ref1"></a>
+
 [1] CLIMACO. Design Pattern: Composite. Medium, 2021. Disponível em: https://climaco.medium.com/design-pattern-composite-7fcc39c08ff2. Acesso em: 30 maio–1 jun. 2025.
 
 [2] ENGSOFT MODERNA. Criando objetos compostos com o padrão Composite. Disponível em: https://engsoftmoderna.info/artigos/composite.html. Acesso em: 30 maio–1 jun. 2025.
