@@ -128,7 +128,7 @@ Diagrama UML para o Prototype de Conquistas:
 <div align="center">
     Figura 2: Modelagem UML do Padrão Prototype para Conquistas
     <br>
-    <img src="" width="900">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/7cb6e29db88d30f657a215147daa001238852057/docs/PadroesDeProjeto/Imagens/NovaModelagem_Prototype_Conquistas.drawio.png" width="900">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -238,7 +238,7 @@ Abaixo está o diagrama UML para o Prototype de Notificações:
 <div align="center">
     Figura 4: Modelagem UML do Padrão Prototype para Notificações
     <br>
-    <img src="" width="900">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/7cb6e29db88d30f657a215147daa001238852057/docs/PadroesDeProjeto/Imagens/NovaModelagem_Prototype_Notificacoes%20(1).drawio.png" width="900">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
