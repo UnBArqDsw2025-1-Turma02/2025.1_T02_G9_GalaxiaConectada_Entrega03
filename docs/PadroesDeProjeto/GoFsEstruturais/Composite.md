@@ -63,9 +63,60 @@
 
 ## Introdução
 
+O padrão de projeto Composite, como é explicado em [Composite](https://refactoring.guru/pt-br/design-patterns/composite), é uma solução estrutural que permite compor objetos em estruturas de árvore ao tratar objetos individuais e composições de forma uniforme. Com isso, o seu propósito é permitir que clientes manipulem objetos complexos e simples através de uma interface comum, o que promove flexibilidade e simplicidade no código. Ainda de acordo com [Composite](https://refactoring.guru/pt-br/design-patterns/composite), esse padrão é ideal para representar hierarquias do tipo "parte-todo", como ocorre em sistemas que lidam com elementos agrupáveis e recursivos, como menus, pastas ou estruturas de aprendizado.
+
+Com base nisso, no projeto **Galáxia Conectada**, a aplicação do padrão Composite busca atender a necessidade de organizar elementos educacionais em uma hierarquia lógica e reutilizável. Assim, as **Trilhas Educacionais** representam conjuntos maiores, compostos por Módulos temáticos, os quais agrupam diferentes Conteúdos como artigos, vídeos ou jogos. Ao utilizar uma interface comum (ComponenteTrilha), tanto Conteúdos individuais quanto conjuntos complexos (como Módulos ou Trilhas completas) podem ser tratados uniformemente.
+
 ## Objetivo
 
+A aplicação do padrão de projeto estrutural **Composite** na plataforma "Galáxia Conectada" visa estabelecer uma maneira uniforme e flexível de tratar tanto objetos individuais de aprendizado (`Conteudo`) quanto agrupamentos hierárquicos desses objetos (`Modulo`, `TrilhaEducacional`). Com isso, o propósito é construir estruturas em árvore que representem as hierarquias "parte-todo" inerentes aos percursos educacionais, onde uma trilha é composta por módulos, e um módulo é composto por diversos conteúdos.
+
+Os principais objetivos ao utilizar o padrão Composite no contexto das Trilhas Educacionais, Módulos e Conteúdos, inspirados em referências como [Composite Pattern (Refactoring Guru)](https://refactoring.guru/design-patterns/composite) e [Design Pattern: Composite](https://climaco.medium.com/design-pattern-composite-7fcc39c08ff2), são:
+
+* **Tratamento Uniforme:** Permitir que o código trate objetos individuais (folhas, como um `Artigo` ou `Video`) e composições de objetos (compostos, como um `Modulo` ou `TrilhaEducacional`) da mesma maneira através de uma interface comum (`ComponenteTrilha`).
+* **Simplificação do Código:** Reduzir a complexidade no código que manipula essas estruturas, pois ele não precisa distinguir explicitamente entre um elemento simples e um grupo de elementos ao realizar operações comuns.
+* **Representação de Hierarquias:** Modelar de forma natural e intuitiva as estruturas hierárquicas parte-todo, como uma `TrilhaEducacional` que contém `Modulo`s, os quais por sua vez contêm `Conteudo`s.
+* **Facilidade de Adição de Novos Componentes:** Simplificar a adição de novos tipos de `Conteudo` (folhas) ou mesmo novos tipos de agrupadores (compostos) à hierarquia sem impactar significativamente o código.
+* **Recursividade em Operações:** Facilitar a aplicação de operações que devem ser propagadas recursivamente por toda a estrutura da árvore.
+
 ## Metodologia
+
+Como já foi discutido, o padrão **Composite** é um padrão de projeto estrutural que permite compor objetos em estruturas de árvore para representar hierarquias parte-todo. Fundamentalmente, o Composite permite que sejam tratados os objetos individuais (folhas) e composições de objetos (compostos) de maneira uniforme. 
+
+**Principais Componentes do Padrão Aplicado (com base em [Design Patterns — Parte 10 — Composite](https://medium.com/@jonesroberto/desing-patterns-parte-10-composite-f7600cb3aad7) e na estrutura clássica GoF):**
+
+* **Component (Componente):**
+    * **Definição:** Declara a interface para os objetos na composição, tanto para os elementos folha quanto para os compostos. Implementa o comportamento padrão comum a todas as classes, conforme apropriado. 
+    * **No Projeto:** A interface `ComponenteTrilha.java` foi criada para este papel, definindo operações como `getTitulo()` e `exibirInformacoes(String indentacao)`, e métodos padrão para gerenciamento de filhos (`adicionar`, `remover`, `getFilho`) que lançam `UnsupportedOperationException` por padrão.
+
+* **Leaf (Folha):**
+    * **Definição:** Representa os objetos folha na composição, ou seja, aqueles que não possuem filhos. Define o comportamento para os objetos primitivos na composição.
+    * **No Projeto:** A classe abstrata `Conteudo.java` e suas subclasses concretas (`Artigo.java`, `Video.java`, `Quiz.java`, `Jogo.java`) atuam como Leafs. Elas implementam `ComponenteTrilha` e fornecem a lógica para `exibirInformacoes()` através do método `exibirDetalhesEspecificos()`. Para as operações de gerenciamento de filhos, elas utilizam a implementação padrão da interface `ComponenteTrilha` (que lança exceção).
+
+* **Composite (Composto):**
+    * **Definição:** Define o comportamento para componentes que têm filhos. Armazena componentes filhos e implementa as operações relacionadas a filhos definidas na interface Component. Suas operações de Componente geralmente delegam para seus filhos.
+    * **No Projeto:** As classes `Modulo.java` e `TrilhaEducacional.java` atuam como Composites. Elas implementam `ComponenteTrilha` e mantêm uma lista de `ComponenteTrilha` filhos. Seus métodos `exibirInformacoes()` iteram sobre os filhos, chamando o mesmo método recursivamente. Elas também implementam os métodos `adicionar()`, `remover()` e `getFilho()`.
+
+* **Client (Cliente):**
+    * **Definição:** Manipula os objetos na composição através da interface Component.
+    * **No Projeto:** A classe `AplicacaoGalaxia.java` atua como Cliente ao construir e interagir com a estrutura hierárquica das trilhas, por exemplo, ao chamar `trilha.exibirInformacoes("")`. As classes Builder (`ModuloBuilder` e `TrilhaEducacionalBuilder`) também atuam como clientes ao montar os objetos Compostos.
+
+A concepção da hierarquia de `TrilhaEducacional`, `Modulo` e `Conteudo`, e a decisão de aplicar o padrão Composite para gerenciá-la, foram informadas pela análise dos seguintes artefatos de modelagem do projeto:
+
+* **Diagrama de Classes de Referência:** [Diagrama de Classes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaClasses) - Indicou a relação de composição natural entre Trilhas, Módulos e Conteúdos.
+* **Diagrama de Componentes:** [Diagrama de Componentes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemEstatica/DiagramaComponentes) - Ajudou a visualizar como o subsistema de conteúdo interativo (que inclui trilhas) se encaixa na arquitetura geral.
+* **Diagrama de Pacotes:** [Diagrama de Pacotes - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemOrganizacional/DiagramaPacotes) - Orientou a criação do pacote `com.galaxiaconectada.trilhas` e do subpacote `componentes` para as classes do padrão Composite.
+* **(Observação: Você listou "Diagrama de Pacotes" duas vezes no seu exemplo de sumário, talvez um deles fosse outro diagrama ou um erro de digitação. Mantive apenas um por enquanto, mas você pode ajustar se necessário.)**
+* **Diagrama de Casos de Uso:** [Diagrama de Casos de Uso - Galáxia Conectada](https://unbarqdsw2025-1-turma02.github.io/2025.1_T02_G9_GalaxiaConectada_Entrega02/#/Modelagem/ModelagemOrganizacional/DiagramaCasosUso) - A análise de casos de uso como "Consultar Trilha Educacional" ou "Navegar por Módulos" reforçou a necessidade de uma estrutura hierárquica que pudesse ser percorrida e exibida de forma coesa.
+
+**Passo a passo de desenvolvimento da implementação do Composite:**
+
+1.  Identificação da Hierarquia Parte-Todo
+2.  Definição da Interface Componente Comum:
+3.  Adaptação das Classes "Folha" (Leaf)
+4.  Implementação das Classes "Compostas" (Composite)
+5.  Atualização das Classes Builder
+6.  Demonstração e Teste na classe `AplicacaoGalaxia.java`
 
 ## Motivação para o Padrão Composite
 
