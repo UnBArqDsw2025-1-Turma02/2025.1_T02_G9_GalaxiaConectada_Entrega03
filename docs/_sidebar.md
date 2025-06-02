@@ -28,5 +28,9 @@
     - [3.3.1 Observer](/PadroesDeProjeto/GoFsComportamentais/Observer.md)
     - [3.3.2 Código Fonte](/PadroesDeProjeto/GoFsComportamentais/ComportamentalCodigoFonte.md)
 
+- 3.4 Participações nos Padrões
+  - [3.4.1 Participações](/PadroesDeProjeto/ParticipacoesPadroes/ParticipacoesPadroes.md)
+    
+
 - **3.5 Iniciativas Extras** 
   - [3.5.1 Cronograma Planejado](/PadroesDeProjeto/IniciativasExtras/CronogramaPlanejado.md)
