@@ -7,12 +7,12 @@
 - [Objetivo](#objetivo)
 - [Metodologia](#metodologia)
 - [Desenvolvimento e Implementação](#desenvolvimento-e-implementação)
-- [Modelagem do Prototype Para Notificações](#Modelagem-do-Prototype-Para-Notificações)
-- [Modelagem do Prototype Para Conquistas](#Modelagem-do-Prototype-Para-Conquistas)
 - [Definição da Interface de Clonagem](#Definição-da-Interface-de-Clonagem)
   - [Interface PrototipoClonavel](#Interface-PrototipoClonavel)
 - [Implementação dos Protótipos Concretos](#Implementação-dos-Protótipos-Concretos)
+- [Modelagem do Prototype Para Conquistas](#Modelagem-do-Prototype-Para-Conquistas)
   - [Classe Conquista como Protótipo](#Classe-Conquista-como-Protótipo)
+- [Modelagem do Prototype Para Notificações](#Modelagem-do-Prototype-Para-Notificações)
   - [Classe Notificacao como Protótipo](#Classe-Notificacao-como-Protótipo)
 - [Gerenciamento de Protótipos com RegistroDePrototipos](#Gerenciamento-de-Protótipos-com-RegistroDePrototipos)
 - [Classe RegistroDePrototipos](#Classe-RegistroDePrototipos)
@@ -72,34 +72,6 @@ O padrão **Prototype** especifica os tipos de objetos a criar usando uma instâ
 A seguir, serão detalhadas as modelagens e as implementações das classes envolvidas na aplicação do padrão Prototype.
 
 
-## Modelagem do Prototype Para Notificações
-
-Abaixo está o diagrama UML para o Prototype de Notificações:
-
-<div align="center">
-    Figura 1: Modelagem UML do Padrão Prototype para Notificações
-    <br>
-    <img src="" width="900">
-    <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
-
-## Modelagem do Prototype Para Conquistas
-
-Similarmente à seção anterior, esta parte deve apresentar um diagrama UML focado na aplicação do padrão Prototype à classe `Conquista`.
-
-Abaixo o espaço para o seu diagrama UML para o Prototype de Conquistas:
-<div align="center">
-    Figura 2: Modelagem UML do Padrão Prototype para Conquistas
-    <br>
-    <img src="" width="900">
-    <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
-
-
 ## Definição da Interface de Clonagem
 
 Para padronizar a operação de clonagem dos protótipos foi definida uma interface simples, apresentada como `PrototipoClonavel`
@@ -130,10 +102,10 @@ package com.galaxiaconectada.prototipos;
 
 ##### Imagem do código no VSCODE
 
-A figura 3 abaixo ilustra a estrutura da classe `PrototipoClonavel.java` no ambiente de desenvolvimento VSCode.
+A figura 1 abaixo ilustra a estrutura da classe `PrototipoClonavel.java` no ambiente de desenvolvimento VSCode.
 
 <div align="center">
-    Figura 3: Interface PrototipoClonavel.java
+    Figura 1: Interface PrototipoClonavel.java
     <br>
     <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/633bd9122d9c05604bdc8687a4e377af146e5ba6/docs/PadroesDeProjeto/Imagens/prototypePrototipoClonavel.png" width="900">
     <br>
@@ -146,6 +118,22 @@ A figura 3 abaixo ilustra a estrutura da classe `PrototipoClonavel.java` no ambi
 ## Implementação dos Protótipos Concretos
 
 As classes Conquista e Notificacao foram adaptadas para atuar como protótipos concretos.
+
+## Modelagem do Prototype Para Conquistas
+
+Aplicação do padrão Prototype à classe `Conquista`.
+
+Diagrama UML para o Prototype de Conquistas:
+
+<div align="center">
+    Figura 2: Modelagem UML do Padrão Prototype para Conquistas
+    <br>
+    <img src="" width="900">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 
 ## Classe Conquista como Protótipo
 
@@ -233,7 +221,7 @@ package com.galaxiaconectada.prototipos;
 A figura 4 abaixo ilustra a estrutura da classe `Conquista.java` no ambiente de desenvolvimento VSCode.
 
 <div align="center">
-    Figura 4:  Classe Conquista.java como Protótipo
+    Figura 3:  Classe Conquista.java como Protótipo
     <br>
     <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/633bd9122d9c05604bdc8687a4e377af146e5ba6/docs/PadroesDeProjeto/Imagens/PrototypeConquista.png" width="900">
     <br>
@@ -242,6 +230,19 @@ A figura 4 abaixo ilustra a estrutura da classe `Conquista.java` no ambiente de 
 </div>
 
 </details>
+
+## Modelagem do Prototype Para Notificações
+
+Abaixo está o diagrama UML para o Prototype de Notificações:
+
+<div align="center">
+    Figura 4: Modelagem UML do Padrão Prototype para Notificações
+    <br>
+    <img src="" width="900">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 ## Classe Notificacao como Protótipo
 
