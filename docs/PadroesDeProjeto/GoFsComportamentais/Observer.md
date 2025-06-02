@@ -1,11 +1,10 @@
-Padrão Comportamental Observer
+# Padrão Comportamental Observer
 
 ## Sumário
 
 - [Introdução](#Introdução)  
-  - [Contexto da Notificação no Galáxia Conectada](#Contexto-da-Notificação-no-Galáxia-Conectada)  
 - [Objetivo](#Objetivo)  
-- [Metodologia - O Padrão Observer](#Metodologia---O-Padrão-Observer)  
+- [Metodologia](#Metodologia---O-Padrão-Observer)  
   - [Definição e Participantes do Padrão Observer](#Definição-e-Participantes-do-Padrão-Observer)  
   - [Aplicação no Cenário de Publicação de Trilhas](#Aplicação-no-Cenário-de-Publicação-de-Trilhas)  
 - [Desenvolvimento e Implementação](#Desenvolvimento-e-Implementação)  
@@ -34,11 +33,10 @@ Padrão Comportamental Observer
 
 ## Introdução
 
-### Contexto da Notificação no Galáxia Conectada
 
 ## Objetivo
 
-## Metodologia - O Padrão Observer
+## Metodologia
 
 ### Definição e Participantes do Padrão Observer
 
@@ -83,5 +81,15 @@ Padrão Comportamental Observer
 ## Conclusão
 
 ## Referências
+
+[1] REFACTORING.GURU. Observer. Disponível em: https://refactoring.guru/pt-br/design-patterns/observer. Acesso em: 31 maio 2025.
+
+[2] DIO. [sw design pattern] Observer (Observador). Disponível em: https://www.dio.me/articles/sw-design-pattern-observer-observador. Acesso em: 31 maio 2025.
+
+[3] ELEMÁR, J. R. Padrão de Design Observer: Simplificando a Comunicação entre Objetos. Clube de Estudos. Disponível em: https://elemarjr.com/clube-de-estudos/artigos/padrao-de-design-observer-simplificando-a-comunicacao-entre-objetos/. Acesso em: 1 jun. 2025.
+
+[4] MOREIRA, D. Padrão Observer. In: Padrões de Projeto. GitBook. Disponível em: https://diogomoreira.gitbook.io/padroes-de-projeto/padroes-gof-comportamentais/padrao-observer. Acesso em: 1 jun. 2025.
+
+[5] GEEKSFORGEEKS. Observer Design Pattern. Disponível em: https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/. Acesso em: 1 jun. 2025.
 
 ## Histórico de Versão
