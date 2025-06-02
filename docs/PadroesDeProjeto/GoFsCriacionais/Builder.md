@@ -86,6 +86,14 @@ A seguir, são apresentadas as classes envolvidas na implementação do padrão 
 
 A figura 1 abaixo mostra a modelagem do campo Módulo
 
+<div align="center">
+    Figura 1: modelagem do campo Módulo
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 ## Classe Produto Modulo
 
