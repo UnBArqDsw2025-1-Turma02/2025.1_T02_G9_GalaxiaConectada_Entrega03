@@ -120,11 +120,30 @@ A concepção da hierarquia de `TrilhaEducacional`, `Modulo` e `Conteudo`, e a d
 
 ## Motivação para o Padrão Composite
 
+A estrutura de aprendizado da "Galáxia Conectada", com Trilhas Educacionais contendo Módulos que, por sua vez, agrupam diversos Conteúdos (Artigos, Vídeos, etc.), forma uma hierarquia natural de "parte-todo". Para manipular esses elementos de forma consistente – seja um Conteúdo individual, um Módulo completo ou uma Trilha inteira – e evitar lógicas condicionais complexas no código, o padrão Composite foi adotado. Como já foi explicado e também é evidenciado em [Padrão Composite](https://diogomoreira.gitbook.io/padroes-de-projeto/padrao-composite), ele permite tratar tanto os objetos simples ("folhas") quanto os agrupamentos ("compostos") através de uma interface comum (ComponenteTrilha), o que simplifica operações como a exibição da estrutura hierárquica e facilita a extensibilidade do sistema educacional da plataforma.
+
 ## Desenvolvimento e Implementação
+
+Para o desenvolvimento do padrão Composite no projeto "Galáxia Conectada", foi necessário realizar uma série de etapas de implementação e adaptação das classes existentes. Com isso, este processo envolveu primeiramente a definição da interface `ComponenteTrilha`, que estabelece o contrato comum para todos os objetos na composição. Em seguida, procedeu-se com a refatoração da classe abstrata Conteudo e suas especializações (Artigo, Video, Quiz, Jogo) para que atuassem como os elementos "folha" (Leaf) desta hierarquia. Subsequentemente, as classes Modulo e TrilhaEducacional foram implementadas como elementos "compostos" (Composite), o que as tornou capazes de agregar outros componentes (ComponenteTrilha). 
+
+Foram também cruciais as atualizações nas classes `ModuloBuilder` e `TrilhaEducacionalBuilder`, ao assegurar que a construção desses objetos estivesse alinhada com a nova estrutura Composite. Todo este desenvolvimento foi conduzido em Java, utilizando o Visual Studio Code (VSCode) como ambiente de desenvolvimento principal.
 
 ## Modelagem UML do Padrão Composite
 
+A figura 1 abaixo mostra a modelagem do Padrão Composite
+
+<div align="center">
+    Figura 1: modelagem do Padrão Composite
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 ## Definição da Interface Componente ComponenteTrilha
+
+
 
 ### Descrição e Objetivos da Interface
 
