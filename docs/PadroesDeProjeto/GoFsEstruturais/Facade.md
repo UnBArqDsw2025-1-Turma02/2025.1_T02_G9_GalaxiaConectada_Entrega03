@@ -5,9 +5,8 @@
 - [Introdução](#Introdução)
 - [Objetivo](#Objetivo)
 - [Metodologia](#Metodologia)
-  - [Definição e Participantes do Padrão Facade](#Definição-e-Participantes-do-Padrão-Facade)
   - [Aplicação no Contexto do Projeto](#Aplicação-no-Contexto-do-Projeto)
-- [Desenvolvimento e Implementação da PlataformaGalaxiaFacade](#Desenvolvimento-e-Implementação-da-PlataformaGalaxiaFacade)
+- [Desenvolvimento e Implementação](#Desenvolvimento-e-Implementação)
   - [Modelagem UML do Padrão Facade](#Modelagem-UML-do-Padrão-Facade)
   - [A Classe Facade PlataformaGalaxiaFacade](#A-Classe-Facade-PlataformaGalaxiaFacade)
     - [Descrição Objetivos e Responsabilidades](#Descrição-Objetivos-e-Responsabilidades)
@@ -78,11 +77,9 @@ A decisão de introduzir uma Facade e o design de seus métodos foram informados
 4.  **Teste da Funcionalidade** Execução da `AplicacaoGalaxia.java` para verificar se a operação através da Facade produz o resultado esperado.
 
 
-### Definição e Participantes do Padrão Facade
-
 ### Aplicação no Contexto do Projeto
 
-## Desenvolvimento e Implementação da PlataformaGalaxiaFacade
+## Desenvolvimento e Implementação
 
 ### Modelagem UML do Padrão Facade
 
