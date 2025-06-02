@@ -1,0 +1,5 @@
+# Padrão Estrutural Facade
+
+## Sumário
+
+
