@@ -85,7 +85,7 @@ Abaixo o espaço para o seu diagrama UML para o Singleton do `Forum`:
 <div align="center">
     Figura 1 (Singleton): Modelagem UML do Padrão Singleton para a Classe Forum
     <br>
-    <img src="" alt="Modelagem UML do Singleton para Forum" width="700">
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/321d105f1b22cf2f95f809cf9d6adad51061e2b9/docs/PadroesDeProjeto/Imagens/NovaModelagem_Singleton_Forum.drawio.png" alt="Modelagem UML do Singleton para Forum" width="1000">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
