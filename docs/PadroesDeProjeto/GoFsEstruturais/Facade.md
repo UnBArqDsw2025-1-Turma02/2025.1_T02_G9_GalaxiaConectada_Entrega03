@@ -17,10 +17,7 @@
     - [Coordenação da Criação de Trilhas (uso de Builders e Fábricas de Conteúdo)](#Coordenação-da-Criação-de-Trilhas-uso-de-Builders-e-Fábricas-de-Conteúdo)
     - [Geração de Notificações (uso de Prototypes e Registro)](#Geração-de-Notificações-uso-de-Prototypes-e-Registro)
     - [Interação com o Fórum (uso do Singleton)](#Interação-com-o-Fórum-uso-do-Singleton)
-  - [Utilização da Facade pelo Cliente AplicacaoGalaxia](#Utilização-da-Facade-pelo-Cliente-AplicacaoGalaxia)
-    - [Descrição da Interação do Cliente com a Facade](#Descrição-da-Interação-do-Cliente-com-a-Facade)
-    - [Código Relevante da Classe AplicacaoGalaxia](#Código-Relevante-da-Classe-AplicacaoGalaxia)
-    - [Imagem do Código no VSCode](#Imagem-do-Código-no-VSCode-1)
+  - [Utilização da Facade na AplicacaoGalaxia](#Utilização-da-Facade-na-AplicacaoGalaxia)
     - [Vídeo da Execução Demonstrando a Facade](#Vídeo-da-Execução-Demonstrando-a-Facade)
 - [Vantagens da Utilização da Facade no Projeto](#Vantagens-da-Utilização-da-Facade-no-Projeto)
 - [Conclusão](#Conclusão)
@@ -164,19 +161,24 @@ A figura 2 abaixo ilustra a estrutura da classe `PlataformaGalaxiaFacade.java` n
 
 ### Interação da Facade com os Subsistemas
 
+A eficácia da `PlataformaGalaxiaFacade` reside em sua capacidade de orquestrar e simplificar o acesso a funcionalidades complexas, o que é alcançado através da sua interação com diversos subsistemas e componentes da plataforma. Para isso, o método `instrutorCriaPublicaTrilhaSimples()`, por exemplo, demonstra claramente essa coordenação ao utilizar diferentes padrões de projeto e classes para realizar uma operação de alto nível. A seguir, detalhamos como a Facade interage com os principais subsistemas envolvidos nesta operação.
+
 #### Coordenação da Criação de Trilhas (uso de Builders e Fábricas de Conteúdo)
+
+Para a criação da estrutura da trilha educacional, o método `instrutorCriaPublicaTrilhaSimples()` na `PlataformaGalaxiaFacade` delega a complexidade da montagem aos padrões Builder e Factory Method previamente implementados. Primeiramente, para o conteúdo que comporá o módulo inicial da trilha (um artigo), a Facade utiliza uma fábrica de conteúdo específica (como `FabricaDeArtigo`) para instanciar o objeto `Conteudo`. Em seguida, um `ModuloBuilder` é empregado para construir o objeto `Modulo`, ao configurar os seus atributos e ao adicionar o conteúdo recém-criado a ele. Finalmente, um `TrilhaEducacionalBuilder` é utilizado para montar o objeto `TrilhaEducacional` principal, recebendo os dados da trilha e o módulo construído. Ao final desse processo, a Facade invoca o método `build()` de cada builder para obter as instâncias finais e também pode chamar métodos como `publicarTrilha()` no objeto `TrilhaEducacional` resultante. 
 
 #### Geração de Notificações (uso de Prototypes e Registro)
 
+Após a criação e publicação da nova trilha educacional, a `PlataformaGalaxiaFacade`, através do método `instrutorCriaPublicaTrilhaSimples()`, interage com o subsistema de notificações utilizando o padrão Prototype. A Facade acessa o `RegistroDePrototipos` (que lhe foi fornecido ou que ela gerencia) para obter um clone de um objeto `Notificacao` pré-configurado, adequado para anunciar novas trilhas (ex: um protótipo com a chave "NOTIFICACAO_NOVA_TRILHA"). Uma vez que o clone é obtido através do método `clonar()`, a Facade o personaliza com os detalhes específicos da trilha recém-criada, como seu título, o nome do instrutor e um link direto para a trilha. Este objeto `Notificacao` clonado e customizado está então pronto para ser processado pelo sistema de envio de notificações (cuja lógica de envio em si pode ser parte de outro serviço não detalhado pela Facade, mas a *criação* da notificação é facilitada pelo Prototype). 
+
+
 #### Interação com o Fórum (uso do Singleton)
 
-### Utilização da Facade pelo Cliente AplicacaoGalaxia
+Para anunciar a nova trilha à comunidade, o método `instrutorCriaPublicaTrilhaSimples()` da `PlataformaGalaxiaFacade` interage com o Fórum principal do sistema. Ele obtém a instância única do `Forum` através do método estático `Forum.getInstance()`, característico do padrão Singleton. Com a referência ao `Forum` em mãos, a Facade pode então realizar operações como buscar ou criar um `Subforum` específico para anúncios (ex: "Anúncios de Novas Trilhas"). Em seguida, ela simula a criação de uma nova postagem ou tópico informativo nesse subfórum, comunicando o lançamento da nova trilha educacional.
 
-#### Descrição da Interação do Cliente com a Facade
 
-#### Código Relevante da Classe AplicacaoGalaxia
+### Utilização da Facade na AplicacaoGalaxia
 
-#### Imagem do Código no VSCode
 
 #### Vídeo da Execução Demonstrando a Facade
 
@@ -196,3 +198,13 @@ A figura 2 abaixo ilustra a estrutura da classe `PlataformaGalaxiaFacade.java` n
 
 
 ## Histórico de Versão
+
+
+| Versão | Alteração | Responsável | Data |
+| - | - | - | - |
+| 1.0 | Elaboração do documento| Larissa Stéfane | 01/06/2025 |
+| 1.1 | Adição das mudanças do código | Larissa Stéfane | 01/06/2025 |
+| 1.2 | Organização e adição das mudanças | Larissa Stéfane | 01/06/2025 |
+| 1.3 | Reestruturação | Larissa Stéfane | 01/06/2025 |
+| 1.4 | Adição dos códigos | Larissa Stéfane | 01/06/2025 |
+| 1.5 | Adição de Interação da Facade com os Subsistemas | Larissa Stéfane | 01/06/2025 |
