@@ -1955,6 +1955,21 @@ A figura 27 abaixo ilustra a estrutura da classe `FabricaDeModerador.java` no am
 
 </details> 
 
+## Vídeo: Explicação e Execução do Factory Method para Usuários
+
+O vídeo 2 abaixo mostra explicação e a execução do Factory Method para Usuários
+
+
+<div align="center">
+    Vídeo 2: Factory Method para Usuários
+    <br>
+    <iframe width="1321" height="743" src="https://www.youtube.com/embed/ubeEgPUcccQ" title="Galáxia Conectada: Explicação e Execução do Factory Method para Usuários." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
 ## Classe de Teste AplicacaoGalaxia
 
 Para testar as classes e os códigos, foi criada uma main chamada AplicacaoGalaxia. O código dela se encontra abaixo:
