@@ -143,13 +143,43 @@ A figura 1 abaixo mostra a modelagem do Padrão Composite
 
 ## Definição da Interface Componente ComponenteTrilha
 
-
+No cerne do padrão Composite está a definição de uma interface ou classe abstrata comum para todos os objetos da hierarquia, como é explicado em [Criando Objetos Compostos com o Padrão Composite](https://engsoftmoderna.info/artigos/composite.html), sejam eles elementos simples (folhas) ou agrupamentos (compostos). Para o sistema de trilhas educacionais da "Galáxia Conectada", esta responsabilidade é da interface `ComponenteTrilha`.
 
 ### Descrição e Objetivos da Interface
 
+A interface `ComponenteTrilha` é o elemento central Component do padrão Composite no sistema de trilhas educacionais. Com isso, seu objetivo primordial é estabelecer um contrato unificado para todos os elementos da hierarquia – sejam eles Conteudos individuais (folhas) ou agrupamentos como Modulo e TrilhaEducacional (compostos). 
+
+Ao definir operações comuns como getTitulo() e exibirInformacoes(String indentacao), e métodos padrão para gerenciamento de filhos (ex: adicionar(), remover()), `ComponenteTrilha` permite que o código trate qualquer objeto da estrutura de forma uniforme, ao simplificar a manipulação de hierarquias complexas e facilitar operações recursivas, sem a necessidade de diferenciar explicitamente entre objetos simples e compostos.
+
 ### Código da Interface ComponenteTrilha
 
+Abaixo o código para `ComponenteTrilha` 
+
+<details>
+  <summary><strong>Código para `ComponenteTrilha` </strong></summary>
+
+
+```java
+
+
+```
+
+<b> Autora: </b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+
 ### Imagem do Código no VSCode
+
+A figura 2 abaixo ilustra a estrutura da classe `ComponenteTrilha` no ambiente de desenvolvimento VSCode.
+
+<div align="center">
+    Figura 2: Classe Produto Modulo.java
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+</details>
 
 ## Adaptação das Classes Folha Leaf
 
