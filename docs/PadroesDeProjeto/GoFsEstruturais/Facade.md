@@ -917,6 +917,18 @@ public class AplicacaoGalaxia {
 
 #### Vídeo da Execução Demonstrando a Facade
 
+O vídeo 1 abaixo mostra explicação e a execução do Facade
+
+
+<div align="center">
+    Vídeo 1: Singleton para Fórum
+    <br>
+    <iframe width="1321" height="743" src="https://www.youtube.com/embed/l4udqOwmAFk" title="Galáxia Conectada: Explicação e Execução da Fachada" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 ## Conclusão
 
 A implementação do padrão de projeto Facade, através da classe `PlataformaGalaxiaFacade`, demonstrou ser uma adição estratégica e benéfica à arquitetura do sistema "Galáxia Conectada". Com isso, ao fornecer uma interface simplificada para operações complexas que orquestram múltiplos subsistemas – como a criação e publicação de trilhas educacionais com suas respectivas notificações e anúncios no fórum – o padrão cumpriu seu objetivo de reduzir a complexidade percebida pelo cliente e de promover um menor acoplamento entre as diferentes camadas e componentes da aplicação.
