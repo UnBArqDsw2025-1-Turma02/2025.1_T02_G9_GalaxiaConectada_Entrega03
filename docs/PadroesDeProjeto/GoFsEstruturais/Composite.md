@@ -51,6 +51,7 @@
     - [Descrição das Mudanças](#Descrição-das-Mudanças)
     - [Código Atualizado da Classe TrilhaEducacionalBuilder](#Código-Atualizado-da-Classe-TrilhaEducacionalBuilder)
     - [Imagem do Código no VSCode](#Imagem-do-Código-no-VSCode)
+- [Vídeo Explicação e Execução do Composite para Trilha Módulo e Conteúdo](#Vídeo-Explicação-e-Execução-do-Composite-para-Trilha-Módulo-e-Conteúdo)
 - [Demonstração de Uso na AplicacaoGalaxia](#Demonstração-de-Uso-na-AplicacaoGalaxia)
   - [Vídeo da Execução](#Vídeo-da-Execução)
 - [Conclusão](#Conclusão)
@@ -1262,6 +1263,21 @@ A figura 9 abaixo ilustra a estrutura da classe `TrilhaEducacionalBuilder.java` 
 </div>
 
 </details>
+
+## Vídeo Explicação e Execução do Composite para Trilha Módulo e Conteúdo
+
+O vídeo 1 abaixo mostra explicação e a execução do Composite para Trilha Módulo e Conteúdo
+
+
+<div align="center">
+    Vídeo 1: Singleton para Fórum
+    <br>
+    <iframe width="1321" height="743" src="https://www.youtube.com/embed/ipsBeEBnjfU" title="Galáxia Conectada: Explicação e Execução do Composite" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 
 ## Demonstração de Uso na AplicacaoGalaxia
 
