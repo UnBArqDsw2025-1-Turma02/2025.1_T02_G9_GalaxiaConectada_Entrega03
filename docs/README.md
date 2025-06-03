@@ -21,7 +21,16 @@ O projeto Galáxia Conectada está sendo desenvolvido como parte da disciplina d
 ## Screenshot da Entrega
 
 
+A figura 1 abaixo mostra o terminal rodando
 
+<div align="center">
+    Figura 1: execução
+    <br>
+    <img src="https://raw.githubusercontent.com/UnBArqDsw2025-1-Turma02/2025.1_T02_G9_GalaxiaConectada_Entrega03/7131d46f58fb9634ef087a1d352f0487d7cf051d/docs/PadroesDeProjeto/Imagens/capturatela_entrega03.png" width="1200">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 
 ## Há algo a ser executado?
