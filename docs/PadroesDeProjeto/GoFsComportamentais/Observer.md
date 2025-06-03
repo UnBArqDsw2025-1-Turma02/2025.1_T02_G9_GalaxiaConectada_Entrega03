@@ -16,8 +16,9 @@
     - [Imagem do Código no VSCode](#Imagem-do-Código-no-VSCode)  
   - [Implementação dos Observadores Concretos](#Implementação-dos-Observadores-Concretos)  
     - [Classe NotificadorPlataforma](#Classe-NotificadorPlataforma)  
-    - [Classe AnunciadorForum](#Classe-AnunciadorForum)  
-  - [Demonstração de Uso na AplicacaoGalaxia](#Demonstração-de-Uso-na-AplicacaoGalaxia)  
+    - [Classe AnunciadorForum](#Classe-AnunciadorForum)
+- [Vídeo Explicação e Execução do Observer](#Vídeo-Explicação-e-Execução-doObserver)
+- [Demonstração de Uso na AplicacaoGalaxia](#Demonstração-de-Uso-na-AplicacaoGalaxia)  
 - [Conclusão](#Conclusão)  
 - [Referências](#Referências)  
 - [Histórico de Versão](#Histórico-de-Versão)  
@@ -551,8 +552,21 @@ A figura 8 abaixo ilustra a estrutura da classe `AnunciadorForum.java` no ambien
 
 </details>
 
+## Vídeo Explicação e Execução do Observer
 
-### Demonstração de Uso na AplicacaoGalaxia
+O vídeo 1 abaixo mostra explicação e a execução do Observer
+
+<div align="center">
+    Vídeo 1: Observer
+    <br>
+   <iframe width="1321" height="743" src="https://www.youtube.com/embed/kvCSVlVDYRM" title="Galáxia Conectada: Explicação e Execução do Observer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+## Demonstração de Uso na AplicacaoGalaxia
 
 Abaixo está o código da aplicação:
 
